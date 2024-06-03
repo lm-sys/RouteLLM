@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "routellm"
+version = "0.0.1"
+readme = "README.md"
+classifiers = [
+	"Programming Language :: Python :: 3",
+]
+dependencies = [
+    'importlib-metadata; python_version<"3.10"',
+]
