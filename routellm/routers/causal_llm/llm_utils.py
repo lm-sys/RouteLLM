@@ -1,11 +1,16 @@
 import torch
 import yaml
-from transformers import (AutoModelForCausalLM,
-                          AutoModelForSequenceClassification, AutoTokenizer)
+from transformers import (
+    AutoModelForCausalLM,
+    AutoModelForSequenceClassification,
+    AutoTokenizer,
+)
 
-from routellm.routers.causal_llm.configs import (PROMPT_FORMAT_CONFIGS,
-                                                 ModelTypeEnum,
-                                                 RouterModelConfig)
+from routellm.routers.causal_llm.configs import (
+    PROMPT_FORMAT_CONFIGS,
+    ModelTypeEnum,
+    RouterModelConfig,
+)
 from routellm.routers.causal_llm.prompt_format import PromptFormat
 
 

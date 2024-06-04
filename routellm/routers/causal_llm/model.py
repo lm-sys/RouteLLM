@@ -5,8 +5,7 @@ from typing import List
 import numpy as np
 import torch
 
-from routellm.routers.causal_llm.configs import (ModelTypeEnum,
-                                                 RouterModelConfig)
+from routellm.routers.causal_llm.configs import ModelTypeEnum, RouterModelConfig
 from routellm.routers.causal_llm.llm_utils import get_model, get_tokenizer
 from routellm.routers.causal_llm.prompt_format import PromptFormat
 
