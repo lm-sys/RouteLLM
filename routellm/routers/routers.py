@@ -14,7 +14,7 @@ from routellm.routers.causal_llm.llm_utils import (
     to_openai_api_messages,
 )
 from routellm.routers.causal_llm.model import CausalLLMClassifier
-from routellm.routers.constants import MODEL_LIST
+from routellm.constants import MODEL_LIST
 
 
 def no_parallel(cls):
