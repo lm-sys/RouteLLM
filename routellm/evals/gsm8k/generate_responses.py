@@ -6,8 +6,8 @@ import time
 from types import SimpleNamespace
 
 import numpy as np
-from openai import OpenAI
 import pandas as pd
+from openai import OpenAI
 
 from routellm.constants import MODEL_LIST
 
