@@ -1,0 +1,673 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"Statement 1| Linear regression estimator has the smallest variance among all unbiased estimators. Statement 2| The coefficients α assigned to the classifiers assembled by AdaBoost are always non-negative.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Statement 1| RoBERTa pretrains on a corpus that is approximate 10x larger than the corpus BERT pretrained on. Statement 2| ResNeXts in 2018 usually used tanh activation functions.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"Statement 1| Support vector machines, like logistic regression models, give a probability distribution over the possible labels given an input example. Statement 2| We would expect the support vectors to remain the same in general as we move from a linear kernel to higher order polynomial kernels.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"A machine learning problem involves four attributes plus a class. The attributes have 3, 2, 2, and 2 possible values each. The class has 3 possible values. How many maximum possible different examples are there?
+A. 12
+B. 24
+C. 48
+D. 72
+Answer:",True,True
+"As of 2020, which architecture is best for classifying high-resolution images?
+A. convolutional networks
+B. graph networks
+C. fully connected networks
+D. RBF networks
+Answer:",True,True
+"Statement 1| The log-likelihood of the data will always increase through successive iterations of the expectation maximation algorithm. Statement 2| One disadvantage of Q-learning is that it can only be used when the learner has prior knowledge of how its actions affect its environment.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,False
+"Let us say that we have computed the gradient of our cost function and stored it in a vector g. What is the cost of one gradient descent update given the gradient?
+A. O(D)
+B. O(N)
+C. O(ND)
+D. O(ND^2)
+Answer:",True,True
+"Statement 1| For a continuous random variable x and its probability distribution function p(x), it holds that 0 ≤ p(x) ≤ 1 for all x. Statement 2| Decision tree is learned by minimizing information gain.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"Consider the Bayesian network given below. How many independent parameters are needed for this Bayesian Network H -> U <- P <- W?
+A. 2
+B. 4
+C. 8
+D. 16
+Answer:",False,True
+"As the number of training examples goes to infinity, your model trained on that data will have:
+A. Lower variance
+B. Higher variance
+C. Same variance
+D. None of the above
+Answer:",True,True
+"Statement 1| The set of all rectangles in the 2D plane (which includes non axisaligned rectangles) can shatter a set of 5 points. Statement 2| The VC-dimension of k-Nearest Neighbour classifier when k = 1 is infinite.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"_ refers to a model that can neither model the training data nor generalize to new data.
+A. good fitting
+B. overfitting
+C. underfitting
+D. all of the above
+Answer:",True,True
+"Statement 1| The F1 score can be especially useful for datasets with class high imbalance. Statement 2| The area under the ROC curve is one of the main metrics used to assess anomaly detectors.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"Statement 1| The back-propagation algorithm learns a globally optimal neural network with hidden layers. Statement 2| The VC dimension of a line should be at most 2, since I can find at least one case of 3 points that cannot be shattered by any line.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"High entropy means that the partitions in classification are
+A. pure
+B. not pure
+C. useful
+D. useless
+Answer:",True,True
+"Statement 1| Layer Normalization is used in the original ResNet paper, not Batch Normalization. Statement 2| DCGANs use self-attention to stabilize training.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"In building a linear regression model for a particular data set, you observe the coefficient of one of the features having a relatively high negative value. This suggests that
+A. This feature has a strong effect on the model (should be retained)
+B. This feature does not have a strong effect on the model (should be ignored)
+C. It is not possible to comment on the importance of this feature without additional information
+D. Nothing can be determined.
+Answer:",False,False
+"For a neural network, which one of these structural assumptions is the one that most affects the trade-off between underfitting (i.e. a high bias model) and overfitting (i.e. a high variance model):
+A. The number of hidden nodes
+B. The learning rate
+C. The initial choice of weights
+D. The use of a constant-term unit input
+Answer:",True,True
+"For polynomial regression, which one of these structural assumptions is the one that most affects the trade-off between underfitting and overfitting:
+A. The polynomial degree
+B. Whether we learn the weights by matrix inversion or gradient descent
+C. The assumed variance of the Gaussian noise
+D. The use of a constant-term unit input
+Answer:",True,True
+"Statement 1| As of 2020, some models attain greater than 98% accuracy on CIFAR-10. Statement 2| The original ResNets were not optimized with the Adam optimizer.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"The K-means algorithm:
+A. Requires the dimension of the feature space to be no bigger than the number of samples
+B. Has the smallest value of the objective function when K = 1
+C. Minimizes the within class variance for a given number of clusters
+D. Converges to the global optimum if and only if the initial means are chosen as some of the samples themselves
+Answer:",True,True
+"Statement 1| VGGNets have convolutional kernels of smaller width and height than AlexNet's first-layer kernels. Statement 2| Data-dependent weight initialization procedures were introduced before Batch Normalization.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"What is the rank of the following matrix? A = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+A. 0
+B. 1
+C. 2
+D. 3
+Answer:",False,True
+"Statement 1| Density estimation (using say, the kernel density estimator) can be used to perform classification. Statement 2| The correspondence between logistic regression and Gaussian Naive Bayes (with identity class covariances) means that there is a one-to-one correspondence between the parameters of the two classifiers.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Suppose we would like to perform clustering on spatial data such as the geometrical locations of houses. We wish to produce clusters of many different sizes and shapes. Which of the following methods is the most appropriate?
+A. Decision Trees
+B. Density-based clustering
+C. Model-based clustering
+D. K-means clustering
+Answer:",True,True
+"Statement 1| In AdaBoost weights of the misclassified examples go up by the same multiplicative factor. Statement 2| In AdaBoost, weighted training error e_t of the tth weak classifier on training data with weights D_t tends to increase as a function of t.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"MLE estimates are often undesirable because
+A. they are biased
+B. they have high variance
+C. they are not consistent estimators
+D. None of the above
+Answer:",True,True
+"Computational complexity of Gradient descent is,
+A. linear in D
+B. linear in N
+C. polynomial in D
+D. dependent on the number of iterations
+Answer:",False,False
+"Averaging the output of multiple decision trees helps _.
+A. Increase bias
+B. Decrease bias
+C. Increase variance
+D. Decrease variance
+Answer:",False,True
+"The model obtained by applying linear regression on the identified subset of features may differ from the model obtained at the end of the process of identifying the subset during
+A. Best-subset selection
+B. Forward stepwise selection
+C. Forward stage wise selection
+D. All of the above
+Answer:",False,False
+"Neural networks:
+A. Optimize a convex objective function
+B. Can only be trained with stochastic gradient descent
+C. Can use a mix of different activation functions
+D. None of the above
+Answer:",True,True
+"Say the incidence of a disease D is about 5 cases per 100 people (i.e., P(D) = 0.05). Let Boolean random variable D mean a patient “has disease D” and let Boolean random variable TP stand for ""tests positive."" Tests for disease D are known to be very accurate in the sense that the probability of testing positive when you have the disease is 0.99, and the probability of testing negative when you do not have the disease is 0.97. What is P(TP), the prior probability of testing positive.
+A. 0.0368
+B. 0.473
+C. 0.078
+D. None of the above
+Answer:",False,False
+"Statement 1| After mapped into feature space Q through a radial basis kernel function, 1-NN using unweighted Euclidean distance may be able to achieve better classification performance than in original space (though we can’t guarantee this). Statement 2| The VC dimension of a Perceptron is smaller than the VC dimension of a simple linear SVM.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"The disadvantage of Grid search is
+A. It can not be applied to non-differentiable functions.
+B. It can not be applied to non-continuous functions.
+C. It is hard to implement.
+D. It runs reasonably slow for multiple linear regression.
+Answer:",True,True
+"Predicting the amount of rainfall in a region based on various cues is a ______ problem.
+A. Supervised learning
+B. Unsupervised learning
+C. Clustering
+D. None of the above
+Answer:",True,True
+"Which of the following sentence is FALSE regarding regression?
+A. It relates inputs to outputs.
+B. It is used for prediction.
+C. It may be used for interpretation.
+D. It discovers causal relationships
+Answer:",True,True
+"Which one of the following is the main reason for pruning a Decision Tree?
+A. To save computing time during testing
+B. To save space for storing the Decision Tree
+C. To make the training set error smaller
+D. To avoid overfitting the training set
+Answer:",True,True
+"Statement 1| The kernel density estimator is equivalent to performing kernel regression with the value Yi = 1/n at each point Xi in the original data set. Statement 2| The depth of a learned decision tree can be larger than the number of training examples used to create the tree.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"Suppose your model is overfitting. Which of the following is NOT a valid way to try and reduce the overfitting?
+A. Increase the amount of training data.
+B. Improve the optimisation algorithm being used for error minimisation.
+C. Decrease the model complexity.
+D. Reduce the noise in the training data.
+Answer:",True,True
+"Statement 1| The softmax function is commonly used in mutliclass logistic regression. Statement 2| The temperature of a nonuniform softmax distribution affects its entropy.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"Which of the following is/are true regarding an SVM?
+A. For two dimensional data points, the separating hyperplane learnt by a linear SVM will be a straight line.
+B. In theory, a Gaussian kernel SVM cannot model any complex separating hyperplane.
+C. For every kernel function used in a SVM, one can obtain an equivalent closed form basis expansion.
+D. Overfitting in an SVM is not a function of number of support vectors.
+Answer:",True,True
+"Which of the following is the joint probability of H, U, P, and W described by the given Bayesian Network H -> U <- P <- W? [note: as the product of the conditional probabilities]
+A. P(H, U, P, W) = P(H) * P(W) * P(P) * P(U)
+B. P(H, U, P, W) = P(H) * P(W) * P(P | W) * P(W | H, P)
+C. P(H, U, P, W) = P(H) * P(W) * P(P | W) * P(U | H, P)
+D. None of the above
+Answer:",False,False
+"Statement 1| Since the VC dimension for an SVM with a Radial Base Kernel is infinite, such an SVM must be worse than an SVM with polynomial kernel which has a finite VC dimension. Statement 2| A two layer neural network with linear activation functions is essentially a weighted combination of linear separators, trained on a given dataset; the boosting algorithm built on linear separators also finds a combination of linear separators, therefore these two algorithms will give the same result.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Statement 1| The ID3 algorithm is guaranteed to find the optimal decision tree. Statement 2| Consider a continuous probability distribution with density f() that is nonzero everywhere. The probability of a value x is equal to f(x).
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Given a Neural Net with N input nodes, no hidden layers, one output node, with Entropy Loss and Sigmoid Activation Functions, which of the following algorithms (with the proper hyper-parameters and initialization) can be used to find the global optimum?
+A. Stochastic Gradient Descent
+B. Mini-Batch Gradient Descent
+C. Batch Gradient Descent
+D. All of the above
+Answer:",True,True
+"Adding more basis functions in a linear model, pick the most probably option:
+A. Decreases model bias
+B. Decreases estimation bias
+C. Decreases variance
+D. Doesn’t affect bias and variance
+Answer:",True,True
+"Consider the Bayesian network given below. How many independent parameters would we need if we made no assumptions about independence or conditional independence H -> U <- P <- W?
+A. 3
+B. 4
+C. 7
+D. 15
+Answer:",True,True
+"Another term for out-of-distribution detection is?
+A. anomaly detection
+B. one-class detection
+C. train-test mismatch robustness
+D. background detection
+Answer:",False,True
+"Statement 1| We learn a classifier f by boosting weak learners h. The functional form of f’s decision boundary is the same as h’s, but with different parameters. (e.g., if h was a linear classifier, then f is also a linear classifier). Statement 2| Cross validation can be used to select the number of iterations in boosting; this procedure may help reduce overfitting.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Statement 1| Highway networks were introduced after ResNets and eschew max pooling in favor of convolutions. Statement 2| DenseNets usually cost more memory than ResNets.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"If N is the number of instances in the training dataset, nearest neighbors has a classification run time of
+A. O(1)
+B. O( N )
+C. O(log N )
+D. O( N^2 )
+Answer:",False,True
+"Statement 1| The original ResNets and Transformers are feedforward neural networks. Statement 2| The original Transformers use self-attention, but the original ResNet does not.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,False
+"Statement 1| RELUs are not monotonic, but sigmoids are monotonic. Statement 2| Neural networks trained with gradient descent with high probability converge to the global optimum.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"The numerical output of a sigmoid node in a neural network:
+A. Is unbounded, encompassing all real numbers.
+B. Is unbounded, encompassing all integers.
+C. Is bounded between 0 and 1.
+D. Is bounded between -1 and 1.
+Answer:",True,True
+"Which of the following can only be used when training data are linearly separable?
+A. Linear hard-margin SVM.
+B. Linear Logistic Regression.
+C. Linear Soft margin SVM.
+D. The centroid method.
+Answer:",True,True
+"Which of the following are the spatial clustering algorithms?
+A. Partitioning based clustering
+B. K-means clustering
+C. Grid based clustering
+D. All of the above
+Answer:",True,True
+"Statement 1| The maximum margin decision boundaries that support vector machines construct have the lowest generalization error among all linear classifiers. Statement 2| Any decision boundary that we get from a generative model with classconditional Gaussian distributions could in principle be reproduced with an SVM and a polynomial kernel of degree less than or equal to three.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Statement 1| L2 regularization of linear models tends to make models more sparse than L1 regularization. Statement 2| Residual connections can be found in ResNets and Transformers.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"Suppose we like to calculate P(H|E, F) and we have no conditional independence information. Which of the following sets of numbers are sufficient for the calculation?
+A. P(E, F), P(H), P(E|H), P(F|H)
+B. P(E, F), P(H), P(E, F|H)
+C. P(H), P(E|H), P(F|H)
+D. P(E, F), P(E|H), P(F|H)
+Answer:",True,True
+"Which among the following prevents overfitting when we perform bagging?
+A. The use of sampling with replacement as the sampling technique
+B. The use of weak classifiers
+C. The use of classification algorithms which are not prone to overfitting
+D. The practice of validation performed on every classifier trained
+Answer:",False,False
+"Statement 1| PCA and Spectral Clustering (such as Andrew Ng’s) perform eigendecomposition on two different matrices. However, the size of these two matrices are the same. Statement 2| Since classification is a special case of regression, logistic regression is a special case of linear regression.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"Statement 1| The Stanford Sentiment Treebank contained movie reviews, not book reviews. Statement 2| The Penn Treebank has been used for language modeling.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"What is the dimensionality of the null space of the following matrix? A = [[3, 2, −9], [−6, −4, 18], [12, 8, −36]]
+A. 0
+B. 1
+C. 2
+D. 3
+Answer:",True,False
+"What are support vectors?
+A. The examples farthest from the decision boundary.
+B. The only examples necessary to compute f(x) in an SVM.
+C. The data centroid.
+D. All the examples that have a non-zero weight αk in a SVM.
+Answer:",False,True
+"Statement 1| Word2Vec parameters were not initialized using a Restricted Boltzman Machine. Statement 2| The tanh function is a nonlinear activation function.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"If your training loss increases with number of epochs, which of the following could be a possible issue with the learning process?
+A. Regularization is too low and model is overfitting
+B. Regularization is too high and model is underfitting
+C. Step size is too large
+D. Step size is too small
+Answer:",False,True
+"Say the incidence of a disease D is about 5 cases per 100 people (i.e., P(D) = 0.05). Let Boolean random variable D mean a patient “has disease D” and let Boolean random variable TP stand for ""tests positive."" Tests for disease D are known to be very accurate in the sense that the probability of testing positive when you have the disease is 0.99, and the probability of testing negative when you do not have the disease is 0.97. What is P(D | TP), the posterior probability that you have disease D when the test is positive?
+A. 0.0495
+B. 0.078
+C. 0.635
+D. 0.97
+Answer:",True,False
+"Statement 1| Traditional machine learning results assume that the train and test sets are independent and identically distributed. Statement 2| In 2017, COCO models were usually pretrained on ImageNet.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Statement 1| The values of the margins obtained by two different kernels K1(x, x0) and K2(x, x0) on the same training set do not tell us which classifier will perform better on the test set. Statement 2| The activation function of BERT is the GELU.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Which of the following is a clustering algorithm in machine learning?
+A. Expectation Maximization
+B. CART
+C. Gaussian Naïve Bayes
+D. Apriori
+Answer:",True,True
+"You've just finished training a decision tree for spam classification, and it is getting abnormally bad performance on both your training and test sets. You know that your implementation has no bugs, so what could be causing the problem?
+A. Your decision trees are too shallow.
+B. You need to increase the learning rate.
+C. You are overfitting.
+D. None of the above.
+Answer:",False,True
+"K-fold cross-validation is
+A. linear in K
+B. quadratic in K
+C. cubic in K
+D. exponential in K
+Answer:",True,True
+"Statement 1| Industrial-scale neural networks are normally trained on CPUs, not GPUs. Statement 2| The ResNet-50 model has over 1 billion parameters.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Given two Boolean random variables, A and B, where P(A) = 1/2, P(B) = 1/3, and P(A | ¬B) = 1/4, what is P(A | B)?
+A. 1/6
+B. 1/4
+C. 3/4
+D. 1
+Answer:",False,False
+"Existential risks posed by AI are most commonly associated with which of the following professors?
+A. Nando de Frietas
+B. Yann LeCun
+C. Stuart Russell
+D. Jitendra Malik
+Answer:",True,True
+"Statement 1| Maximizing the likelihood of logistic regression model yields multiple local optimums. Statement 2| No classifier can do better than a naive Bayes classifier if the distribution of the data is known.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"For Kernel Regression, which one of these structural assumptions is the one that most affects the trade-off between underfitting and overfitting:
+A. Whether kernel function is Gaussian versus triangular versus box-shaped
+B. Whether we use Euclidian versus L1 versus L∞ metrics
+C. The kernel width
+D. The maximum height of the kernel function
+Answer:",True,True
+"Statement 1| The SVM learning algorithm is guaranteed to find the globally optimal hypothesis with respect to its object function. Statement 2| After being mapped into feature space Q through a radial basis kernel function, a Perceptron may be able to achieve better classification performance than in its original space (though we can’t guarantee this).
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"For a Gaussian Bayes classifier, which one of these structural assumptions is the one that most affects the trade-off between underfitting and overfitting:
+A. Whether we learn the class centers by Maximum Likelihood or Gradient Descent
+B. Whether we assume full class covariance matrices or diagonal class covariance matrices
+C. Whether we have equal class priors or priors estimated from the data.
+D. Whether we allow classes to have different mean vectors or we force them to share the same mean vector
+Answer:",True,True
+"Statement 1| Overfitting is more likely when the set of training data is small. Statement 2| Overfitting is more likely when the hypothesis space is small.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"Statement 1| Besides EM, gradient descent can be used to perform inference or learning on Gaussian mixture model. Statement 2 | Assuming a fixed number of attributes, a Gaussian-based Bayes optimal classifier can be learned in time linear in the number of records in the dataset.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Statement 1| In a Bayesian network, the inference results of the junction tree algorithm are the same as the inference results of variable elimination. Statement 2| If two random variable X and Y are conditionally independent given another random variable Z, then in the corresponding Bayesian network, the nodes for X and Y are d-separated given Z.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"Given a large dataset of medical records from patients suffering from heart disease, try to learn whether there might be different clusters of such patients for which we might tailor separate treatments. What kind of learning problem is this?
+A. Supervised learning
+B. Unsupervised learning
+C. Both (a) and (b)
+D. Neither (a) nor (b)
+Answer:",True,True
+"What would you do in PCA to get the same projection as SVD?
+A. Transform data to zero mean
+B. Transform data to zero median
+C. Not possible
+D. None of these
+Answer:",True,True
+"Statement 1| The training error of 1-nearest neighbor classifier is 0. Statement 2| As the number of data points grows to infinity, the MAP estimate approaches the MLE estimate for all possible priors. In other words, given enough data, the choice of prior is irrelevant.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,False
+"When doing least-squares regression with regularisation (assuming that the optimisation can be done exactly), increasing the value of the regularisation parameter λ the testing error.
+A. will never decrease the training error.
+B. will never increase the training error.
+C. will never decrease the testing error.
+D. will never increase
+Answer:",False,False
+"Which of the following best describes what discriminative approaches try to model? (w are the parameters in the model)
+A. p(y|x, w)
+B. p(y, x)
+C. p(w|x, w)
+D. None of the above
+Answer:",True,True
+"Statement 1| CIFAR-10 classification performance for convolution neural networks can exceed 95%. Statement 2| Ensembles of neural networks do not improve classification accuracy since the representations they learn are highly correlated.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Which of the following points would Bayesians and frequentists disagree on?
+A. The use of a non-Gaussian noise model in probabilistic regression.
+B. The use of probabilistic modelling for regression.
+C. The use of prior distributions on the parameters in a probabilistic model.
+D. The use of class priors in Gaussian Discriminant Analysis.
+Answer:",True,True
+"Statement 1| The BLEU metric uses precision, while the ROGUE metric uses recall. Statement 2| Hidden markov models were frequently used to model English sentences.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"Statement 1| ImageNet has images of various resolutions. Statement 2| Caltech-101 has more images than ImageNet.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"Which of the following is more appropriate to do feature selection?
+A. Ridge
+B. Lasso
+C. both (a) and (b)
+D. neither (a) nor (b)
+Answer:",False,True
+"Suppose you are given an EM algorithm that finds maximum likelihood estimates for a model with latent variables. You are asked to modify the algorithm so that it finds MAP estimates instead. Which step or steps do you need to modify?
+A. Expectation
+B. Maximization
+C. No modification necessary
+D. Both
+Answer:",True,True
+"For a Gaussian Bayes classifier, which one of these structural assumptions is the one that most affects the trade-off between underfitting and overfitting:
+A. Whether we learn the class centers by Maximum Likelihood or Gradient Descent
+B. Whether we assume full class covariance matrices or diagonal class covariance matrices
+C. Whether we have equal class priors or priors estimated from the data
+D. Whether we allow classes to have different mean vectors or we force them to share the same mean vector
+Answer:",True,True
+"Statement 1| For any two variables x and y having joint distribution p(x, y), we always have H[x, y] ≥ H[x] + H[y] where H is entropy function. Statement 2| For some directed graphs, moralization decreases the number of edges present in the graph.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,False
+"Which of the following is NOT supervised learning?
+A. PCA
+B. Decision Tree
+C. Linear Regression
+D. Naive Bayesian
+Answer:",True,True
+"Statement 1| A neural network's convergence depends on the learning rate. Statement 2| Dropout multiplies randomly chosen activation values by zero.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,True
+"Which one of the following is equal to P(A, B, C) given Boolean random variables A, B and C, and no independence or conditional independence assumptions between any of them?
+A. P(A | B) * P(B | C) * P(C | A)
+B. P(C | A, B) * P(A) * P(B)
+C. P(A, B | C) * P(C)
+D. P(A | B, C) * P(B | A, C) * P(C | A, B)
+Answer:",False,True
+"Which of the following tasks can be best solved using Clustering.
+A. Predicting the amount of rainfall based on various cues
+B. Detecting fraudulent credit card transactions
+C. Training a robot to solve a maze
+D. All of the above
+Answer:",False,True
+"After applying a regularization penalty in linear regression, you find that some of the coefficients of w are zeroed out. Which of the following penalties might have been used?
+A. L0 norm
+B. L1 norm
+C. L2 norm
+D. either (a) or (b)
+Answer:",True,False
+"A and B are two events. If P(A, B) decreases while P(A) increases, which of the following is true?
+A. P(A|B) decreases
+B. P(B|A) decreases
+C. P(B) decreases
+D. All of above
+Answer:",True,True
+"Statement 1| When learning an HMM for a fixed set of observations, assume we do not know the true number of hidden states (which is often the case), we can always increase the training data likelihood by permitting more hidden states. Statement 2| Collaborative filtering is often a useful model for modeling users' movie preference.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"You are training a linear regression model for a simple estimation task, and notice that the model is overfitting to the data. You decide to add in $\ell_2$ regularization to penalize the weights. As you increase the $\ell_2$ regularization coefficient, what will happen to the bias and variance of the model?
+A. Bias increase ; Variance increase
+B. Bias increase ; Variance decrease
+C. Bias decrease ; Variance increase
+D. Bias decrease ; Variance decrease
+Answer:",True,True
+"Which PyTorch 1.8 command(s) produce $10\times 5$ Gaussian matrix with each entry i.i.d. sampled from $\mathcal{N}(\mu=5,\sigma^2=16)$ and a $10\times 10$ uniform matrix with each entry i.i.d. sampled from $U[-1,1)$?
+A. \texttt{5 + torch.randn(10,5) * 16} ; \texttt{torch.rand(10,10,low=-1,high=1)}
+B. \texttt{5 + torch.randn(10,5) * 16} ; \texttt{(torch.rand(10,10) - 0.5) / 0.5}
+C. \texttt{5 + torch.randn(10,5) * 4} ; \texttt{2 * torch.rand(10,10) - 1}
+D. \texttt{torch.normal(torch.ones(10,5)*5,torch.ones(5,5)*16)} ; \texttt{2 * torch.rand(10,10) - 1}
+Answer:",False,True
+"Statement 1| The ReLU's gradient is zero for $x<0$, and the sigmoid gradient $\sigma(x)(1-\sigma(x))\le \frac{1}{4}$ for all $x$. Statement 2| The sigmoid has a continuous gradient and the ReLU has a discontinuous gradient.
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",False,True
+"Which is true about Batch Normalization?
+A. After applying batch normalization, the layer’s activations will follow a standard Gaussian distribution.
+B. The bias parameter of affine layers becomes redundant if a batch normalization layer follows immediately afterward.
+C. The standard weight initialization must be changed when using Batch Normalization.
+D. Batch Normalization is equivalent to Layer Normalization for convolutional neural networks.
+Answer:",True,True
+"Suppose we have the following objective function: $\argmin_{w} \frac{1}{2} \norm{Xw-y}^2_2 + \frac{1}{2}\gamma \norm{w}^2_2$ What is the gradient of $\frac{1}{2} \norm{Xw-y}^2_2 + \frac{1}{2}\lambda \norm{w}^2_2$ with respect to $w$?
+A. $\nabla_w f(w) = (X^\top X + \lambda I)w - X^\top y + \lambda w$
+B. $\nabla_w f(w) = X^\top X w - X^\top y + \lambda$
+C. $\nabla_w f(w) = X^\top X w - X^\top y + \lambda w$
+D. $\nabla_w f(w) = X^\top X w - X^\top y + (\lambda+1) w$
+Answer:",True,True
+"Which of the following is true of a convolution kernel?
+A. Convolving an image with $\begin{bmatrix}1 & 0 & 0\\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$ would not change the image
+B. Convolving an image with $\begin{bmatrix}0 & 0 & 0\\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{bmatrix}$ would not change the image
+C. Convolving an image with $\begin{bmatrix}1 & 1 & 1\\ 1 & 1 & 1 \\ 1 & 1 & 1 \end{bmatrix}$ would not change the image
+D. Convolving an image with $\begin{bmatrix}0 & 0 & 0\\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}$ would not change the image
+Answer:",False,False
+"Which of the following is false?
+A. Semantic segmentation models predict the class of each pixel, while multiclass image classifiers predict the class of entire image.
+B. A bounding box with an IoU (intersection over union) equal to $96\%$ would likely be considered at true positive.
+C. When a predicted bounding box does not correspond to any object in the scene, it is considered a false positive.
+D. A bounding box with an IoU (intersection over union) equal to $3\%$ would likely be considered at false negative.
+Answer:",True,True
+"Which of the following is false?
+A. The following fully connected network without activation functions is linear: $g_3(g_2(g_1(x)))$, where $g_i(x) = W_i x$ and $W_i$ are matrices.
+B. Leaky ReLU $\max\{0.01x,x\}$ is convex.
+C. A combination of ReLUs such as $ReLU(x) - ReLU(x-1)$ is convex.
+D. The loss $\log \sigma(x)= -\log(1+e^{-x})$ is concave
+Answer:",False,True
+"We are training fully connected network with two hidden layers to predict housing prices. Inputs are $100$-dimensional, and have several features such as the number of square feet, the median family income, etc. The first hidden layer has $1000$ activations. The second hidden layer has $10$ activations. The output is a scalar representing the house price. Assuming a vanilla network with affine transformations and with no batch normalization and no learnable parameters in the activation function, how many parameters does this network have?
+A. 111021
+B. 110010
+C. 111110
+D. 110011
+Answer:",False,False
+"Statement 1| The derivative of the sigmoid $\sigma(x)=(1+e^{-x})^{-1}$ with respect to $x$ is equal to $\text{Var}(B)$ where $B\sim \text{Bern}(\sigma(x))$ is a Bernoulli random variable. Statement 2| Setting the bias parameters in each layer of neural network to 0 changes the bias-variance trade-off such that the model's variance increases and the model's bias decreases
+A. True, True
+B. False, False
+C. True, False
+D. False, True
+Answer:",True,False

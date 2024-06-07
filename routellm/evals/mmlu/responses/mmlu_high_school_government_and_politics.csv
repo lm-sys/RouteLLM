@@ -1,0 +1,1159 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"Which of the following best describes the balance the Supreme Court has struck between the establishment clause and the free-exercise clause?
+A. Freedom of speech is protected except in certain situations, such as yelling ""fire"" in a crowded theater.
+B. Once a church has been recognized by the federal government, its tax-exempt status can never be revoked.
+C. Once Congress has created an administrative agency, that agency can be dissolved only by a constitutional amendment.
+D. State-sponsored prayer during school hours is prohibited, but voluntary prayer by student groups before school is allowed.
+Answer:",True,True
+"Which of the following statements does NOT accurately describe voting behavior in the United States?
+A. Registered voters between the ages of 35 and 45 are more likely to vote than are those under the age of 21.
+B. A registered voter who has attained his or her General Educational Development (GED) is less likely to vote than a high school dropout.
+C. Registered voters are more likely to vote in general elections than they are in primary elections.
+D. More women than men have voted in every presidential election since 1980.
+Answer:",True,True
+"Which of the following plays the most significant role in forming a child's political views?
+A. The geographical area in which the child grows up
+B. The child's family
+C. The media to which the child is exposed
+D. The child's religion
+Answer:",True,True
+"What power was granted to the states by the Articles of Confederation but not by the Constitution?
+A. Coining money
+B. Authorizing constitutional amendments
+C. Having representation in Congress
+D. Appealing to the president to adjudicate disputes
+Answer:",True,True
+"The primary function of political action committees (PACs) is to
+A. contribute money to candidates for election
+B. coordinate local get-out-the-vote campaigns
+C. promote the defeat of incumbents in the federal and state legislatures
+D. organize protest demonstrations and other acts of civil disobedience
+Answer:",True,True
+"Federal judges are subject to which of the following disciplinary actions?
+A. Impeachment, conviction, and removal from office by Congress
+B. Removal from office by the appointing president
+C. Removal from office by the president-elect
+D. Recall elections by citizens residing in the district over which the judge has jurisdiction
+Answer:",True,True
+"The amount of access cabinet secretaries have to the president is most likely to be controlled by the
+A. vice president
+B. president's chief of staff
+C. national security advisor
+D. chair of the Federal Reserve Board
+Answer:",True,True
+"Which of the following defines the salience of a political issue?
+A. The amount of coverage the issue receives in the major news media
+B. The degree to which public opinion on the issue is likely to shift quickly
+C. The number of people affected by the issue
+D. The importance of the issue to a particular individual or group
+Answer:",True,True
+"Voters who rely exclusively on television network news coverage of national elections are most likely to be aware of
+A. which special interest groups have endorsed which candidates
+B. the relative strength of each candidate's support, as indicated by public opinion polls
+C. candidates' positions on international issues
+D. candidates' positions on domestic issues
+Answer:",False,True
+"Which principle was established by the Supreme Court's decision in Marbury v. Madison?
+A. One man, one vote
+B. Separate but equal
+C. Judicial review
+D. Right to privacy
+Answer:",True,True
+"Which of the following people would most likely be accused of influence peddling?
+A. A congressperson who retires to take a position teaching political science at a university
+B. A former president who advises a current president on a particular foreign policy issue
+C. A voter who researches the positions of all candidates in a race before choosing whom to support
+D. An official who leaves the State Department to work as a paid consultant to foreign governments
+Answer:",True,True
+"Which of the following does the Supreme Court NOT have the power to override?
+A. Constitutional amendments
+B. Presidential executive orders
+C. Laws passed by Congress
+D. Laws passed by state legislatures
+Answer:",True,True
+"According to The Federalist Papers, federalism has which of the following effects on political factions?
+A. It provides a structured environment in which factions may flourish.
+B. It limits the dangers of factionalism by diluting political power.
+C. It allows factions to dominate on the national level while limiting their influence on state governments.
+D. It eliminates any opportunity for factions to form.
+Answer:",True,True
+"Which of the following statements about voting patterns is NOT true?
+A. Non-whites are more likely to vote Democratic than are whites.
+B. Women are more likely to vote Democratic than are men.
+C. Low-income Americans are more likely to vote Democratic than are upper-income Americans.
+D. Evangelical Christians are more likely to vote Democratic than are non-religious Americans.
+Answer:",True,True
+"The legal principle that instructs judges to follow established precedent when deciding cases is commonly referred to as
+A. certiorari
+B. de jure
+C. ex post facto
+D. stare decisis
+Answer:",True,True
+"Voters in which of the following categories would be LEAST likely to vote?
+A. Blue-collar workers who belong to a union
+B. Professionals
+C. Voters who are active in their political parties
+D. Voters aged 18-29
+Answer:",True,True
+"While ratifying the Constitution, the primary point of disagreement between Federalists and Anti-Federalists was over
+A. whether representation in Congress should be equal among states or proportional to population
+B. the strength of the federal government relative to the states
+C. the future of the slave trade
+D. whether people had inalienable rights
+Answer:",True,True
+"The legislative successes of the National Rifle Association, antiabortion activists, and other powerful interest groups demonstrate that
+A. United States domestic policy grew more conservative in the 1990s
+B. the influence of political action committees has weakened in recent years
+C. the power of interest groups depends on the degree of support for their positions in the White House
+D. majority opinion on an issue can sometimes be overridden by the intensity of a minority's commitment to activism
+Answer:",True,True
+"The exclusionary rule was established to
+A. create ""separate but equal"" facilities to facilitate racial segregation
+B. allow private organizations to restrict their memberships
+C. limit the government's ability to use illegally obtained evidence
+D. deny control of interstate commerce to the states
+Answer:",True,True
+"The opinions of congressional committees often fail to accurately mirror public opinion because
+A. the membership of committees often overrepresents constituencies with the greatest stake in the committee's business
+B. most committees are too small to include representatives of all popular opinions
+C. the minority party controls nearly half of all committees
+D. committee members often lose track of their constituents' priorities because of their frequent contact with special-interest lobbyists
+Answer:",True,True
+"Congress would be required to use the ""elastic clause"" of the Constitution to
+A. change citizenship requirements
+B. impose workplace safety standards
+C. increase tax rates
+D. authorize the treasury to print money
+Answer:",True,True
+"The House Rules Committee is considered among the most powerful in the House of Representatives because it has great power over the
+A. ethical conduct of House members
+B. selection of federal judges
+C. number of subcommittees that a standing committee may establish at any given time
+D. scheduling of votes and the conditions under which bills are debated and amended
+Answer:",True,True
+"The Supreme Court issued the opinion quoted below in its ruling on which of the following cases? ""We conclude that in the field of education the doctrine of 'separate but equal' has no place. Separate educational facilities are inherently unequal.""
+A. Gideon v. Wainwright
+B. Marbury v. Madison
+C. Engel v. Vitale
+D. Brown v. Board of Education of Topeka
+Answer:",True,True
+"In the past decade many states have moved forward the date of their presidential primary elections in an effort to
+A. minimize the cost of running the election
+B. convince the national government to move forward the date of the general election
+C. restrict the number of entrants in the presidential race
+D. increase the significance of their election results
+Answer:",True,True
+"Ruled unconstitutional in 1983, the legislative veto had allowed
+A. the executive branch to veto legislation approved by Congress
+B. federal district courts to overturn legislation
+C. the president to veto state laws
+D. Congress to nullify resolutions approved by the executive branch
+Answer:",True,True
+"Federal election laws are designed to achieve all of the following EXCEPT
+A. require disclosure of campaign donations
+B. prevent campaigns from issuing ""attack"" ads
+C. limit campaign contributions
+D. require disclosure of campaign expenditures
+Answer:",True,True
+"The president executes a ""pocket veto"" by doing which of the following?
+A. Publicly expressing rejection of a bill
+B. Issuing an executive order invalidating a recently passed bill
+C. Failing to sign a bill after Congress has adjourned
+D. Recalling ambassadors from a peace negotiation
+Answer:",True,True
+"Which of the following has been true of the Republican Party since the 1980s?
+A. It has become aligned with civil libertarians.
+B. It has come to be dominated by labor unions.
+C. It has become more antagonistic to business interests.
+D. It has become more influenced by evangelical Christians.
+Answer:",True,True
+"Which of the following statements is LEAST true of voters in federal, state, and local elections?
+A. Voter turnout is lower in midterm elections than it is in presidential elections.
+B. Voters lacking party affiliation tend to vote less regularly than those with strong party affiliation.
+C. Young adults are less likely to vote than senior citizens.
+D. Individuals are more likely to vote when they believe they know which candidate will win an election.
+Answer:",True,True
+"Which of the following is NOT true of executive orders?
+A. Presidents avoid using executive orders for controversial actions.
+B. Executive orders have the same effect as laws passed by Congress.
+C. Presidents have made increased use of executive orders since the 1970s.
+D. Executive orders bypass congressional approval.
+Answer:",True,True
+"Which of the following principles is realized when the federal government provides most of the funding to a project in which multiple levels of government work together?
+A. Confederation
+B. Fiscal federalism
+C. Grant-based funding
+D. Dual federalism
+Answer:",False,True
+"In ""Federalist No. 10,"" James Madison argues that a federal system of government reduces the danger of political factions by
+A. creating insurmountable obstacles to the founding of factions
+B. making it difficult for one faction to gain the power necessary to govern
+C. requiring equal representation of all factions within the government
+D. restricting factional political activity to the state level only
+Answer:",True,True
+"All of the following can be considered true about the impact of a higher level of education on voting habits EXCEPT
+A. voters are more likely to support government-enforced affirmative action programs
+B. voters are more likely to support environmental protection efforts
+C. voters are more likely to support public prayer in schools
+D. voters are less likely to support restrictions on abortion rights
+Answer:",True,True
+"The boundary lines of congressional districts must be redrawn every 10 years to
+A. reflect population shifts indicated by the national census
+B. guarantee the turnover of the majority of congressional seats
+C. make sure each state's congressional delegation exactly mirrors its residents' party affiliations
+D. determine which party's leader will be named Speaker of the House
+Answer:",True,True
+"Which of the following is true of appellate courts?
+A. Appellate judges never use the stare decisis principle.
+B. Appellate trials are usually jury trials.
+C. Appellate judges usually decide the facts of a case.
+D. Appellate judges review decisions of lower courts.
+Answer:",True,True
+"Which of the following generally results when the Senate and House of Representatives pass different versions of the same bill?
+A. The president signs the version he prefers.
+B. The bill goes back to each house's committee and restarts the legislative process.
+C. All amendments to the bill are invalidated, and the original version of the bill is sent to the president to sign.
+D. The two legislative bodies form a conference committee.
+Answer:",True,True
+"Which of the following accounts for the fact that the power and prestige of the presidency have grown since 1932? I. America's increased prominence in international affairs II. continually improved public confidence in the federal government III. the New Deal and other programs that have expanded federal responsibility IV. the president's increased visibility, due to the development of mass media
+A. I only
+B. I and IV only
+C. I, III, and IV only
+D. II and IV only
+Answer:",True,True
+"Interest groups representing businesspeople and investors are often among the most successful lobbying groups in Washington, D.C., for all of the following reasons EXCEPT
+A. Such groups have the financial resources to mount sustained campaigns on their own behalf.
+B. Many such groups have been in existence for several decades or more, allowing them to master the legislative system and to develop close ties with legislators.
+C. In many districts, these groups' constituents make up the majority of voters.
+D. These groups' constituents contribute heavily to many legislators' campaigns, and in doing so, gain greater access to legislators.
+Answer:",True,True
+"Each of the two main political parties of the United States is organized
+A. as a single party with a presence at the national level only
+B. into a federal structure in which state and local parties have no power
+C. as a relatively independent organization that exists at all levels of government
+D. in a top-down fashion, so that instructions are dispersed from the national level to the state and local levels
+Answer:",True,True
+"The origination clause of the Constitution states that
+A. the Bill of Rights must not be infringed upon by any state legislature
+B. Congress and the president must jointly create the annual federal budget
+C. revenue bills must be initiated in the House of Representatives
+D. the Supreme Court has original jurisdiction over all constitutional matters
+Answer:",True,True
+"Among the following groups that have traditionally supposed the Democratic Party, which has the least liberal constituency?
+A. White Southerners
+B. Labor union members
+C. African Americans
+D. Northern ethnic minorities
+Answer:",True,True
+"Which of the following has the Supreme Court held about the death penalty?
+A. The death penalty may only be imposed upon citizens.
+B. Under some circumstances, the death penalty may not violate the Eighth Amendment.
+C. Under some circumstances, the death penalty may violate the Third Amendment.
+D. States may execute any adult regardless of intellectual disability.
+Answer:",True,True
+"Which of the following describes a core principle of the Constitution as it was written in 1787?
+A. Direct democracy
+B. Checks and balances
+C. Equal representation
+D. Unitary government
+Answer:",True,True
+"What is the primary reason that the committees in the House of Representatives are more influential than they are in the Senate?
+A. The difference in size between the two chambers means that more work is done on the floor in the Senate and more work is done in committees in the House.
+B. The Senate as a whole has confirmation powers that the House does not have.
+C. Members are appointed to the committee in the House but are elected to committees in the Senate.
+D. A member of any party can serve a committee in the House, but only major party members can serve on committees in the Senate.
+Answer:",True,True
+"Which of the following statements about presidential elections since 1972 is most accurate?
+A. Voters increasingly get their information from newspapers.
+B. Voters have become more focused on individual candidates.
+C. Elections have become dominated by special interest groups.
+D. Voters increasingly vote based on a party's platform.
+Answer:",True,True
+"Which of the following most accurately describes the right of American citizens to privacy?
+A. The right to privacy is determined entirely by the states on a case-by-case basis.
+B. The right to privacy is explicitly granted in the Preamble to the Constitution.
+C. The Supreme Court has ruled that the right to privacy is implied by the Bill of Rights.
+D. Common law requires the government to respect citizens' right to privacy.
+Answer:",True,True
+"A presidential veto would most likely be overturned in which of the following situations?
+A. Approximately 30% of the senators and representatives are members of the presidential political party.
+B. The majority of American citizens support the proposed legislation.
+C. The chief justice of the Supreme Court was appointed by the president.
+D. The president's successful reelection campaign advocated bipartisanship.
+Answer:",True,True
+"Of the following interest groups, which has created the largest number of political action committees (PACs) since the 1970s?
+A. Environmental activists
+B. Labor unions
+C. For-profit business
+D. Religious institutions
+Answer:",True,True
+"The Commerce Clause of the Constitution has been used to
+A. release detainees from prison following unlawful arrest
+B. maintain the navy
+C. increase the power of the national government
+D. veto legislative bills of attainder
+Answer:",True,True
+"Which of the following would occur if Congress were to pass legislation and declare a recess, and the president took no action on the bill within ten days of its passage?
+A. A line-item veto
+B. A pocket veto
+C. An adjournment
+D. A writ of certiorari
+Answer:",True,True
+"Republican candidates for president who tend to be more successful in the primaries tend to be more conservative than rank-and-file Republicans because
+A. moderate Republicans are less likely than conservative Republicans to gain widespread support in the general election
+B. most moderate Republicans have approved of the Democratic presidential candidate
+C. most rank-and-file Republicans do not care whether their party's nominee shares their political views
+D. party activists, whose political participation is disproportionate to their numbers, tend to be very conservative
+Answer:",True,True
+"A ""motion for cloture"" is used to
+A. send a bill back to the House
+B. override a presidential veto in the House
+C. amend an appropriations bill in the House
+D. end a filibuster and force a vote on a bill in the Senate
+Answer:",True,True
+"Which of the following best illustrates a use of the elastic clause?
+A. The Supreme Court allows a lower court ruling to stand by refusing to hear an appeal.
+B. A congressional committee prevents the full chamber from voting on legislation by delaying its report.
+C. Congress passes legislation establishing a national speed limit.
+D. A member of the House of Representatives introduces a bill to increase federal income tax rates.
+Answer:",True,True
+"Which of the following is true of the House Committee on Ways and Means?
+A. Its primary role is to appropriate spending for infrastructure projects.
+B. It is the primary author of congressional banking reform legislation.
+C. It allocates funding for canals and waterways.
+D. Its jurisdiction includes the tax system.
+Answer:",True,True
+"Which of the following is generally understood to be the purpose of the Tenth Amendment to the Constitution?
+A. It allows for trial by jury in common-law cases.
+B. It grants voting rights to all American women.
+C. It lowers the legal voting age from 21 to 18.
+D. It reserves powers to the states.
+Answer:",True,True
+"Which of the following best articulates the doctrine of original intent?
+A. When a law is unclear, the Supreme Court may consider the intent of a law or the letter of the law, but not both.
+B. Copyright laws exist to protect the rights of those who create original works.
+C. Appellate judges should respect the original decisions of trial judges.
+D. The Constitution should be interpreted in light of the intent of those who wrote it.
+Answer:",True,True
+"Which of the following statements is true of congressional incumbents who run for reelection?
+A. Incumbent senators are more likely to be reelected than are incumbent members of the House of Representatives.
+B. Incumbents are prohibited by law from spending more on their reelection campaigns than their challengers spend.
+C. Incumbents have a great advantage over challengers because they are better known and can raise campaign funds more easily.
+D. Ever since the 1994 election, the majority of congressional incumbents have failed in their reelection attempts.
+Answer:",True,True
+"The relative stability of American public policy is achieved largely through
+A. cooperation between the two major political parties
+B. judicial activism
+C. the constitutional fragmentation of power
+D. affirmative action programs
+Answer:",True,True
+"Which of the following is a direct result of an electoral system that features single-member districts?
+A. Only two major parties can successfully be supported.
+B. National campaigns can be conducted without incurring great expense.
+C. Third parties can be as successful as the two major political parties can.
+D. Each political party tends to focus its campaign on a single issue.
+Answer:",True,True
+"All of the following contribute to lower voting rates among Americans in the 18-to-25 age bracket EXCEPT
+A. college attendance in a state other than one's home state
+B. frequent relocation of one's primary residence
+C. the remoteness of most political issues to the daily lives of young people
+D. the fact that the minimum voting age in some states is 21
+Answer:",True,True
+"Which of the following may file an amicus curiae brief?
+A. A defendant who wants to know what witnesses the plaintiff plans to call.
+B. Former presidents who wish to send instructions to the justices who they appointed.
+C. A senator who wants to impeach a Supreme Court justice.
+D. Companies that are not involved in a court case but wish to affect the outcome.
+Answer:",True,True
+"Which of the following best predicts how someone will vote in an election?
+A. The voter's gender
+B. The voter's political party affiliation
+C. The voter's socioeconomic status
+D. The voter's religion
+Answer:",True,True
+"Which of the following statements about the electoral college is correct?
+A. Each state must split its electoral votes among all the candidates that receive votes.
+B. Each state is equally represented in the electoral college.
+C. The electoral college was created by an amendment to the Constitution.
+D. The results of electoral college voting tend to distort the winner's margin of victory, when compared with the popular vote for president.
+Answer:",True,True
+"A sound bite would most likely be used during a presidential election in order to
+A. avoid ""horse race"" politics
+B. provide the audience with a candidate's view in a limited amount of time
+C. reduce the amount of negative advertising used
+D. ensure a candidate is presented in the best light
+Answer:",True,True
+"Interest groups are barred from taking part in which of the following activities?
+A. Sending lawmakers to educational seminars
+B. Giving tangible gifts to lawmakers
+C. Providing research to government officials
+D. Staging protests and boycotts
+Answer:",True,True
+"The Dred Scott decision of 1857 was overturned by the
+A. Plessy v. Ferguson decision
+B. Missouri Compromise
+C. Jim Crow laws
+D. Fourteenth Amendment
+Answer:",True,True
+"A member of which of the following demographic groups is most likely to support a Republican presidential candidate?
+A. Married white male
+B. Unmarried white female
+C. African American, male or female
+D. Youths under the age of 25, male or female
+Answer:",True,True
+"Which of the following is the primary purpose of ""motor voter"" laws?
+A. To increase turnout on election days
+B. To make it easier for citizens to register to vote
+C. To require that all voters know how to drive
+D. To establish voter identification laws
+Answer:",True,True
+"An open primary is a primary election in which
+A. voters registered as ""independents"" may not vote
+B. candidates do not specify the office for which they are running
+C. voters may register at their polling place on election day
+D. voters may vote in the election of a party other than the one to which they are registered
+Answer:",True,True
+"Which of the following is the largest source of ""automatic spending"" for the federal government?
+A. Salaries to employees of the U.S. Post Office
+B. Interest payments made to U.S. bondholders
+C. Entitlement programs
+D. National defense
+Answer:",True,True
+"Which of the following is an example of ""horse-race journalism""?
+A. A news story focuses on a politician's scandals rather than achievements.
+B. A television news anchor reports an event before the station's rivals.
+C. A reporter announces which candidate leads in a public opinion poll.
+D. A newspaper editor prints stories about long-term political developments.
+Answer:",True,True
+"All of the following are core values of American political culture EXCEPT
+A. income equality
+B. democracy
+C. individual liberty
+D. due process
+Answer:",True,True
+"The Supreme Court has used the practice of selective incorporation to
+A. limit the number of appeals filed by defendants in state courts
+B. extend voting rights to racial minorities and women
+C. apply most Bill of Rights protections to state law
+D. hasten the integration of public schools
+Answer:",True,True
+"According to the Constitution, who determines voter eligibility requirements?
+A. The president
+B. Congress
+C. State legislatures
+D. Federal administrative agencies
+Answer:",True,True
+"The difference between a pardon and a reprieve is
+A. a pardon lasts 10 years, while a reprieve lasts one year
+B. a reprieve grants a release from legal punishment, while a pardon postpones it
+C. a pardon grants a release from legal punishment while a reprieve postpones it
+D. only state governors can issue pardons
+Answer:",True,True
+"Which of the following actions can the president take without congressional approval?
+A. Grant reprieves and pardons
+B. Appoint Supreme Court justices
+C. Negotiate and ratify treaties
+D. Declare war
+Answer:",True,True
+"Two related cases that focused on the right to privacy for all American citizens were
+A. Near v. Minnesota and New York Times v. Sullivan
+B. Texas v. Johnson and Morse v. Frederick
+C. Thornhill v. Alabama and Cox v. New Hampshire
+D. Griswold v. Connecticut and Roe v. Wade.
+Answer:",True,True
+"The swift adoption of the Bill of Rights in the years following ratification of the Constitution demonstrates the
+A. Framers' unqualified commitment to individual rights
+B. small states' determination to receive equal representation in the legislature
+C. Northern states' support for abolitionism
+D. states' fears of an overpowerful national government
+Answer:",True,True
+"Incumbent members of the House of Representatives win reelection more often than incumbent senators for all of the following reasons EXCEPT
+A. representatives' constituents more often belong largely to the representative's party
+B. senators have more political power than representatives, and Senate races are accordingly contested more aggressively
+C. representatives may use federal funds to publicize their achievements via direct mail to constituents
+D. representatives more often run uncontested
+Answer:",False,False
+"A Supreme Court that demonstrates a willingness to change public policy and alter judicial precedent is said to be engaging in
+A. judicial activism
+B. due process
+C. judicial restraint
+D. ex post facto lawmaking
+Answer:",True,True
+"Which of the following is an accurate statement about the leadership of the two major political parties?
+A. The national party organization controls all facets of party activity throughout the country.
+B. Party leadership is dispersed among numerous officials at the national, state, and local levels.
+C. The highest elected official in each national party directs that party's activities and operations all the way down to the state and local levels.
+D. All major decisions concerning party activities are made during each party's presidential nomination conventions.
+Answer:",True,True
+"The opposition of the American Civil Liberties Union (ACLU), the National Association of Women Lawyers (NAWL), and the American Federation of Labor and Congress of Industrial Organizations (AFL-CIO) to Samuel Alito's 2006 nomination to the Supreme Court is an example of
+A. realignment
+B. coalition building
+C. impeachment
+D. a recall election
+Answer:",True,True
+"Which of the following is the best illustration of ""pork barrel"" legislation?
+A. A federal agency is created to ensure the safety of food and animal products.
+B. A bill can be passed only if a majority of congresspersons from rural districts approve of it.
+C. A senator refuses to vote for a tax increase without a corresponding decrease in spending.
+D. A member of Congress inserts a provision into a bill to secure funding for a project in his or her district.
+Answer:",True,True
+"All of the following statements about gerrymandering are true EXCEPT that it
+A. favors incumbent candidates over challengers
+B. can divide like-minded voters into several districts to reduce their influence
+C. has been allowed by the Supreme Court in some instances
+D. increases the control voters have over their elected officials
+Answer:",True,True
+"Which of the following was the legal basis for the 1973 Roe v. Wade majority opinion, in which the Supreme Court struck down a state ban on abortion?
+A. The Nineteenth Amendment secures for women the right to vote.
+B. The Civil Rights Act of 1964 prohibits discrimination based on gender.
+C. The Bill of Rights implies a right to privacy.
+D. The Ninth Amendment reserves powers to the people.
+Answer:",True,True
+"Of the following, American federalism is most clearly exemplified by the
+A. system of checks and balances among the three branches of the national government
+B. process by which international treaties are completed
+C. special constitutional status of Washington, D.C.
+D. Tenth Amendment to the Constitution
+Answer:",True,True
+"When the Founders met in 1787 to write the Constitution, their primary objective was to
+A. establish a bill of rights that would protect citizens from the government
+B. create a national court system for hearing disputes between citizens of different states
+C. return to the states those powers that the Articles of Confederation had given to the central government
+D. replace the weak central government created by the Articles of Confederation with a stronger one
+Answer:",True,True
+"A constitutional amendment would be required to ban flag burning because that activity is currently protected by the right to
+A. due process
+B. assembly
+C. free exercise of religion
+D. free speech
+Answer:",True,True
+"Which of the following is an example of an implied power of the Congress?
+A. regulation of interstate commerce
+B. borrowing money on the credit of the United States
+C. oversight of executive branch agencies
+D. declarations of war
+Answer:",True,True
+"To which characteristic of American government does the term ""federalism"" refer?
+A. The system of checks and balances within the national government
+B. The power of the Supreme Court to review the constitutionality of laws
+C. The Bill of Rights' protection of the rights of the accused
+D. The division and sharing of power between the national and state governments
+Answer:",True,True
+"Given the structure of the electoral college system, presidential candidates tend to
+A. avoid battleground states and focus their campaigns on ""safe"" states
+B. campaign more heavily in states with large populations
+C. spend more television advertising money in the Plains States
+D. campaign extensively in states that heavily favor one party over the other
+Answer:",False,True
+"Filibusters are less likely to occur in the House of Representatives than in the Senate because
+A. Senate decorum forbids one senator from attempting to stop another's speech
+B. the House meets for substantially fewer hours per day than does the Senate
+C. Senate sessions, unlike House sessions, are open to the public
+D. debate in the House is in most instances strictly regulated by the rules
+Answer:",True,True
+"When the Democratic Party pursues liberal social policies, it is most likely to alienate which of its traditional bases?
+A. People holding advanced academic degrees
+B. Northeastern city dwellers
+C. Southerners
+D. Jewish Americans
+Answer:",True,True
+"The practice of drawing congressional district lines in an attempt to give one party a benefit over another is referred to as
+A. front-loading
+B. prior restraint
+C. reapportionment
+D. gerrymandering
+Answer:",True,True
+"Which of the following is NOT a way in which the powers of the executive branch are balanced by the legislative branch?
+A. The Senate may use the filibuster to block an executive order.
+B. Congress may impeach and convict a president for ""high crime and misdemeanors.""
+C. The Senate can decline to ratify a treaty.
+D. The Senate can decline to approve a president's nominee for the Supreme Court.
+Answer:",True,True
+"The line-item veto was found unconstitutional because
+A. it gave executive powers to the legislature
+B. it gave legislative powers to the bureaucracy
+C. it gave legislative powers to the president
+D. it delegated too many powers to the states
+Answer:",True,True
+"Why do political scientists identify the presidential elections of Franklin Roosevelt in 1932 and Richard Nixon in 1968 as well as the midterm election of 1994 as ""critical elections""?
+A. The issues at stake in those elections were more important than in most elections.
+B. Those elections saw major shifts in party alignment that would last for decades.
+C. Minority voters played a key role in deciding the winners of those elections.
+D. Those elections took place during wartime.
+Answer:",True,True
+"House members are more concerned about their committee assignments than are senators because
+A. House members may serve on only one committee at a time
+B. Senate committees have relatively little power to alter legislation
+C. bills in the Senate must pass through all committees before reaching the floor
+D. the rules make it extremely difficult for representatives to influence legislation on the House floor
+Answer:",False,True
+"Which of the following statements about voting populations is most accurate?
+A. Individuals are less likely to vote in a closely contested race.
+B. Voters are more likely to vote at age 18 than they are at age 65.
+C. An individual with a graduate degree is more likely to vote than an individual who has only a high school diploma.
+D. Affluent individuals are less likely to vote than impoverished individuals.
+Answer:",True,True
+"The primary goal of the Gramm-Rudman Acts of 1985 and 1987 was to
+A. strengthen the military
+B. increase funding for social programs
+C. reduce the federal deficit
+D. limit the president's ability to conduct foreign policy
+Answer:",True,True
+"Which of the following best describes the practice of ""ticket splitting""?
+A. A presidential nominee selects a running mate who can appeal to voter groups whose support of the nominee is weak.
+B. A voter chooses the presidential nominee of one major party, but chooses congressional nominees of the other major party.
+C. A mayor orders the local police force to hand out fewer parking violations in the weeks leading up to the general election.
+D. A delegate to a national party convention supports the front-runner but remains uncommitted on the party platform.
+Answer:",True,True
+"Which of the following is the most direct result of an electoral system with single-member districts?
+A. Proliferation of many small parties
+B. A balance of power that favors the president over Congress
+C. A persistent third-party presence
+D. Development of a two-party system
+Answer:",True,True
+"The Voting Rights Act of 1965
+A. granted women the right to vote
+B. banned race-based discrimination
+C. granted African-Americans the right to vote
+D. suspended the use of literacy tests at voting centers
+Answer:",True,False
+"In the House of Representatives, the Rules Committee
+A. determines both the rules of the House and conditions for legislative process
+B. plays a pivotal role in the management of the Library of Congress
+C. has jurisdiction over fisheries and wildlife
+D. determines what behavior is deemed ethical in the House
+Answer:",True,True
+"When an appeal is made to the Supreme Court, the court usually
+A. refuses to hear the appeal
+B. declares a mistrial
+C. orders the lower court to retry the case
+D. rules in favor of the defendant
+Answer:",True,True
+"Under which of the following circumstances does a president usually experience a reduction in political power? I. The president is in the final two years of his or her second term II. The number and severity of international crises is increasing III. Different parties control Congress and the White House IV. The economy is strong and the president's approval ratings are high
+A. I only
+B. I and II only
+C. I and III only
+D. II and III only
+Answer:",True,True
+"Which of the following is LEAST likely to explain low voter turnout for an election?
+A. The preclearance provision of the Voting Rights Act
+B. Low levels of political efficacy among registered voters
+C. Regulations that require voters to show identification
+D. The frequency with which state and local elections occur
+Answer:",True,True
+"Members of Congress are allowed to mail letters to their constituents at the government's expense because of
+A. gerrymandering
+B. pork-barrel legislation
+C. the Sixteenth Amendment
+D. the franking privilege
+Answer:",True,True
+"The idea that the Bill of Rights applies to both federal and state governments by means of the Fourteenth Amendment is called
+A. mandamus
+B. habeas corpus
+C. strict constructionism
+D. the doctrine of incorporation
+Answer:",True,True
+"If no presidential candidate receives a majority of the electoral college vote, then who becomes the president?
+A. The candidate who wins the popular national vote
+B. The incumbent vice president of the United States
+C. Whomever is selected by the United States Supreme Court
+D. The candidate who wins the majority of votes in the House
+Answer:",True,True
+"Unlike in a closed primary election, in an open primary election
+A. voters select the winner by caucus instead of by individual ballots
+B. the election results are not binding
+C. any registered voter may participate, regardless of party affiliation
+D. voters may register to vote on the day of the election
+Answer:",True,True
+"Every ten years, the majority of state legislatures are responsible for
+A. redrawing congressional district boundaries
+B. electing a new state governor
+C. evaluating the physical accessibility of polling venues
+D. deciding where to construct new elementary schools
+Answer:",True,True
+"Which of the following best describes the fate of most popular third-party movements?
+A. They displace one of the two major parties and become major parties themselves.
+B. They are ultimately abandoned by the public because their politics are perceived as too radical.
+C. Their supporters become frustrated and withdraw from the political process.
+D. They disintegrate when one or both of the major parties adopt the third party's goals.
+Answer:",True,True
+"The spoils system of awarding civil service jobs was replaced by the merit system as a result of the
+A. Truman Doctrine
+B. Fair Labor Standards Act of 1961
+C. National Industrial Recovery Act
+D. Pendleton Act of 1883
+Answer:",True,True
+"The term ""iron triangle"" refers to the interrelationship of the
+A. president, Congress, and the Supreme Court
+B. electorate, Congress, and political action committees
+C. local, state, and federal governments
+D. federal bureaucracy, congressional committees, and lobbyists
+Answer:",True,True
+"The No Child Left Behind Act, which established educational standards that states must meet to receive federal educational funding, is an example of which of the following?
+A. A federal mandate
+B. A constitutional amendment
+C. Affirmative action
+D. Tort reform
+Answer:",True,True
+"An inherent power of the president is the power to
+A. appoint a nominee for the U.S. Supreme Court
+B. negotiate a treaty with another country
+C. declare a state of emergency following a natural disaster
+D. veto a bill passed by the U.S. Congress
+Answer:",True,True
+"The Supreme Court has used the Fourteenth Amendment to apply portions of the Bill of Rights to state law by citing the amendment's
+A. prohibition on unreasonable search and seizures
+B. due process clause
+C. guarantee of privacy rights
+D. abolition of slavery
+Answer:",True,True
+"Political efficacy refers to the idea that
+A. political parties can provide a check to the political influence wielded by corporations
+B. individuals believe that they can influence the government through participation in the democratic process
+C. the system of checks and balances ensures that the government is both efficient and productive
+D. politicians have a duty to inform their constituents about the democratic process
+Answer:",True,True
+"Which of the following presidential powers is shared with the Senate?
+A. Deploying troops
+B. Drafting appropriations bills
+C. Negotiating treaties
+D. Forcing Congress into session
+Answer:",True,True
+"Which of the following is a significant difference between the Senate and the House of Representatives?
+A. Only the House has the power to issue subpoenas.
+B. Only the Senate may introduce revenue bills.
+C. States are equally represented in the House, while representation in the Senate is proportional to population.
+D. The Senate allows unlimited debate, while the House does not.
+Answer:",True,True
+"A member of the president's cabinet is said to have ""gone native"" when that cabinet member
+A. resigns to take a position as a consultant to lobbying groups
+B. cedes control of his or her department to lifelong bureaucrats within the department
+C. places his or her department's priorities above the president's
+D. accepts bribes or expensive favors from businesses regulated by his or her department
+Answer:",True,True
+"All of the following are ways in which lobbyists attempt to persuade legislators EXCEPT
+A. distributing propaganda to media
+B. endorsing candidates for office
+C. socializing with government officials
+D. acquiring corporate campaign donations for candidates
+Answer:",False,False
+"All of the following are consequences of low voter turnout in the United States EXCEPT
+A. a perception of the government as illegitimate
+B. a lack of true democracy
+C. a lack of minority representation
+D. an imposition of a fine on non-voters
+Answer:",True,True
+"Which of the following statements is true regarding delegates to presidential nomination conventions?
+A. Delegates are generally more likely to register as third party voters at some point.
+B. The majority of the general population is more educated than the delegates.
+C. Delegates typically have little interest in politics.
+D. Typically, the general population is less ideological than the delegates.
+Answer:",True,True
+"All of the following are specifically mentioned in the Constitution EXCEPT
+A. judicial review
+B. the national census
+C. rules of impeachment
+D. the State of the Union address
+Answer:",True,True
+"Which of the following is true of the Supreme Court?
+A. Every case appealed to the Supreme Court is ruled upon by the court.
+B. The court helps set the public agenda by deciding which appeals to hear.
+C. The court hears all cases when two or more justices agree that the case has merit.
+D. In deciding cases, the chief justice's vote counts as two votes.
+Answer:",True,True
+"While best known for protecting freedom of speech and religion, the First Amendment also protects Americans' right to
+A. due process of the law in any criminal case
+B. retain personal property unless justly compensated by the government
+C. not be subjected to excessive fines or unusual punishment
+D. petition the government for a redress of grievances
+Answer:",True,True
+"The Voting Rights Act of 1965 has had which of the following effects?
+A. States have been prohibited from establishing voter identification requirements.
+B. Voters must now pass literacy tests before voting.
+C. Voting participation for racial minority voters has increased.
+D. The voting age was lowered from 21 to 18.
+Answer:",True,True
+"Considered as a single group, the Small Business Administration, the Small Business committees in the House and Senate, and small business advocacy groups are an example of
+A. an iron triangle
+B. a conference committee
+C. a regulatory agency
+D. dual federalism
+Answer:",True,True
+"A writ of certiorari from the Supreme Court indicates that the Court
+A. will review a lower court decision
+B. has rendered a decision on a case
+C. has decided not to hear an appeal
+D. will recess until the end of the calendar year
+Answer:",True,True
+"Which of the following does NOT appear in the Constitution?
+A. The electoral college
+B. Political parties
+C. Separation of powers
+D. The term length for members of Congress
+Answer:",True,True
+"Which of the following constitutional principles might be violated if the Environmental Protection Agency issued, enforced, and adjudicated all disputes regarding a new regulation?
+A. Vertical federalism
+B. Due process of law
+C. Comity
+D. Separation of powers
+Answer:",True,True
+"Which of the following correctly states the relationship between the federal and state judiciaries?
+A. Federal courts are higher courts than state courts and may overturn state decisions on any grounds.
+B. The two are entirely autonomous, and neither ever hears cases that originate in the other.
+C. The two are generally autonomous, although federal courts may rule on the constitutionality of state court decisions.
+D. State courts are trial courts; federal courts are appeals courts.
+Answer:",True,True
+"An example of a categorical grant would be
+A. money loaned by the federal government to cities to fund school maintenance
+B. money given by the federal government to states without conditions
+C. money loaned by the federal government to a private company to prevent it from failing
+D. money given by the federal government to states to fund Head Start early education programs
+Answer:",True,True
+"When the Supreme Court decides to take a case on appeal it
+A. issues a writ of habeas corpus
+B. issues a writ of certiorari
+C. issues amicus curiae briefs
+D. engages in judicial review
+Answer:",True,True
+"Which of the following is true of federal judges?
+A. They serve four-year terms that coincide with the presidential term.
+B. They are appointed for life and can only be removed by impeachment.
+C. They are elected by Congress and serve ten-year terms.
+D. They are appointed for life and cannot be removed from office.
+Answer:",False,True
+"Congress has attempted to protect independent regulatory agencies from political influence by requiring that each agency
+A. be led by a group of commissioners representing both major political parties
+B. plan policy cooperatively with the appropriate congressional committees
+C. reapply for funding at the end of each fiscal year
+D. submit all planned policy changes to the president for approval
+Answer:",True,True
+"Which of the following is true of congressional redistricting?
+A. The responsibility for redrawing congressional districts belongs to congressional committees.
+B. It is a noncontroversial process because it has few political ramifications.
+C. It occurs every 10 years to reflect changes in population according to the census.
+D. The Supreme Court has ruled that legislators may not consider racial demographics when redrawing districts.
+Answer:",True,True
+"Which of the following most accurately describes The Federalist Papers?
+A. The Federalist party platform during the presidency of John Adams, the first Federalist president
+B. A popular anti-British booklet of the pre-Revolutionary era
+C. A collection of essays arguing the merits of the Constitution
+D. A series of congressional acts defining the relationship between the federal and state governments
+Answer:",True,True
+"Which of the following is true of court cases in which one private party is suing another?
+A. They are tried in civil court.
+B. The federal court system has exclusive jurisdiction over them.
+C. They are tried in criminal court.
+D. The state court system has exclusive jurisdiction over them.
+Answer:",True,True
+"Which of the following statements about political action committees (PACs) is most accurate?
+A. They may only campaign for issues, not for individual candidates
+B. Their activities are not regulated by the Federal Election Commission (FEC)
+C. Their activities are limited to national presidential elections
+D. They raise money to influence federal, state, and local elections
+Answer:",True,True
+"The line-item veto was ruled unconstitutional because it
+A. violated the legislative process by which bills become laws
+B. allowed Congress to eliminate sections of legislation without a two-thirds majority
+C. gave states the ability to override federal legislation
+D. empowered Congress to nullify executive actions
+Answer:",True,True
+"In which of the following cases did the Supreme Court decision establish the ""separate but equal"" doctrine of state-sponsored racial segregation?
+A. Plessy v. Ferguson
+B. McCulloch v. Maryland
+C. Gibbons v. Ogden
+D. Brown v. Board of Education
+Answer:",True,True
+"Which of the following categories of spending are paid without an appropriations bill?
+A. Department of Education special acts and authorizations
+B. Justice department budgets
+C. Federal budget entitlements
+D. Department of Defense funding
+Answer:",True,True
+"The Reorganization Plan 1 of 1939 and Executive Order 8248 allow the president to select the staff for the
+A. Peace Corps
+B. White House Office
+C. Senate Committee on Appropriations
+D. Cabinet
+Answer:",True,True
+"Failed felony prosecutions at the state level are sometimes retried at the federal level
+A. on appeal by state prosecutors
+B. under the ""double jeopardy"" provision of the Constitution
+C. because new evidence has voided the state-level verdict
+D. as civil liberties violations
+Answer:",True,True
+"Compared with political parties in countries such as England and Israel, both of which have multiparty systems, American political parties are
+A. less interested in influencing the outcome of elections
+B. less clearly identified with consistent political ideologies
+C. less effective at raising money from political supporters
+D. better able to reflect the goals of their entire constituencies
+Answer:",True,True
+"All of the following are true under the system of checks and balances EXCEPT
+A. the president's nominees must be approved by the Senate before taking office
+B. two-thirds of the Senate must approve presidentially negotiated treaties
+C. the president can override a congressional veto and pass laws
+D. Congress can override a presidential veto
+Answer:",True,True
+"The Supreme Court case Regents of University of California v. Bakke concerned which of the following issues?
+A. The rights of students to protest on a publicly funded campus
+B. In-class prayer at a publicly funded school
+C. The rights of students to carry concealed weapons on campus
+D. The use of racial quotas in public university admissions
+Answer:",True,True
+"Why has network news coverage become less diverse in recent years?
+A. Decreasing liberal bias in the news media
+B. Increasing visibility for individual candidates on TV
+C. Increasing concentration of ownership in the news media
+D. Decreasing cost of political ads on TV
+Answer:",True,True
+"Politicians and political reporters are natural adversaries; the adversarial nature of their relationship, however, is tempered by the fact that
+A. younger politicians who are more comfortable with the media are gradually displacing older politicians
+B. government regulations on interaction between the two groups are very strict
+C. each group is dependent on the other to perform its job effectively
+D. very few media outlets will cover a story that is embarrassing to a political leader
+Answer:",True,True
+"Both the War Powers Act of 1974 and the Budget and Impoundment Control Act of 1974 represent efforts by Congress to limit the powers of the
+A. Joint Chiefs of Staff
+B. House Ways and Means Committee
+C. Central Intelligence Agency
+D. president
+Answer:",True,True
+"Under the Articles of Confederation, the national government had the power to
+A. negotiate treaties
+B. collect taxes
+C. establish a federal judiciary
+D. enforce its laws
+Answer:",True,True
+"According to Brown v. Board of Education (1954), which of the following amendments was violated by the ""separate but equal"" doctrine that had been established in Plessy v. Ferguson (1896)?
+A. First Amendment
+B. Sixth Amendment
+C. Ninth Amendment
+D. Fourteenth Amendment
+Answer:",True,True
+"The Framers of the Constitution sought to insulate the Senate from public opinion by
+A. restricting Senate membership to those who previously served in the House of Representatives
+B. delegating the responsibility for electing senators to the state legislatures
+C. requiring all spending bills to originate in the House of Representatives
+D. empowering the Senate to provide advice and consent to the executive branch
+Answer:",True,True
+"All of the following statements about Congress are true EXCEPT:
+A. Only Congress can pass laws.
+B. A proposed amendment must be approved by two-thirds of the delegates in both houses of Congress.
+C. Congress can override a presidential veto if two-thirds of the House and Senate agree to do so.
+D. Congressional power over the bureaucracy is less than that of the president.
+Answer:",True,False
+"The majority of Supreme Court justices
+A. are appointed by presidents of the same political party
+B. have no prior judicial experience
+C. switch party affiliation during their term
+D. stay on the court for only a decade
+Answer:",True,True
+"Which of the following most accurately states the impact of the Civil Rights Act of 1964 on school desegregation in the South?
+A. Because it included no enforcement provisions, the Civil Rights Act of 1964 had no appreciable effect on school desegregation.
+B. By overturning the ""separate but equal"" principle, the Civil Rights Act of 1964 ended segregation in public schools.
+C. The Civil Rights Act of 1964 hastened school desegregation by cutting off federal funds to discriminatory school systems.
+D. The Civil Rights Act of 1964 sent federal troops to every segregated public school in the South to force school desegregation.
+Answer:",True,True
+"A presidential plurality victory occurs when
+A. the winning candidate receives less than 50 percent of the popular vote
+B. candidates receive an equal number of electoral votes and the popular vote determines the winner
+C. the Senate declares the formal winner
+D. the winning candidate receives more than 50% of the popular vote
+Answer:",True,True
+"Which of the following statements best characterizes cooperative federalism?
+A. The executive and legislative branches working on legislation together
+B. The federal government granting power over a policy area to the states
+C. Governments working with businesses to address an issue
+D. State and federal governments working on the same issue
+Answer:",True,True
+"In Gideon v. Wainwright, the Supreme Court ruled that criminal defendants in state cases have the right
+A. to representation by an attorney
+B. not to incriminate themselves
+C. to a speedy trial
+D. not to be punished excessively
+Answer:",True,True
+"Which of the following is not a special position held by a member of Congress?
+A. President pro tempore
+B. Speaker of the House
+C. Congressional Management Foundation Chair
+D. Minority Whip
+Answer:",True,True
+"All of the following statements concerning the likelihood that a person will vote are true EXCEPT:
+A. When there is a strong front-runner in a state, people in that state are less likely to vote.
+B. White-collar workers are more likely to vote than are blue-collar workers, with the exception of blue-collar workers who belong to unions.
+C. Voters who are registered as independent are less likely to vote than those who are registered Democrats or Republicans.
+D. There is no difference in the likelihood of voting among those with undergraduate degrees and those with postgraduate degrees.
+Answer:",True,True
+"Which of the following statements about the House of Representatives is true?
+A. All revenue bills must originate in the Senate before moving to the House.
+B. Representation in the House is allocated equally among the states, while representation in the Senate is allocated proportional to population.
+C. The Speaker of the House wields less power than the president pro tempore of the Senate.
+D. The House has a Committee on Ways and Means, while the Senate does not.
+Answer:",True,True
+"Which of the following best describes the Supreme Court's doctrine of incorporation?
+A. Although the Constitution empowers the federal government to regulate international trade, states may establish boycotts of goods imported from countries that use child labor.
+B. While the Congress creates laws, and the executive branch enacts and enforces those laws, only the Supreme Court may decide which laws and executive actions are unconstitutional.
+C. The Fifth Amendment guarantees that an individual may not be deprived of life, liberty, or property without due process, and this protection provides a legal justification for those who do not wish to serve on a jury.
+D. The Bill of Rights articulates certain rights in order to protect individuals from the federal government, and the Fourteenth Amendment extends most of those rights to protect individuals from the state governments as well.
+Answer:",True,True
+"People who join a political party other than the one to which their parents belong most often do so because of
+A. peer pressure
+B. economic issues
+C. religious beliefs
+D. pressure from their employers
+Answer:",True,True
+"The right of American citizens to petition the government for a redress of grievances is protected under the
+A. First Amendment
+B. Second Amendment
+C. Third Amendment
+D. Eighth Amendment
+Answer:",True,True
+"In the majority of cases, federal programs are implemented by
+A. private businesses working as subcontractors to the government
+B. state and local governments, by means of federal funding
+C. Congress, through the local offices of its elected representatives
+D. the federal courts, by means of criminal prosecutions
+Answer:",True,True
+"How many votes in the Senate must a presidential nominee to the Supreme Court receive in order to be confirmed?
+A. Forty percent
+B. Fifty-one percent
+C. Fifty-five percent
+D. Sixty percent
+Answer:",False,True
+"Appointments to which of the following positions must be confirmed by the Senate before taking effect? I. Director of Homeland Security II. Secretary of the Treasury III. National Security Advisor IV. U.S. Ambassador to the United Nations
+A. II only
+B. I and III only
+C. II and IV only
+D. I, II, and IV only
+Answer:",True,True
+"Which of the following best describes a block grant?
+A. Money provided to individuals to fund research projects
+B. Funds with few restrictions that are provided to state or local governments for general purpose use
+C. Funds distributed among states according to a set formula
+D. Money that can only be used for a specific purpose
+Answer:",True,True
+"A member of the House of Representatives wishing to influence tax policy would most likely try to serve on which of the following committees?
+A. Commerce
+B. Ways and Means
+C. Education and the Workforce
+D. Resources
+Answer:",True,True
+"Which of the following is an example of devolution?
+A. Allowing states to decide how to meet federally mandated greenhouse gas emissions targets
+B. A ""race to the bottom"" in which states compete with one another to have the fewest environmental regulations
+C. A state that legalizes marijuana possession in conflict with federal law
+D. A state being prevented from implementing a fuel efficiency standard that is more stringent than that set by the federal government
+Answer:",True,True
+"Which committee in the House of Representatives determines the procedure by which bills are debated and amended?
+A. Ways and Means
+B. Judiciary
+C. Ethics
+D. Rules
+Answer:",True,True
+"The government promotes preferential treatment for members of groups that have historically suffered from discrimination by means of
+A. the New Federalism
+B. affirmative action programs
+C. Social Security benefits
+D. bills of attainder
+Answer:",True,True
+"The rules governing the electoral college make it especially important for presidential candidates to
+A. win as many states as possible, regardless of the size of the states
+B. spend most of their time campaigning in the South
+C. campaign most aggressively among those who will be chosen as electors
+D. concentrate their campaign efforts on ""battleground"" states
+Answer:",True,True
+"Which of the following CANNOT limit the influence of the federal courts?
+A. A constitutional amendment to the contrary of a court decision
+B. The impeachment of a federal judge
+C. A governor's failure to enforce a court decision
+D. A national election recalling an unpopular judge
+Answer:",True,True
+"All of the following are constitutionally mandated presidential powers EXCEPT the power to
+A. negotiate treaties
+B. veto legislation
+C. grant reprieves and pardons
+D. declare war
+Answer:",True,True
+"The Constitution, as originally ratified, addressed all of the following weaknesses of the Articles of Confederation EXCEPT the
+A. lack of a chief executive office
+B. national government's inability to levy taxes effectively
+C. absence of a central authority to regulate interstate trade
+D. omission of a universal suffrage clause
+Answer:",True,True
+"Among the executive branch's checks on the legislative branch is the president's power to
+A. call special sessions of Congress
+B. introduce bills to the floor of Congress
+C. address Congress during its debate on bills
+D. vote on acts of Congress
+Answer:",True,True
+"Which of the following accurately describes individual entitlements?
+A. Congress provides funds to the states, and the states decide how best to spend the money.
+B. Congress is allowed to fund these programs only when the federal government has a budget surplus.
+C. Congress must pay benefits to anyone who qualifies to receive them.
+D. Congress grants money to states, provided that certain criteria are met.
+Answer:",True,True
+"Which of the following is true of most third parties in U.S. history?
+A. They arose and succeeded during times of prosperity.
+B. They were created to protest wars.
+C. At some point they won a majority of seats in Congress.
+D. They flourished during periods of widespread dissatisfaction.
+Answer:",True,True
+"The principles of freedom-""we hold these truths to be self-evident, that all men are created equal""- stated in the Declaration of Independence were influenced by the beliefs of political philosopher
+A. Thomas Hobbes
+B. Niccolo Macchiavelli
+C. Jonathan Edwards
+D. John Locke
+Answer:",True,True
+"Divided government frequently results in
+A. reapportionment of voting districts
+B. amendments to the Constitution
+C. conflict between states and the federal government
+D. delays in the confirmation of those nominated to be ambassadors
+Answer:",True,True
+"Which of the following is true of Congress's power of oversight?
+A. Congressional oversight activities most often take place at the committee and subcommittee levels.
+B. State challenges to congressional oversight have severely weakened Congress's oversight powers.
+C. Congressional oversight is primarily directed at the judicial branch.
+D. Constituent input does not influence congressional oversight.
+Answer:",True,True
+"Which of the following is the most accurate statement about writs of certiorari?
+A. Fewer than 5% of petitions for writs of certiorari are granted by the Supreme Court.
+B. The Supreme Court grants writs of certiorari only when there is a ""circuit split.""
+C. The lower court's ruling is overturned if the Supreme Court denies a writ of certiorari.
+D. Only the solicitor general may petition for a writ of certiorari.
+Answer:",True,True
+"Federal election laws require that, in
+A. an area that has a substantial community of non-English speakers, voters be provided with ballots in their native language
+B. an electoral district that has historically low voter turnout, polling places be open for longer than the typical work day
+C. a state with a budget deficit, a tax be collected from each voter to pay for the cost of the election
+D. a region with racial diversity, congressional district lines be drawn to guarantee that at least one elected congressperson be of a racial minority
+Answer:",True,True
+"The absence of a political party solely dedicated to labor and working class issues in the United States
+A. proves U.S. politicians are not concerned about serving working-class constituencies
+B. is the result of government restrictions placed on the political activities of labor unions
+C. reflects the difficulty of unifying a party around a single issue in a ""winner-take-all"" format
+D. demonstrates that, in the United States, most political issues regarding workers have been decided in the workers' favor
+Answer:",True,True
+"The Civil Rights Act of 1964 was passed to reinforce the
+A. presidential veto
+B. system of checks and balances
+C. states' power to challenge federal regulation
+D. Fourteenth Amendment
+Answer:",True,True
+"Which of the following is NOT part of the ""iron triangles"" that influence public policy-making?
+A. House committees
+B. Senate committees
+C. The courts
+D. Bureaucratic agencies
+Answer:",True,True
+"The attorney general is the head of which of the following entities?
+A. The Senate Judiciary Committee
+B. The Department of Justice
+C. The Department of State
+D. The Judge Advocate General's Corps
+Answer:",True,True
+"The Supreme Court's decision in Miranda v. Arizona was based mainly on the
+A. Constitutional prohibition of ex post facto laws
+B. incorporation of the Fifth Amendment through the due process clause of the Fourteenth Amendment
+C. Eighth Amendment restriction against cruel and unusual punishment
+D. abolition of slavery by the Thirteenth Amendment
+Answer:",True,True

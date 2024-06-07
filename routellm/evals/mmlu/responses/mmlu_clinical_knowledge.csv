@@ -1,0 +1,1591 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"What size of cannula would you use in a patient who needed a rapid blood transfusion (as of 2020 medical knowledge)?
+A. 18 gauge.
+B. 20 gauge.
+C. 22 gauge.
+D. 24 gauge.
+Answer:",True,True
+"The key attribute in successful marathon running is:
+A. strength.
+B. power.
+C. stride length.
+D. stamina.
+Answer:",True,True
+"Which of the following is the commonest cause of dementia in the UK?
+A. Alzheimer's disease.
+B. Cerebrovascular (stroke) disease.
+C. Lewy body dementia.
+D. HIV infection.
+Answer:",True,True
+"Which of the following is NOT a symptom of anaphylaxis?
+A. Stridor.
+B. Bradycardia.
+C. Severe wheeze.
+D. Rash.
+Answer:",True,True
+"In what situation are closed pouches applied?
+A. The patient has a semi-formed or liquid output.
+B. The patient has a colostomy.
+C. In the immediate post-operative period.
+D. The patient has a urostomy.
+Answer:",False,True
+"With an increasing number of sprints the:
+A. anaerobic contribution progressively increases.
+B. pH of the muscle falls below 6.0.
+C. blood glucose concentration falls below 3 mmol/L.
+D. relative contribution of aerobic metabolism increases.
+Answer:",False,False
+"Which of the following is true in diplopia?
+A. Diplopia can never occur if one eye is covered
+B. The outer image is always the false image
+C. A fourth nerve palsy occurs when the patient looks upwards
+D. A sixth nerve palsy causes a divergent squint
+Answer:",False,False
+"Sodium bicarbonate ingestion improves middle distance running performance by:
+A. elevating the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.
+B. reducing the pH and buffering capacity of the extracellular fluid allowing a faster efflux of hydrogen ions from muscle.
+C. elevating the pH and buffering capacity of the extracellular fluid allowing a faster influx of hydrogen ions into muscle.
+D. elevating the pre-exercise muscle pH.
+Answer:",True,True
+"Codons are composed of:
+A. triplet sequences of nucleotide bases in mRNA or DNA .
+B. quadruplet sequences of nucleotide bases in mRNA or DNA.
+C. triplet sequences of amino acids in polypeptide chains.
+D. triplet sequences of deoxyribose sugars in DNA.
+Answer:",True,True
+"Fatty acids are transported into the mitochondria bound to:
+A. thiokinase.
+B. coenzyme A (CoA).
+C. acetyl-CoA.
+D. carnitine.
+Answer:",True,True
+"Which of the answers below best indicates the compatible blood types that can be given to a person with a blood group B (rhesus negative)?
+A. Blood type AB (rhesus negative), blood type B, and blood type O (rhesus negative).
+B. Blood type B (rhesus positive) and blood type O (rhesus positive).
+C. Blood type B (rhesus negative) and blood type O (rhesus negative).
+D. Blood type B (rhesus negative) only.
+Answer:",True,True
+"Which of the following is true of a lower motor neurone lesion in the arm?
+A. It leads to increased tone in the arm (hypertonia)
+B. Fasciculations are never seen
+C. The reflexes are brisk
+D. An ulna nerve palsy is an example of a lower motor neurone lesion
+Answer:",False,True
+"Which of the following statements is false?
+A. Ammonia is produced in repeated high intensity exercise.
+B. Muscle lactate accumulation does not begin until at least 5 seconds of intermittent muscle contractions have taken place.
+C. Muscle phosphocreatine depletion begins in the first few seconds of high intensity exercise.
+D. With an increasing number of repeated sprints the rate of accumulation of lactate in muscle declines.
+Answer:",True,False
+"Glycogen breakdown in muscle initially results in the formation of:
+A. glucose.
+B. glucose-1-phosphate.
+C. glucose-6-phosphate.
+D. glucose-1,6-diphosphate.
+Answer:",False,True
+"The two principal contractile proteins found in skeletal muscle are:
+A. actin and troponin.
+B. actin and myosin.
+C. troponin and tropomyosin.
+D. myosin and tropomyosin.
+Answer:",True,True
+"Which one of the following represents a IIIrd cranial nerve palsy and is a neurosurgical emergency?
+A. Unilateral constricted pupil.
+B. Bilateral constricted pupils.
+C. Unilateral fixed dilated pupil.
+D. Oval shaped pupils.
+Answer:",True,True
+"Which of the following is true about a thyroid swelling?
+A. It always elevates on swallowing
+B. Lymph node enlargement is a good prognostic sign
+C. An ultrasound of the swelling is the best test to determine whether the nodule is actively secreting hormone
+D. A functioning nodule on isotope scanning is unlikely to be due to cancer
+Answer:",True,True
+"Which of the following is true of hepatomegaly?
+A. Emphysema is a cause
+B. The liver enlarges downwards from the left hypochondrium
+C. The presence of jaundice, spider naevi and purpura suggest alcohol as a cause
+D. The liver is usually resonant to percussion
+Answer:",True,True
+"Which of the following is true regarding reflexes?
+A. A positive babinski reflex is the same as a normal flexor response in the assessment of the plantar reflex
+B. An extensor plantar response indicates a lower motor neurone lesion
+C. The root value of the ankle reflex is S1
+D. The root value of the knee reflex is L1, L2
+Answer:",False,True
+"Which of the following is true of facial nerve palsy?
+A. Bells palsy is another term for an upper motor neurone lesion
+B. Ramsay Hunt Syndrome is an upper motor neurone lesion secondary to a Herpes Zoster infection
+C. An inability to close the eyelid on the paralysed side indicates a lower motor neurone lesion
+D. In Bell's Palsy the sense of taste is never affected
+Answer:",True,True
+"What is a colles fracture?
+A. Hand fracture.
+B. Elbow fracture.
+C. Finger fracture.
+D. Fracture of the radius and ulna at the wrist.
+Answer:",True,True
+"If a transfusion reaction is suspected, you should:
+A. turn off the transfusion, inform medical staff immediately, and follow transfusion policy advice on dealing with acute transfusion reactions.
+B. leave the transfusion running and contact the medical staff immediately.
+C. disconnect and dispose of the blood bag immediately.
+D. leave the transfusion running and record a set of observations on the patient.
+Answer:",True,True
+"Once a prescribed unit of blood product has been obtained from the blood bank and is out of refrigeration, the transfusion should commence within what period of time before it starts to deteriorate (as of 2020 medical knowledge)?
+A. 30 minutes.
+B. 90 minutes.
+C. 4 hours.
+D. 12 hours.
+Answer:",False,True
+"Which of the following statements is true about informal carers (as of 2020)?
+A. 50% of over 65s are providing informal care.
+B. One in six over 65s is providing some form of informal care.
+C. Informal carers should not be included in discharge planning.
+D. The majority of informal carers are fit and active.
+Answer:",True,True
+"Which of the following processes is not used to modify protein structure after translation has occurred?
+A. Lipidation.
+B. Attachment of more amino acids via peptide bonds.
+C. Glycosylation.
+D. Phosphorylation.
+Answer:",True,True
+"Why would you need to carry out a bladder washout for a patient at home?
+A. When their urine is clear.
+B. When the catheter is blocked.
+C. When the catheter is bypassing.
+D. When the catheter is dirty.
+Answer:",True,True
+"A 14-16 gauge needle is most likely to be used for:
+A. children.
+B. elderly patients.
+C. inserting in the back of the hand.
+D. trauma or burns patients.
+Answer:",False,True
+"Which of these features suggest that a crackling sound is more likely due to a pleural friction rub than crackles?
+A. More prominent in expiration
+B. Alters with coughing
+C. No pain over the area
+D. Clubbing
+Answer:",False,False
+"In games like soccer the blood lactate concentration:
+A. rarely increases above 3 mM.
+B. is usually lower at the end of the game than at the end of the first half.
+C. is usually higher at the end of the game than at the end of the first half.
+D. increases throughout the course of the game as the players become more fatigued.
+Answer:",False,False
+"Lactate and hydrogen ions leave the muscle:
+A. via a cotransport mechanism with carnosine.
+B. via an active transport mechanism.
+C. via a protein transporter molecule.
+D. by simple diffusion.
+Answer:",False,True
+"Which of the following is true of the spine?
+A. Back pain is an uncommon complaint
+B. Schober's test is designed to quantify the flexion of the lumbar spine
+C. Ankylosing spondylitis is a cause of hypermobility of the spine
+D. Pregnancy is a cause of loss of lordosis of the lumbar spine
+Answer:",True,True
+"Which of the following is true of psoriatic arthropathy?
+A. The absence of plaques of psoriasis excludes the diagnosis
+B. The diagnosis can be confirmed by a blood marker
+C. Tophi can sometimes be seen over affected joints
+D. Nail pitting may give a clue to the diagnosis
+Answer:",True,True
+"Which of the following is true of Graves Disease of the thyroid?
+A. It is a cause of ophthalmoplegia
+B. It causes a large multi-nodular goitre
+C. It is commoner in males than females
+D. In the past, Grave's disease sometimes caused 'Derbyshire Neck'
+Answer:",True,True
+"Which of the following is true of calcium metabolism?
+A. Calcitonin causes a rise in plasma calcium
+B. Primary hyperparathyroidism is usually asymptomatic
+C. Vitamin D is secreted by the parathyroid glands
+D. Oliguria is a symptom of hypercalcaemia
+Answer:",False,True
+"Kinase reactions:
+A. inhibit ATP breakdown.
+B. involve the addition or removal of a phosphate group.
+C. involve the addition or removal of a ketone group.
+D. involve the addition or removal of an amino acid to a polypeptide chain.
+Answer:",True,True
+"The normal respiratory rate for an adult male is:
+A. 10-12 breaths per minute.
+B. 8-10 breaths per minute.
+C. 20-22 breaths per minute.
+D. 14-16 breaths per minute.
+Answer:",False,True
+"Collagen fibres:
+A. are re-established in the first five days of wound healing.
+B. provide a bridge across the surface of a wound.
+C. take some time to re-establish.
+D. are not needed if a wound is healing by primary intention.
+Answer:",True,True
+"Which of the following releases most energy when completely oxidised in the body?
+A. One gram of glucose
+B. One gram of palmitic acid
+C. One gram of leucine
+D. One gram of alcohol
+Answer:",True,True
+"Embedded in the inner membrane of the mitochondrion are:
+A. the enzymes of the tricarboxylic acid cycle (Krebs' cycle).
+B. the components of the electron transport chain.
+C. glycogen molecules.
+D. triacylglycerol molecules.
+Answer:",True,True
+"If the mean rate of oxygen consumption of a male athlete during a training session is 2 l/min, then his rate of energy expenditure is approximately:
+A. 400 kJ/min.
+B. 200 kJ/min.
+C. 80 kJ/min.
+D. 40 kJ/min.
+Answer:",False,False
+"A normal heart rate for an adult at rest is:
+A. 60-80 bpm.
+B. 60-100 bpm.
+C. 60-90 bpm.
+D. 60-110 bpm.
+Answer:",False,True
+"Which of the following statements is false?
+A. Phosphofructokinase is the rate limiting enzyme in glycolysis.
+B. Phosphorylase activity is higher in Type II fibres than in Type I fibres.
+C. Endurance training increases the amount of TCA cycle enzymes in muscle.
+D. Oxygen is consumed in the TCA cycle.
+Answer:",True,True
+"Which of the following is true in ulna nerve palsy?
+A. The ulna nerve can be affected by a fracture of the spiral groove of the humerus
+B. It gives rise to a positive phalen's sign
+C. It leads to loss of sensation over the medial half of the hand and medial one and a half digits on both palmar and dorsal aspects of the hand
+D. It supplies the biceps muscles
+Answer:",False,True
+"How much toothpaste is recommended for cleaning teeth?
+A. A smear.
+B. A pea-sized amount.
+C. The length of the toothbrush.
+D. Half an inch.
+Answer:",True,True
+"Which of the following is true about Cushing's Syndrome?
+A. It is due to a deficiency of cortisol hormone
+B. Enlarged extremities are commonly seen
+C. Osteoporosis is not a feature
+D. A moon face and a buffalo hump are characteristic of the disease
+Answer:",True,True
+"The main factors determining success in sport are:
+A. a high energy diet and large appetite.
+B. high intelligence and motivation to succeed.
+C. a good coach and the motivation to succeed.
+D. innate ability and the capacity to respond to the training stimulus.
+Answer:",False,True
+"In a double stranded molecule of DNA, the ratio of purines : pyrimidines is:
+A. variable.
+B. determined by the base sequence in RNA.
+C. genetically determined.
+D. always 1:1.
+Answer:",True,True
+"Performance enhancing synthetic steroids are based on the structure of the hormone:
+A. testosterone.
+B. cortisol.
+C. progesterone.
+D. aldosterone.
+Answer:",True,True
+"Glycogen breakdown in exercising muscle is activated by:
+A. insulin.
+B. cortisol.
+C. increased pH.
+D. none of the above.
+Answer:",True,True
+"Most of the free fatty acids are transported in the blood:
+A. inside the red blood cells.
+B. as lipoproteins.
+C. combined with glucose.
+D. bound to albumin.
+Answer:",True,True
+"How often should a cannula be flushed?
+A. Every 4 hours.
+B. Every 8 hours.
+C. Every 12 hours.
+D. Every 16 hours.
+Answer:",False,False
+"The activity of creatine kinase is:
+A. increased when intracellular ADP rises.
+B. increased when muscle pH falls below 6.9.
+C. always lower in Type II fibres than Type I fibres.
+D. increased after a period of endurance training.
+Answer:",True,True
+"The smallest increments on a mercury and aneroid sphygmomanometer measure are:
+A. 10 mmHg.
+B. 4 mmHg.
+C. 2 mmHg.
+D. 1 mmHg.
+Answer:",True,True
+"Which of the following is not an abnormal breathing pattern seen in head injury and altered conscious level?
+A. Cheyne-Stokes respiration.
+B. Anaerobic respiration.
+C. Hyperventilation.
+D. Ataxic breathing.
+Answer:",True,True
+"During CPR chest compressions and ventilations should be delivered in a ratio of:
+A. 2:25
+B. 15:02
+C. 1:05
+D. 30:02:00
+Answer:",True,True
+"A person weighs 62 kg. Their drug dose is 15 mg/kg. How many grams is their dose? Choose one answer from the following:
+A. 930
+B. 93
+C. 9.3
+D. 0.93
+Answer:",False,False
+"An expected side effect of creatine supplementation is:
+A. muscle weakness.
+B. gain in body mass.
+C. muscle cramps.
+D. loss of electrolytes.
+Answer:",True,True
+"The cardiac cycle consists of the phases:
+A. systole, diastole, and rest.
+B. contraction, relaxation, and rest.
+C. diastole and systole.
+D. diastole, systole, and contraction.
+Answer:",True,True
+"Which of the following factors does not influence success in sport?
+A. Ability to tolerate heavy training without succumbing to illness or injury.
+B. Tactics.
+C. The diet.
+D. Ingestion of carnitine during exercise.
+Answer:",True,True
+"The chain of survival has four links. Put the following list in the correct order: 1. Early defibrillation; 2. Early CPR; 3. Recognition and call for help early; 4. Post-resuscitation care.
+A. 3, 1, 2, 4.
+B. 3, 2, 1, 4.
+C. 1, 2, 3, 4.
+D. 2, 1, 3, 4.
+Answer:",False,True
+"A fundamental cause of fatigue in high intensity exercise is:
+A. a fall in the cell concentration of ADP.
+B. inhibition of ATP production.
+C. failure of the ATP supply to match the demand.
+D. lack of skill.
+Answer:",True,True
+"Which of the following is true about possible rectal findings?
+A. The finding of a palpable median groove in the prostate is an adverse finding
+B. Impacted faeces can sometimes be mistaken for a rectal tumour
+C. A thrombosed haemorrhoid is painless
+D. Peri-anal warts can only be demonstrated on proctoscopy
+Answer:",True,True
+"What commonly causes skin excoriation?
+A. A well-fitting pouch.
+B. Changing the pouch every day.
+C. Leakage of effluent onto peristomal skin.
+D. The use of unscented soap to cleanse the skin.
+Answer:",True,True
+"Which of the following is true of Systemic Sclerosis?
+A. It affects males more than females
+B. If telangiectasia are seen this clinches the diagnosis
+C. Arachnodactyly is a feature of the disease
+D. Patients have a beaked shaped nose and waxy skin
+Answer:",True,True
+"A palpable left parasternal impulse suggests which abnormality?
+A. Right ventricular hypertrophy
+B. Aortic stenosis
+C. Aortic regurgitation
+D. Left ventricular hypertrophy
+Answer:",False,True
+"In hypovolaemic shock, what percentage of blood can be lost before it is reflected in changes in heart rate and blood pressure?
+A. 5%
+B. 10%
+C. 20%
+D. 30%
+Answer:",False,False
+"Which of the following best describes the effects of morphine?
+A. Reduces pain intensity and increases alertness.
+B. Reduces pain intensity but also causes sedation.
+C. Reduces pain intensity but also causes diarrhoea.
+D. Reduces pain intensity but also causes insomnia.
+Answer:",True,True
+"Which of the following is true of headache?
+A. When associated with neck stiffness is always due to meningitis
+B. Severe pain usually indicates a life threatening cause
+C. Temporal arteritis is strongly associated with rheumatoid arthritis
+D. Tension headaches is a common cause of headache
+Answer:",True,True
+"Between contractions of the left ventricle the blood continues to flow through the vessels because:
+A. the atria are contracting.
+B. the vessels are contracted.
+C. the right ventricle is relaxed.
+D. the arteries have elastic recoil.
+Answer:",True,True
+"What might make the nurse think a patient could not use an inhaler?
+A. Severe leg ulcers.
+B. Previous recovery from an acute exacerbation of asthma.
+C. Forthcoming surgery.
+D. Poor technique, physical impairment, or lack of understanding.
+Answer:",True,True
+"Removal of adhesive strips:
+A. can be carried out by the patient.
+B. should be undertaken under aseptic conditions.
+C. is a specialist skill.
+D. should not be undertaken until at least seven days after application.
+Answer:",True,True
+"During CPR, chest compressions should be delivered at a rate of:
+A. 80/minute.
+B. as fast as possible.
+C. 100/minute.
+D. varies with each patient.
+Answer:",True,True
+"Which of the following physiological characteristics is not important for success in endurance events such as the marathon race?
+A. The ability to regulate body temperature.
+B. The ability to supply oxygen to the exercising muscles.
+C. The availability of body stores of carbohydrate.
+D. Muscle ATP and phosphocreatine content.
+Answer:",True,True
+"When using an inhaler, when should a patient be asked to rinse their mouth?
+A. Before using their bronchodilator inhaler.
+B. After using their bronchodilator inhaler.
+C. Before using their steroid inhaler.
+D. After using their steroid inhaler.
+Answer:",True,True
+"Muscle lactate production increases when:
+A. oxygen is readily available.
+B. pyruvate cannot be formed from glucose breakdown.
+C. the pH of the muscle falls.
+D. glycolysis is activated at the onset of exercise.
+Answer:",False,True
+"What is the minimum time a stretch should be held for?
+A. 0-10 seconds.
+B. 10-30 seconds.
+C. 30-50 seconds.
+D. 60 seconds.
+Answer:",True,True
+"What three factors regulate stroke volume?
+A. Blood volume, preload, and afterload.
+B. Preload, contractility, and afterload.
+C. Contractility, blood volume, and blood pressure.
+D. Cardiac output, contractility, and blood volume.
+Answer:",True,True
+"Name the bones of the middle finger in the correct order from the hand.
+A. Proximal phalynx, middle phalynx, distal phalynx.
+B. Distal phalynx, middle phalynx, proximal phalynx.
+C. Middle phalynx, distal phalynx, proximal phalynx.
+D. Distal phalynx, proximal phalynx, middle phalynx.
+Answer:",True,True
+"Which of the following promotes glucose and amino acid uptake by muscle?
+A. Adrenaline
+B. Insulin
+C. Glycogen
+D. Cortisol
+Answer:",True,True
+"An ileostomy opening should be:
+A. flush with the skin.
+B. 3-5cm in length.
+C. below skin level.
+D. over 5cm in length.
+Answer:",False,False
+"Which of the following would not be done before catheterizing?
+A. Gain patient consent.
+B. Patient to be washed.
+C. Expiry dates to be checked.
+D. Ring patient's next of kin.
+Answer:",True,True
+"Hydrogen ions are formed when:
+A. glycogen becomes depleted.
+B. phosphocreatine breakdown occurs.
+C. pyruvate is converted to lactate.
+D. glycolysis is being used as a major means of resynthesising ATP.
+Answer:",True,False
+"Which one of the following manoeuvres is not a central painful stimulus?
+A. Supra-orbital ridge pressure.
+B. Pressure on the little finger pulp.
+C. Trapezius squeeze.
+D. Sternal rub.
+Answer:",True,True
+"Dopamine is prescribed at a rate of 4 micrograms/kg/min. For a 65 kg person, how many milligrams will they receive in an hour?
+A. 156
+B. 15.6
+C. 1.56
+D. 15600
+Answer:",False,True
+"Which of the following is true about the rectal examination?
+A. If the patient refuses a chaperone the doctor can overrule them
+B. The rectal examination is of no value in a neurological examination
+C. The optimum position of the patient is on their right side with their knees extended
+D. The rectal examination is indicated for the assessment of some gastrointestinal disorders
+Answer:",True,True
+"Why can't a patient talk if the cuff is inflated?
+A. They are unable to breathe in sufficiently.
+B. They are unable to swallow properly.
+C. It is too tiring.
+D. They are unable to pass air through their vocal cords.
+Answer:",True,True
+"Wound drainage should be assessed for volume and consistency:
+A. each time post-operative observations are undertaken.
+B. daily.
+C. every hour.
+D. only when the wound dressing is changed.
+Answer:",True,True
+"Creatine is synthesized from:
+A. amino acids in the muscles.
+B. amino acids in the liver.
+C. amino acids in the kidneys.
+D. creatinine in the kidneys.
+Answer:",True,True
+"If a catheter resists all attempts to unblock it and you are unable to remove it, what should you do?
+A. Try harder to remove it.
+B. Try harder to unblock it.
+C. Leave it until next time.
+D. Call for assistance from a medical practitioner.
+Answer:",True,True
+"Bladder washout solution should be:
+A. warm.
+B. cold.
+C. refrigerated.
+D. room temperature.
+Answer:",False,False
+"When developing a plan of care relating to the management of a person's pain, attention should be given to the following needs:
+A. physical and pharmacological needs only.
+B. physical and psychological needs only.
+C. physical, psychological, and pharmacological needs followed by regular reassessment.
+D. none of the above, as the main priority is to limit drug side effects.
+Answer:",True,True
+"Patients with the apolipoprotein E gene are at risk of which disease?
+A. Cystic fibrosis.
+B. Huntington's dementia.
+C. Alzheimer's disease.
+D. Depression.
+Answer:",True,True
+"Which of the following groups of drugs may cause a dry mouth?
+A. Steroids.
+B. Analgesics.
+C. Antidepressants.
+D. Antifungal agents.
+Answer:",True,True
+"Which of the following is not a true statement?
+A. Muscle glycogen is broken down enzymatically to glucose-1-phosphate
+B. Elite endurance runners have a high proportion of Type I fibres in their leg muscles
+C. Liver glycogen is important in the maintenance of the blood glucose concentration
+D. Insulin promotes glucose uptake by all tissues in the body
+Answer:",True,True
+"If a patient is cyanosed, what might their oxygen saturation level be?
+A. 98% or above.
+B. 94% or above.
+C. 80% or below.
+D. 85% or above.
+Answer:",True,True
+"When assessing a patient's breathing:
+A. always remove dentures.
+B. look for chest movements and use a mirror to check for exhaled air.
+C. look for chest movements, listen for breath sounds, and feel for exhaled air on your cheek.
+D. assess for 30 seconds.
+Answer:",True,True
+"A person is prescribed Ropinirole 1.5 mg divided into three doses. How many micrograms is each dose? Choose one answer from the following:
+A. 5
+B. 50
+C. 0.5
+D. 500
+Answer:",False,True
+"Which of the following is thought to be implicated in the development of peripheral muscle fatigue during multiple sprint activities?
+A. An accumulation of inorganic phosphate.
+B. Development of hyperosmolality in the muscles.
+C. An excess of antioxidants.
+D. A lack of potassium.
+Answer:",True,True
+"The ATP store in muscle can only supply energy in high intensity exercise for about:
+A. 2 milliseconds.
+B. 2 seconds.
+C. 10 seconds.
+D. 20 seconds.
+Answer:",True,False
+"960 mg of the antibacterial drug Cotrimoxazole is prescribed every 12 hours. What is the daily dose in grams? Choose one answer from the following:
+A. 0.192
+B. 1.92
+C. 1920
+D. 0.96
+Answer:",True,False
+"Which of the following is true of hypothyroidism?
+A. Weight loss
+B. Pre-tibial myxoedema
+C. A raised TSH level
+D. An aversion to warm places
+Answer:",True,True
+"What is hypochlorhydria?
+A. Increased amount of gastric acid.
+B. Gastric ulceration.
+C. Reduced amount of gastric acid.
+D. Pernicious anaemia.
+Answer:",True,True
+"A 67-year-old man, three hours post-transurethral resection of prostate with irrigation, has a blocked catheter. Which solution should be used to complete bladder washout?
+A. Solution R.
+B. Normal saline.
+C. Solution G.
+D. Any of the above.
+Answer:",False,True
+"A keloid is:
+A. evidence of infection.
+B. a firm mass of scar tissue.
+C. a fine, hairline scar.
+D. formed if a wound drain is removed too soon.
+Answer:",True,True
+"Which of the following is not an amino acid?
+A. Glutamic acid
+B. Aspartic acid
+C. Glutamine
+D. Palmitic acid
+Answer:",True,True
+"Wound drainage is described as serous if:
+A. it contains red blood cells.
+B. it is thick and yellow or green.
+C. it contains microorganisms.
+D. it is clear or slightly yellow.
+Answer:",True,True
+"The sex of a child is dictated by the inheritance of:
+A. the number of X chromosomes from the mother.
+B. a recessive allele on the X chromosome.
+C. a single Y chromosome from the mother.
+D. a single Y chromosome from the father.
+Answer:",True,True
+"Which of the following is true in spastic paraplegia?
+A. Multiple Sclerosis can cause this neurological pattern
+B. Proprioceptive loss is a common feature
+C. Coordination in the legs is affected
+D. The tone is normal or flaccid
+Answer:",False,True
+"The synthesis of glucose from lactate, glycerol, or amino acids is called:
+A. glycogenolysis.
+B. glycolysis.
+C. lipolysis.
+D. gluconeogenesis.
+Answer:",True,True
+"If a blood unit has been out of refrigeration for longer than the accepted time limit, you should:
+A. transfuse it as soon as possible and annotate the patient's notes with the time of administration.
+B. dispose of the contents in the sluice area, keeping the bag for record purposes.
+C. return it to the blood bank and inform them of why you have done so.
+D. refrigerate for a minimum of 12 hours and then administer it.
+Answer:",True,True
+"The auscultatory gap is:
+A. when you can no longer hear the Korotkoff sounds because the bladder is equal with the diastolic pressure.
+B. when the Korotkoff sounds can be heard between systolic and diastolic phases.
+C. when the Korotkoff sounds disappear then return during phase 2 as the bladder is deflated.
+D. When the Korotkoff sounds do not disappear when the cuff is fully deflated.
+Answer:",True,True
+"How many different types of microorganisms may colonize the mouth?
+A. 35
+B. 100
+C. 350
+D. 500
+Answer:",True,False
+"Why should shampoo not be used for washing the skin when showering or bathing?
+A. It is more slippery than soap or emollients.
+B. It will not produce sufficient lather.
+C. It is not cost-effective.
+D. It can cause dryness of the skin.
+Answer:",True,True
+"Which of the following is the same strength as Adrenaline 1 in 1000? Choose one answer from the following:
+A. 1 mg/mL
+B. 1 mg/L
+C. 1 g/mL
+D. 100 micrograms/mL
+Answer:",True,True
+"An allele that is masked is referred to as:
+A. recessive.
+B. redundant.
+C. repressed.
+D. reclusive.
+Answer:",True,True
+"Hypernatraemic dehydration is:
+A. water intake is less than is needed to maintain balance.
+B. water intake is more than is needed to maintain balance.
+C. blood volume is lost due to trauma or burns.
+D. blood volume is lost due to surgery.
+Answer:",True,True
+"Which of the following is not associated with an increase in the work of breathing?
+A. Rise in respiratory rate.
+B. Noisy breathing.
+C. Increase in the use of accessory muscles.
+D. A respiratory rate of 16 breaths per minute.
+Answer:",True,True
+"Which of the following can act as an intracellular buffer to limit pH changes when the rate of glycolysis is high?
+A. Glutamine
+B. Glucose
+C. Carnosine
+D. Amylase
+Answer:",True,True
+"Which of the following is true about Addisons Disease?
+A. It is due to a deficiency of prolactin hormone
+B. Leads to generalized pigmentation
+C. It is a recognized cause of hypertension
+D. Diabetes is a complication
+Answer:",True,True
+"Which of the following are indicative signs and symptoms of circulatory overload?
+A. Hypothermia, hypotension, and bradycardia.
+B. Hypotension, oliguria, and uticaria.
+C. Shivering, pyrexia, and thirst.
+D. Dyspnoea, tachycardia, and distended neck veins.
+Answer:",True,True
+"What is the most likely cause of acute urinary retention of urine?
+A. Haematuria.
+B. Bladder outflow obstruction.
+C. Drinking alcohol.
+D. Kidney stones.
+Answer:",True,True
+"Which of the following tools is the first choice for cleaning the mouth?
+A. Small, soft toothbrush.
+B. Gloved finger wrapped in gauze.
+C. Forceps wrapped in gauze.
+D. Foam stick.
+Answer:",False,True
+"Which of the following drugs may be used to enhance gastric motility?
+A. Adrenaline.
+B. Ditropan.
+C. Erythromycin.
+D. Carbemazepine.
+Answer:",True,True
+"The creatine kinase reaction is:
+A. irreversible.
+B. slow compared with glycolysis.
+C. not activated until all the ATP has been used up.
+D. inhibited by low pH in the muscle.
+Answer:",True,True
+"Where should a stoma be sited?
+A. The rectus sheath abdominus.
+B. Next to the umbilicus.
+C. Within an abdominal crease.
+D. In close proximity to the incision site.
+Answer:",False,False
+"Women's world record performances have improved rapidly in recent years mainly because:
+A. women have evolved a greater muscle mass.
+B. women can now run faster than men.
+C. women have started training at an earlier age.
+D. more women are now engaged in sport.
+Answer:",True,True
+"Our genetic material is made up of:
+A. deoxyribonucleic acid.
+B. ribonucleic acid.
+C. dinitronucleic acid.
+D. protein.
+Answer:",True,True
+"Insensible loss does not come from:
+A. pyrexia.
+B. using unhumidified oxygen.
+C. excessive weight loss.
+D. diarrhoea.
+Answer:",True,False
+"Exhaustion, confusion, and unresponsiveness can be indicators of:
+A. respiratory failure.
+B. being generally unwell.
+C. renal failure.
+D. cardiac failure.
+Answer:",True,True
+"Pairs of electrons carried in the form, FADH2 and NADH+H, collectively contain enough free energy to rephosphorylate:
+A. 6 ATP.
+B. 5 ATP.
+C. 4 ATP.
+D. 3 ATP.
+Answer:",False,False
+"A muscle fibre relaxes when:
+A. the nerve stimulus is removed.
+B. the nerve stimulus is too forceful.
+C. the actin binding sites are uncovered.
+D. the actin binding sites are saturated.
+Answer:",True,True
+"Which of the following best describes the Golgi tendon organ?
+A. Proprioceptive motor receptor found within main muscle body.
+B. Proprioceptive sensory receptor found at the junction between muscle and tendon.
+C. Proprioceptive sensory receptor found within main muscle body.
+D. Proprioceptive motor receptor found at the junction between muscle and tendon.
+Answer:",True,True
+"The pulse can be palpated:
+A. every time the atria contracts.
+B. when a vein is close to the surface of the skin.
+C. every time the left ventricle contracts.
+D. when an artery is close to the surface of the skin.
+Answer:",True,True
+"The pyruvate dehydrogenase complex:
+A. is located in the sarcoplasm.
+B. catalyses the conversion of pyruvate to acetyl CoA.
+C. catalyses the conversion of pyruvate to lactate.
+D. catalyses the conversion of lactate to pyruvate.
+Answer:",True,True
+"Which of the following is true about the knee joint?
+A. The knee is a ball and socket joint
+B. A baker's cyst can sometimes be found anterior to the knee
+C. The patellar tap is used to demonstrate an effusion
+D. 'knock knee' deformity is due to bilateral genu varum
+Answer:",True,True
+"Who is the publication Your guide to the NHS written for?
+A. GPs.
+B. Patient lobby groups.
+C. The general public.
+D. Patients admitted to hospital.
+Answer:",True,True
+"Which of the following is true about the assessment of arm reflexes?
+A. The root value of the biceps reflex is C5, C6
+B. If no reflex is elicited when you tap a tendon it is documented as absent
+C. The triceps tendon is struck in the antecubital fossa
+D. Brisk finger jerks confirm a lower motor neurone lesion
+Answer:",True,True
+"Which of these is most likely to cause deviation of the trachea?
+A. A left basal pneumonia
+B. A small right pleural effusion
+C. Previous tuberculosis of the right upper lobe
+D. Idiopathic fibrosing alveolitis
+Answer:",False,True
+"What is the risk if water is used for bladder washout in secondary care?
+A. Fluid may bypass when the washout is carried out.
+B. Bladder washout may be unsuccessful.
+C. Using water may cause electrolyte imbalance.
+D. The medical staff may be unhappy.
+Answer:",True,True
+"What is the 'normal' range of flexion at the knee joint?
+A. 0-115 degrees.
+B. 0-135 degrees.
+C. 0-155 degrees.
+D. 0-175 degrees.
+Answer:",True,True
+"Which of the following is not a controlled drug?
+A. A 30 milligram ampoule of Codeine Phosphate for injection.
+B. A sustained release Morphine tablet.
+C. A 12.5 microgram Fentanyl patch.
+D. A 500 ml bottle of Morphine 10 mg in 5 ml in oral suspension.
+Answer:",True,False
+"After what period of time does maximal dynamic exercise become predominantly aerobic?
+A. 10 seconds
+B. 30 seconds
+C. 1 minute
+D. 4 minutes
+Answer:",False,False
+"The trigger to initiate the contractile process in skeletal muscle is:
+A. potassium binding to myosin.
+B. calcium binding to tropomyosin.
+C. ATP binding to the myosin cross bridges.
+D. calcium binding to troponin.
+Answer:",True,True
+"Which of the following is NOT a sign of phlebitis?
+A. Swelling.
+B. Redness.
+C. Exudate.
+D. Cool to the touch.
+Answer:",True,True
+"The energy charge of the cell is:
+A. the difference between the charge on the outside and inside of a cell.
+B. generated by the sodium-potassium ATPase.
+C. the overall rate of energy use by the cell.
+D. the extent to which the total adenine nucleotide pool is phosphorylated.
+Answer:",True,True
+"The sarcoplasmic reticulum in muscle cells acts as a:
+A. store of digestive enzymes.
+B. store of sodium ions.
+C. store of lipid.
+D. store of calcium ions.
+Answer:",True,True
+"Which of the following parameters are seen on typical neurological observation charts?
+A. Urine output.
+B. Temperature.
+C. Central venous pressure.
+D. Blood glucose.
+Answer:",False,True
+"In the discharge checklist recommended by the Department of Health (2004), who should be involved in completing the form?
+A. The GP, consultant, and named nurse.
+B. The nurse, patient, and ward clerk.
+C. The nurse, ward clerk, and consultant.
+D. The nurse, consultant, and GP.
+Answer:",False,False
+"Which of the following is true regarding the complications of a large goitre?
+A. It causes stridor due to compression of the oesophagus
+B. Dysphagia is an indication for surgery
+C. It causes hoarseness due to compression of the trachea
+D. It causes a more florid thyrotoxicosis than a smaller goitre
+Answer:",False,True
+"The heart has:
+A. two valves and two chambers.
+B. four valves and four chambers.
+C. two valves and four chambers.
+D. four valves and two chambers.
+Answer:",False,True
+"Which one of the following groups of patients should be assessed using an Early Warning Score (EWS)?
+A. Only patients over 60 years of age.
+B. Only patients admitted to the Emergency Department.
+C. Only patients who have been on an Intensive care/High dependency unit.
+D. Any patient who is acutely unwell pre-operatively or post-operatively and those who have undergone major surgery.
+Answer:",True,True
+"What is the purpose of the cuff on a tracheostomy tube?
+A. To create an air seal within the trachea and reduce the risk of aspirating saliva or gastric contents.
+B. To reduce local oedema.
+C. To assist with swallowing.
+D. To allow the patient to talk.
+Answer:",True,True
+"What type of covalent bonds link the amino acids in a protein?
+A. Peptide bonds
+B. Hydrogen bonds
+C. Ionic bonds
+D. Glycosidic bonds
+Answer:",True,True
+"Which is the most reliable way to assess for clubbing?
+A. Inspect the nail-bed angle from above
+B. Assessing the fluctuancy of the nail-bed
+C. Schamroth's sign
+D. Inspect the nail-bed angle from the side
+Answer:",False,False
+"The term gene doping refers to:
+A. the use of drugs to modify gene transcription.
+B. the use of genetic manipulation techniques to enhance performance in sport.
+C. the activation or inhibition of genes to mask drug taking by athletes.
+D. the use of drugs to modify the myostatin gene.
+Answer:",True,True
+"Name three of the five main uses of the hand.
+A. Touch, feel, stroke.
+B. Grip, percussion, sensory.
+C. Tap, slap, clap.
+D. Touch, pinch, grasp.
+Answer:",False,False
+"Which of the following is true about an abdominal mass?
+A. A pulsatile mass is always due to an aortic aneurysm
+B. An enlarged kidney is dull to percussion
+C. A large mass arising out of the pelvis which disappears following urethral catheterization is caused by an ovarian cyst
+D. An indentible mass is caused by faecal loading of the colon
+Answer:",False,False
+"Which of the following is not a category used to classify patients according to the Glasgow Coma Scale?
+A. Eye opening.
+B. Verbal response.
+C. Best motor response.
+D. Pupil response.
+Answer:",True,True
+"Which of these combinations of clinical features is most suggestive of mixed mitral valve disease with a predominance of mitral regurgitation?
+A. Displaced apex beat; soft first heart sound; pan-systolic murmur; short mid-diastolic murmur
+B. Irregularly, irregular pulse; displaced apex beat; ejection systolic murmur; short mid-diastolic murmur
+C. Displaced apex beat; normal first heart sound; pan-systolic murmur; long mid-diastolic murmur
+D. Tapping apex beat; loud first heart sound; pan-systolic murmur; long mid-diastolic murmur
+Answer:",True,True
+"Prior to undergoing a painful procedure, a patient should be informed about what to expect and how their pain will be controlled, as this is associated with:
+A. a reduction in anxiety and perceived pain intensity.
+B. an increased use of analgesia.
+C. a decrease in the frequency of pain-related problems such as nausea and vomiting.
+D. an increased urine output.
+Answer:",True,True
+"The conversion of one molecule of glucose to two molecules of pyruvate results in the net formation of:
+A. six molecules of water.
+B. two molecules of ATP.
+C. three molecules of ATP.
+D. thirty-eight molecules of ATP.
+Answer:",False,True
+"The net production of ATP via substrate-level phosphorylation in glycolysis is:
+A. 2 from glucose and 3 from glycogen.
+B. 2 from glucose and 4 from glycogen.
+C. 3 from glucose and 4 from glycogen.
+D. 3 from glucose and 2 from glycogen.
+Answer:",True,False
+"Which of the following is true about rectal bleeding?
+A. A painful digital examination suggests an anal fissure
+B. Bright red blood on the finger usually signifies a caecal lesion
+C. Proctoscopy is of no value in the assessment of rectal bleeding
+D. Rectal cancer is the commonest cause of rectal bleeding
+Answer:",True,True
+"Mutations are errors in DNA that:
+A. are always harmful.
+B. only occur in the presence of carcinogens.
+C. increase tumour growth.
+D. occur spontaneously at a low rate.
+Answer:",True,True
+"When recording peak flow results, within how many litres/minute should the three readings be?
+A. 10 litres per minute of each other.
+B. 20 litres per minute of each other.
+C. 100 litres per minute of each other.
+D. 30 litres per minute of each other.
+Answer:",False,True
+"Peak flow meters record:
+A. the lowest rate of air expelled from the lungs through an open mouth.
+B. forced expiratory volume.
+C. forced vital capacity.
+D. the highest rate of air expelled from the lungs through an open mouth.
+Answer:",True,True
+"Which of the following should patients remember when taking paracetamol?
+A. It can interfere with the effectiveness of other drugs such as Warfarin.
+B. It should only be given on an 'as required' basis.
+C. Patients should carefully check the contents of over-the-counter cold remedies in order to prevent accidental overdose, as such preparations often contain additional paracetamol.
+D. It is contraindicated in patients with pyrexia.
+Answer:",True,True
+"Which of the following molecules does not form part of DNA?
+A. Purine
+B. Pyrimidine
+C. Deoxyribose
+D. Amino acid
+Answer:",True,True
+"Which of the following is true about jaundice?
+A. Pale stools and dark urine are characteristic of the jaundice of haemalytic anaemia
+B. Bilirubin is used by the liver in the synthesis of red blood cells
+C. Itching may be a sign of obstructive jaundice
+D. Putting a danger of infection sticker on blood samples from an intravenous drug user with jaundice is optional
+Answer:",True,True
+"Which of the following nucleotide bases is not found in RNA?
+A. Thymine
+B. Adenine
+C. Uracil
+D. Guanine
+Answer:",True,True
+"Bronchial breathing is characterized by
+A. Inspiratory component louder and longer with a gap between expiration and inspiration
+B. Expiratory component louder and longer with a gap between inspiration and expiration
+C. Inspiratory component louder and longer with a gap between inspiration and expiration
+D. Expiratory component louder and longer with a gap between expiration and inspiration
+Answer:",False,True
+"Which of the following drugs is most commonly responsible for patients who present with acute confusion?
+A. Heroin (opiates).
+B. Ecstasy.
+C. Alcohol.
+D. Cannabis.
+Answer:",True,True
+"The frontal lobe of the brain's cortex is responsible for which of the following?
+A. The sleep/wake cycle.
+B. The ability to draw shapes.
+C. Understanding others' speech.
+D. Visual perception.
+Answer:",True,True
+"The carpal bones are the small bones of the wrist - name them.
+A. Scaphoid, lunate, triquetral, pisiform, trapezium, trapezoid, capitate, hamate.
+B. Scaphoid, lunar, triquetrium, pisiform, radius, ulna, capitates.
+C. Scaphoid, proximal phalynx, humerus, hamate, capitate.
+D. Scaphoid, radius, ulna, cunniform, trapezius.
+Answer:",True,True
+"The process of translation requires the presence of:
+A. mRNA, tRNA and ribosomes.
+B. mRNA, ribosomes and RNA polymerase.
+C. DNA, mRNA and RNA polymerase.
+D. chromatin, DNA and amino acids.
+Answer:",True,True
+"What is 'coring'?
+A. A symptom of phlebitis.
+B. Titration of a drug with its desired effect.
+C. The delivery of medication straight into the bloodstream.
+D. When drugs are withdrawn from a sealed vial, fragments of the rubber bung can be cut out by the needle.
+Answer:",True,True
+"What must you ensure before a speaking valve is used?
+A. That the patient is able to swallow properly.
+B. It is seven days after the tracheostomy tube was first inserted.
+C. The cuff is deflated.
+D. The cuff is inflated.
+Answer:",True,True
+"Which one of the following statements is true with regard to intravenous drug administration?
+A. IV administration of a drug will delay its action.
+B. IV administration carries low risk of bacteraemia.
+C. IV administration allows titration of a drug with its desired effect.
+D. An intravenous cannula should never be used for both drug and fluid administration.
+Answer:",True,True
+"Which of the following factors can affect enzyme activity?
+A. Temperature.
+B. pH.
+C. The presence of certain metal ions.
+D. All of the above.
+Answer:",True,True
+"For very high force contractions lasting 1-2 seconds, the initial energy source is from:
+A. Glycolysis.
+B. creatine phosphorylation.
+C. phosphocreatine stores.
+D. ATP stores.
+Answer:",False,False
+"A change in blood pressure is detected by the:
+A. baroreceptors.
+B. chemoreceptors.
+C. vasomotor centre.
+D. cardiovascular centre.
+Answer:",True,True
+"Blood clots are responsible for repeatedly blocking a catheter. What should you do?
+A. Call for help.
+B. Inform medical staff.
+C. Inform the patient.
+D. Remove the catheter and recatheterize.
+Answer:",False,False
+"What is the pH of water?
+A. 3.5
+B. 7
+C. 12
+D. 6.25
+Answer:",True,True
+"How long can a cannula remain in situ?
+A. 24 hours.
+B. 36 hours.
+C. 48 hours.
+D. 96 hours.
+Answer:",False,False
+"Metabolism is determined by the:
+A. size of proteins in the cell.
+B. availability of amino acids.
+C. proteins formed as dictated by the genetic material.
+D. amino acid composition of the ribonucleic acids.
+Answer:",True,True
+"How many chromosomes do all human somatic cells contain?
+A. 3
+B. 20
+C. 23
+D. 46
+Answer:",True,True
+"Under what circumstances would you use antibiotics prior to catheterization?
+A. If the patient has had a catheter in situ for a week.
+B. If the patient does not have urinary tract infection.
+C. If patient has an artificial heart valve.
+D. If the patient requests them.
+Answer:",True,True
+"Which of these features suggest that a pulsation in the neck is arterial?
+A. A waggling earlobe
+B. Positive for hepatojugular reflux
+C. No variation with posture
+D. Pressure in the root of the neck reduces the impulse
+Answer:",False,False
+"The rate limiting enzyme of glycolysis is:
+A. phosphorylase.
+B. hexokinase.
+C. pyruvate dehydrogenase.
+D. phosphofructokinase.
+Answer:",True,True
+"Which of the following is true about haemorrhoids?
+A. Bleeding haemorrhoids lead to melaena per rectum (PR)
+B. Pregnancy is a predisposing factor in causing haemorrhoids
+C. Bleeding from first degree haemorrhoids is associated with pain
+D. Second degree haemorrhoids cannot be returned to the anal canal
+Answer:",True,True
+"Selective Androgen Receptor Modulators (SARMs) are:
+A. steroid drugs that act on androgen receptors mimicking the effects of natural steroid hormones.
+B. steroid drugs that act on androgen receptors antagonising the effects of natural steroid hormones.
+C. non-steroid drugs that act on androgen receptors mimicking the effects of natural steroid hormones.
+D. non-steroid drugs that act on androgen receptors inhibiting the effects of natural steroid hormones.
+Answer:",True,True
+"The β-oxidation of a molecule of palmitic acid, CH3(CH2)14CO2H:
+A. yields 8 molecules of acetyl-CoA and some ATP and water.
+B. yields 16 molecules of acetyl-CoA only.
+C. yields carbon dioxide and water only.
+D. does not involve oxygen.
+Answer:",True,True
+"Which products of ADP degradation increase in concentration in the blood during multiple sprint sports?
+A. Ammonia, hypoxanthine and uric acid.
+B. Ammonia, urea and uric acid.
+C. Ammonia, urea and creatinine.
+D. Ammonia, urea and creatine.
+Answer:",True,True
+"The optimum position for performing CPR is to position the patient:
+A. in a semi-recumbent posture.
+B. tilted to the left to keep the heart perfused.
+C. flat on a firm surface.
+D. on the floor with the legs raised.
+Answer:",True,True
+"The complete resynthesis of phosphocreatine after very high intensity exercise normally takes:
+A. about 10 seconds.
+B. about 30 seconds.
+C. about 1 minute.
+D. about 4 minutes.
+Answer:",True,True
+"What type of joint is the elbow?
+A. Ball and socket joint.
+B. Fused joint.
+C. Synovial hinge joint.
+D. Plain joint.
+Answer:",True,True
+"A hypertonic solution is:
+A. a solution that has a higher concentration of solutes than the normal human cell.
+B. a solution that blocks off enteral tubes easily.
+C. a solution that has a lower concentration of solutes than the normal human cell.
+D. a solution with a high fibre content.
+Answer:",True,True
+"Which of these is not necessary when examining the jugular venous pulse?
+A. Patient's neck muscles should be relaxed
+B. Timing the pulsation with the radial pulse
+C. Good lighting
+D. Patient lying at 45 degree angle
+Answer:",False,True
+"The maximum sustainable power:
+A. usually remains constant during a race.
+B. declines with the distance of the race.
+C. is improved by a high fat diet.
+D. is inversely related to muscle glycogen content.
+Answer:",True,True
+"Fast-twitch fibres contain:
+A. a relatively large number of mitochondria and low ATPase activity.
+B. a relatively small number of mitochondria and low ATPase activity.
+C. a relatively small number of mitochondria and high ATPase activity.
+D. a relatively large number of mitochondria and high ATPase activity.
+Answer:",True,True
+"The rate of blood lactate accumulation is determined by:
+A. the rate of muscle lactate production and the rate of muscle lactate efflux.
+B. the rate of anaerobic glycolysis.
+C. the rate of muscle glucose uptake.
+D. the difference between the rate of lactate appearance and the rate of lactate clearance.
+Answer:",True,True
+"The enzymes of glycolysis are located in the:
+A. mitochondrion.
+B. nucleus.
+C. cytoplasm.
+D. lysosomes.
+Answer:",True,True
+"The energy released from the breakdown of the high-energy phosphates, ATP and phosphocreatine, can sustain maximal exertion exercise for about:
+A. 1-2 seconds.
+B. 5-10 seconds.
+C. 30-40 seconds.
+D. 50-60 seconds.
+Answer:",True,False
+"Prosthetic groups are:
+A. required by all enzymes in the cell.
+B. loosely bound to enzymes via hydrogen bonds.
+C. sites on the enzyme molecule that permit allosteric modification of enzyme activity.
+D. tightly bound to enzymes and are required for their activity.
+Answer:",True,True
+"Which of the following is true in peripheral neuropathy?
+A. Sensory loss is demonstrated in a stocking distribution
+B. The tone is increased bilaterally in the legs
+C. Reflexes are very brisk with reinforcement
+D. Weakness is more marked proximally than distally
+Answer:",True,True
+"Which of the following is true about involuntary movements in the arm?
+A. Alcohol makes the tremor of benign essential tremor worse
+B. Hemiballismus is due to a stroke causing paralysis of the distal half of the arm
+C. A 'milkmaid' grip is sometimes found in dystonia
+D. Writer's cramp is an example of a focal dystonia
+Answer:",True,False
+"Which of these options is not recognized as a cause of chronic cough?
+A. Gastro-oesophageal reflux disease
+B. Angiotensin Converting Enzyme (ACE) inhibitors
+C. Long-term smoking
+D. Sodium valproate
+Answer:",True,True
+"Which of the following is recommended for cleaning the mouth?
+A. Hydrogen peroxide.
+B. Water.
+C. Lemon and glycerine swabs.
+D. Normal saline.
+Answer:",True,False
+"As a general principle what is the best approach to the use of analgesic drugs following surgery?
+A. Give drugs only 'as required'.
+B. Give drugs regularly with provision for additional 'as required' pain relief for breakthrough pain.
+C. Use long-acting drugs twice daily.
+D. Give only when pain scores are high.
+Answer:",True,True
+"Which of the following best describes nociceptive pain?
+A. Pain resulting from actual or potential tissue damage, which causes the release of chemical mediators that stimulate nerve fibres to initiate pain signals to the brain.
+B. Pain resulting from pressure upon a nerve or group of nerves.
+C. A disorder of a specific nerve or group of nerves resulting in the release of abnormal pain signals.
+D. Pain resulting from a disorder of the central nervous system, i.e. following a cerebral vascular accident.
+Answer:",True,True
+"Complete the following: A variation of serial peak flow readings over a two week period are considered diagnostic in . . .
+A. . . . asthma.
+B. . . . COPD.
+C. . . . pneumonia.
+D. . . . tuberculosis.
+Answer:",True,True
+"Under which circumstances would you not use a catheter valve?
+A. If the patient is post-operative.
+B. If the patient chooses it.
+C. If the patient has bladder sensation.
+D. If urine does not need to be measured.
+Answer:",False,True
+"Which of the following is true of Paget's Disease?
+A. Bowing of a long bone is a characteristic feature
+B. Spinal cord compression is a common complication
+C. Heart failure is not a recognized complication
+D. Pathological fractures are not a feature
+Answer:",True,True
+"Your first action following confirmation of cardiac arrest is to:
+A. ensure the emergency team/services are called.
+B. give two rescue breaths.
+C. give 30 chest compressions.
+D. check the notes to see if the patient has a DNAR order.
+Answer:",True,True
+"What is an urgent reason for catheterizing a patient?
+A. Acute urinary retention.
+B. Urinary tract infection.
+C. Incontinence.
+D. Because they asked.
+Answer:",True,True
+"Which of the following is true?
+A. Increasing the protein intake above 3 grams per kg body mass per day will stimulate muscle growth and increase strength.
+B. Creatine supplements can increase muscle strength and power.
+C. Amino acid supplements can increase muscle strength and power.
+D. Muscle damage is induced by shortening contractions.
+Answer:",True,True
+"Who has legal responsibility for a patient's care during hospital admission, stay, and discharge?
+A. The named nurse.
+B. The named consultant.
+C. The ward manager.
+D. The GP.
+Answer:",True,True
+"Endurance training increases the muscle's capacity to:
+A. contract faster.
+B. break down phosphocreatine.
+C. burn fat and carbohydrate.
+D. generate energy anaerobically.
+Answer:",True,True
+"An action potential arriving at the motor endplate causes release of:
+A. acetylcholine which traverses the neuromuscular junction.
+B. sodium ions which binds to sodium receptors on the muscle membrane.
+C. calcium ions which initiate an action potential along the muscle fibre.
+D. noradrenaline which increases muscle metabolic activity.
+Answer:",True,True
+"Your patient has diabetes. Why is this important?
+A. These patients are more likely to bleed.
+B. These patients are more likely to get urinary tract infections if their blood sugar is unstable.
+C. These patients are more likely to have clear urine.
+D. These patients are less likely to have catheter encrustation.
+Answer:",True,True
+"What is meant by the term 'passive movements'?
+A. Movement with resistance, stretching at end of range.
+B. Movement without resistance, stretching at end of range.
+C. Movement with resistance, stopping at end of range.
+D. Movement without resistance, stopping at end of range.
+Answer:",True,True
+"What is a tracheostomy?
+A. An opening in the anterior wall of the trachea above the cricoid cartilage.
+B. An opening in the anterior wall of the trachea below the cricoid cartilage.
+C. An opening in the anterior chest wall.
+D. An opening in the posterior wall of the trachea below the cricoid cartilage.
+Answer:",True,True
+"Which of the following is true of haematemesis?
+A. A low blood pressure (<90mmHg systolic) and a tachycardia (>100/min) are worrying features
+B. A pulse rate of 80/min in a patient taking Bisoprolol is reassuring
+C. Abdominal pain is always present
+D. An alcohol history is not essential
+Answer:",True,True
+"Which of the following is true of rheumatoid arthritis?
+A. Rheumatoid factor is present in 25% of rheumatoid cases
+B. It is an example of an oligoarthropathy
+C. Anaemia is a common finding
+D. Heberden's nodes are a feature
+Answer:",True,True
+"Why should careful consideration be given to providing people aged over 65 with information sources that are internet based?
+A. They may have difficulty reading the screen.
+B. Less than 30% of people over 65 years have access to the internet.
+C. The internet is aimed at younger people.
+D. They may not be able to type.
+Answer:",True,True
+"Which of the following is true about the carpal tunnel syndrome?
+A. It can be caused by rheumatoid arthritis
+B. It is caused by compression of the ulna nerve
+C. It causes pain and tingling in the medial three and half digits
+D. Paraesthesia is worse during the day
+Answer:",True,True
+"How many CO2 and ATP molecules are formed during one complete turn of the tricarboxylic acid cycle (Krebs' cycle)?
+A. 2CO2 and 2ATP
+B. 2CO2 and 16ATP
+C. 2CO2 and 12ATP
+D. 2CO2 and 1ATP
+Answer:",False,True
+"Which potential complication of IV therapy is described thus: 'Leakage of vesicant (irritant) medication or fluid into surrounding tissues, causing tissue damage'?
+A. Extravasation.
+B. Phlebitis.
+C. Inflammation.
+D. Infiltration.
+Answer:",True,True
+"Which of the following is present in saliva and has an antibacterial action?
+A. Lysozyme.
+B. Amylase.
+C. Sodium chloride.
+D. Mucus.
+Answer:",True,True
+"The genome is:
+A. the number of chromosomes found in the somatic cells of an organism.
+B. the entire DNA sequence of an organism.
+C. the entire list of proteins that an organism is capable of producing.
+D. the DNA sequence of an entire chromosome.
+Answer:",True,True
+"Alterations in which neurotransmitters in the brain by pharmacological agents has been shown to influence fatigue development?
+A. Acetyl choline and noradrenaline.
+B. Dopamine and acetyl choline.
+C. Glutamate and serotonin.
+D. Dopamine and serotonin.
+Answer:",True,True
+"In all-out exercise such as sprinting the first fibre types to fatigue are the:
+A. Type I fibres.
+B. Type Ia fibres.
+C. Type IIa fibres.
+D. Type IIX fibres.
+Answer:",True,True
+"The main fate of lactate that leaves muscle and enters the circulation is:
+A. conversion to urea in the liver.
+B. conversion to glucose in the heart.
+C. excretion via the kidneys.
+D. uptake and oxidation by other tissues.
+Answer:",True,True
+"The most rapid method to resynthesize ATP during exercise is through:
+A. glycolysis.
+B. phosphocreatine breakdown.
+C. tricarboxylic acid cycle (Krebs' cycle).
+D. glycogenolysis.
+Answer:",True,True
+"Which of the following is true in a sensory assessment of the arm?
+A. It is acceptable to test pain with a venepuncture needle
+B. Proprioception is appreciated via the same tracts as light touch
+C. It is best to test vibration sense with a 256 Hz tuning fork
+D. Impulses for pain travel principally up the dorsal columns
+Answer:",False,False
+"The blood glucose concentration during 80-90 minutes of intermittent high intensity exercise:
+A. frequently rises by 1 - 3 mM.
+B. remains relatively unchanged.
+C. frequently falls by 1 - 3 mM.
+D. falls to hypoglycaemic levels.
+Answer:",True,False
+"One of the most common reasons for stoma formation is:
+A. irritable bowel syndrome.
+B. haemorrhoids.
+C. carcinoma.
+D. bladder instability.
+Answer:",True,True
+"A surgical support can be used for:
+A. prolapsed stomas.
+B. high output stomas.
+C. herniation around the stoma.
+D. retraction of the stoma.
+Answer:",False,True
+"What size of catheter bag may be used at night?
+A. 350ml.
+B. 500ml.
+C. 1L.
+D. 2L.
+Answer:",True,True
+"Anaerobic metabolism refers to the generation of ATP:
+A. without the involvement of ADP.
+B. without the use of glycogen.
+C. without the use of oxygen.
+D. in the absence of available oxygen.
+Answer:",False,True
+"Approximately how many kJ of energy are expended if an athlete's steady-rate oxygen uptake averages 3.0 l/min for 5 minutes of exercise?
+A. 60 kJ
+B. 150 kJ
+C. 300 kJ
+D. 500 kJ
+Answer:",True,False
+"A patient has been on the operating table for four hours. How long may it take for any pressure damage to be visible?
+A. 12 hours.
+B. 72 hours.
+C. 24 hours.
+D. 5 days.
+Answer:",False,True
+"Eccrine and apocrine glands are both types of:
+A. sweat glands.
+B. salivary glands.
+C. chemoreceptors.
+D. tear ducts.
+Answer:",True,True
+"Which of the following is true of the assessment of power in the arms?
+A. Grade 3/5 (MRC scale) represents movement of the arm only when gravity is eliminated
+B. Flexion at the elbow is produced by the triceps muscle
+C. The root value of shoulder abduction is C5
+D. Grade 1/5 power represents no movement or muscle contraction
+Answer:",False,True
+"Two of the following are evident - pain at IV site, erythema, and swelling. What stage on the phlebitis scale is this and what should you do?
+A. Stage 1 - observe cannula.
+B. Stage 2 - re-site cannula.
+C. Stage 3 - re-site cannula and consider treatment.
+D. Stage 0 - do nothing.
+Answer:",True,False
+"Which hormone is primarily responsible for fluid regulation?
+A. Antidiuretic hormone.
+B. Insulin.
+C. Adrenaline.
+D. Testosterone.
+Answer:",True,True
+"The low intake of carbohydrate in the diet:
+A. does not influence exercise performance in events lasting less than 10 minutes.
+B. affects the resting muscle pH.
+C. may impair high intensity exercise performance.
+D. results in greater reliance on muscle glycogen during exercise.
+Answer:",True,True
+"Phophocreatine resynthesis during recovery from exercise is inhibited by:
+A. an excess of creatine.
+B. hyperventilation.
+C. an excess of oxygen.
+D. a lack of oxygen.
+Answer:",True,True
+"The transcription of DNA to a molecule of messenger RNA occurs:
+A. on the ribosomes.
+B. in the cytosol.
+C. in the nucleus.
+D. only during cell division.
+Answer:",True,True
+"Oedema is the presence of:
+A. excessive intravascular fluid.
+B. excessive extravascular fluid.
+C. excessive intracranial fluid.
+D. excessive necrotic cells.
+Answer:",True,True
+"Why should the short-acting bronchodilator be taken first?
+A. It works to dilate the airways quickly, allowing better deposition of other medications.
+B. They are colour-coded.
+C. It is warmer than the others.
+D. It is less moist than the others.
+Answer:",True,True
+"Which of the following is true about an intention tremor?
+A. It is worse at rest
+B. It is caused by Parkinson's Disease
+C. It is indicative of a cerebellar lesion
+D. Dyscalculia is a common association
+Answer:",True,True
+"Glucose is transported into the muscle cell:
+A. via protein transporters called GLUT4.
+B. only in the presence of insulin.
+C. via hexokinase.
+D. via monocarbylic acid transporters.
+Answer:",True,True
+"Oxygen is used:
+A. in glycolysis.
+B. in the conversion of fatty acids to acetyl CoA.
+C. in the tricarboxylic acid cycle (Krebs' cycle).
+D. in glycogenolysis.
+Answer:",False,False
+"Measuring the blood pressure in an arm that is above the level of the heart will:
+A. accurately estimate the blood pressure.
+B. overestimate the blood pressure.
+C. cause an auscultatory gap.
+D. underestimate the blood pressure.
+Answer:",True,True
+"When you are taking a musculoskeletal history which of the following is true?
+A. Drugs may be implicated in the causation of gout
+B. A history of diarrhoea is not relevant
+C. Difficulty rising from a chair is diagnostic of polymyalgic rheumatica
+D. Joint stiffness of 5 minutes duration suggests an arthropathy
+Answer:",True,True
+"Why are male patients advised to take their own electric razor to hospital?
+A. For patient comfort.
+B. To make hospital as familiar as possible.
+C. To minimize risk of cross-infection.
+D. To allow shaving at a time convenient to the patient.
+Answer:",True,True
+"Which organ secretes insulin?
+A. The gastric parietal cells.
+B. The pancreas.
+C. The walls of the large intestine.
+D. The autonomic nervous system.
+Answer:",True,True
+"When teaching a patient inhaler technique, how will you ensure that a large proportion of the drug reaches the lower airways?
+A. Ask them to take lots of small, quick breaths in before using the inhaler.
+B. Ask them to breathe normally when using the inhaler.
+C. Ask them to perform the procedure as quickly as they can.
+D. Ask them to hold their breath at the end of the inspiration on using the inhaler.
+Answer:",True,True
+"Why should a patient stand or sit as upright as possible when recording a peak flow rate?
+A. To ensure best lung expansion and accuracy and consistency of readings.
+B. This is the most comfortable position to perform any breathing test.
+C. The counter on the meter will not move if the patient is lying down.
+D. To ensure that their technique can be observed easily.
+Answer:",True,True
+"Why might a patient need a tracheostomy?
+A. To repair vocal cords after paralysis.
+B. To aid swallowing.
+C. As an aid to weaning patients from a ventilator.
+D. Prior to neck surgery.
+Answer:",True,True
+"In general, the higher the intensity of exercise, the greater the proportional contribution of:
+A. aerobic energy production.
+B. anaerobic energy production.
+C. the TCA cycle (Krebs' cycle) to the production of ATP.
+D. the electron transfer chain to the production of ATP.
+Answer:",True,True
+"What is the second commonest hospital acquired infection?
+A. Urinary infection.
+B. Wound infection.
+C. Upper respiratory tract infection.
+D. Ventilator-associated pneumonia.
+Answer:",False,False
+"Phosphocreatine in the muscle cell is found in:
+A. the mitochondria.
+B. all subcellular compartments.
+C. the sarcolemma.
+D. the cytoplasm.
+Answer:",True,True
+"The patient's self-report of pain is important because health care staff:
+A. can overestimate the intensity of the patient's pain.
+B. underestimate the intensity of the patient's pain.
+C. do not possess an objective way of assessing pain.
+D. can use the information to prescribe and administer the least possible amount of pain relief.
+Answer:",True,True

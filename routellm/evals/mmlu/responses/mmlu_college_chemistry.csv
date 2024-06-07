@@ -1,0 +1,617 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"The rate, r, of a zero-order chemical reaction A → B can be expressed as which of the following?
+A. r = k ln[A]
+B. r = k [A]^2
+C. r = k [A]
+D. r = k
+Answer:",True,True
+"Infrared (IR) spectroscopy is useful for determining certain aspects of the structure of organic molecules because
+A. all molecular bonds absorb IR radiation
+B. IR peak intensities are related to molecular mass
+C. most organic functional groups absorb in a characteristic region of the IR spectrum
+D. each element absorbs at a characteristic wavelength
+Answer:",True,True
+"What is the maximum number of phases that can be at equilibrium with each other in a three component mixture?
+A. 2
+B. 3
+C. 4
+D. 5
+Answer:",False,False
+"When the following equation is balanced, which of the following is true?
+__ MnO4− + __ I− + __ H+ <-> __ Mn2+ + __ IO3− + __ H2O
+A. The I− : IO3− ratio is 3:1.
+B. The MnO4- : I- ratio is 6:5.
+C. The MnO4- : Mn2+ ratio is 3:1.
+D. The H+ : I− ratio is 2:1.
+Answer:",False,False
+"The equation ΔH = ΔU + PΔV is applicable
+A. always
+B. only for constant pressure processes
+C. only for constant temperature processes
+D. only for constant volume processes
+Answer:",True,False
+"Nitronyl nitroxides are stable radicals in which the unpaired electron is coupled to two equivalent nitrogen nuclei. How many lines will appear in the EPR spectrum of a solution of a rigid nitronyl nitroxide diradical with J << a?
+A. 3 lines
+B. 9 lines
+C. 5 lines
+D. 7 lines
+Answer:",False,True
+"Cobalt-60 is used in the radiation therapy of cancer and can be produced by bombardment of cobalt-59 with which of the following?
+A. Neutrons
+B. Alpha particles
+C. Beta particles
+D. X-rays
+Answer:",True,True
+"Which of the following is required for both paramagnetism and ferromagnetism?
+A. Strong oxidizing conditions
+B. Low-spin electron configuration
+C. Metallic physical properties
+D. Unpaired electrons
+Answer:",True,True
+"The 1H spectrum of a mixture of dimethylsulphoxide (DMSO) and acetonitrile (AN) contains lines with relative intensities α and 3α, respectively. What is the ratio of the two concentrations, [DMSO]:[AN]?
+A. 1:1
+B. 1:3
+C. 1:6
+D. 2:3
+Answer:",True,False
+"Which of the following statements most accurately explains why the T1 of a nucleus is sometimes longer than its T2?
+A. T1, unlike T2, is sensitive to very low-frequency molecular motions.
+B. T2, unlike T1, is sensitive to very low-frequency molecular motions.
+C. T1, unlike T2, is sensitive to molecular motions at the Larmor frequency.
+D. T2, unlike T1, is sensitive to molecular motions at the Larmor frequency.
+Answer:",True,False
+"The 1H Larmor frequency of benzene exceeds that of trifluoroacetic acid by 1.656 kHz on a 400 MHz spectrometer. The 1H chemical shift of benzene is 7.16 ppm. What is the chemical shift of trifluoroacetic acid?
+A. 3.02 ppm
+B. 5.03 ppm
+C. 10.56 ppm
+D. 11.30 ppm
+Answer:",True,False
+"Suppose that the 13C nuclei in a molecule in a 600 MHz spectrometer can be 100% polarized (p = 1). If T1 = 5.0 s, how long does it take for p to reach a value equal to twice the thermal equilibrium polarization at 298 K?
+A. [The polarization relaxes exponentially: p(t) = [p(0) - peq]exp(-t/T1) + peq.]
+B. 72.0 s
+C. 56.6 s
+D. 12.7 s
+Answer:",False,False
+"Estimate the β-hyperfine value for the cyclobutyl radical (C4H7•) assuming the radical is flat and the HCH angle is 115°.
+A. 4.6 mT
+B. 27 G
+C. 5.4 mT
+D. 3.8 mT
+Answer:",False,False
+"What is the ratio of line intensities in the EPR spectrum of the t-Bu radical (CH3)3C•?
+A. 1:19:36:84:126:126:84:36:19:1
+B. 1:9:36:84:126:126:84:36:9:1
+C. 1:9:35:82:120:120:82:35:9:1
+D. 1:8:28:56:70:56:28:8:1
+Answer:",False,False
+"Which one sentence explains most accurately why spin trapping is often used to detect free radical intermediates?
+A. spin trapping provides more structural information than direct detection by EPR
+B. spin trapping makes it easy to quantify free radical intermediates
+C. steady state concentration of free radical intermediates is often too low to enable direct detection by EPR
+D. detection of spin adducts requires lower power than direct detection of radical intermediates
+Answer:",False,False
+"Calculate the magnetic moment (μI) of a 13C nucleus.
+A. 6.1445 x 10^-27 J T-1
+B. 3.1445 x 10^-27 J T-1
+C. 9.1445 x 10^-27 J T-1
+D. 1.1445 x 10^-28 J T-1
+Answer:",False,False
+"The normal modes of a carbon dioxide molecule that are infrared-active include which of the following?
+I. Bending
+II. Symmetric stretching
+III. Asymmetric stretching
+A. I only
+B. II only
+C. III only
+D. I and III only
+Answer:",True,True
+"Which of the following is a true statement about optical isomerism of complexes containing achiral ligands?
+A. Square planar complexes can display optical isomerism only if all four ligands are identical.
+B. Tetrahedral complexes never display optical isomerism.
+C. Linear complexes can display optical isomerism when both ligands are different.
+D. Octahedral complexes of monodentate ligands can display optical isomerism only when they have at least three different ligands.
+Answer:",True,True
+"Which one of the following statements is true:
+A. Protons and neutrons have orbital and spin angular momentum.
+B. Protons have orbital and spin angular momentum, neutrons have spin angular momentum.
+C. Protons and neutrons possess orbital angular momentum only.
+D. Protons and neutrons possess spin angular momentum only.
+Answer:",False,False
+"Calculate the Larmor frequency for a proton in a magnetic field of 1 T.
+A. 23.56 GHz
+B. 42.58 MHz
+C. 74.34 kHz
+D. 13.93 MHz
+Answer:",False,True
+"Which of the following is an n-type semiconductor?
+A. Silicon
+B. Diamond
+C. Silicon carbide
+D. Arsenic-doped silicon
+Answer:",True,True
+"Which of the following statements most accurately explains why the 1H spectrum of 12CHCl3 is a singlet?
+A. Both 35Cl and 37Cl have I = 0.
+B. The hydrogen atom undergoes rapid intermolecular exchange.
+C. The molecule is not rigid.
+D. Both 35Cl and 37Cl have electric quadrupole moments.
+Answer:",False,False
+"At 25°C, the maximum amount of PbI2 that can be dissolved in 1.00 L of pure water is 1.0 mmol. Assuming complete dissociation, the solubility product, K_sp, for lead iodide at 25°C is
+A. 1.0 × 10^−3
+B. 1.0 × 10^−6
+C. 1.0 × 10^−9
+D. 4.0 × 10^−9
+Answer:",True,False
+"The 13C spectrum of which isomer of C6H14 has lines with five distinct chemical shifts?
+A. hexane
+B. 2-methylpentane
+C. 3-methylpentane
+D. 2,3-dimethylbutane
+Answer:",False,True
+"Which of the following is the most common naturally-occurring form in which silicon is found?
+A. Metallic element
+B. Sulfide
+C. Fluoride
+D. Oxide
+Answer:",True,True
+"Which nuclide has an NMR frequency of 115.5 MHz in a 20.0 T magnetic field?
+A. 17O
+B. 19F
+C. 29Si
+D. 31P
+Answer:",False,False
+"Which of the following must be true about a binary liquid mixture that obeys Raoult’s law?
+I. The partial pressure of each component at equilibrium is proportional to its mole fraction in the liquid mixture.
+II. The volume of the mixture is equal to the sum of the volumes of each component before mixing.
+III. Intermolecular interactions in the mixture are identical to intermolecular interactions in the pure components.
+A. I only
+B. III only
+C. I and III only
+D. I, II, and III
+Answer:",False,False
+"A single line is seen in the 31P spectrum of a solution of sodium phosphate. The 31P chemical shifts of H2PO4‾ and HPO42– are 3.42 ppm and 5.82 ppm respectively. What is the chemical shift when the pH of the solution equals the pKa of H2PO4‾?
+A. 3.41 ppm
+B. 3.98 ppm
+C. 4.33 ppm
+D. 4.62 ppm
+Answer:",False,False
+"For EDTA titrations, the analyte solution and the titrant solution are both buffered at the same pH for which of the following reasons?
+I. The conditional formation constant is affected by pH.
+II. The fraction of EDTA in the fully deprotonated Y4− form varies with pH.
+III. When EDTA reacts to form a metal complex, H+ is a product in most cases.
+A. I only
+B. I and II only
+C. I and III only
+D. I, II, and III
+Answer:",True,True
+"The Henry’s law constant for CO2 dissolved in water at 25°C is 30.0 atm M^−1. The concentration of dissolved CO2 in a vessel pressurized with 2.0 atm of CO2 is
+A. 1.5 M
+B. 0.15 M
+C. 0.067 M
+D. 0.015 M
+Answer:",True,False
+"A student performs five titrations and obtains a mean result of 0.110 M, with a standard deviation of 0.001 M. If the actual concentration of the titrated solution is 0.100 M, which of the following is true about the titration results?
+A. Accurate but not precise
+B. Precise but not accurate
+C. Both accurate and precise
+D. Neither accurate nor precise
+Answer:",True,True
+"A Cu(II) metal ion (giso = 2.12) produces four lines with a separation of 500 MHz between each line. Express the hyperfine splitting in field units of mT and the hyperfine coupling in units of wavenumbers.
+A. 500 MHz = 0.185 mT = 0.29842 cm-1
+B. 500 MHz = 16.850 mT = 0.01667 cm-1
+C. 500 MHz = 32.953 mT = 0.76298 cm-1
+D. 500 MHz = 45.672 mT = 2.86329 cm-1
+Answer:",False,False
+"On the basis of oxidation-reduction potential, which of the following is most likely to occur?
+A. Al(s) + 3 NaNO3(aq) 3 Na(s) + Al(NO3)3(aq)
+B. Zn(s) + 2 Ag(NO3)(aq) → 2 Ag(s) + Zn(NO3)2(aq)
+C. Pb(s) + Ca(NO3)2(aq) → Ca(s) + Pb(NO3)2(aq)
+D. Pb(s) + 2 LiNO3(aq) → 2 Li(s) + Pb(NO3)2(aq)
+Answer:",False,True
+"Which of the following statements is not a reason why tetramethylsilane is used as a 1H chemical shift reference.
+A. Its 1H spectrum is a singlet.
+B. Its protons are quite strongly shielded.
+C. It dissolves in most organic solvents.
+D. Most organic compounds do not contain silicon atoms.
+Answer:",True,True
+"The X-band (9.5 GHz) EPR spectrum of a matrix isolated Na atom reveals four hyperfine lines with resonant field positions of 3074 G, 3174 G, 3274 G and 3374 G. Calculate the g value of the atom.
+A. g = 2.002
+B. g = 1.950
+C. g = 2.250
+D. g = 2.005
+Answer:",False,False
+"Calculate the spin angular momentum of 43Ca. [I = 7⁄2]
+A. 2.166 x 10^-34 J s
+B. 3.691 x 10^-34 J s
+C. 4.185 x 10^-34 J s
+D. 5.493 x 10^-34 J s
+Answer:",False,False
+"Calculate the magnetic field responsible for the polarization of 2.5 x 10^-6 for 13C at 298 K.
+A. 0.5 T
+B. 1.2 T
+C. 2.9 T
+D. 100 T
+Answer:",False,False
+"The T2 of an NMR line is 15 ms. Ignoring other sources of linebroadening, calculate its linewidth.
+A. 0.0471 Hz
+B. 21.2 Hz
+C. 42.4 Hz
+D. 66.7 Hz
+Answer:",False,False
+"What is the maximum value of the z-component of the spin angular momentum of 43Ca? [I = 7⁄2]
+A. 3.691 x 10^-34 J s
+B. 4.185 x 10^-34 J s
+C. 5.493 x 10^-34 J s
+D. 8.370 x 10^-34 J s
+Answer:",True,False
+"Of the following compounds, which has the lowest melting point?
+A. HCl
+B. AgCl
+C. CaCl2
+D. CCl4
+Answer:",True,False
+"Which of the following statements about nuclear binding energies is NOT true?
+A. Binding energy per nucleon reaches a maximum for 56Fe.
+B. Nuclear binding energies have about the same magnitude as chemical bond energies.
+C. Nuclei have slightly less mass than the sum of their component nucleons.
+D. The nuclei of heavy elements have more neutrons than protons in order to provide sufficient binding energy to hold the nuclei together.
+Answer:",True,True
+"Predict the hyperfine value for the EPR spectrum of fully deuteriated benzene radical anion C6D6•-.
+A. 0.375 mT
+B. 3.75 G
+C. 2.35 mT
+D. 0.58 G
+Answer:",True,False
+"The strongest base in liquid ammonia is
+A. NH3
+B. NH2−
+C. NH4+
+D. N2H4
+Answer:",False,True
+"The equilibrium populations of the 1H energy levels of a molecule are nα = nαeq and nβ = nβeq. What are the populations after a 5.0 μs pulse when B1 = 4.697 mT?
+A. nα = nβeq and nβ = nαeq
+B. nα = nαeq and nβ = nβeq
+C. nα = ½(nαeq + nβeq) and nβ = ½(nαeq + nβeq)
+D. nα = nαeq + nβeq and nβ = nαeq + nβeq
+Answer:",False,False
+"Calculate the Q-factor for an X-band EPR cavity with a resonator bandwidth of 1.58 MHz.
+A. Q = 1012
+B. Q = 2012
+C. Q = 3012
+D. Q = 6012
+Answer:",True,False
+"The 13C chemical shifts of benzene and chloroform are 128.4 ppm and 77.2 ppm respectively. What is the difference in the 13C NMR frequencies of the two compounds on a 600 MHz spectrometer?
+A. 7.73 kHz
+B. 30.7 kHz
+C. 91.6 kHz
+D. 122 kHz
+Answer:",False,False
+"Of the following solutions, which will have the highest ionic strength? (Assume complete dissociation.)
+A. 0.050 M AlCl3
+B. 0.100 M NaCl
+C. 0.050 M CaCl2
+D. 0.100 M HCl
+Answer:",False,True
+"What is the strength (B1) of a 13C 90° pulse of duration 1 μs?
+A. 3.72 mT
+B. 5.18 mT
+C. 17.0 mT
+D. 23.3 mT
+Answer:",False,False
+"Which of the following experimental observations were explained by Planck’s quantum theory?
+A. Blackbody radiation curves
+B. Emission spectra of diatomic molecules
+C. Electron diffraction patterns
+D. Temperature dependence of reaction rates
+Answer:",True,True
+"A radioactive isotope, which is used in diagnostic imaging, has a half-life of 6.0 hours. If a quantity of this isotope has an activity of 150 mCi when it is delivered to a hospital, how much activity will remain 24 hours after delivery? (mCi = microcuries)
+A. 150 mCi
+B. 38 mCi
+C. 19 mCi
+D. 9.4 mCi
+Answer:",True,False
+"What is the orbital angular momentum quantum number, l, of the electron that is most easily removed when ground-state aluminum is ionized?
+A. 3
+B. 2
+C. 1
+D. 0
+Answer:",False,True
+"Considering 0.1 M aqueous solutions of each of the following, which solution has the lowest pH?
+A. Na2CO3
+B. Na3PO4
+C. Na2S
+D. NaCl
+Answer:",False,False
+"A silyl radical bearing an Si-H· fragment has a g value of 2.0033 and a pair of lines separated by 15.5 MHz. Express the splitting in units of mT, Gauss and cm-1.
+A. 15.5 MHz = 11.104 mT = 27.201 Gauss = 0.862 x 10^-4 cm-1
+B. 15.5 MHz = 7.352 mT = 10.104 Gauss = 18.39 x 10^-4 cm-1
+C. 15.5 MHz = 1.55 mT = 0.562 Gauss = 31.0 x 10^-4 cm-1
+D. 15.5 MHz = 0.553 mT = 5.530 Gauss = 5.17 x 10^-4 cm-1
+Answer:",False,False
+"Elements with partially filled 4f or 5f orbitals include all of the following EXCEPT
+A. Cu
+B. Gd
+C. Eu
+D. Am
+Answer:",True,True
+"Calculate spin density on the central carbon atom of malonic acid radical (•CH(COOH)2) if the hyperfine value for the α-hydrogen atom is 21.9 G.
+A. 0.95
+B. 0.85
+C. 0.15
+D. 0.65
+Answer:",False,False
+"In fluorescence spectroscopy, the quantum yield (Φ_f) is best defined as the
+A. rate of fluorescence emission
+B. number of photons emitted
+C. number of photons emitted, divided by the number of photons absorbed
+D. number of excitation photons impinging on the sample, divided by the number of photons absorbed
+Answer:",True,True
+"Which one of the following statements is true:
+A. Large and positive g shifts are observed when the LUMO – HOMO gap is small and λ is positive.
+B. Large deviations in g occurs when the energy difference between the SOMO and lowest lying excited state is large.
+C. A large deviation of g from ge is expected when λ is large and the energy difference between the SOMO and the lowest lying excited state is small.
+D. A small deviation of g from ge is expected when λ is small and positive.
+Answer:",False,True
+"What is the magnetic moment of 205Tl?
+A. [ɣ (205TI = 1.569 x 108 T-1 s-1, I = ½]
+B. 0.717 x 10^-26 J T-1
+C. 0.827 x 10^-26 J T-1
+D. 1.433 x 10^-26 J T-1
+Answer:",False,False
+"A molecule has a rotational correlation time of 1 ns. At what magnetic field would protons in this molecule have the fastest spin-lattice relaxation? [Use eqns 5.3 and 5.4.]
+A. 3.74 T
+B. 5.19 T
+C. 6.08 T
+D. 9.49 T
+Answer:",False,False
+"Of the following ionic substances, which has the greatest lattice enthalpy?
+A. MgO
+B. MgS
+C. NaF
+D. NaCl
+Answer:",False,True
+"Which of the following compounds has a 1H resonance approximately 1.55 kHz away from TMS on a spectrometer with a 12.0 T magnet?
+A. CH3F
+B. CH3Cl
+C. CH3Br
+D. CH3I
+Answer:",False,False
+"Calculate the equilibrium polarization of 13C nuclei in a 20.0 T magnetic field at 300 K.
+A. 10.8 x 10^-5
+B. 4.11 x 10^-5
+C. 3.43 x 10^-5
+D. 1.71 x 10^-5
+Answer:",True,False
+"The magnetic moment (μI) of an unknown nuclide is 2.884 x 10^-27 J T-1. Given the nuclear spin is known to be 1, identify the unknown nuclide.
+A. 14N
+B. 2H
+C. 19F
+D. 6Li
+Answer:",False,True
+"Which of the following is (are) characteristic of mass spectrometry?
+I. Analyte molecules are converted to gaseous ions.
+II. The ions are separated according to their mass-to-charge ratio.
+III. In addition to compound identification, mass spectra can be utilized to determine precise isotopic masses and isotopic ratios.
+A. II only
+B. I and II only
+C. I and III only
+D. I, II, and III
+Answer:",True,True
+"Which of the following types of spectroscopy is a light-scattering technique?
+A. Nuclear magnetic resonance
+B. Infrared
+C. Raman
+D. Ultraviolet-visible
+Answer:",True,True
+"When the Heisenberg uncertainty principle is applied to a quantum mechanical particle in the lowest energy level of a one-dimensional box, which of the following is true?
+A. Momentum is known exactly, but no information about position can be known.
+B. Position is known exactly, but no information about momentum can be known.
+C. No information about either position or momentum can be known.
+D. Neither position nor momentum can be known exactly.
+Answer:",True,True
+"The dissociation energy for a hydrogen-bromine bond is defined as the change in enthalpy, DH, for which of the following reactions?
+A. 2 HBr(g) → H2(g) + Br2(l)
+B. HBr(g) → H+(g) + Br−(g)
+C. H(g) + Br(g) → HBr(g)
+D. HBr(g) → H(g) + Br(g)
+Answer:",True,True
+"23Na has an NMR frequency of 198.52 MHz in a 750 MHz NMR spectrometer. What is its magnetogyric ratio?
+A. 101.1 x 10^7 T-1 s-1
+B. 26.75 x 10^7 T-1 s-1
+C. 7.081 x 10^7 T-1 s-1
+D. 0.9377 x 10^7 T-1 s-1
+Answer:",False,False
+"Exact solutions of the Schrödinger equation CANNOT be obtained for a
+A. simple harmonic oscillator
+B. particle in a one-dimensional box
+C. rigid rotor
+D. helium atom
+Answer:",True,True
+"What is the limiting high-temperature molar heat capacity at constant volume (C_V) of a gas-phase diatomic molecule?
+A. 1.5R
+B. 2R
+C. 2.5R
+D. 3.5R
+Answer:",False,False
+"The +1 oxidation state is more stable than the +3 oxidation state for which group 13 element?
+A. B
+B. Al
+C. In
+D. Tl
+Answer:",True,True
+"The fact that the infrared absorption frequency of deuterium chloride (DCl) is shifted from that of hydrogen chloride (HCl) is due to the differences in their
+A. electron distribution
+B. dipole moment
+C. force constant
+D. reduced mass
+Answer:",True,True
+"The number of allowed energy levels for the 55Mn nuclide are:
+A. 3
+B. 5
+C. 8
+D. 4
+Answer:",False,False
+"A substance that is NOT generally considered to be a toxic pollutant in water is
+A. carbonic acid
+B. a halogenated hydrocarbon
+C. lead
+D. mercury
+Answer:",True,True
+"All proteins absorb electromagnetic radiation of wavelength around 190 nm, which corresponds to a π → π* excitation in the protein molecule. In which region of the spectrum is this wavelength found?
+A. X-ray
+B. Ultraviolet
+C. Visible
+D. Infrared
+Answer:",True,True
+"The rotational correlation time of a spherical object of radius r immersed in a liquid with viscosity η is given by the Stokes equation: τc = 4πηr3/3kBT. A small molecule with relative molecular mass Mr = 100 in water at 298 K has τc = 50 ps. Assuming that Mr is proportional to the molecular volume, estimate τc for a small protein with Mr = 8400.
+A. 420 ns
+B. 42 ns
+C. 4.2 ns
+D. 420 ps
+Answer:",False,False
+"Chlorofluorocarbons (CFCs) such as F3CCCl3 are implicated in the decomposition of stratospheric ozone. Which of the following methods would be best suited to measurement of trace amounts (sub-ppb) of CFCs in an air sample?
+A. Gas chromatographic separation of the air sample on a capillary column followed by electron capture detection
+B. Gas chromatographic separation of the air sample on a packed column followed by thermal conductivity detection
+C. Gas chromatographic separation of the air sample on a capillary column followed by flame ionization detection
+D. Conversion of the sample of the chlorinated compounds to chloride ions, followed by titration with Ag+
+Answer:",True,True
+"The solid-state structures of the principal allotropes of elemental boron are made up of which of the following structural units?
+A. B12 icosahedra
+B. B8 cubes
+C. B6 octahedra
+D. B4 tetrahedra
+Answer:",True,True
+"A buffer is made from equal concentrations of a weak acid and its conjugate base. Doubling the volume of the buffer solution by adding water has what effect on its pH?
+A. It has little effect.
+B. It significantly increases the pH.
+C. It significantly decreases the pH.
+D. It changes the pH asymptotically to the pKa of the acid.
+Answer:",True,True
+"Which of the following is classified as a conjugate acid-base pair?
+A. HCl / NaOH
+B. H3O+ / H2O
+C. O2 / H2O
+D. H+ / Cl−
+Answer:",False,True
+"Which of the following metal ions cannot be used as a paramagnetic quencher?
+A. Ti3+
+B. Cr3+
+C. Fe3+
+D. Zn2+
+Answer:",False,False
+"An electron and a proton are placed in a 1.0 T magnetic field at 300 K. What is the ratio of the equilibrium polarizations: |pe / pH| ?
+A. [|ɣe| = 1.761 x 10^11 T^-1 s^-1]
+B. 820
+C. 658
+D. 329
+Answer:",False,False
+"The amplitude of a free induction decay drops to 25% of its initial intensity after 1.0 s. Assuming exponential relaxation and Ω = 0, determine the value of T2.
+A. 0.721 s
+B. 0.750 s
+C. 1.386 s
+D. 1.661 s
+Answer:",True,False
+"The molecular geometry of thionyl chloride, SOCl2, is best described as
+A. trigonal planar
+B. T-shaped
+C. tetrahedral
+D. trigonal pyramidal
+Answer:",True,True
+"Which of the following procedures tend(s) to minimize the influence of random errors on measured results?
+I. Signal averaging
+II. Use of internal standards
+III. Averaging the results from multiple samples
+A. I only
+B. II only
+C. III only
+D. I and III only
+Answer:",True,True
+"A PO3- radical produces a pair of lines separated by 280 MHz with giso = 2.005. Calculate the expected resonant field positions of both lines in the X-band EPR spectrum (ν = 9.5 GHz).
+A. Bres for mI = -½ = 325.0 mT; Bres for mI = +½ = 335.0 mT
+B. Bres for mI = -½ = 123.5 mT; Bres for mI = +½ = 124.5 mT.
+C. Bres for mI = -½ = 333.5 mT; Bres for mI = +½ = 343.5 mT.
+D. Bres for mI = -½ = 0.218 mT; Bres for mI = +½ = 0.418 mT.
+Answer:",False,False
+"Calculate the relative occupancies of the α and β spin energy levels for a radical species with g = 2.05, at L- and W-band frequencies (take TS = 300 K).
+A. Nα/Nβ = 0.9800 at L-band; Nα/Nβ = 0.9509 at W-band
+B. Nα/Nβ = 0.9950 at L-band; Nα/Nβ = 0.9609 at W-band
+C. Nα/Nβ = 0.9910 at L-band; Nα/Nβ = 0.9709 at W-band
+D. Nα/Nβ = 0.9850 at L-band; Nα/Nβ = 0.9809 at W-band
+Answer:",True,False
+"Which of the following is a primary standard for use in standardizing bases?
+A. Ammonium hydroxide
+B. Sulfuric acid
+C. Acetic acid
+D. Potassium hydrogen phthalate
+Answer:",True,True
+"Which of the following is lower for argon than for neon?
+A. Melting point
+B. Boiling point
+C. Polarizability
+D. First ionization energy
+Answer:",False,True
+"The 99Ru chemical shift of [Ru(H2O)6]2+ is 16,050 ppm relative to [Ru(CN)6]2- at 0 ppm. The electronic excitation energies of [Ru(H2O)6]2+, [Ru(CN)6]2- and [Ru(NH3)6]2+ are 18,900, 40,000 and 25,600 cm-1 respectively. Assuming that the chemical shift differences are dominated by paramagnetic currents, determine the chemical shift of [Ru(NH3)6]2+.
+A. 7,530 ppm
+B. 8,090 ppm
+C. 11,070 ppm
+D. 14,840 ppm
+Answer:",False,False
+"During a delay, spins with an offset frequency Ω = 250 rad s-1 precess through an angle of 60°. How long is the delay?
+A. 4.19 ms
+B. 26.3 ms
+C. 240 ms
+D. 1510 ms
+Answer:",False,False
+"Which of the following is always true of a spontaneous process?
+A. The process is exothermic.
+B. The process does not involve any work.
+C. The entropy of the system increases.
+D. The total entropy of the system plus surroundings increases.
+Answer:",True,True
+"Nitronyl nitroxides are stable radicals in which the unpaired electron is coupled to two equivalent nitrogen nuclei. How many lines will appear in the EPR spectrum of a solution of a rigid nitronyl nitroxide diradical with J >> a?
+A. 3 lines
+B. 9 lines
+C. 5 lines
+D. 7 lines
+Answer:",False,False
+"Redox enzyme catalysis involves the cyclic oxidation and reduction of metal ions that have at least two stable positive oxidation states. Which of the following groups of metals could be found at the active site of redox enzymes?
+A. Cu, Fe, Co
+B. Zn, Ca, Ga
+C. Sr, Ga, Mg
+D. Na, Ba, Al
+Answer:",True,True
+"In the vibrational-rotational spectrum of a diatomic molecule, the R-branch of the spectrum is the result of which of the following transitions?
+A. ΔJ = 0; Δu = 0
+B. ΔJ = 1; Δu = 0
+C. ΔJ = 2; Δu = 0
+D. ΔJ = 1; Δu = 1
+Answer:",False,True
+"Of the following atoms, which has the lowest electron affinity?
+A. F
+B. Si
+C. O
+D. Ca
+Answer:",True,True
+"Of the following ions, which has the smallest radius?
+A. K+
+B. Ca2+
+C. Sc3+
+D. Rb+
+Answer:",True,True
+"What is the NMR frequency of 31P in a 20.0 T magnetic field?
+A. 54.91 MHz
+B. 239.2 MHz
+C. 345.0 MHz
+D. 2167 MHz
+Answer:",True,False
+"Predict the number of lines in the EPR spectrum of a solution of dimethylnitroxide (CH3)2NO• assuming the lines do not overlap.
+A. 21
+B. 3
+C. 7
+D. 24
+Answer:",False,False
+"Of the following compounds, which is LEAST likely to behave as a Lewis acid?
+A. BeCl2
+B. MgCl2
+C. ZnCl2
+D. SCl2
+Answer:",False,True

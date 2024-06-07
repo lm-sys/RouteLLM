@@ -1,0 +1,997 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"How many human polyomaviruses are known at present?
+A. 100
+B. 1
+C. 10
+D. unknown
+Answer:",False,False
+"AIDS activism in the U.S. resulted in:
+A. Food and Drug Administration reforms
+B. Easier access to investigational drugs
+C. Changes in the way medicine was practiced in the U.S.
+D. All of the above
+Answer:",True,True
+"Globally, the most deaths are caused by:
+A. Respiratory infections
+B. Diarrheal diseases
+C. Malaria
+D. Tuberculosis
+Answer:",False,False
+"What happens during the 'incubation period'?
+A. The virus is cleared from the body by the immune system
+B. Virus replication happens at an intracellular level
+C. This period commonly lasts for a few days
+D. This period commonly lasts for a few hours
+Answer:",True,True
+"Newborn infants in countries with limited access to safe water and low levels of education should be:
+A. Exclusively formula fed for six months
+B. Exclusively breast fed for six months
+C. Should receive both breast milk and other foods as tolerated in the first 6
+D. months
+Answer:",True,True
+"Achieving effective change in a community is usually dependent on which of the following segments of society?
+A. Innovators
+B. Early adapters
+C. Middle adapters
+D. Late adapters
+Answer:",False,True
+"“Contingency management” is”:
+A. A strategy of last resort for reducing high-risk behaviors
+B. Paying drug users for negative urine specimens
+C. Paying sex workers to use condoms
+D. Paying drug users to use condoms
+Answer:",True,True
+"Typical clinical symptoms following infection with astroviruses include which of the following?
+A. Acute pneumonia
+B. Gastroenteritis in children
+C. Hepatitis
+D. rashes
+Answer:",True,True
+"Which of the following is the most special characteristic of the adaptive immune system?
+A. Antibodies
+B. T cells
+C. Memory T cells
+D. Clonal expansion of pre-existing antibodies and/or T cells
+Answer:",True,False
+"Chemotherapy is now an option for clinical care of patients. Typical drug regimens now include which of the following?
+A. Interferon and ribavirin
+B. Lamivudine and ribavirin
+C. Combinations of adefovir and entecavir and/or tenofovir (DAA)
+D. Interferons alone
+Answer:",False,False
+"There were no new cases of Ebola virus in the United States from January 1, 1997 through January 1, 1998. Which of the following epidemiologic terms does this statement describe?
+A. Incidence
+B. Lifetime expectancy
+C. Lifetime prevalence
+D. Period prevalence
+Answer:",False,False
+"How were retroviruses discovered?
+A. In chickens as Rous sarcoma
+B. In humans as HTLV-1
+C. In mice causing leukaemia
+D. In cats causing leukaemia
+Answer:",False,False
+"Most surveillance systems use which of the following study designs?
+A. Cohort
+B. Serial cross-sectional
+C. Mortality
+D. Syndromic
+Answer:",False,True
+"Polio can be eradicated by which of the following?
+A. Attention to sewage control and hygiene
+B. Killed polio vaccine
+C. Live polio vaccine
+D. Combination of the killed and live vaccines.
+Answer:",False,False
+"Public health ethics is:
+A. Patient-centered
+B. Population-centered
+C. Subject-centered
+D. Must respect the rights of individuals
+Answer:",True,True
+"How many people globally are currently infected with hepatitis B?
+A. 350 million
+B. 2 billion
+C. 100,000
+D. 1 million
+Answer:",True,False
+"In a study, a group of people are exposed to an environmental toxin but are not treated observed over time on a standard set of measures to ascertain the potential effects of the toxin. This type of study design is called
+A. Clinical trial
+B. Double-blind
+C. Longitudinal
+D. Prospective cohort
+Answer:",True,True
+"Which disease do polyomaviruses predominantly cause?
+A. Tumours
+B. Brain pathology
+C. No disease at all
+D. Kidney infections
+Answer:",False,False
+"How are antibody producing cells stimulated?
+A. Interacting with a virus short peptide
+B. Interacting with a T helper cell.
+C. Interacting with a plasma cell
+D. Interacting with a virus infected cell
+Answer:",True,True
+"The single most important key to the success of the Multicenter AIDS Cohort (MACS) is:
+A. The brilliance of the principal investigator
+B. The commitment of the staff
+C. The commitment of the participants
+D. The quality of the laboratories
+Answer:",True,True
+"Picornavirus replication as a positive strand RNA virus is particularly typified by which of the following?
+A. Virions carry RNA transcriptase enzyme into the cell
+B. The virion RNA is translated into a single large polyprotein
+C. The virion RNA acting as mRNA
+D. The virus exits by apoptosis of the cell
+Answer:",False,False
+"Why are members of the astrovirus family only recently recognised as significant enteric viruses for humans?
+A. The genome has been identified by the new method of deep sequencing
+B. A new vector has been discovered
+C. They infect a wide range of domestic animals and so contaminate meat
+D. Knowledge of their replication as positive sense ssRNA viruses is now complete
+Answer:",True,True
+"Which virus infection was not first identified by clinical observation?
+A. HIV
+B. Rubella teratogenicity
+C. Microcephaly and Zika
+D. Hepatitis C
+Answer:",True,True
+"The particular quality of the U.S. health care system is its:
+A. Systematic, democratic approach
+B. Fragmented, uncoordinated approach
+C. The result of rationale decisions by informed legislators
+D. a. and c. above
+Answer:",True,True
+"The three key intervention strategies according to Professor Shoptaw are:
+A. Behavioral intervention, treatment and structural interventions
+B. Condoms, drug therapy and regulation of commercial sex establishments
+C. Drug replacement therapy, community intervention and needle exchange
+D. HIV testing, drug therapy and condom use
+Answer:",False,True
+"Measles has been controlled in many countries by which of the following?
+A. By hygiene
+B. By MMR vaccine
+C. By new molecular peptide vaccines
+D. By humanised monoclonal antibodies to F protein
+Answer:",True,True
+"How can the spread of filoviruses be restricted?
+A. New antivirals
+B. New humanised monoclonal antibodies
+C. Hygiene and social distancing
+D. New vaccines
+Answer:",True,True
+"Most pandemics have arisen from influenza viruses from which of the following animals?
+A. Pigs
+B. Wild birds
+C. Bats
+D. Humans
+Answer:",False,False
+"PreP is an effective strategy for reducing the incidence of HIV in:
+A. Women
+B. Drug users
+C. Pregnant women
+D. a. and b. above
+Answer:",False,False
+"The replication of hepatitis B includes which of the following stages?
+A. Movement of intact virus to the cellular cytoplasm for replication
+B. Conversion of relaxed circular viral DNA in to covalently closed circular (CCC) DNA in the nucleus
+C. Virions produced in the cytoplasm by cellular DNA polymerase
+D. Oncogenic activity to transform liver cells.
+Answer:",False,False
+"How does the papilloma family of viruses cause cancer?
+A. Replicate in dividing cells and encodes three oncogenic proteins E5, E6 and E7
+B. Integrates viral genome into cellular DNA
+C. Has an oncogene able to initiate cancer
+D. Acts as a co factor for a cellular oncogene
+Answer:",False,True
+"The noroviruses typically cause which of the following?
+A. Diarrhoea
+B. Rash
+C. Projectile vomiting and diarrhoea
+D. Disease of the central nervous system
+Answer:",True,True
+"Deep nucleotide sequencing (NGS) is now cheap enough for general application. What will the technique mainly be useful for?
+A. Speedy vaccine development
+B. Identifying genetic variation
+C. Giving details on virus excretion in symptomless carriers
+D. Quickly identifying new viruses
+Answer:",False,False
+"Determinants of acquiring an HIV infection from an infected person per sexual act include:
+A. Viral RNA level
+B. Presence of other infections
+C. Condom use
+D. All of the above
+Answer:",True,True
+"How is next generation sequencing (NGS) most often used?
+A. To identify a newly discovered virus
+B. To search for drug resistant mutants
+C. To identify quasi species viruses
+D. Cannot be used
+Answer:",False,False
+"Which of the following HPV viruses are known to cause cervical cancer?
+A. Viruses of all 5 clades
+B. Types 14, 16, 18, 31, 45
+C. None are oncogenic per se
+D. Types 1-180
+Answer:",False,False
+"Which member of the paramyxovirus family can cause very serious croup?
+A. Measles
+B. Meta pneumo virus
+C. Hendra
+D. Respiratory syncytial virus (RSV)
+Answer:",False,False
+"Which of the following is the cause of delay in HIV testing among the Latino population?
+A. Stigma attached to the disease
+B. Machismo
+C. Drug abuse
+D. All of the above
+Answer:",True,True
+"Describe the morphology of a togavirus.
+A. Enveloped spherical particles with an icosahedral structure
+B. Non-enveloped with an icosahedral structure
+C. Filamentous virus with protruding glycoproteins
+D. Small round viruses
+Answer:",True,True
+"A good surveillance system should provide information about:
+A. Who is being infected
+B. Where the infected individuals are
+C. How rapidly infection is spreading
+D. All of the above
+Answer:",True,True
+"What has so far prevented polio being eradicated from the world?
+A. Inability to vaccinate in some countries
+B. Poor quality (unsafe) vaccines
+C. Genetic variation
+D. Expense
+Answer:",True,True
+"The range of disease caused by the family is wide but identify the exception from the following:
+A. Aplastic crisis in anaemia patients
+B. Fifth disease at 'Slapped cheek' syndrome
+C. Foetal infection with teratogenicity
+D. Serious pneumonia
+Answer:",True,False
+"Which of the following drugs inhibit herpes viruses?
+A. Amantadine
+B. Acyclovir
+C. Oseltamivir
+D. Azidothymidine
+Answer:",False,False
+"The three countries with the most drug injectors are:
+A. Bolivia, Argentina, Thailand
+B. China, the U.S. and Russia
+C. Afghanistan, Iraq and Myanmar
+D. Lithuania, Estonia and Latvia
+Answer:",True,True
+"Officials at a large community hospital report an increased incidence of acute lymphocytic leukemia (ALL) among children aged 5 – 12. They point out that some households in the community are exposed to chemical waste from a nearby factory. They believe that chemical waste causes leukemia. If a study is designed to evaluate the hospital officials’ claim, which of the following subjects are most likely to comprise the control group?
+A. Children exposed to the chemical waste who do not suffer from ALL
+B. Children not exposed to the chemical waste who do not suffer from ALL
+C. Children from the hospital’s outpatient clinic who do not suffer from ALL
+D. Children not exposed to the chemical waste who suffer from ALL
+Answer:",False,True
+"Lassa and Ebola are emergent viruses in W. Africa. What is their origin?
+A. Humans
+B. Primates
+C. Fruit bats
+D. Pigs
+Answer:",False,False
+"Antivirals can be used prophylactically or therapeutically in persons in which of the following circumstances?
+A. If administered within 4 days of clinical signs
+B. If used within 48 hours of first clinical signs
+C. Used for the obese
+D. Used in children under the age of 2 years where high virus spread is noted
+Answer:",False,False
+"Papillomaviruses cause warts and cancer but how do they most often infect humans?
+A. Are water borne
+B. Are airborne
+C. Via scratches and breaks in the skin
+D. Are nosocomial and spread in hospitals
+Answer:",True,True
+"There are 57 serotypes of adenovirus currently recognised. Which has the most important clinical impact?
+A. Diarrhoea
+B. Eye infections
+C. Respiratory tract infections
+D. Haemorrhagic cystitis
+Answer:",True,False
+"How are new polyomaviruses detailed
+A. Shot gun sequencing
+B. Cultivation in human neural cells
+C. Deep pyro sequencing (NGS)
+D. Monoclonal antibody techniques
+Answer:",False,False
+"Describe the YF vaccine.
+A. Killed virus vaccine
+B. Live attenuated virus vaccine developed by Pasteurian passage
+C. Live attenuated vaccine produced by direct mutation of the virus genome
+D. Experimental vaccine only
+Answer:",True,True
+"What is the biggest risk factor for infection with Ebola?
+A. Working in a category IV laboratory
+B. Attending a funeral of a victim outside
+C. Nursing a patient at home
+D. Attending football matches or large gatherings
+Answer:",False,False
+"The influenza virus is mainly controlled in special ""risk"" sectors by:
+A. Hygiene
+B. Vaccination
+C. Antiviral drugs
+D. Humanised monoclonal antibodies
+Answer:",True,True
+"A case-control study is conducted to assess the association between alcohol consumption and lung cancer patients with lung cancer and 100 controls are asked about their past alcohol consumption. According to the study results, alcohol consumption is strongly associated with lung cancer (OR = 2.5). The researchers then divide the study subjects into two groups: smokers and non-smokers. Subsequent statistical analysis does not reveal any association between alcohol consumption and lung cancer within either group. The scenario described is an example of which of the following?
+A. Observer bias
+B. Confounding
+C. Placebo effect
+D. Nonresponse bias
+Answer:",True,True
+"How are arenaviruses spread?
+A. Sexual contact
+B. Blood
+C. Aerosols of urine from infected small mammals
+D. Mosquito bites
+Answer:",False,False
+"Which areas of the world are rabies free?
+A. USA
+B. Norway
+C. EU
+D. Island nations, UK, NZ and Australia
+Answer:",True,True
+"The risk of perinatal transmission of HIV-1 infection during breast feeding is increased due to:
+A. Mixed feeding
+B. Very early introduction of solids
+C. Both a and b
+D. None of them
+Answer:",True,True
+"How is the parvovirus family targeted to reduce disease?
+A. Transfusion blood is screened
+B. Vaccine has been developed
+C. A range of new antivirals
+D. Social distancing
+Answer:",True,False
+"Who discovered the first virus?
+A. The microscopist Antonie van Leeuwenhoek
+B. The bacteriologist Charles Chamberland
+C. The botanist Dmitri Iwanowsky
+D. The virologist Jonas Salk
+Answer:",True,True
+"Structural interventions typically target:
+A. Policies
+B. The environment
+C. Availability
+D. All of the above
+Answer:",True,True
+"What is the main clinical picture of hepatitis A?
+A. Rash
+B. Limb paralysis
+C. Jaundice and abdominal discomfort
+D. Upper respiratory tract infection
+Answer:",True,True
+"If the human norovirus cannot be cultured in cell cultures how can it best be studied?
+A. Animal models
+B. Volunteer studies
+C. In cells using replicon systems
+D. Deductions from the 3 human ORF's of the virus genome
+Answer:",True,True
+"Any systematic error in the design, conduct, or analysis of a study that results in a mistaken estimate of an exposure’s effect on the risk of disease is called:
+A. Confounding
+B. Bias
+C. Interaction
+D. Stratification
+Answer:",False,False
+"Describe the coronavirus structure.
+A. Club shaped glycoprotein spikes protrude through a lipid bilayer
+B. An icosahedral structure with an envelope
+C. An icosahedral large pleomorphic virus
+D. Large regimented barrel shaped virus
+Answer:",False,False
+"SARS is described as a zoonotic virus - what does this mean?
+A. Such viruses are confined to animals
+B. They do not cause disease in humans
+C. They emerge from animals to cross the species barrier infrequently
+D. They cause pandemics
+Answer:",False,False
+"Which of the following coronaviruses has caused thousands of deaths around the world as an 'emergent' virus?
+A. MERS
+B. SARS
+C. OC43
+D. HKU1
+Answer:",False,False
+"Clinical infection by an arenavirus is characterised by which one of the following?
+A. Pantropic infection
+B. Signs of malaria
+C. Short (2-3 days) incubation
+D. Hepatitis
+Answer:",True,True
+"How does rubella cause foetal abnormalities?
+A. By crossing the placenta early in pregnancy and infecting the foetus
+B. By only infecting the placenta
+C. By inducing cytokines and chemokines in the mother
+D. By raising the temperature of the mother and inducing an abnormal immune reaction to the foetus
+Answer:",True,True
+"Which of the following is an unusual feature of the replication cycle in coronaviruses?
+A. The RNAs all terminate in a common 3´ and produce nested set transcripts
+B. They take advantage of recombination with the long RNA genome
+C. They are not highly mutable
+D. They use capped cellular mRNA's
+Answer:",False,False
+"Which replication strategy is paralleled by some other viruses?
+A. Cytoplasmic replication and 'snatched caps' are used as primers for RNA transcription
+B. Replicates in cytoplasmic tubules
+C. Extracellular replication
+D. Replicates in the nucleus
+Answer:",False,False
+"The characteristic of a generalized epidemic is:
+A. High rates in drug users
+B. High rates in MSM
+C. High rates in pregnant women
+D. High rate in STD clinic attendees
+Answer:",False,True
+"An updated version of classification shows the parvovirus family as having how many genera?
+A. Having 5 genera
+B. A very large number of virus types
+C. Only a single virus
+D. Only three viruses
+Answer:",False,False
+"The largest Latino community in the U.S. is:
+A. Puerto Rican
+B. Mexican
+C. Cuban
+D. Brazilian
+Answer:",True,True
+"How can epidemics of astrovirus mainly be controlled?
+A. By vaccination
+B. Using passive antibody
+C. Basic knowledge of hand washing and food hygiene
+D. Quarantine
+Answer:",True,True
+"500 women aged 40 – 54 who present for routine check-ups are asked about their meat consumption the women turn out to be vegetarian. During the ensuing 5 years, 5 vegetarians and 43 non-vegetarians develop colorectal cancer. Which of the following best describes the study design?
+A. Case series report
+B. Cohort study
+C. Case-control study
+D. Cross-sectional study
+Answer:",False,False
+"In the absence of treatment the risk of HIV transmission from an infected mother to her fetus/infant was highest in which of the following areas?
+A. Africa
+B. North America
+C. Europe
+D. Japan
+Answer:",True,True
+"Poliovirus can most easily become more virulent by which of the following processes?
+A. Mutation of the RNA genome at only a few positions
+B. Recombining with another enterovirus
+C. Altering its protein coat
+D. Multiple nucleotide deletions and substitutions
+Answer:",False,True
+"A virus such as influenza which emerges suddenly and spreads globally is called:
+A. Epidemic
+B. Endemic
+C. Pandemic
+D. Zoonotic
+Answer:",False,False
+"Of the following factors, which are the most important factors for virus spread and infection?
+A. Age
+B. Sex
+C. Genetic factors
+D. Travel
+Answer:",False,False
+"How do viruses of the calcivirus family replicate?
+A. As negative strand RNA viruses
+B. As positive strand RNA viruses
+C. Retroviruses
+D. Using genetic reassortment
+Answer:",True,True
+"The parvoviruses have a rather unique genome; what form does it take?
+A. Circular ds DNA
+B. Small linear ss DNA
+C. ds DNA genome
+D. RNA genome with RT
+Answer:",False,False
+"How can the morphology of filoviruses be described?
+A. Very large ball like structure
+B. Long filamentous threads
+C. Icosahedral virion
+D. Floppy membranes without defined morphology
+Answer:",False,False
+"What is the usual direction of 'knowledge' in a cell?
+A. From protein to DNA
+B. From DNA to DNA
+C. From DNA to RNA to protein
+D. Random
+Answer:",True,True
+"Why are drug combinations essential for HIV?
+A. Single drugs are not completely inhibitory
+B. Mutations negate the effect of one drug
+C. Combinations of antibiotics are effective versus TB
+D. The virus cannot mutate vs a combination
+Answer:",False,False
+"Many virus infections result in immune pathology, this is caused predominantly by which of the following?
+A. A cytokine storm
+B. Antibody mediated reactions
+C. A response of killer T cells (CD-8)
+D. A decline in function of the immune system
+Answer:",True,True
+"David Baltimore is a molecular biologist. What did he discover?
+A. The structure of DNA
+B. X-ray crystallographic techniques
+C. The enzyme reverse transcriptase
+D. The anti HIV drug zidovudine
+Answer:",True,True
+"Identify the most commonly used diagnostic technique in the virus laboratory:
+A. Virus isolation in cell culture
+B. Deep sequencing (NGS)
+C. Reverse transcriptase (RT) PCR
+D. Immuno-serology
+Answer:",False,False
+"The major risk group for HIV infection among Latinos is:
+A. Heterosexual males
+B. Homosexual males
+C. Females
+D. Injection drug users
+Answer:",False,True
+"In HIV-associated tuberculosis cases, treatment with antiretrovirals should begin:
+A. Before antiretroviral drugs are started
+B. After antiretroviral drugs are started
+C. Concurrently with antiretroviral drugs
+D. Doesn’t make any difference
+Answer:",True,True
+"A “benefit” of research may accrue:
+A. To the participant
+B. To his/her family
+C. To society
+D. All of the above
+Answer:",True,True
+"What is the current best option for preventing future outbreaks of Ebola?
+A. Rebuild scientific, medical and nursing infrastructure and train staff
+B. Early and accurate diagnosis with molecular kits
+C. Develop effective vaccines
+D. Arrange rapid intervention into West Africa with EU and USA army teams
+Answer:",False,False
+"Where are arenaviruses predominately located in the world?
+A. SE Asia
+B. Russia
+C. Africa and S. America
+D. N. America
+Answer:",False,False
+"The most important element of ethical research on human subjects is:
+A. Beneficence
+B. Justice
+C. A methodologically sound study design
+D. Informed consent
+Answer:",True,True
+"The characteristic of injecting drug users in Asia is/are:
+A. Strong family support
+B. Low failure rate for rehabilitation centers
+C. Remaining a member of the community
+D. Both a and c
+Answer:",True,True
+"Viruses have encouraged us to change our world, as we have now:
+A. Eradicated smallpox
+B. Eradicated polio
+C. Increased hygiene
+D. A better understanding of how cellular genes aid virus replication and so become a target for new drugs
+Answer:",False,True
+"What is the most important factor for virus classification?
+A. The geometry of the virus
+B. How many proteins the virus has
+C. The disease a virus causes
+D. Chemistry of the DNA and RNA
+Answer:",True,True
+"The major issue for HIV infection among the Latino population is:
+A. Late detection of HIV status
+B. Cultural beliefs
+C. Immigration
+D. All of the above
+Answer:",True,True
+"Disease can most often be prevented by which of the following:
+A. Vaccines
+B. Antivirals
+C. Hygiene
+D. mosquito nets
+Answer:",False,True
+"Results of surveillance should be distributed to:
+A. Decision makers
+B. The public
+C. The data collectors
+D. All of the above
+Answer:",True,True
+"Which is a major characteristic of the bunyavirus family?
+A. Amplify by persistent infection of midgets, mosquitoes, sand flies, ticks
+B. Predominantly mosquito borne
+C. Genetic recombination or reassortment
+D. Spread to humans via bites of mice and rats
+Answer:",False,False
+"The group that permits analysis of the entire natural history of HIV/AIDS is:
+A. Persistent seronegatives
+B. Long-term survivors
+C. Seroconverters
+D. Long-term survivors with low levels of CD4+ cells
+Answer:",True,True
+"The chance of acquiring HIV infection from factor VIII in the United States in 2011 is 0% primarily because:
+A. All donors for factor VIII are screened
+B. Factor VIII is subject to detergent “washing” prior to release
+C. Factor VIII is made synthetically
+D. Factor VIII is important from countries with no reported HIV
+Answer:",False,False
+"The prevalence of HIV among Latino-Americans compared to other ethic groups in the U.S. is:
+A. Highest
+B. Higher than all other ethnic groups except African-Americans
+C. Higher than in all other ethnic groups except African-Americans and
+D. Native Americans
+Answer:",False,True
+"What is the rubella syndrome?
+A. A description of the 3 day rash of German measles
+B. The teratogenic lesions of cataracts, deafness, mental retardation and microcephaly in the foetus
+C. Combination of rash and post infection encephalitis
+D. Side effects of the MMR vaccine
+Answer:",True,True
+"What is the most common way for a virus to kill a cell?
+A. Dissolves the cellular membrane
+B. Induces apoptosis via caspases
+C. Fragments cellular DNA
+D. Totally blocks cellular transcription
+Answer:",True,True
+"The influenza virus has complicated genetics mainly characterised by which of the following?
+A. Genetic reassortment amongst 8 genes
+B. High levels of recombination
+C. Rapid adsorption and fusion from without via a hydrophobic peptide
+D. High fidelity RNA replicase enzyme
+Answer:",False,False
+"The highest risk of HIV infection among drug users in the U.S. is in:
+A. The east coast
+B. The central United States (Kansas, Missouri etc.)
+C. Southern California
+D. The Pacific Northwest (Washington, Oregon, Idaho)
+Answer:",False,True
+"A study is conducted to assess the relationship between race and end-stage renal disease pathologists independently study specimens from 1,000 kidney biopsies. The first group of pathologists is aware of the race of the patient from whom the biopsy came, while the second group is blinded as to the patient’s race. The first group reports ‘hypertensive nephropathy’ much more frequently for black patients than the second group. Which of the following types of bias is most likely present in this study?
+A. Confounding
+B. Nonresponse bias
+C. Recall bias
+D. Referral bias
+Answer:",False,False
+"What is urban yellow fever (YF)?
+A. Part of a cycle of mosquitoes biting humans in cities
+B. Part of a cycle of mosquitoes biting humans and monkeys in forested areas
+C. A mutant of the YF virus
+D. A YF species that has adapted to new mosquitoes
+Answer:",True,True
+"The current testing policy of the Centers for Disease Control and the World Health Organization is:
+A. “Opt-in”
+B. “Opt-out”
+C. Mandatory testing of prisoners
+D. Mandatory testing of high-risk groups
+Answer:",True,True
+"Common cold viruses are ubiquitous and invade by which route?
+A. Faecal oral route
+B. Respiratory and surface route
+C. Cuts in the skin
+D. Sexual transmission
+Answer:",True,True
+"Assembly is a vital late replication stage for a virus and is often accomplished by which of the following?
+A. Use of cellular scaffolding in the nucleus and cytoplasm
+B. Snatching cellular lipids and membranes
+C. Master plan embedded in the viral genome
+D. Random interactions between cellular and virus proteins
+Answer:",False,False
+"The biggest single determinant of HIV transmission to the infant is:
+A. Mother’age
+B. Mother’s viral load
+C. Mother’s immune status
+D. Father’s viral load
+Answer:",True,True
+"What does the reproductive number of a virus tell us?
+A. How virulent the infection will be
+B. How many people will die
+C. How many contacts will be infected from one case
+D. How long the 'incubation period' will be
+Answer:",True,True
+"PreP is most effective for which group:
+A. Men with frequent unprotected sex
+B. Men with infrequent unprotected sex
+C. Women with frequent unprotected sex
+D. Women with infrequent unprotected sex
+Answer:",True,True
+"A special feature of adaptive immunity is:
+A. Speed of response to a foreign protein
+B. Ability to distinguish self and non self
+C. Ability to distinguish viruses and bacteria
+D. Short memory
+Answer:",False,True
+"As regards the range of diseases caused by viruses:
+A. Each member of the 'family' causes the same disease.
+B. Members of many families can cause the same sort of disease.
+C. Most virus disease are now controlled by vaccines.
+D. Most viruses can cross placenta and be teratogenic.
+Answer:",True,True
+"Which is the exception in the following range of disease symptoms caused by bunyaviruses?
+A. Pneumonias
+B. Haemorrhagic fever
+C. Hepatitis
+D. Impaired renal function
+Answer:",False,False
+"There is no vaccine against HIV because of which of the following?
+A. The virus is so antigenically variable
+B. Such a vaccine would be too expensive
+C. The virus can be controlled by a change in sexual habits
+D. Latency can abrogate any vaccine effect
+Answer:",False,False
+"The requirements for an effective surveillance system include:
+A. A diagnostic algorithm
+B. Staff members
+C. A sampling frame
+D. All of the above
+Answer:",True,True
+"MERS has four special characteristics and here we have one exception - which is it?
+A. Spread by faecal oral route
+B. Aerosol droplet transmission
+C. Reservoir in bats
+D. A conduit to humans via camels
+Answer:",False,False
+"The major beneficiary of Medicaid in the U.S. is:
+A. Single men
+B. The elderly
+C. Women and children
+D. Undocumented residents
+Answer:",True,True
+"Which of the following is the most important for controlling disease caused by norovirus?
+A. A norovirus vaccine
+B. Attention to handwashing and hygiene
+C. Quarantine
+D. New antiviral drugs
+Answer:",True,True
+"Why do vigorous CD8 cell responses in chronically infected HIV-positive individuals fail to eliminate the virus?
+A. CTL exhaustion
+B. Epitope escape
+C. Suboptimal CTL
+D. Absence of dendritic cells
+Answer:",False,True
+"The most widespread and important retrovirus is HIV-1; which of the following is true?
+A. Infecting only gay people
+B. Infecting only males
+C. Infecting every country in the world
+D. Infecting only females
+Answer:",False,False
+"The first acquired immune cell to respond defensively to HIV infection is:
+A. CD4+
+B. CD8+
+C. CD57
+D. NK cells
+Answer:",True,False
+"Which of the following is a special feature of the rabies vaccine?
+A. The vaccine has not changed since the time of L. Pasteur
+B. The original air dried spinal cord of infected rabbits was a killed vaccine
+C. The vaccine still needs 16 doses given into the peritoneal cavity
+D. The modern rabies vaccine is grown in human diploid cells from an aborted embryo
+Answer:",False,True
+"Most viral vaccines are produced by which of the following techniques?
+A. Traditional cell culture
+B. Molecular biology
+C. Animal tissues in vitro
+D. VLPs (virus like particles)
+Answer:",False,False
+"The treatment of hepatitis C has been revolutionised most recently by which of the following?
+A. The use of interferon
+B. A new vaccine
+C. Monoclonal antibodies
+D. Direct-acting Antivirals such as daclatasvir and sofosbuvir
+Answer:",False,False
+"Chikungunya has spread widely from Asia and Africa into the Caribbean in recent years. This has been mainly facilitated by:
+A. Mutation in the virus allowing replication in the mosquito Aedes albopictus
+B. Air Travel
+C. Climate change
+D. Poor mosquito control and the absence of DTT
+Answer:",True,True
+"The successful anti-cancer HPV vaccine consists of:
+A. Live virus attenuated by specific mutagenesis
+B. Whole virus chemically inactivated vaccine
+C. Self-assemble of virus L1 protein into VLP
+D. Sub unit chemically inactivated vaccine
+Answer:",False,False
+"The rotavirus is an important cause of which of the following?
+A. Respiratory infection in adults
+B. Gastroenteritis in children
+C. Diarrhoea and vomiting in adults
+D. Cancer
+Answer:",True,True
+"The surveillance testing strategy associated with the least selection bias is:
+A. Compulsory
+B. Unlinked anonymous
+C. Voluntary anonymous
+D. Voluntary confidential
+Answer:",False,False
+"In a medical class of 147 students, the distribution of scores on a biochemistry final examination has a mean equal to 67, a median equal to 76, a mode equal to 80, a standard deviation equal to 5.5, and a variance equal to 30.25. Three students were unable to take the test on the scheduled date and were given a different form of the exam 1 week later. Which parameter is most likely to be the least biased estimator of central tendency for this distribution of biochemistry test scores?
+A. Mean
+B. Median
+C. Mode
+D. Standard deviation
+Answer:",False,False
+"What disease do herpes viruses not cause?
+A. Infantile paralysis
+B. Encephalitis
+C. Sexually transmitted disease
+D. Cancer
+Answer:",True,True
+"The purpose of a double-blind or double-masked study is to:
+A. Achieve comparability of treated and untreated subjects
+B. Reduce the effects of sampling variation
+C. Avoid observer and subject bias
+D. Avoid observer bias and sampling variation
+Answer:",False,False
+"Nipah is a zoonotic paramyxovirus; where did it originate?
+A. Originating in pigs
+B. Originating in bats
+C. Coming from humans
+D. Coming from horses
+Answer:",False,False
+"What is the genome structure of the polyomavirus family?
+A. Circular ds DNA with T antigen coding regions
+B. Circular ssDNA
+C. RNA genome with RT
+D. Segmented RNA genome
+Answer:",False,False
+"Interferons are very special defence mechanisms which operate by:
+A. Binding to viruses
+B. Binding to neighbouring cells
+C. Producing a long lasting state of resistance
+D. Inhibiting virus induced enzymes
+Answer:",False,True
+"Genetic characteristics of the bunyavirus family include which one of the following?
+A. Three segmented negative stranded RNA viruses with anti-sense expression
+B. Highly mutable RNA viruses
+C. Emerging viruses via arthropod vector
+D. Use an RT enzyme
+Answer:",True,True
+"The basic code of ethical research (respect for persons, beneficence, and justice) was first established by the:
+A. Nuremberg Code
+B. Declaration of Helsinki
+C. CIOMS
+D. Belmont Report
+Answer:",True,True
+"The paramyxovirus family employ what strategy at virus entry?
+A. Initiate a fusion 'from without' using virus F protein
+B. Has fusion from within a cytoplasmic vacuole at low pH
+C. Viruses can puncture plasma membranes at entry
+D. A fusion mediated by M protein
+Answer:",False,False
+"The risk of acquiring HIV from a unit of blood in the United States is now:
+A. 1/10,000 units
+B. 1/200,000 units
+C. 1/500,000 unit
+D. 1 per 2 million units
+Answer:",True,True
+"What is the essential pathology of astroviruses?
+A. Very restricted replication in the gut
+B. Can cause infection of the central nervous system
+C. Sequence diversity allows widespread replication
+D. Can cause infection in the upper respiratory tract
+Answer:",True,True
+"Which of the following are goals of vaccination?
+A. Prevent infection
+B. Prevent disease
+C. Prevent transmission
+D. All of the above
+Answer:",True,True
+"Randomization of study subjects in a clinical trial is most helpful for controlling for which of the following?
+A. Placebo effect
+B. Recall bias
+C. Non-compliance
+D. Effect modification (interaction)
+Answer:",False,True
+"A quasi species virus such as influenza and HIV has which of the following characteristics?
+A. A fragmented or segmented genome
+B. Co-existence of innumerable genetic variants
+C. Possesses RNA and DNA
+D. A very large genome
+Answer:",True,True
+"Positive stranded RNA viruses have which of the following characteristics?
+A. Their genome RNA can be translated directly as mRNA
+B. They have to transcribe their genome RNA to a mirror image copy as a mRNA
+C. This genome is circular
+D. Their RNA genome is segmented
+Answer:",True,True
+"What is the genetic structure of rotavirus?
+A. Circular DNA containing virus
+B. RNA virus with RT
+C. ds RNA virus
+D. ds RNA virus in segments
+Answer:",False,False
+"Are/were viruses:
+A. The most abundant form of life on earth?
+B. Discovered before bacteria?
+C. Grown in animals in the laboratory?
+D. The cause of all human disease?
+Answer:",False,False
+"It is unlikely that a 'cure' of HIV is possible with current drugs because:
+A. Even in combination current drugs do not completely block viral replication
+B. They do not penetrate to cells
+C. They cannot block viral transcription from integrated viral DNA
+D. They cannot penetrate to the CNS
+Answer:",False,False
+"Which viruses appear to be hypermutable?
+A. DNA viruses
+B. 'Emerging' viruses
+C. Influenza and HIV
+D. RNA viruses
+Answer:",True,True
+"How are herpes infections controlled?
+A. Chemotherapy
+B. Vaccines
+C. Hygiene and social distancing
+D. No method
+Answer:",True,True
+"A new drug with in vitro activity against HIV is tested on a population of patients with Western-blot confirmed HIV infections. Out of the 200 individuals in the patient population, 100 are chosen by lottery to receive the drug. The drug, which is tasteless, is administered in a cup of orange juice; the other patients receive pure orange juice. Neither the nurses, doctors, nor the patients know which patients receive the drug. At the end of the study period, the number of CD4+ T cells is determined for all of the subjects. This is an example of a
+A. Case-control study
+B. Case report
+C. Cohort study
+D. Cross-sectional study
+Answer:",False,False
+"What is the most successful and most widely used 'travel' vaccine for international visitors?
+A. Influenza
+B. MMR
+C. Yellow Fever
+D. Rabies
+Answer:",False,False
+"What is a virus pandemic?
+A. A sharp and rapid epidemic involving more than one country
+B. An outbreak which recurs again and again
+C. A rapid global outbreak starting from a single focus
+D. A characteristic of common cold virus and HIV
+Answer:",True,False
+"Benefits of opioid replacement therapy as an approach for HIV prevention include:
+A. Reducing craving for and use of illicit opioids
+B. More sharing of injecting paraphernalia
+C. Reducing frequency of injection drug use
+D. Both a and c
+Answer:",True,True
+"Papilloma viruses are characterised by what genetic feature?
+A. A genome of ds circular DNA encoding around 8 ORF
+B. A virus with RT able to integrate and cause cancer
+C. A variable ds RNA virus
+D. A large DNA containing virus
+Answer:",True,True
+"As part of the Women’s Health Study, researchers investigated the role of systemic inflammation in predicting cardiovascular disease in women (N Engl J Med. 2002;347[20]:1557-1565). Researchers used a prospective study design with a large sample size. Blood levels of C-reactive protein (CRP) were measured at baseline and women were followed for an average of 8 years. The following table shows the relative risk estimates of cardiovascular event (heart attack or stroke) within 5 years by quintile of CRP level for the 30,000 women. The first quintile is used as the reference category.  1 0.49 mg/dL Relative Risk Number of women  1.0 6000  2 >0.49-1.08 mg/dL 1.8 6000  Quintile of CRP Level 3 >1.08-2.09 mg/dL 2.3 6000  4 >2.09-4.19 mg/dL 3.2 6000  5 >4.19 mg/dL 4.5 6000  Based on the relative risk data above, one can conclude:
+A. There is no risk of heart attack/stroke for women with CRP levels in the first quintile.
+B. Decreasing CRP level appears to increase the risk of heart attack/stroke.
+C. Increasing CRP level appears to increase the risk of heart attack/stroke.
+D. There appears to be no association between CRP levels and heart attack/stroke.
+Answer:",False,False
+"What is the morphology of the Dane particle?
+A. Double shelled icosahedron
+B. Lipid membrane free icosahedron
+C. Flexuous and filamentous morphology
+D. Numerous small particles
+Answer:",False,False
+"The adenovirus virion has which unique structural feature?
+A. Icosahedron
+B. Icosahedron with slender fibres
+C. 'Complex' structure not yet fully explored
+D. Flexuous lipid containing structure
+Answer:",True,True
+"A city has a population of 250,000 cases and 400 deaths each year from this disease. There are 2,500 deaths per year from all causes. The prevalence of this disease is given by
+A. 400/250,000
+B. 600/250,000
+C. 1,000/250,000
+D. 2,500/250,000
+Answer:",False,False
+"Which unique form does the rabies virus take?
+A. The virion has a dumbbell appearance
+B. It is shaped like a bullet from a gun
+C. The virus is star shaped
+D. The virion is very pleomorphic
+Answer:",True,False
+"Which of the following diseases is not caused by togaviruses?
+A. Chikungunya
+B. Rubella (German measles)
+C. Western Equine encephalitis
+D. Yellow Fever
+Answer:",True,True
+"Why are the viruses of this family called astroviruses?
+A. Because of the nucleotide sequence of their genomes
+B. The superficial appearance of a 'star' on negative straining electron microscopy
+C. Because of isolation in very large numbers of mammals including dromedaries, cats and cattle
+D. Because they are more common in developing countries with poor hygiene
+Answer:",True,True
+"Why do emerging viruses like Zika and Ebola continue to plague us?
+A. These viruses mutate and hence emerge
+B. We disturb forests where they quietly exist as a zoonosis
+C. Mosquitoes are the main culprit to encourage virus spread
+D. The viruses can be halted by new vaccines
+Answer:",False,True

@@ -1,0 +1,605 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"What is the structure of the United Nations Security Council?
+A. 5 permanent members with veto power, 10 rotating members with no veto power
+B. 5 permanent members and 10 rotating members, all with veto power
+C. 10 permanent members with veto power, and 5 rotating members without veto power
+D. 15 permanent members with veto power
+Answer:",True,True
+"What was the significance of the Gulf of Tonkin resolution?
+A. It allowed the US to intensify its involvement in Vietnam
+B. It illustrated the influence of public opinion on US foreign policy
+C. It enhanced Congressional control over the Vietnam War
+D. It curtailed US involvement in Vietnam
+Answer:",True,True
+"Which is not a nonstate actor that poses a threat to the United States?
+A. Terrorists
+B. Organized crime
+C. Drug traffickers
+D. China
+Answer:",True,True
+"Who was the first American president to visit communist China?
+A. Richard Nixon
+B. George H. W. Bush
+C. Jimmy Carter
+D. Ronald Reagan
+Answer:",True,True
+"The Strategic Arms Reduction Treaty was the first accord
+A. on nuclear weapons signed between the United States and the Soviet Union.
+B. cutting conventional arms in Europe.
+C. to be rejected by the U.S. Senate.
+D. mandating the elimination of many long-range nuclear missiles.
+Answer:",True,True
+"What were the implications of the Cold War for American exceptionalism?
+A. It ended the influence of American exceptionalism entirely
+B. Exceptionalism was enhanced by America's status as the 'leader of the free world'
+C. The extension of American power globally challenged core assumptions of exceptionalism
+D. Both b and c
+Answer:",True,True
+"Why did Franklin D. Roosevelt initially favour an 'isolationist' stance on the part of the US during the 1930s?
+A. He believed that internal reform rather than international negotiation was the key to economic regeneration of the US
+B. He believed that German domination of Europe would be in US interests
+C. He always favoured isolationism
+D. All of the above
+Answer:",True,True
+"What was the 'New Populism'?
+A. A strand of neo-isolationist sentiment
+B. A strand of internationalist sentiment
+C. An expression of American cultural superiority
+D. Increased incorporation of public opinion in foreign policy making
+Answer:",False,True
+"How did World War I shift economic power from Europe to the United States?
+A. The war reduced European population levels below that of the United States
+B. The United States seized German resources after the war
+C. European countries paid the United States for assistance
+D. The United States became a creditor country and financial centre, with European war spending boosting the US economy
+Answer:",True,True
+"In American government, the power to declare war rests with
+A. the president of the United States.
+B. the secretary of defense.
+C. the chairman of the Joint Chiefs of Staff.
+D. Congress.
+Answer:",True,True
+"How did the Cold War context shape US perceptions of the Third World?
+A. The US ignored the Third World
+B. Local developments were viewed through a geopolitical lens
+C. The US unreservedly supported decolonization
+D. None of the above
+Answer:",True,True
+"What was unique about the NATO intervention in Kosovo?
+A. It was the first time the US became involved in the Balkans
+B. It was the first time NATO used military force
+C. It was the first war won by airpower alone
+D. It was the first war to employ 'smart weapons'
+Answer:",True,False
+"What, according to Systemic theories, is the primary determinant of a state's foreign policy?
+A. The character of a state's leader
+B. The distribution of power in the international system
+C. The distribution of power within a state's governmental system
+D. A state's political ideology
+Answer:",True,True
+"Why is there so much uncertainty over which states have nuclear weapons?
+A. Leaders have incentives to lie
+B. If leaders revealed their programs, they would be more likely to be attacked
+C. Leaders will not always grant foreign monitors access to their nuclear programs
+D. ALL of the above
+Answer:",True,True
+"Within American politics, the power to accord official recognition to other countries belongs to
+A. the Senate.
+B. the president.
+C. the Secretary of State.
+D. the chairman of the Joint Chiefs.
+Answer:",True,True
+"What did the Moscow Treaty on Strategic Offensive Reductions do?
+A. Required the United States and Russia to demobilize their armies
+B. Required the United States and Russia to dismantle a significant number of their nuclear weapons
+C. Prohibited the acquisition of new military bases
+D. Prohibited short-range nuclear weapons
+Answer:",True,True
+"What were the 'open-door notes'?
+A. An American declaration that the US was always open to Chinese immigration
+B. An American proclamation that China should be divided up between the US, Japan and the European empires
+C. An American proclamation that China should be open to US trade and missionaries
+D. An American declaration of support for Chinese economic protectionism
+Answer:",True,True
+"International trade will almost always benefit both countries, so why do countries try to protect their own firms from exposure to the world market?
+A. Irrationality on the part of the leadership
+B. Costs of free trade are concentrated, but benefits are dispersed
+C. Regime type
+D. International conflict prevents trade
+Answer:",True,True
+"Why did George H.W. Bush allow Saddam Hussein to remain in power after the Gulf War of 1991?
+A. Lack of US firepower
+B. Concern over oil supplies
+C. Limited UN mandate and fear of a protracted conflict
+D. Difficult terrain and fear of civilian casualties
+Answer:",True,True
+"Why do Liberal Internationalists argue that international institutions are important to US grand strategy?
+A. They allow the US to withdraw from the international arena
+B. They serve American interests
+C. The US is incapable of acting alone
+D. None of the above
+Answer:",True,True
+"What was the significance of the Truman Doctrine?
+A. It indicated the special place of Greece and Turkey in American interests
+B. It was Truman's first statement on European affairs
+C. It indicated US reluctance to get involved in incidents outside of its immediate sphere of influence
+D. It indicated that the US would now view all local revolts through a geopolitical lens
+Answer:",True,True
+"What tend to be the effects of oil and other natural resource trade on developing states?
+A. It democratizes countries
+B. It has no real effect
+C. It encourages stability of the regime
+D. It changes the nature of the investor
+Answer:",True,True
+"The dominant course for foreign policy throughout most of American history can be categorized as
+A. containment.
+B. neoconservatism.
+C. isolationism.
+D. protectionism.
+Answer:",True,True
+"What led Britain to impose new taxes on their American colonies?
+A. To increase the wealth of King George III
+B. The growing costs of war with France
+C. Anger at America's growing prosperity
+D. Pressure from rich merchants
+Answer:",True,True
+"Who said ""Globalization is not something we can hold off or turn off. It is the economic equivalent of a force of nature-like wind or water""?
+A. Ronald Reagan
+B. George Soros
+C. Bill Clinton
+D. George W. Bush
+Answer:",True,True
+"The idea that war is ""the continuation of politics by other means"" helps to capture
+A. diplomacy is the quietest instrument of influence in global politics.
+B. the way political parties fight with each other.
+C. the idea that governments use their military to help pursue policy goals.
+D. the way Democrats and Republicans differ over the war in Iraq.
+Answer:",True,True
+"What are the key elements of the Liberal approach to US foreign policy?
+A. Promotion of Democracy, free-trade and international institutions
+B. Alliances, diplomacy and protectionism
+C. The balance of power, self-sufficiency and prudence
+D. None of the above
+Answer:",True,True
+"What was the key difference between US expansion pre- and post- 1865?
+A. US expansion was based on territory rather than markets post-1865
+B. US expansion was based on markets rather than territory post-1865
+C. US expansion was limited to Latin America post-1865
+D. US expansion ended after 1865
+Answer:",True,True
+"What case did President Eisenhower make against the 'military-industrial complex' in his farewell speech?
+A. That the capitalist search for profits was the leading cause of armed conflict
+B. That the United States no longer needed to be militarily strong
+C. That military spending gave the arms industry unwarranted influence on politics and government
+D. That private companies would undermine the role of the Armed Forces
+Answer:",True,True
+"Within the United Nations, real power is located in
+A. the Security Council.
+B. the Chamber of Deputies.
+C. the Council of Ministers.
+D. the Secretariat.
+Answer:",True,True
+"In general, how do conservatives and liberals differ when it comes to defense spending?
+A. Conservatives are skeptical of increases in defense spending; liberals advocate increases in defense spending.
+B. Conservatives favor social spending over defense spending; liberals favor defense spending over social spending.
+C. Conservatives advocate increases in defense spending; liberals are generally skeptical of increases in defense spending.
+D. Conservatives emphasize strong economies; liberals emphasize strong military readiness.
+Answer:",True,True
+"Intergovernmental organizations SELDOM do which of the following?
+A. Provide strong enforcement
+B. Monitor parties
+C. Provide fora for discussion
+D. Reduce transaction costs for agreements
+Answer:",True,True
+"Which of the following are possible constraints on US foreign policy decision making?
+A. Foreign policies of other states
+B. International law
+C. Intergovernmental organizations
+D. All of the above
+Answer:",True,True
+"What is direct diplomacy?
+A. Members of Congress negotiating directly with foreign governments
+B. Face-to-face meetings between state leaders
+C. The president consulting Congress on foreign policy issues
+D. Bilateral talks that do not involve a third-party negotiator
+Answer:",False,False
+"What was the Clinton Administration's policy on the Russian economy?
+A. The US inhibited the marketization of the Russian economy
+B. The US promoted the marketization of the Russian economy
+C. The US supported public ownership of natural resources
+D. None, the US was only concerned with security issues
+Answer:",True,True
+"How many major powers are there in a multipolar system?
+A. 0
+B. 1
+C. 2
+D. 3 or more
+Answer:",True,True
+"Why did Americans believe that they could found a different kind of empire after 1776?
+A. This would be an 'empire of liberty'
+B. This empire would be multi-cultural
+C. This type of empire would be based on expansion
+D. This would be empire free of slavery
+Answer:",True,True
+"The trade-off between defense and social spending is often referred to as a choice between
+A. bread and butter.
+B. war and peace.
+C. guns and butter.
+D. bombs and books.
+Answer:",True,True
+"What did Charles Krauthammer mean by a 'unipolar moment' when describing the post-Cold War system?
+A. The chance for the United States to share power with other countries in the world
+B. An opportunity to use to collapse of the Soviet Union to extend US power
+C. An international system that didn't face any threats
+D. The never-ending domination of the United States
+Answer:",True,True
+"Which of the following considers it immoral to use force abroad to do good things (such human rights protection, democracy, etc)?
+A. Realism
+B. Idealism
+C. Liberalism
+D. None of the above
+Answer:",True,True
+"According to realists, what is the fundamental difference between the international system and the domestic system?
+A. Armed conflict
+B. Anarchy
+C. Institutions
+D. No common language
+Answer:",True,True
+"Which is NOT a reason for why intergovernmental organizations are ineffective at promoting human rights?
+A. These organizations merely identify those states who already support human rights
+B. They cannot get enough information about which leaders will abuse their citizens
+C. These organizations have little ability to constrain abusive leaders
+D. None of the above
+Answer:",False,True
+"Why might the 'Philadelphian System' be linked to the idea of American exceptionalism?
+A. It encouraged greater involvement in European politics
+B. It was designed as the antithesis of European politics
+C. It created a large standing army
+D. It encouraged the centralization of political power in the US
+Answer:",True,True
+"Which of the following are possible constraints on US foreign policy decision making?
+A. Foreign policies of other states
+B. International law
+C. Intergovernmental organizations
+D. All of the above
+Answer:",True,True
+"Détente, or the relaxing of tensions coupled with firm guarantees of mutual security, represented a shift in American foreign policy toward the communist world ushered in by
+A. Richard Nixon.
+B. Eugene McCarthy
+C. Lyndon Johnson.
+D. Robert Kennedy.
+Answer:",True,True
+"Which of these is not a component of the 'American Creed'?
+A. Liberty
+B. Equality
+C. Autocracy
+D. Individualism
+Answer:",True,True
+"During the early years of his administration, Reagan's foreign and defense policies emphasized
+A. nuclear disarmament.
+B. détente.
+C. anticommunism.
+D. international free trade.
+Answer:",True,True
+"The Vietnam War can be understood as
+A. a war that deeply divided the United States and fostered cynicism toward the American government.
+B. an example of the doctrine of containment, because U.S. involvement was designed to prevent the fall of South Vietnam to the communists.
+C. an example of how even a great power may not be able to prevail against a determined enemy unless there is a clear objective and the national will to do so.
+D. All of the above are true.
+Answer:",True,True
+"The departments of the executive branch that assist the president in designing and carrying out U.S. foreign policy are known as
+A. the United Nations.
+B. the National Security Council.
+C. the State Department.
+D. the National Security Agency.
+Answer:",True,False
+"The largest increase in peacetime defense spending in American history occurred under which president?
+A. Jimmy Carter
+B. Ronald Reagan
+C. Bill Clinton
+D. Dwight Eisenhower
+Answer:",True,True
+"What caused a public uproar involving the National Security Agency in 2005?
+A. Revelations that the NSA was monitoring the communications of American citizens without obtaining warrants
+B. A leaked memo that linked the events of September 11, 2001, with the Democratic National Committee
+C. Revelations that the NSA had tortured prisoners at Guantanamo, Cuba
+D. A scathing report condemning the George W. Bush administration for ""building a case for the war in Iraq on a quicksand foundation""
+Answer:",True,True
+"What was the Marshall Plan?
+A. A plan that provided economic assistance to rebuild Europe.
+B. A plan to provide aid to Greece and Turkey in their stand against Soviet and Soviet-assisted threats
+C. A plan that provided Europe with military assistance to counter the Soviet threat
+D. The plan designed to stop communism in Asia
+Answer:",True,True
+"Bureaucratic politics suggests we should be worried about which of the following with regard to nuclear weapons?
+A. Having the capability to deter the most powerful rival
+B. Having the capability to deter smaller states
+C. How nuclear attacks are identified and responded to; who controls the weapons
+D. Bureaucratic politics provides no information about nuclear proliferation and use
+Answer:",True,True
+"According to International Institutionalists, what problems have international institutions been designed to address?
+A. War
+B. Anarchy
+C. Collective action and coordination problems
+D. All of the above
+Answer:",False,True
+"What was meant by the term 'New World Order'?
+A. A new democratic internationalism led by the United States
+B. A new balance of power between the US and China
+C. A new global economic framework
+D. A new era of globalization
+Answer:",True,True
+"The best known and perhaps most important international organization is
+A. the United Nations.
+B. the North Atlantic Treaty Organization (NATO).
+C. the Organization of Petroleum Exporting Countries (OPEC).
+D. the World Trade Organization (WTO).
+Answer:",True,True
+"What was meant by the term 'American multiplication table'?
+A. Increase in the US population
+B. Increase in US finances
+C. Increase in US military capability
+D. Increase in US international influence
+Answer:",False,False
+"Global and regional international trade agreements work by using which of the following mechanisms?
+A. Reciprocity across multiple issues
+B. Reputational concerns of the actors
+C. Side payments for adjusting to the organization (such as the Common Agricultural Policy in the EU)
+D. ALL of the above
+Answer:",True,True
+"Why did Lincoln oppose the southward expansion of the US?
+A. It would have drained the US economically
+B. It would have involved compromising opposition to slavery
+C. It would have increased immigration to the US
+D. None of the above
+Answer:",True,True
+"Growing tension between the United States and the Soviet Union resulted in a policy that John Foster Dulles referred to as
+A. ""mutual assured destruction.""
+B. ""brinkmanship.""
+C. ""realism.""
+D. ""not in my backyard.""
+Answer:",True,True
+"Why do some scholars claim that Reagan 'won the Cold War'?
+A. Reagan's first term military spending pressured the Soviet Union to keep up its international commitments
+B. Reagan encouraged engagement with the Soviet Union
+C. Reagan encouraged a softer approach towards communism
+D. Reagan reduced military spending and this allowed the Soviet Union space to reform
+Answer:",True,True
+"What is the implication of American exceptionalism in terms of global economics?
+A. It encourages the use of tariffs
+B. It encourages nationalization
+C. It encourages liberalization of global trade
+D. It encourages redistribution of wealth
+Answer:",True,True
+"What were the primary institutions of the liberal international economic order?
+I. GATT
+II. IMF
+III. World Bank
+IV. NATO
+A. IV only
+B. II and III
+C. I, II, and III
+D. I, II, III, and IV
+Answer:",True,True
+"According to Rosenau, which factor is important to consider in explaining the foreign policy behavior of the United States?
+A. The external environment of the international system
+B. Domestic environment, government and bureaucracy
+C. The President's individual personality.
+D. All of the above
+Answer:",True,True
+"How many states in the international system are likely to have nuclear weapons right now?
+A. Fewer than 7
+B. Between 8 and 15
+C. Between 16 and 25
+D. More than 25
+Answer:",True,True
+"Why is NSC 68 seen as a turning point in US Cold War Foreign policy?
+A. It indicated the primacy of economic containment
+B. It indicated a desire to engage with the Soviet Union
+C. It indicated a shift towards military containment
+D. It dispensed with the idea of containment
+Answer:",True,True
+"What was meant by the term 'Rogue States'?
+A. States aligned with the USSR during the Cold War
+B. States outside of the 'family of nations'
+C. Communist States
+D. The former Soviet states
+Answer:",True,True
+"The foreign policy doctrine that European nations should stay out of Latin America is known as
+A. the Powell Doctrine.
+B. the Roosevelt Doctrine.
+C. the Bush Doctrine.
+D. the Monroe Doctrine.
+Answer:",True,True
+"Why do contemporary European liberal democrats tend to object to the influence of exceptionalism on American foreign policy?
+A. They see it as a challenge to European global influence
+B. They see it as an ideological façade for US imperialism
+C. They see it as a temporary phenomenon
+D. None of the above
+Answer:",True,True
+"In what sense might exceptionalism link isolationist and internationalist strategies?
+A. Both encourage world government
+B. Both focus on the decline of the American power
+C. It doesn't - the two are fundamentally opposed
+D. Both can be viewed as different means of achieving the same liberal ends
+Answer:",True,True
+"Why do realists tend to object to the influence of exceptionalism on American foreign policy?
+A. It leads to a diminished focus on collective security
+B. It diminishes the prospects for world government
+C. It enhances the prospects for world government
+D. It leads to a diminished focus on security, power and interest
+Answer:",True,True
+"What features distinguish Socio-Economic accounts of US Cold War foreign policy?
+A. A focus on class and economic interests
+B. A focus on liberal ideology
+C. A focus on language and culture
+D. All of the above
+Answer:",True,True
+"What did Paul Kennedy argue in his book The Rise and Fall of the Great Powers?
+A. All of the world's leading economies were declining due to low growth and inflation
+B. The United States could no longer remain a superpower and was in decline
+C. The soft power of the United States would allow it to avoid decline
+D. The rise of Japan had been exaggerated
+Answer:",True,True
+"The Joint Chiefs of Staff is made up of
+A. the critical domestic and foreign policy advisers to the president.
+B. foreign policy advisers who meet with the president daily.
+C. the commanding officers of each branch of the armed services, along with a chairperson and vice chairperson.
+D. the highest-ranking generals in the U.S. Army.
+Answer:",True,True
+"What is American exceptionalism?
+A. The belief that the United States is different from other major powers because it is concerned not only with Power, but also with Principles.
+B. The belief that the United States is different because it is the most powerful nation in the world.
+C. The belief that the United States is pacifist.
+D. The belief that the United States is different because it is motivated more by economic factors than other countries are.
+Answer:",True,True
+"The role of gathering and interpreting intelligence about foreign countries in order to allow policymakers to make good foreign policy decisions was given to
+A. the Central Intelligence Agency (CIA).
+B. the Federal Bureau of Investigation (FBI).
+C. the National Security Council.
+D. Both A and B are correct.
+Answer:",True,True
+"The cooperative international organization of 185 countries designed to stabilize the exchange of currencies and the world economy is
+A. the World Bank.
+B. the United Nations.
+C. UNICEF.
+D. the International Monetary Fund.
+Answer:",True,True
+"What policies are part of a grand strategy of Offshore Balancing?
+A. Maintaining a balance between the United States and other countries and not entering into alliances
+B. Investing equally in domestic and international security with balanced protection against terrorism and other states
+C. Embrace multi-polarity, show greater restraint internationally and require other states to meet their own security burdens.
+D. Isolate the US from the international system and not seek global power
+Answer:",True,True
+"What was the Marshall plan?
+A. A plan designed to aid the economy recovery of Europe
+B. An attempt to diminish the potential attraction of the Soviet system to Europeans
+C. An aid programme that embedded US influence in Europe
+D. All of the above
+Answer:",True,True
+"What accounted for the US avoidance of catastrophe at the hands of the British in 1814?
+A. Naval victories
+B. Diplomacy
+C. British preoccupation with Europe
+D. All of the above
+Answer:",True,True
+"What was a main organizational change proposed by the 9/11 Commission with regard to the U.S. intelligence community?
+A. Creation of the Department of Homeland Security
+B. Moving the Department of Defense Intelligence Agencies to the CIA for better coordination
+C. Creation of the National Intelligence Director
+D. Moving the domestic intelligence component of the FBI to the CIA
+Answer:",True,True
+"The government body formed to coordinate American foreign and military policy is known as
+A. the National Security Council.
+B. the Pentagon.
+C. the Defense Policy Institute.
+D. the Joint Chiefs of Staff.
+Answer:",True,True
+"What drives US foreign policy according to the Marxist perspective?
+A. Economic protectionism
+B. Class consciousness
+C. The search for new markets
+D. Superstructure
+Answer:",True,True
+"Why might American exceptionalism lead to opposition to world government?
+A. Its general anti-statism opposes centralized government
+B. It views world government as impractical
+C. It views the UN as a sufficient form of global governance
+D. None of the above
+Answer:",True,True
+"Which of the following considers states to be the primary actors in international relations?
+A. Realism
+B. Idealism
+C. Liberalism
+D. None of the above
+Answer:",True,True
+"The importance of oil in shaping U.S. foreign policy helps to highlight
+A. the importance of military superiority.
+B. how the importance of oil is often overexaggerated.
+C. the increasing importance of economic instruments of foreign policy.
+D. the need to drill for domestic sources.
+Answer:",False,True
+"The president's principal civilian adviser on the military is the
+A. national security adviser.
+B. director of the CIA.
+C. secretary of defense.
+D. secretary of state.
+Answer:",False,True
+"How do Ideational approaches to US foreign policy during the Cold War differ from Realist accounts of the same period?
+A. They place greater emphasis on economic factors
+B. They place greater emphasis on material interests and power
+C. They place greater emphasis on ideology and beliefs
+D. They place greater emphasis on geopolitics
+Answer:",True,True
+"How did the relationship between President and Congress develop under George H.W. Bush and Bill Clinton?
+A. Congress asserted its primacy in foreign policy
+B. US foreign policy became substantially decentralized
+C. The Presidency welcomed the influence of Congress
+D. None of the above
+Answer:",False,False
+"Which of the following points supports the argument for American unilateralism?
+A. Benevolent hegemony
+B. Ineffectiveness of multilateralism
+C. American power
+D. All of the above
+Answer:",True,True
+"Historically, what has been the general pattern of defense spending in the United States?
+A. Steady increases over time.
+B. Increased spending during wars, with demobilization bringing spending down but not back to prewar levels
+C. Unpredictable fluctuations.
+D. Increased spending during wars, with further increases after the war to prepare for future engagements.
+Answer:",True,True
+"International development may be tied to the security of the state, why?
+A. Threats to the state centralize political and economic power, threatening state development
+B. Too many casualties drain the productive power of the state
+C. Threats to the state encourage socialism
+D. The two are correlated, but there is no causal effect
+Answer:",False,True
+"What was the 'Domino Theory'?
+A. The idea that the Cold War operated according to the principles of game theory
+B. The idea that certain states were of higher value than others to the US during the Cold War
+C. The idea that the fall of one state to communism would inexorably lead to the fall of its neighbors
+D. The idea that the growth of democracy in one state would inexorably lead to its growth in others
+Answer:",True,True
+"What has been an effective way of disbursing US foreign aid to encourage change in target states?
+A. Conditional programs, such as the Millennium Challenge, that require change before receipt of aid
+B. the use of intergovernmental organizations to monitor aid disbursement
+C. withdrawal of aid for bad policies
+D. None of the above, international aid never works
+Answer:",True,True
+"What was established at Bretton Woods in 1994 to stabilize the global economy?
+A. The International Monetary Fund (IMF)
+B. The US Dollar as the world's reserve currency
+C. The General Agreement on Tariffs and Trade (GATT)
+D. All of the above
+Answer:",False,True
+"Which of the following is NOT a good predictor of which states will get nuclear weapons?
+A. Receipt of sensitive nuclear assistance
+B. Wealth/GDP
+C. Rivalry with a nuclear state
+D. Regime type
+Answer:",False,True
+"What was 'democratic enlargement'?
+A. A proposal for reform of the US system of government
+B. A proposal for the extension of democratic rule globally
+C. A proposal for the extension of free markets
+D. Both b and c
+Answer:",True,True
+"What is meant by the phrase 'empire by invitation'?
+A. Voluntary reliance on an external power for security
+B. Willful openness to colonization
+C. Cultural imperialism
+D. Open advocacy of imperialism for economic gain
+Answer:",True,True
+"In what way did the George W Bush administration change the direction of US foreign policy?
+A. It criticized international organizations, rather than trying to strengthen them
+B. It expanded NATO to include former Soviet states
+C. It focused on a more personal style of leadership
+D. It increased international support for the United States
+Answer:",True,True
+"Peace, commerce, and honest friendship with all nations, entangling alliances with none'. Identify the speaker.
+A. James Madison
+B. Abraham Lincoln
+C. Woodrow Wilson
+D. Thomas Jefferson
+Answer:",True,True

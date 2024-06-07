@@ -1,0 +1,983 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"A valid disjunctive syllogism has a major premise that:
+A. includes two or more alternatives
+B. classifies subjects
+C. affirms the antecedent or denies the consequent
+D. leads to a valid conclusion
+Answer:",True,True
+"Which of the following best describes the fallacy of style over substance?
+A. Changing the meaning of a word or phrase from one part of the argument to another.
+B. Confusing figurative language with literal language.
+C. Reasoning that ideas presented in an appealing manner are correct, regardless of the content of the message.
+D. Using emotionally charged language to create an impression about the subject of a claim, without making an argument that the language fits the subject.
+Answer:",False,True
+"Which of the following fallacies is a way of suppressing evidence that eliminates a source of evidence from consideration by claiming the source is flawed, when there is no true relationship between the alleged flaw and the reliability of the source?
+A. significance
+B. snob appeal
+C. poisoning the well
+D. appeal to anonymous authority
+Answer:",True,True
+"The false analogy fallacy is
+A. a specific type of false cause fallacy that argues that since two event happened at the same time one event must have caused the other
+B. arguing that an event that preceded another event necessarily is the cause of the second event
+C. arguing that since something is new it is necessarily good
+D. drawing a conclusion based on a comparison when the items being compared are not similar enough to support the conclusion.
+Answer:",True,True
+"The _ad nauseam_ fallacy is
+A. arguing that something should be done because that's the way it's been done in the past.
+B. arguing that an act should be carried out because it will not have any significant consequences, when there is no evidence of the effects
+C. reasoning that a conclusion is true because it's been claimed so often
+D. reasoning that a claim is true because so many people believe it is true
+Answer:",True,True
+"Arguing that what is true of an entire object is also true of each part of that object is the fallacy of
+A. false criteria
+B. hasty generalization
+C. ad crumenam
+D. division
+Answer:",True,True
+"Which of the following describes the horse laugh fallacy?
+A. responding to an argument with an expression of derision instead of a counter argument
+B. attempts to gain agreement based solely the feelings aroused by the message
+C. characterizing an opponent's position in such way to make it or its consequences appear to be ridiculous
+D. arguing actions should be taken to avoid negative results, when those results are exaggerated, unlikely, or irrelevant
+Answer:",True,True
+"Arguing that a lack of evidence proves something is the fallacy of...
+A. Appeal to ignorance
+B. Double negative
+C. Equivocation
+D. Burden of proof
+Answer:",True,True
+"The argument against the person consists of
+A. ignoring another person's arguments and attacking her character instead
+B. asserting an opposing arguer has taken an easily defeated position, which she has not really taken
+C. causing confusion during an argument by a lack of ability to engage in refutation
+D. using threats of harm instead of reasoning to gain agreement
+Answer:",True,True
+"Which of the following fallacies happens when someone concludes that someone must be honest because the people he hangs around with are honest?
+A. Laudatory personality
+B. Guilt by association
+C. Reprehensible personality
+D. Circular reasoning
+Answer:",True,False
+"Asking a question that includes an unproven assumption may lead to which of the following fallacies?
+A. Appeal to ignorance
+B. Extension
+C. a priori
+D. Complex question
+Answer:",True,True
+"Polonius in William Shakespeare's Hamlet: ""Your noble son is mad: Mad call I it, for to define true madness, What is't but to be nothing else but mad?""
+A. Attacking the Person (ad hominem)
+B. Equivocation
+C. Begging the Question
+D. Appeal to Pity
+Answer:",False,True
+"Notice from the Hyatt Regency Hotel in New Orleans: We are pleased to confirm your reservation. It will be held on a space-available basis.
+A. Equivocation
+B. Affirming the Consequent
+C. Gambler's Fallacy
+D. Inconsistency
+Answer:",False,False
+"The natural law fallacy is
+A. arguing that something is necessarily bad because it doesn't cost very much
+B. substituting individual stories for a larger sample when supporting a generalization
+C. arguing that what is true in nature must be true about humans
+D. the same thing as the  post hoc  fallacy
+Answer:",True,True
+"If someone uses an emotionally charged restatement of a claim in place of support for the claim, that person may have committed which of the following fallacies?
+A. Style over substance
+B. Question begging epithets
+C. Hypostatization
+D. Amphiboly
+Answer:",True,True
+"Arguing that a claim must be true merely because a substantial number of people believe it is called the fallacy of...
+A. Tu quoque
+B. Composition
+C. Appeal to the masses
+D. Appeal to reason
+Answer:",True,True
+"_Ad populum_. is another name for which fallacy?
+A. poisoning the well
+B. suppressed evidence
+C. appeal to pride
+D. appeal to the people
+Answer:",True,True
+"In a valid disjunctive syllogism the minor premise must
+A. accept one choice
+B. reject all but one choice
+C. either A or B
+D. none of the above
+Answer:",False,False
+"Which of the following describes the fallacy of appeal to spite?
+A. responding to an argument with an expression of derision instead of a counter argument
+B. arguing against a position based only on negative personal feelings toward the position
+C. arguing someone should do something only because that person dislikes someone else
+D. saying someone shouldn't do something because if he or she does it people won't like him or her
+Answer:",False,False
+"_Ad hominem_ is another name for the fallacy of
+A. appeal to loyalty
+B. reducing to an absurdity
+C. ignorance of refutation
+D. argument against the person
+Answer:",True,True
+"The fallacy of appeal to the person is rejecting a claim by...
+A. Using rhetoric
+B. Making false statements
+C. Ignoring the person
+D. Criticizing the person who makes it
+Answer:",True,True
+"Another name for hasty conclusion is
+A. hasty generalization
+B. post hoc ergo prompter hoc
+C. jumping to a conclusion
+D. ad novitatem
+Answer:",False,False
+"John S. Knight, Detroit Free Press (3 July 1970): ...Capitalism is the economic system in which the means of production and distribution are privately owned and operated for profit. The alternative system is called socialism, the theory of the ownership and operation of the means of production by society, with all members sharing in the work and the products.
+A. Begging the Question
+B. False Dilemma
+C. Straw Man
+D. Appeal to Gallery (Provicialism)
+Answer:",True,True
+"The fallacy of composition is
+A. attributing the cause of an event to a simple cause when the cause is more complex
+B. arguing that what is true of part of an object must be true of the entire object
+C. drawing a conclusion without enough evidence to support that conclusion
+D. drawing a conclusion based on sign reasoning when there is not really a direct relationship between the alleged sign and the subject of the conclusion
+Answer:",True,True
+""" _Ad crumenam_ "" is a specific kind of
+A. False analogy
+B. Hasty Generalization
+C. False sign
+D. Hasty Conclusion
+Answer:",False,True
+"Which of the following fallacies happens when someone draws a conclusion that is simply a restatement of one of the premises?
+A. Laudatory personality
+B. Guilt by association
+C. Accident
+D. Begging the question
+Answer:",True,True
+"I don't know what the answer is to number 8. But Heather hasn't made the third option into the correct answer for a while, and even then only once, so I'm guessing that this is the fallacy of Composition!
+A. Gambler's Fallacy
+B. Equivocation
+C. Fallacy of Composition
+D. Appeal to Pity
+Answer:",False,False
+"When someone argues that making a change will have no significant effect, but there is no evidence that the effect will not be significant, that person has committed which of the following fallacies?
+A. poisoning the well
+B. solid slope
+C. appeal to tradition
+D. argument from authority
+Answer:",True,False
+"Which of the following best describes the fallacy of question begging epithets?
+A. Treating something that exists in the mind as if it was a real object.
+B. A form of loaded language that uses an emotionally charged restatement of the claim, often in the form of name calling, in place of support for the claim.
+C. Changing the meaning of a word or phrase from one part of the argument to another.
+D. Reasoning that ideas presented in an appealing manner are correct, regardless of the content of the message.
+Answer:",True,True
+"Which of the following describes he fallacy of appeal to pride?
+A. arguing a claim should be accepted based only on evidence that unidentified authorities accept it.
+B. arguing someone should accept a claim based only on the evidence that he or she has the favorable characteristics to understand the truth of the claim.
+C. arguing something should be done based only on evidence that it's been done that way in the past, or should be believed only because it's been believed for a long time.
+D. arguing that an act or series of acts should be carried out because they will have no significant consequences, when there is no evidence for the lack of significant effects.
+Answer:",True,True
+"A syllogism that is formally invalid
+A. cannot be materially true
+B. might be materially true
+C. might be materially untrue
+D. both B and C
+Answer:",True,True
+"Another name for the fallacy of false dilemma is
+A. Guilt by association
+B. Circular reasoning
+C. Laudatory personality
+D. False dichotomy
+Answer:",True,True
+"When someone responds to your argument with a sarcastic statement such as, ""Yeah, right. Like that's ever going to happen,"" that person may have committed which fallacy?
+A. appeal to indignation
+B. appeal to spite
+C. horse laugh
+D. tu quoque
+Answer:",True,True
+"The _post hoc_ fallacy is
+A. arguing that a single event caused another when the cause is really several events
+B. arguing that since two things happened at the same time one must have caused the other
+C. drawing a conclusion about a causal relationship when there is no evidence of a causal relationship
+D. arguing that since one event preceded another event the first event must have caused the second event
+Answer:",True,True
+"The fallacy of reprehensible personality is a specific type of
+A. the fallacy of accident
+B. False dilemma
+C. Begging the question
+D. Circular reasoning
+Answer:",True,True
+"_A priori_ is a fallacy that involves
+A. asking a question that includes either an unproven assumption or more than one question, thus making a straightforward yes or no answer meaningless.
+B. arguing something is inferior just because it doesn't do something it was never intended to do.
+C. arguing that a claim must be true because there is no evidence that it is false.
+D. reasoning that determines the conclusion one wants first, then accepts only evidence supporting that conclusion, or interprets all evidence as support for that conclusion.
+Answer:",False,True
+"If you say an opposing arguer has taken a position that you can easily defeat, when he or she has not taken that position, then you go on to defeat that position and claim to have done significant damage to that arguer's overall argument, you are probably guilty of which of the following fallacies?
+A. genetic fallacy
+B. appeal to emotions
+C. straw person
+D. ignorance of refutation
+Answer:",True,True
+"""The minor premise must affirm the antecedent or deny the consequent"" is a way to determine the validity of which type of argument?
+A. Categorical syllogism
+B. Disjunctive syllogism
+C. Hypothetical syllogism
+D. Toulmin model
+Answer:",False,True
+"Arguing that someone couldn't have done something good because he is incapable of doing good commits the fallacy of
+A. Begging the question
+B. False dilemma
+C. Accident
+D. False dichotomy
+Answer:",False,False
+"The complex proposition fallacy involves
+A. including more than one claim in the proposition and treating proof for one claim as proof for all the claims.
+B. asking a question that includes either an unproven assumption or more than one question, thus making a straightforward yes or no answer meaningless.
+C. arguing that a claim must be true because there is no evidence that it is false.
+D. arguing something is inferior just because it doesn't do something it was never intended to do.
+Answer:",True,True
+"Anecdotal evidence is a specific kind of
+A. False sign
+B. False criteria
+C. False cause
+D. Hasty Generalization
+Answer:",True,True
+"Fallacies can be psychologically persuasive even though they are...
+A. Psychologically impotent
+B. Logically flawed
+C. Deductively valid
+D. Inductively valid
+Answer:",True,True
+"Referring to an act committed by an opponent in negative terms while referring to the same act committed by the arguer or supporters in favorable terms describes which of the following fallacies?
+A. Ambiguity
+B. Special pleading
+C. Reification
+D. Hypostatization
+Answer:",True,True
+"Which of the following explanations best fits the fallacy of ignorance of refutation?
+A. asserting an argumentative opponent has taken an easily defeated position, which the opponent has not really taken, defeating the position, and acting as if you've done significant damage to that person's overall argument.
+B. causing confusion during refutation because of a real or feigned lack of the ability to engage in refutation
+C. characterizing an opposing argument in such a way to make it or its consequences appear to be ridiculous
+D. arguing an action should be taken based only on the need to be loyal to someone or to a group
+Answer:",False,True
+"Another name for the fallacy of reducing to an absurdity is
+A. tu quoque
+B. ad baculum
+C. ad hominem
+D. reductio ad absurdum
+Answer:",True,True
+"Another name for the fallacy of complex question is
+A. Fallacy of interrogation
+B. Compound proposition
+C. Appeal to ignorance
+D. Extension
+Answer:",True,True
+"The appeal to joy fallacy involves
+A. arguing that someone should do something based only on the assertion that it will make him or her feel happier
+B. causing confusion during refutation because of a lack of ability to engage in refutation
+C. arguing for a conclusion based only on feeling sorry for someone when that feeling is irrelevant to the conclusion
+D. arguing someone should do something only because other people will like him or her for doing it
+Answer:",True,True
+"Another name for the fallacy of accident is
+A. Sweeping generalization
+B. Black-or-white fallacy
+C. Petitio principii
+D. False dichotomy
+Answer:",True,True
+"Which of the following describes the fallacy of evading the issue?
+A. arguing that someone should do something only because of ill will towards someone else
+B. characterizing an opponent's position in a way that makes it seem ridiculous
+C. supporting a claim with evidence or reasoning that is not relevant to the proposition, or responding to another's argument by changing the subject
+D. attempting to gain agreement based only on the feelings aroused in the message
+Answer:",True,True
+"Including more than one claim in a proposition may lead to which of the following fallacies?
+A. Complex question
+B. Appeal to ignorance
+C. Compound proposition
+D. Extension
+Answer:",False,False
+"Which of the following fallacies happens when someone concludes that someone couldn't have done something bad because he or she has good qualities?
+A. Laudatory personality
+B. Guilt by association
+C. Reprehensible personality
+D. Circular reasoning
+Answer:",True,True
+"Which of the following describes the fallacy of appeal to popularity?
+A. saying someone should do something because he or she dislikes someone else
+B. saying someone should do something to be better liked by others
+C. saying someone should do something because it will make him or her feel good
+D. saying someone should accept an idea because of the source of the idea
+Answer:",True,True
+"Which fallacy happens because of a failure to recognize the alternatives presented are not mutually exclusive?
+A. Begging the Question
+B. Accident
+C. Circular reasoning
+D. False dilemma
+Answer:",True,True
+"In a conditional syllogism, when the minor premise denies the antecedent
+A. no valid conclusion can be drawn
+B. the conclusion must affirm the consequent
+C. the conclusion must deny the consequent
+D. the conclusion must affirm the antecedent
+Answer:",True,True
+"The Dean was showing a visitor around the campus. The visitor asked, ""About how many students do you have here?"" After a moment of reflection the Dean replied, ""Oh, I'd guess about one in a hundred.""
+A. Equivocation
+B. Fallacy of Division
+C. Appeal to Authority
+D. Denying the Antecedent
+Answer:",False,True
+"The appeal to anonymous authority fallacy consists of
+A. reasoning that an act or series of acts should be carried out because they will have no significant consequences, when there is no evidence there will be no consequences.
+B. arguing that a claim should be accepted based on the evidence that a large number of people accept it
+C. arguing that something should be done because it has been done in the past
+D. arguing a claim should be accepted based only on the assertion that unidentified authorities accept it
+Answer:",True,True
+"A hasty generalization is a fallacy of...
+A. Acceptable premises
+B. Unacceptable premises
+C. Deduction
+D. Acceptable but untrue premises
+Answer:",True,True
+"Which of the following best describes the fallacy of figure of speech?
+A. Using emotionally charged language to create an impression about the subject of a claim, without making an argument that the language fits the subject.
+B. Treating something that exists in the mind as if it was a real object.
+C. Confusing figurative language with literal language.
+D. A form of loaded language that uses an emotionally charged restatement of the claim in place of support for the claim.
+Answer:",True,True
+"The fallacy of extension consists of
+A. asking a question that includes either an unproven assumption or more than one question, thus making a straightforward yes or no answer meaningless.
+B. arguing something is flawed because it doesn't do what it was never intended to do.
+C. arguing about something when you don't know what you're talking about
+D. including more than one claim in the proposition and treating proof for one claim as proof for all the claims.
+Answer:",False,False
+"Arguing that a claim must be true because there is no evidence that it is false is which of the following fallacies?
+A. a priori
+B. Extension
+C. Appeal to ignorance
+D. plurium interrogationum
+Answer:",True,True
+"Which of the following describes the fallacy of appeal to common practice?
+A. eliminating a source of evidence from consideration by claiming the source is flawed, when there is no true relationship between the alleged flaw and the reliability of the source
+B. reasoning that an act or series of acts should be carried out because they will have no significant consequences, when there is no evidence there will be no consequences
+C. drawing a conclusion after purposely leaving out evidence or ignoring known evidence that might contradict a claim
+D. arguing that something is the right thing to do based only on evidence that other people are already doing it.
+Answer:",True,True
+"Which of the following is another name for evading the issue?
+A. ""you too"" fallacy
+B. irrelevant conclusion
+C. appeal to fear
+D. argument against the person
+Answer:",False,True
+"I don't understand why everyone thinks they belong in college. After all, everyone knows that when you are intelligent you'll succeed. But so many people that elect to attend college don't have even the most basic intelligence. How do they expect to get anywhere here?
+A. Attacking the Person (ad hominem)
+B. Straw Man
+C. Denying the Antecedent
+D. Begging the Question
+Answer:",False,False
+"When someone treats an imaginary concept as if it was something tangible that person might commit the fallacy of
+A. Question begging epithets
+B. Misusing ambiguity
+C. Hypostatization
+D. Amphiboly
+Answer:",True,True
+"Another name for hasty generalization is
+A. false criteria
+B. secundum quid
+C. anecdotal evidence
+D. ad crumenam
+Answer:",False,True
+"An arguer who threatens another to gain agreement commits the fallacy of
+A. appeal to force
+B. tu quoque
+C. ignorance of refutation
+D. straw person
+Answer:",True,True
+"Which type of syllogism's major premise takes the form, ""All A's are B""?
+A. categorical
+B. disjunctive
+C. conditional
+D. hypothetical
+Answer:",True,True
+"Which of the following fallacies happens when someone argues that a choice must be made among a certain set of alternatives, when there are really other alternatives to choose from?
+A. Laudatory personality
+B. Accident
+C. False dilemma
+D. Circular reasoning
+Answer:",True,True
+"If you think that someone's argument is strong based on their compelling use of language and confident delivery, you've probably committed which fallacy?
+A. Amphiboly
+B. Equivocation
+C. Special pleading
+D. Style over substance
+Answer:",True,True
+"Which of the following describes the fallacy of appeal to indignation?
+A. attacking the character or background of someone making an argument instead of his or her evidence and reasoning
+B. responding to charges of wrongdoing by saying other people do the same thing
+C. arguing against a position only based on personal feelings toward the position
+D. responding to an argument with an expression of derision instead of a counter argument
+Answer:",True,True
+"Evading burden of proof is another name for the fallacy of
+A. Extension
+B. Appeal to ignorance
+C. Complex question
+D. Complex proposition
+Answer:",True,True
+"In a hypothetical syllogism, when the minor premise affirms the antecedent
+A. no valid conclusion can be drawn
+B. the conclusion must affirm the consequent
+C. the conclusion must deny the consequent
+D. the conclusion must deny the antecedent
+Answer:",True,True
+"Moses Maimonides, ""The Guide of the Perplexed"": God, may He be exalted ... existed alone, and nothing else. ...Afterwards, through His will and His volition, He brought into existence out of nothing all the beings as they are, time itself being one of the created things. For time is consequent upon motion, and motion is an accident of what is moved. Furthermore, what is moved...is itself created in time ....
+A. Equivocation
+B. Appeal to Authority
+C. Inconsisteny
+D. Slippery Slope
+Answer:",True,False
+"John Stuart Mill: Each person's happiness is a good to that person, and the general happiness, therefore, a good to the aggregate of all persons.
+A. Fallacy of Composition
+B. Fallacy of Division
+C. Gambler's Fallacy
+D. Equivocation
+Answer:",True,True
+"_Circulus in probando_ is another name for
+A. The fallacy of accident
+B. False dilemma
+C. Begging the question
+D. Guilt by association
+Answer:",True,True
+"Arguing that an idea should be accepted or rejected only because of the source of the idea commits which of the following fallacies?
+A. genetic fallacy
+B. appeal to popularity
+C. scare tactics
+D. appeal to emotions
+Answer:",True,True
+"At the end of the course, Professor Jones told us that we were the best class he had ever had. That's why I'm sure that the 0.0 the appeared on my grade report is a mistake. Surely, if we were as good a class as Professor Jones said we were, none of us deserved to fail.
+A. Fallacy of Composition
+B. Fallacy of Division
+C. Questionable Cause
+D. Appeal to Gallery (Provicialism)
+Answer:",False,True
+"Which of the following best describes the fallacy of equivocation?
+A. A form of loaded language that uses an emotionally charged restatement of the claim in place of support for the claim.
+B. Changing the meaning of a word or phrase from one part of the argument to another.
+C. Confusing figurative language with literal language.
+D. Referring to an act committed by an opponent in negative terms while referring to the same act committed by the arguer or supporters in favorable terms.
+Answer:",True,True
+"The fallacy of appeal to emotions consists of
+A. trying to make an opponent's argument seem ridiculous
+B. defending wrongdoing by claiming the opposing arguer does the same thing
+C. arguing that an argument should be rejected because the source of the argument
+D. trying to get someone else to agree to a claim only by arousing that person's feelings about the subject
+Answer:",True,True
+"""To be valid, the minor premise must either agree with the antecedent, or disagree with the consequent"" is a requirement for
+A. a disjunctive syllogism
+B. a categorical syllogism
+C. a conditional syllogism
+D. disjunctive enthymeme
+Answer:",True,False
+"Which of the following fallacies happens when someone concludes that someone couldn't have done something good because he or she has negative qualities?
+A. Laudatory personality
+B. Guilt by association
+C. Reprehensible personality
+D. Circular reasoning
+Answer:",True,True
+"Another name for the bandwagon appeal is
+A. appeal to beliefs
+B. appeal to authority
+C. appeal to the people
+D. common man appeal
+Answer:",True,True
+"A valid disjunctive syllogism has which of the following characteristics?
+A. The minor premise must either affirm the antecedent or deny the consequent
+B. The minor premise must either accept an alternative or reject an alternative
+C. One of the premises is missing
+D. It reaches a truthful conclusion
+Answer:",False,True
+"Appeal to beliefs is another name for which of the following fallacies?
+A. ad nauseam
+B. appeal to tradition
+C. solid slope
+D. self evident truths
+Answer:",False,False
+"When a claim is supported only by asserting that unidentified experts accept the claim the arguer has committed which of the following fallacies?
+A. appeal to tradition
+B. ad vericundiam
+C. appeal to anonymous authority
+D. snob appeal
+Answer:",True,True
+"The black-or-white fallacy is another name for
+A. The fallacy of accident
+B. False dilemma
+C. Begging the question
+D. Circular reasoning
+Answer:",True,True
+"The false sign fallacy is
+A. arguing that what is true of part of an object is necessarily true of the entire object
+B. arguing that two things are similar enough that what is true of one is true of the other
+C. arguing that since something is inexpensive it is necessarily of low quality
+D. reasoning by sign when there is really not a direct relationship between the alleged sign and the subject of the argument
+Answer:",True,True
+""" _Ad novitatem_ "" is
+A. arguing that what is true of a few members of a class is true of all members of the class
+B. drawing a conclusion by applying irrelevant criteria to a subject
+C. substituting individual stories for a larger sample as support for a claim
+D. arguing that something must be good because it is new, or must be bad because it is old
+Answer:",True,True
+"When someone tries to support a proposition with information that really has nothing to do with the claim being made, that person has probably committed which of the following fallacies?
+A. straw person
+B. genetic fallacy
+C. irrelevant conclusion
+D. ignoratio elenchi
+Answer:",False,False
+"Applying irrelevant standards to the subject of the argument is the fallacy of
+A. ad crumenam
+B. ad antiquitatem
+C. false criteria
+D. hasty generalization
+Answer:",True,True
+"If you argued something is flawed because it fails to do something, when it was never intended to do that, you may have committed which of the following fallacies?
+A. ad ignorantium
+B. Many questions
+C. Extension
+D. Compound proposition
+Answer:",False,True
+""" _Ad antiquitatem_ "" is
+A. a specific type of false cause fallacy that argues that since two event happened at the same time one event must have caused the other
+B. a specific type of false sign fallacy that reasons something is necessarily better because it is old, or is worse because it is new
+C. a specific type of false sign fallacy that reasons something is necessarily better because it is new, or is worse because it is old
+D. arguing that what is true of an individual part of an object must be true of the entire object
+Answer:",False,True
+""" _Ad crumenam_ "" is
+A. basing a conclusion on an analogy when the items being compared are not similar enough to sustain the analogy
+B. a specific type of false sign fallacy that reasons someone is necessarily better because he or she is wealthy, or is worse because he or she is poor
+C. drawing a firm conclusion without enough evidence to support that conclusion
+D. a specific type of false cause that involves mistakenly attributing the cause of an event to a simple cause when the cause is more complex
+Answer:",True,True
+"The fallacy of laudatory personality is a specific type of
+A. The fallacy of accident
+B. False dilemma
+C. Begging the question
+D. Circular reasoning
+Answer:",True,True
+"Appeal to ignorance is a fallacy that involves
+A. determining the conclusion one wants first, then accepting only evidence supporting that conclusion, or interpreting all evidence as support for that conclusion.
+B. arguing something is inferior just because it doesn't do something it was never intended to do.
+C. arguing that a claim must be true because there is no evidence that it is false.
+D. arguing about something when you are ignorant about the subject
+Answer:",True,True
+"Which of the following statements is **not** true?
+A. A formally valid syllogism may be materially untrue
+B. A formally valid syllogism must be materially true
+C. A materially true conclusion may arise from a formally valid syllogism
+D. The formal validity of a syllogism does not guarantee it is materially true
+Answer:",True,True
+"""The minor premise must affirm the antecedent or deny the consequent"" is a validity requirement of which type of argument?
+A. Toulmin
+B. Categorical
+C. Disjunctive
+D. Conditional (or hypothetical)
+Answer:",True,True
+"Which of the following describes the fallacy of appeal to loyalty?
+A. arguing that someone should do something because it will make him or her better liked by others
+B. responding to an argument with an expression of derision
+C. arguing that an idea should be accepted only because of who originated the idea
+D. arguing that someone should do something to be loyal to a person or a group
+Answer:",True,True
+"Arguing in favor of a claim based only on the evidence that some regular people believe the claim is one way to commit which of the following fallacies?
+A. poisoning the well
+B. common person appeal
+C. ad numerum
+D. suppressed evidence
+Answer:",True,True
+"The appeal to fear involves
+A. arguing something should be done only because it will make the person doing it feel good
+B. arguing someone should do something only because of ill will towards someone else
+C. arguing actions should be taken to avoid exaggerated, unlikely, or irrelevant negative results
+D. characterizing an opponents position in a way that makes it seem silly
+Answer:",True,True
+"It's silly to pass laws against discrimination, since it is obvious that we can't live without it. We discriminate between pleasant and unpleasant tastes in selecting our food, between pleasant and unpleasant sounds in selecting our music, between harmonious and unharmonious colors in decorating our homes, between interesting and uninteresting people in choosing our friends, and so on. We can't live without discriminating.
+A. Prejudicial Language
+B. Equivocation
+C. Inconsistency
+D. Straw Man
+Answer:",False,True
+"The fallacy of guilt by association is a specific type of
+A. Fallacy of accident
+B. Laudatory personality
+C. Begging the question
+D. Circular reasoning
+Answer:",True,True
+"Appeal to compassion is
+A. an appeal to emotion that argues against a position based only on negative personal feelings toward the position
+B. an appeal to emotion that argues a conclusion should be made based only on feeling sorry for someone
+C. an appeal to emotion that argues an action should be taken based only on the need to be loyal to someone
+D. arguing that an idea should be accepted based only on who originated the idea
+Answer:",True,True
+"When someone uses highly emotionally charged terms during an argument, without giving any reasons why those terms fit the subject, that person may have committed which of the following fallacies?
+A. Special pleading
+B. Amphiboly
+C. Equivocation
+D. Loaded language
+Answer:",True,True
+"Arguing that someone couldn't have done something good because she holds a particular position commits the fallacy of
+A. Guilt by association
+B. False dilemma
+C. Reprehensible personality
+D. False dichotomy
+Answer:",False,False
+""" _Ad antiquitatem_ "" is a specific kind of
+A. False cause
+B. False sign
+C. False analogy
+D. Hasty Generalization
+Answer:",False,False
+"The hasty conclusion fallacy is
+A. arguing that a single event caused another when the cause is really several events
+B. making an argument without enough evidence to support the conclusion
+C. substituting individual stories for a larger sample in support of a claim
+D. reasoning that applies irrelevant criteria to the subject of the argument.
+Answer:",True,True
+""" _Ad lazarum_ "" is
+A. a specific type of false sign that argues there is necessarily an inverse relationship between cost and quality, so something is necessarily a better value because it costs less
+B. arguing that what is true of an entire object must also be true of every individual part of that object
+C. a specific type of false analogy that reasons what is true about nature must be true about humans
+D. drawing a conclusion without enough evidence to support that conclusion
+Answer:",True,True
+"All things that are spoiled are inedible. Timothy is spoiled. So, Timothy is inedible.
+A. Equivocation
+B. Attacking the Person (ad hominem)
+C. Fallacy of Division
+D. Questionable Cause
+Answer:",True,True
+"Which of the statements below is correct about the following argument?
+
+""If the sky is blue there won't be rain. The sky is blue today. Therefore, there won't be rain.""
+A. It is a formally valid categorical syllogism
+B. It is a formally invalid disjunctive syllogism
+C. It is a formally valid conditional syllogism
+D. It is a formally invalid conditional syllogism
+Answer:",True,True
+"Which of the following best describes the snob appeal fallacy?
+A. reasoning that a claim is true based only on the evidence that it has been made so often.
+B. arguing someone should accept a claim based only on the evidence that he or she has the favorable characteristics to understand the truth of the claim.
+C. arguing a claim should be accepted based only on evidence that unidentified authorities accept it.
+D. arguing that someone should accept an idea or product based only on evidence that prestigious people accept it, or that non-prestigious people reject it.
+Answer:",True,True
+"""Each term must be used twice, no more and no less,"" is a test of validity for which type of syllogism?
+A. Enthymeme
+B. Categorical
+C. Disjunctive
+D. Conditional
+Answer:",True,True
+"The universe, like a watch, must have a maker.
+A. Fallacy of Accident
+B. Questionable Analogy
+C. Questionable Cause
+D. Fallacy of Composition
+Answer:",False,True
+"The natural law fallacy is a specific type of
+A. false analogy
+B. false cause
+C. false criteria
+D. false sign
+Answer:",True,True
+"Given the following major premise, which of the following minor premises could lead to a valid conclusion?
+
+""Either I'm going to do well on this test or I'm going to be mad.""
+A. ""I won't do well on the test""
+B. ""I won't take the test""
+C. ""My birthday is today""
+D. both A and B
+Answer:",False,True
+"Men are better drivers than women are. The proof of this is that men are more capable than women of managing cars on the road.
+A. Begging the question
+B. Ad hominem (Attacking the Person)
+C. False Dilemma
+D. Appeal to Pity
+Answer:",True,True
+"In a faulty analogy, the things being compared are...
+A. Sufficiently similar
+B. Sufficiently similar in irrelevant ways
+C. Complete opposites
+D. Not sufficiently similar in relevant ways
+Answer:",True,True
+"Which of the following describes the _tu quoque_ fallacy?
+A. summarizing an opponent's position in a way that makes it seem silly
+B. attempting to gain agreement based only on the feelings aroused in the argument
+C. responding to charges of wrongdoing by saying the accuser does the same thing
+D. arguing against a position based only on negative personal feelings toward the position
+Answer:",True,True
+"Responding to charges of wrongdoing by saying the accuser or others do the same thing describes which of the following fallacies?
+A. ignoratio elenchi
+B. ad baculum
+C. ad misericordiam
+D. tu quoque
+Answer:",True,True
+"The fallacy that involves reasoning that determines the conclusion one wants first, then accepts only evidence supporting that conclusion, or interprets all evidence as support for that conclusion is known as
+A. ad ignorantium
+B. a priori
+C. plurium interrogationum
+D. Extension
+Answer:",False,True
+"The genetic fallacy consists of
+A. arguing that a conclusion should be made based on feeling sorry for someone when that feeling is irrelevant to the conclusion
+B. responding to charges of wrongdoing by saying the accuser does something just as bad
+C. arguing that an idea should be accepted or rejected based only on who originated the idea.
+D. causing confusion during refutation because of a real or feigned lack of ability to engage in refutation
+Answer:",True,True
+"Another name for the fallacy of begging the question is
+A. Dito simpliciter
+B. Bifurcation
+C. Reprehensible personality
+D. Circular reasoning
+Answer:",True,True
+"The fallacy of _ignoratio elenchi_ is also known as
+A. argument against the person
+B. appeal to compassion
+C. ignorance of refutation
+D. the ""you too"" fallacy
+Answer:",False,True
+"William Safire in American Heritage Magazine (December 1987): ...The greatness of Lincoln was his purposefulness. He saw something that few others saw: that the democratic experiment centered on the Union and that majority rule was everything. The minute you allowed secession, you made democracy an absurdity---because what would happen would be continued subdivision.
+A. Slippery Slope
+B. Questionable Analogy
+C. Appeal to Authority
+D. Straw Man
+Answer:",True,True
+"So, how long have you been beating your wife?
+A. Attacking the Person (ad hominem)
+B. False Dilemma
+C. Prejudicial Language
+D. Appeal to Force
+Answer:",False,False
+"""Misuse of statistics,"" ""questionable statistics,"" and ""questionable use of statistics"" are all other names for the fallacy of
+A. appeal to a pride
+B. significance
+C. poisoning the well
+D. slippery slope
+Answer:",True,True
+"E.F. Schumacher, famous economist, in an article in the Atlantic (April 1979): Fifteen months [after I had advised that rural India should have a technology intermediate between the hoe and the tractor,] an all-India conference on intermediate technology was arranged. (They still didn't like the term [intermediate], so they called it appropriate technology. That's all right: when I come to India and somebody says, ""Oh, Mr. Schumacher, I don't believe in appropriate technology"", I just look him straight in the face and say, ""Oh, that's splendid. Do you believe in inappropriate technology?"")
+A. Equivocation
+B. Inconsistency
+C. Appeal to Authority
+D. Prejudicial Language
+Answer:",True,True
+"We must assume that he is a Communist, because he says that he is not, and we know that Communists are taught always to deny party membership.
+A. Argument from Ignorance
+B. Affirming the Consequent
+C. Denying the Antecedent
+D. Begging the Question
+Answer:",False,False
+"If someone argues that something should be done in a certain way because that's the way it's always been done, that person has committed which of the following fallacies?
+A. slippery slope
+B. appeal to tradition
+C. argument from authority
+D. ad nauseam
+Answer:",True,True
+"False analogy is another name for which fallacy?
+A. Over generalization
+B. Composition
+C. Concomitant variation
+D. Imperfect analogy
+Answer:",True,True
+"Which of the following fallacies happen if someone argues that you are a reasonable and intelligent person, so of course you understand his claim is true?
+A. significance
+B. argument from authority
+C. appeal to pride
+D. slippery slope
+Answer:",True,True
+"Which fallacy happens when someone argues in favor of a two part proposition, only supports one part of the proposition, then asserts that the entire proposition has been supported.
+A. a priori
+B. Complex proposition
+C. Extension
+D. Appeal to ignorance
+Answer:",False,True
+"Which of the following is a test of the validity of a conditional syllogism?
+A. Every term must be used twice--no more and no less
+B. If one premise is negative, the conclusion must be negative
+C. The minor premise must affirm the antecedent or deny the consequent
+D. The alternatives presented must be mutually exclusive
+Answer:",True,True
+"Which of the following fallacies happens when someone attributes the cause of an event to a simple cause when the cause is actually more complicated?
+A. complex cause
+B. hasty generalization
+C. post hoc
+D. division
+Answer:",True,True
+"Which of the following is another name for the fallacy of amphiboly?
+A. Misusing ambiguity
+B. Reification
+C. Figure of speech
+D. Special pleading
+Answer:",True,True
+"Tan ah Tiat, forty-nine years old, a native of Kuala Lumpar, Malaysia, was charged with possession of opium. Arguing for acquittal, he told the judge that his opium habit did no harm, as he was too old to work anyway. Asked how he lived, he replied that he lived on the earnings of his grandmother.
+A. Straw Man
+B. False Dilemma
+C. Inconsistency
+D. Appeal to Authority
+Answer:",True,True
+"Which of the following best describes the fallacy of self-evident truths?
+A. arguing that a claim is true based only on evidence that an authority figure accepts the claim.
+B. arguing a claim should be accepted based only on evidence that unidentified authorities accept it.
+C. arguing that a claim should be accepted based on evidence that is not presented, but is asserted to be well known or obvious.
+D. arguing someone should accept a claim based only on the evidence that he or she has the favorable characteristics to understand the truth of the claim.
+Answer:",True,True
+""" _Ad lazarum_ "" is a specific kind of
+A. Anecdotal evidence
+B. Complex cause
+C. False criteria
+D. False sign
+Answer:",True,False
+"We're perfectly entitled to believe there is a God. After all, every effort by atheists to prove otherwise has failed.
+A. Appeal to Authority
+B. Denying the Antecedent
+C. Attacking the Person (ad hominem)
+D. Argument from Ignorance
+Answer:",True,True
+"When someone makes an argument, and the only evidence he or she uses to support the claim is the testimony that an authority figure believes the claim, the arguer has committed which fallacy?
+A. Questionable use of statistics
+B. Apple polishing
+C. Self evident truths
+D. Argument from authority
+Answer:",True,True
+"When someone changes the meaning of a word or phrase from one part of the argument to another that person may have committed which of the following fallacies?
+A. Special pleading
+B. Hypostatization
+C. Question begging epithets
+D. Equivocation
+Answer:",True,True
+"Another name for the fallacy of accident is
+A. Laudatory personality
+B. Guilt by association
+C. Either-or fallacy
+D. Dicto simpliciter
+Answer:",True,True
+"""Each term must be used twice, no more and no less"" is a requirement for
+A. valid categorical syllogism
+B. a valid disjunctive syllogism
+C. a valid conditional syllogism
+D. a materially true hypothetical syllogism
+Answer:",True,True
+"The false cause fallacy is
+A. arguing that since someone is poor she must have high moral character
+B. arguing that two things are causally related without evidence of a causal relationship
+C. arguing that since something is new it is necessarily bad
+D. substituting individual stories for a larger sample in support of a claim
+Answer:",True,True
+"Arguing that someone should do something because other people are doing it is a description of which of the following fallacies?
+A. appeal to common practice
+B. snob appeal
+C. argument by consensus
+D. appeal to tradition
+Answer:",True,True
+"Which of the following describes the fallacy of false consolation?
+A. arguing against a position based only on negative personal feelings toward the position
+B. responding to charges of wrongdoing by saying others do things as bad or worse
+C. arguing that someone is not really harmed because things could be worse or by pointing out what they have to be thankful for
+D. using threats of harm instead of reasoning to get agreement
+Answer:",True,True
+"Which of the following fallacies happens when someone concludes that a legitimate generalization necessarily applies to a particular case?
+A. False dilemma
+B. Circular reasoning
+C. Accident
+D. Bifurcation
+Answer:",True,True
+"Which of the following best describes the fallacy of poisoning the well?
+A. a way of suppressing evidence that eliminates a source of evidence from consideration by claiming the source is flawed, when there is no true relationship between the alleged flaw and the reliability of the source
+B. arguing that a claim should be accepted based on evidence that is not presented, but asserted to be well known or obvious.
+C. arguing something should be done based only on evidence that it's been done that way in the past, or should be believed only because it's been believed for a long time.
+D. reasoning that a claim is true based only on the evidence that it has been made so often.
+Answer:",True,True
+"Which of the following describes the straw person fallacy?
+A. arguing someone should do something only because it will make him or her better liked
+B. saying an opposing arguer has taken a position that you can easily defeat, when he or she has not taken that position, then going on to defeat that position and claim to have done significant damage to that arguer's overall argument
+C. attacking the character or background of an opposing arguer instead of responding to that person's arguments with good evidence and sound reasoni
+D. responding to an argument with an expression of derision instead of a counter argument
+Answer:",True,True
+"Which of the following is another name for appeal to the people?
+A. argument by consensus
+B. appeal to beliefs
+C. no true Scotsman
+D. overlooked evidence
+Answer:",True,True
+"Which of the following describes the fallacy of appeal to tradition?
+A. reasoning that a claim must be true because it's been made so often
+B. reasoning that a claim must be true because a regular person believes it
+C. reasoning that a claim must be true because it's been believed in the past
+D. reasoning that a claim must be true because a lot of people believe it
+Answer:",True,True
+"Which of the following is the best explanation of the fallacy of loaded language?
+A. Using emotionally charged language to create an impression about the subject of a claim, without making an argument that the language fits the subject.
+B. Referring to an act committed by an opponent in negative terms while referring to the same act committed by the arguer or supporters in favorable terms.
+C. Using language and punctuation in a way that a statement can have multiple interpretations, so it's not really clear what is meant.
+D. Confusing figurative language with literal language
+Answer:",True,True
+"Automatically rejecting a claim just because it's traditional is...
+A. Not reasonable
+B. An appeal to tradition
+C. An appeal to the masses
+D. Reasonable
+Answer:",False,True
+"A slippery-slope pattern of argument is fallacious when...
+A. It is hypothetical
+B. There is good reason to think that doing one action will inevitably lead to another undesirable action
+C. There are only two possible results
+D. There is no good reason to think that doing one action will inevitably lead to another undesirable action
+Answer:",True,True
+"Which of the following best describes the fallacy of special pleading?
+A. Reasoning that ideas presented in an appealing manner are correct, regardless of the content of the message.
+B. Using language and punctuation in a way that a statement can have multiple interpretations, so it's not really clear what is meant.
+C. Confusing figurative language with literal language.
+D. Referring to an act committed by an opponent in negative terms while referring to the same act committed by the arguer or supporters in favorable terms
+Answer:",True,True
+"Whether someone is hypocritical regarding her claims is...
+A. Irrelevant to her character
+B. Evidence that the claims are false
+C. Irrelevant to the truth of the claims
+D. Relevant only in court
+Answer:",True,True
+"If someone says if you do something it will lead to extreme consequences, but doesn't provide you with any evidence of a cause and effect relationship between your act and those consequences, that person has probably committed which of the following fallacies?
+A. ad nauseam
+B. self evident truths
+C. slippery slope
+D. suppressed evidence
+Answer:",True,True
+"The concomitant variation fallacy is
+A. attributing the cause of an event to a single cause when the cause is more complicated
+B. arguing that since two events happened at the same time, one event must have caused the other
+C. arguing that since one event preceded another event it must have caused the second event
+D. drawing a conclusion based on sign reasoning when there is not really a direct relationship between the alleged sign and the subject of the conclusion
+Answer:",False,True
+""" _Ad novitatem_ "" is a specific kind of fallacy of
+A. Division
+B. False sign
+C. False cause
+D. Hasty Generalization
+Answer:",False,True
+"Rejecting a claim by criticizing the person who makes it rather than the claim itself is known as the fallacy of...
+A. Division
+B. Appeal to emotion
+C. Composition
+D. Appeal to the person
+Answer:",True,True
+"Which of the following best describes the fallacy of amphiboly?
+A. Using emotionally charged languages to create an impression about the subject of a claim, without making an argument that the language fits the subject.
+B. Referring to an act committed by an opponent in negative terms while referring to the same act committed by the arguer or supporters in favorable terms.
+C. Using grammar and punctuation in a way that a statement may have multiple interpretations, so it's not really clear what is meant.
+D. Changing the meaning of a word or phrase from one part of the argument to another.
+Answer:",True,True
+"When someone uses grammar or punctuation in a way that makes a statement have more than one possible interpretation, that person may have committed which of the following fallacies?
+A. Amphiboly
+B. Hypostatization
+C. Question begging epithets
+D. Style over substance
+Answer:",True,True
+"Telling people that they haven't been harmed because there is something they should be thankful for commits which of the following fallacies?
+A. genetic fallacy
+B. horse laugh
+C. false consolation
+D. appeal to joy
+Answer:",True,True

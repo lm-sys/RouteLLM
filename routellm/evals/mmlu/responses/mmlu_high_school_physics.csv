@@ -1,0 +1,910 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"The plates of a capacitor are charged to a potential difference of 5 V. If the capacitance is 2 mF, what is the charge on the positive plate?
+A. 0.005 C
+B. 0.01 C
+C. 0.02 C
+D. 0.5 C
+Answer:",False,True
+"Which of these quantities decreases as the inverse square of distance for distances far from the objects producing the fields?
+A. the electric field produced by a finite-length charged rod
+B. the electric field produced by an infinitely long charged cylinder
+C. the electric field produced by an infinite plane of charge
+D. the magnetic field produced by an infinitely long, straight current-carrying wire
+Answer:",False,True
+"A solid, metal object is isolated from other charges and has charge distributed on its surface. The charge distribution is not uniform. It may be correctly concluded that the
+A. electric field outside the object is zero
+B. the electric field outside the object is equal to the electric field inside the object
+C. the electric field outside the object is directly proportional to the distance away from the center of mass of the object
+D. the electric field outside the object, but very close to the surface, is equal to the surface charge density at any location divided by the permittivity of free space
+Answer:",True,True
+"Standing waves are produced by a 100-Hz generator in a string of fixed length. The tension in the string is increased until a new set of standing waves is produced. Will the wavelength of the new standing waves be greater than or less than the wavelength of the original standing waves?
+A. Less, because the tension in the string varies directly with the wave speed, which varies inversely with the wavelength.
+B. Greater, because the tension in the string varies directly with the wave speed, which varies inversely with the wavelength.
+C. Greater, because the tension in the string varies directly with the wave speed, which varies directly with the wavelength.
+D. Less, because the tension in the string varies directly with the wave speed, which varies directly with the wavelength.
+Answer:",False,False
+"Two identical capacitors are hooked in parallel to an external circuit. Which of the following quantities must be the same for both capacitors? I. the charge stored on the capacitor II.  the voltage across the capacitor III. the capacitance of the capacitor
+A. I only
+B. II only
+C. II and III only
+D. (E) I, II, and III
+Answer:",True,False
+"A 1-kg object is released from rest at the top of a rough-surfaced incline. The object slides without rotating to the bottom of the incline. The object’s kinetic energy at the bottom must be
+A. Equal to the block’s gravitational potential energy when it was released, because total mechanical energy must be conserved.
+B. Equal to the block’s gravitational potential energy when it was released, because the gain in kinetic energy compensates for the mechanical energy lost to thermal energy on the rough incline.
+C. Less than the block’s gravitational potential energy when it was released, because the gravitational potential energy was converted both to thermal energy and to kinetic energy.
+D. Less than the block’s gravitational potential energy when it was released, because the work done by the friction force must be greater than the block’s gain in kinetic energy.
+Answer:",True,True
+"A student is experimenting with a simple spring-block oscillator of spring constant k and amplitude A. The block attached to the spring has a mass of m. If the student places a small block of mass m on top of the original block, which of the following is true?
+A. The small block is most likely to slide off when the original block is at maximum displacement from the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than kA/[(M+m)g].
+B. The small block is most likely to slide off when the original block is at the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than kA/[(M+m)g].
+C. The small block is most likely to slide off when the original block is at maximum displacement from the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than (M+m)g/(kA).
+D. The small block is most likely to slide off when the original block is at the equilibrium position, but will not slide off as long as the coefficient of static friction between the blocks is greater than (M+m)g/(kA).
+Answer:",True,True
+"How much work is required to charge a 10 µF capacitor to a potential difference of 100 V ?
+A. 0.005 J
+B. 0.01 J
+C. 0.05 J
+D. 0.1 J
+Answer:",True,False
+"A box of mass m slides on a horizontal surface with initial speed v0. It feels no forces other than gravity and the force from the surface. If the coefficient of kinetic friction between the box and the surface is μ, how far does the box slide before coming to rest?
+A. v0^2/(2μg)
+B. v0^2/(μg)
+C. 2v0^2/(μg)
+D. mv0^2/(μg)
+Answer:",True,True
+"A soccer ball, at rest on the ground, is kicked with an initial velocity of 10 m/s at a launch angle of 30°. Calculate its total flight time, assuming that air resistance is negligible.
+A. 0.5 s
+B. 1 s
+C. 2 s
+D. 4 s
+Answer:",False,False
+"Two identical containers are filled with different gases. Container 1 is filled with hydrogen and container 2 is filled with nitrogen. Each container is set on a lab table and allowed to come to thermal equilibrium with the room. Which of the following correctly compares the properties of the two gases?
+A. The average kinetic energy of the hydrogen gas is greater than the nitrogen gas.
+B. The average force exerted on the container by the hydrogen gas is greater than the nitrogen gas.
+C. The density of the hydrogen gas is less than the nitrogen gas.
+D. The pressures of the gases cannot be compared without knowing the number of molecules in each container.
+Answer:",False,False
+"A girl of mass m and a boy of mass 2m are sitting on opposite sides of a see-saw with its fulcrum in the center. Right now, the boy and girl are equally far from the fulcrum, and it tilts in favor of the boy. Which of the following would NOT be a possible method to balance the see-saw?
+A. Move the boy to half his original distance from the fulcrum.
+B. Move the girl to double her original distance from the fulcrum.
+C. Allow a second girl of mass m to join the first.
+D. Move the fulcrum to half its original distance from the boy.
+Answer:",True,True
+"When hot water is poured into a beaker containing cold alcohol, the temperature of the mixture will eventually reach the same temperature. Considering the scale of the size of the molecules of the fluids, which of the following is the primary reason for this phenomenon?
+A. The high temperature water will rise to the top of the container until it has cooled and then mixes with the alcohol.
+B. The molecules of the water continue to have a higher kinetic energy than the molecules of the alcohol, but the two liquids mix until the energy is spread evenly throughout the container.
+C. The hot water produces thermal radiation that is absorbed by the cold alcohol until the kinetic energy of all the molecules is the same.
+D. The water molecules collide with the alcohol molecules, transferring energy until the average kinetic energy of both the water and alcohol molecules are the same.
+Answer:",True,True
+"A solid sphere (I = 0.06 kg·m^2) spins freely around an axis through its center at an angular speed of 20 rad/s. It is desired to bring the sphere to rest by applying a friction force of magnitude 2.0 N to the sphere’s outer surface, a distance of 0.30 m from the sphere’s center. How much time will it take the sphere to come to rest?
+A. 4 s
+B. 2 s
+C. 0.06 s
+D. 0.03 s
+Answer:",False,False
+"The radius of Mars is about half that of Earth; the mass of Mars is about one-tenth that of Earth. Which of the following is closest to the gravitational field at the surface of Mars?
+A. 10 N/kg
+B. 4 N/kg
+C. 2 N/kg
+D. 0.5 N/kg
+Answer:",False,False
+"Above an infinitely large plane carrying charge density σ, the electric field points up and is equal to σ/2εo. What is the magnitude and direction of the electric field below the plane?
+A. σ/2εo, down
+B. σ/2εo, up
+C. σ/εo, down
+D. σ/εo, up
+Answer:",True,True
+"A beam of electrons has speed 10^7 m/s. It is desired to use the magnetic field of the Earth, 5 × 10−5 T, to bend the electron beam into a circle. What will be the radius of this circle?
+A. 1 nm
+B. 1 μm
+C. 1 mm
+D. 1 m
+Answer:",False,False
+"An object is placed 100 cm from a plane mirror. How far is the image from the object?
+A. 50 cm
+B. 100 cm
+C. 200 cm
+D. 300 cm
+Answer:",True,True
+"A horse is attached to a cart that is at rest behind it. Which force, or combination of forces, explains how the horse-cart system can accelerate from rest?
+A. The forward static friction force of the ground on the horse is greater than any friction forces acting backward on the cart, providing a forward acceleration.
+B. The forward force of the horse on the cart is greater than the backward force of the cart on the horse, providing a forward acceleration.
+C. The force of the horse’s muscles on the rest of the horse-cart system provides the necessary acceleration.
+D. The upward normal force of the ground on the horse is greater than the horse’s weight, providing an upward acceleration.
+Answer:",False,True
+"In a certain region, the electric field varies with the radius away from origin by the equation Er = –6r^2 + 4r + 3, where r is given in meters and E in N/C. The potential difference between the origin and the point (3, 4) is
+A. –165 V
+B. –120 V
+C. 64 V
+D. 185 V
+Answer:",False,False
+"A gas undergoes an expansion-compression cycle. If, plotted on a P-V diagram, the cycle is counterclockwise and the work is 300 J in magnitude, what was the heat transfer during this cycle?
+A. 300 J into the system
+B. 300 J out of the system
+C. 600 J into the system
+D. 600 J out of the system
+Answer:",False,False
+"An ideal battery of constant voltage V supplies current to a circuit that has total resistance R. If R is doubled, what will happen to the total power dissipated by the circuit?
+A. It will double.
+B. It will quadruple.
+C. It will be halved.
+D. It will remain the same.
+Answer:",True,True
+"Ultraviolet light has a wavelength of about 6 × 10^-8 m. What is the frequency of this light?
+A. 5 × 10^15 Hz
+B. 0.5 Hz
+C. 2 Hz
+D. 20 Hz
+Answer:",True,False
+"Each of the following ionized isotopes is projected with the same speed into a uniform magnetic field B such that the isotope's initial velocity is perpendicular to B. Which combination of mass and charge would result in a circular path with the largest radius?
+A. m = 16 u, q = –5 e
+B. m = 17 u, q = –4 e
+C. m = 18 u, q = –3 e
+D. m = 20 u, q = –1 e
+Answer:",True,False
+"An electric dipole consists of a pair of equal but opposite point charges of magnitude 4.0 nC separated by a distance of 2.0 cm. What is the electric field strength at the point midway between the charges?
+A. 0
+B. 9.0 × 10^4 N/C
+C. 1.8 × 10^5 N/C
+D. 7.2 × 10^5 N/C
+Answer:",False,False
+"A person can stand outside on a cold day for hours without ill effect, but falling into a cold lake can kill a person in a matter of minutes. Which of the following is the primary reason for this phenomenon?
+A. The molecules of the person are, on average, moving faster than those of the surroundings.
+B. Thermal energy moves from high concentration areas (hot) to low concentration areas (cold).
+C. As heat flows out of the person and warms the fluid surrounding the person, the warmer fluid rises, allowing fresh cool fluid to come in contact with the person and increasing the rate of heat transfer.
+D. Water has more molecules per volume than air, increasing molecular contact with the person.
+Answer:",False,False
+"A liquid flows at a constant flow rate through a pipe with circular cross-sections of varying diameters. At one point in the pipe, the diameter is 2 cm and the flow speed is 18 m/s. What is the flow speed at another point in this pipe, where the diameter is 3 cm?
+A. 4 m/s
+B. 6 m/s
+C. 8 m/s
+D. 12 m/s
+Answer:",False,False
+"An ideal fluid flows through a pipe with radius Q and flow speed V. If the pipe splits up into three separate paths, each with radius (Q/2), what is the flow speed through each of the paths?
+A. 1/3 V
+B. 2/3 V
+C. 4/3 V
+D. 4V
+Answer:",True,True
+"A very slow-moving positron interacts with a stationary electron. Which of the following statements correctly describes a possible outcome of this reaction and why it would occur?
+A. Conservation of mass indicates that if a single new particle were created in the reaction, it must have a total mass equal to the combined masses of the electron and positron.
+B. Conservation of charge indicates that all new particles created in the reaction would have no electric charge.
+C. Conservation of momentum indicates that two identical gamma rays moving off in opposite directions could be created.
+D. Conservation of energy indicates that the antimatter positron could annihilate into energy, leaving the stationary electron behind.
+Answer:",True,True
+"A box sits on an inclined plane without sliding. As the angle of the plane (measured from the horizontal) increases, the normal force
+A. increases linearly
+B. decreases linearly
+C. does not change
+D. decreases nonlinearly
+Answer:",False,True
+"A small cart of mass m is initially at rest. It collides elastically with a large cart of mass 4m and velocity v. The large cart loses half its kinetic energy to the little cart. The little cart now has a velocity of
+A. 1.41v
+B. v
+C. 2v
+D. 4v
+Answer:",True,False
+"A circuit consists of a battery and a light bulb. At first, the circuit is disconnected. Then, the circuit is connected, and the light bulb lights. After the light bulb has been lit for a few moments, how has the net charge residing on the circuit elements changed?
+A. The net charge has become more positive.
+B. The net charge has become more negative.
+C. The net charge has not changed.
+D. Whether the net charge becomes more positive or more negative depends on the initial net charge residing on the circuit elements before the bulb was lit.
+Answer:",True,True
+"If the force of gravity between the Moon and the Earth were to stop, which statement best describes the resulting motion of the moon?
+A. It would continue rotating on its axis, and it would revolve around the Earth as usual.
+B. It would continue rotating on its axis, but it would stop revolving around the Earth.
+C. It would stop rotating on its axis, but it would revolve around the Earth as usual.
+D. It would stop rotating on its axis, and it would stop revolving around the Earth.
+Answer:",False,True
+"A person stands on a scale in an elevator. He notices that the scale reading is less than his usual weight. Which of the following could possibly describe the motion of the elevator?
+A. It is moving downward and slowing down.
+B. It is moving upward and slowing down.
+C. It is moving upward at a constant speed.
+D. It is moving downward at a constant speed.
+Answer:",False,False
+"A whiffle ball is tossed straight up, reaches a highest point, and falls back down. Air resistance is not negligible. Which of the following statements are true?
+I. The ball’s speed is zero at the highest point.
+II. The ball’s acceleration is zero at the highest point.
+III. The ball takes a longer time to travel up to the highest point than to fall back down.
+A. I only
+B. II only
+C. I & II only
+D. I & III only
+Answer:",False,False
+"If L, M, and T denote the dimensions of length, mass, and time, respectively, what are the dimensions of impulse?
+A. LM/T^3
+B. LM/T^2
+C. LM/T
+D. L^2M/T^2
+Answer:",False,True
+"Traveling at an initial speed of 1.5 × 10^6 m/s, a proton enters a region of constant magnetic field of magnitude 1.5 T. If the proton's initial velocity vector makes an angle of 30° with the magnetic field, compute the proton's speed 4 s after entering the magnetic field.
+A. 5.0 × 10^6 m/s
+B. 7.5 × 10^6 m/s
+C. 1.5 × 10^6 m/s
+D. 3.0 × 10^6 m/s
+Answer:",False,True
+"A man stands on a platform scale in an elevator. The elevator moves upward, speeding up. What is the action-reaction force pair to the man’s weight?
+A. The force of the elevator cable on the man
+B. The force of the man on the scale
+C. The force of the elevator cable on the elevator
+D. The force of the man on the Earth
+Answer:",False,True
+"During an isothermal expansion, a confined ideal gas does 150 J of work against its surroundings. Which of the following describes the heat transfer during this process?
+A. 150 J of heat was added to the gas.
+B. 150 J of heat was removed from the gas.
+C. 300 J of heat was added to the gas.
+D. 300 J of heat was removed from the gas.
+Answer:",True,True
+"An object carries a charge of –1 C. How many excess electrons does it contain?
+A. 6.25 × 10^18
+B. 8.00 × 10^18
+C. 1.60 × 10^19
+D. 3.20 × 10^19
+Answer:",False,False
+"A guitar string creates a sound wave of known frequency. Which of the following describes a correct and practical method of measuring the wavelength of the sound wave with a meterstick?
+A. Lightly touch the guitar string in the middle such that a single node is created. Measure the length of the string; this is the wavelength.
+B. Measure the length of the guitar string; this is half the wavelength.
+C. Adjust the length of a pipe placed near the string so that resonances are heard. Measure the difference between the pipe lengths for consecutive resonances; this is half the wavelength.
+D. Measure the peak-to-peak distance of the wave as it passes; this is the wavelength.
+Answer:",True,True
+"Which of the following statements about images is true?
+A. Images produced by concave lenses are always real.
+B. Images produced by concave mirros are always real.
+C. Images produced by convex lenses can be both real and virtual.
+D. Images produced by convex mirrors can be both real and virtual.
+Answer:",True,True
+"Pretend someone actually managed to dig a hole straight through the center of the Earth all the way to the other side. If an object were dropped down that hole, which of the following would best describe its motion? Assume ideal conditions and that the object cannot be destroyed.
+A. It would fall to the center of the Earth and stop there.
+B. It would fall through the hole to the other side, continue past the opposite side’s opening, and fly into space.
+C. It would oscillate back and forth from one opening to the other indefinitely.
+D. It would fall to the other side and stop there.
+Answer:",True,True
+"A horizontal spring-block oscillator is in motion when a second block of equal mass falls on top of the oscillating block. If the two blocks stick together, what effect will this have on the amplitude of the oscillations?
+A. It will increase the amplitude.
+B. It will decrease the amplitude.
+C. It will have no effect.
+D. It would depend on where the original block was in its cycle when the second block fell.
+Answer:",True,False
+"In which of the following situations involving a source of sound and a detector of the sound is it possible that there is NO perceived Doppler shift?
+A. The source travels toward the stationary detector.
+B. The detector travels toward the stationary source.
+C. Both the source and detector travel in the same direction.
+D. Both the source and detector travel in opposite directions, with the source and detector moving away from each other.
+Answer:",True,True
+"A solid plastic cube with uniform density (side length = 0.5 m) of mass 100 kg is placed in a vat of fluid whose density is 1200 kg/m^3. What fraction of the cube's volume floats above the surface of the fluid?
+A. 1.0/9
+B. 1.0/3
+C. 2.0/3
+D. 4.0/5
+Answer:",False,False
+"A person standing on a horizontal floor is acted upon by two forces: the downward pull of gravity and the upward normal force of the floor. These two forces
+A. have equal magnitudes and form an action-reaction pair
+B. have equal magnitudes and do not form an action-reaction pair
+C. have unequal magnitudes and form an action-reaction pair
+D. have unequal magnitudes and do not form an action-reaction pair
+Answer:",False,True
+"A particle of mass m and charge Q and velocity V is directed toward a uniform electric field of strength E and travels a distance d. How far does the particle travel if the original velocity is doubled and the mass is cut in half?
+A. 4d
+B. 2d
+C. d
+D. 1/2d
+Answer:",False,False
+"An object of mass m1 experiences a linear, elastic collision with a stationary object of unknown mass. In addition to m1, what is the minimum necessary information that would allow you to determine the mass of the second object?
+A. The final speed of object 1
+B. The initial speed of object 1
+C. The final speed of object 2
+D. Any 2 of the above values
+Answer:",True,True
+"In an experiment designed to study the photoelectric effect, it is observed that low-intensity visible light of wavelength 550 nm produced no photoelectrons. Which of the following best describes what would occur if the intensity of this light were increased dramatically?
+A. Almost immediately, photoelectrons would be produced with a kinetic energy equal to the energy of the incident photons.
+B. Almost immediately, photoelectrons would be produced with a kinetic energy equal to the energy of the incident photons minus the work function of the metal.
+C. After several seconds, necessary for the electrons to absorb sufficient energy from the incident light, photoelectrons would be produced with a kinetic energy equal to the energy of the incident photons minus the work function of the metal.
+D. Nothing would happen.
+Answer:",True,True
+"Two traveling waves of equal frequency, one of amplitude 4 cm and the other of amplitude 6 cm, superimpose in a single medium. Which of the following best describes the displacement, D, of the resultant wave?
+A. 2 cm ≤ D ≤ 10 cm
+B. D = 5 cm
+C. D = 10 cm
+D. 10 cm ≤ D ≤ 12 cm
+Answer:",True,True
+"In Collision A, two carts collide and bounce off each other. In Collision B, a ball sticks to a rigid rod, which begins to rotate about the combined center of mass. Which of the following statements about quantities in each collision is correct?
+A. Collision A: each cart experiences the same force, time of collision, and change in kinetic energy. Collision B: the ball and the rod each experience the same torque, time of collision, and change in rotational kinetic energy.
+B. Collision A: each cart experiences the same force, time of collision, and change in linear momentum. Collision B: the ball and the rod each experience the same torque, time of collision, and change in angular momentum.
+C. Collision A: each cart experiences the same force, time of collision, and change in kinetic energy. Collision B: the ball and the rod each experience the same torque, time of collision, and change in angular momentum.
+D. Collision A: each cart experiences the same force, time of collision, and change in velocity. Collision B: the ball and the rod each experience the same torque, time of collision, and change in angular velocity
+Answer:",False,True
+"An object of mass 2 kg is acted upon by three external forces, each of magnitude 4 N. Which of the following could NOT be the resulting acceleration of the object?
+A. 0 m/s^2
+B. 2 m/s^2
+C. 4 m/s^2
+D. 8 m/s^2
+Answer:",False,True
+"Spring scales are used to measure the net force applied to an object; a sonic motion detector is used to measure the object’s resulting acceleration. A graph is constructed with the net force on the vertical axis and the acceleration on the horizontal axis. Which of the following quantities is directly measured using the slope of this graph?
+A. Gravitational mass
+B. Weight
+C. Velocity
+D. Inertial mass
+Answer:",True,True
+"A wooden block experiences a frictional force, f, as it slides across a table. If a block of the same material with half the height and twice the length were to slide across the table, what would be the frictional force it experienced?
+A. (1/2)f
+B. f
+C. 2f
+D. 4f
+Answer:",False,True
+"An object is placed 10 cm in front of a diverging mirror. What is the focal length of the mirror if the image appears 2 cm behind the mirror?
+A. -3/5 cm
+B. -5/3 cm
+C. -2/5 cm
+D. -5/2 cm
+Answer:",False,False
+"A body moving in the positive x direction passes the origin at time t = 0. Between t = 0 and t = 1 second, the body has a constant speed of 24 meters per second. At t = 1 second, the body is given a constant acceleration of 6 meters per second squared in the negative x direction. The position x of the body at t = 11 seconds is
+A. 99m
+B. 36m
+C. -36m
+D. -99m
+Answer:",True,False
+"A fluid of density ρ flows through a horizontal pipe with negligible viscosity. The flow is streamlined with constant flow rate. The diameter of the pipe at Point 1 is d and the flow speed is V. If the diameter of the pipe at Point 2 is d/3, then the pressure at Point 2 is
+A. less than the pressure at Point 1 by 4 ρv^2
+B. less than the pressure at Point 1 by 40 ρv^2
+C. more than the pressure at Point 1 by 4 ρv^2
+D. more than the pressure at Point 1 by 40 ρv^2
+Answer:",False,False
+"In a spring-block oscillator, the maximum speed of the block is
+A. proportional to amplitude
+B. proportional to the square of amplitude
+C. proportional to the square root of amplitude
+D. inversely proportional to the square root of amplitude
+Answer:",False,True
+"The weight of a box on the Earth is 80 N. What is the weight of the box on the moon if the moon has 1/80th the mass and 1/4th the radius of the Earth?
+A. 1 N
+B. 10 N
+C. 16 N
+D. 20 N
+Answer:",True,False
+"A textbook weighs 30 N at sea level. Earth’s radius is 6,400 km. Which of the following is the best estimate of the textbook’s weight on a mountain peak located 6,000 m above sea level?
+A. 60 N
+B. 15 N
+C. 30 N
+D. 7.5 N
+Answer:",True,True
+"Which of the following correctly describes the motion of a real object in free fall? Assume that the object experiences drag force proportional to speed and that it strikes the ground before reaching terminal sped.
+A. It will fall with increasing speed and increasing acceleration.
+B. It will fall with increasing speed and decreasing acceleration.
+C. It will fall with decreasing speed and increasing acceleration.
+D. It will fall with decreasing speed and decreasing acceleration.
+Answer:",True,True
+"A bi-convex lens has a radius of curvature of magnitude 20 cm. Which of the following best describes the image formed of an object of height 2 cm placed 30 cm from the lens?
+A. Real, inverted, height = 1 cm
+B. Virtual, upright, height = 0.25 cm
+C. Real, upright, height = 1 cm
+D. Virtual, inverted, height = 0.25 cm
+Answer:",True,False
+"Two spheres of net charge +5e and -6e briefly come into contact. Afterward, which of the following is a possible combination of net charges for the two spheres?
+A. +3e and -4e
+B. +1.5e and -2.5e
+C. Both of the above
+D. None of the above
+Answer:",False,False
+"The circumference of a helium-filled balloon is measured for three different conditions: at room temperature, after being in a warm oven for 30 minutes, and after being in a freezer for 30 minutes. A student plotting the circumference cubed C^3 as a function of temperature T, should expect to find which of the following?
+A. a cubic relationship between C^3 and T
+B. an indirect relationship between C^3 and T
+C. an extrapolated temperature T where C^3 reaches zero
+D. a maximum C^3 as the temperature T increases
+Answer:",False,True
+"The charge on an oil drop is measured in the laboratory. Which of the following measurements should be rejected as highly unlikely to be correct?
+A. 6.4 × 10^-19 C
+B. 8.0 × 10^-19 C
+C. 4.8 × 10^-19 C
+D. 2.4 × 10^-19 C
+Answer:",True,False
+"Traveling at an initial speed of 1.5 × 10^6 m/s, a proton enters a region of constant magnetic field, B, of magnitude 1.0 T. If the proton's initial velocity vector makes an angle of 30° with the direction of B, compute the proton's speed 4 s after entering the magnetic field.
+A. 5.0 × 10^5 m/s
+B. 7.5 × 10^5 m/s
+C. 1.5 × 10^6 m/s
+D. 3.0 × 10^6 m/s
+Answer:",False,True
+"Which of the following changes to a circuit will always bring about an increase in the current?
+A. Increased voltage and increased resistance
+B. Decreased voltage and decreased resistance
+C. Increased voltage and decreased resistance
+D. Decreased voltage and increased resistance
+Answer:",False,False
+"Which of the following concerning uniform circular motion is true?
+A. The centrifugal force is the action-reaction pair of the centripetal force.
+B. The centripetal acceleration and velocity point in the same direction.
+C. The velocity of the object in motion changes whereas the acceleration of the object is constant.
+D. A satellite undergoing uniform circular motion is falling toward the center in a circular path.
+Answer:",True,True
+"It is known that a lab cart is moving east at 25 cm/s at time t1 = 0.10 s, and then moving east at 15 cm/s at t2 = 0.20 s. Is this enough information to determine the direction of the net force acting on the cart between t1 and t2?
+A. Yes, since we know the cart is slowing down, its momentum change is opposite the direction of movement, and the net force is in the direction of momentum change.
+B. No, because we don’t know whether forces such as friction or air resistance might be acting on the cart.
+C. No, because we don’t know the mass of the cart.
+D. Yes, since we know the cart keeps moving to the east, the net force must be in the direction of motion.
+Answer:",False,True
+"An elevator is rising. In order to determine the tension in the cables pulling it, which values (for the elevator) would you need to know?
+A. Mass, velocity, height, and acceleration
+B. Mass, velocity, and acceleration
+C. Mass and velocity
+D. Mass and acceleration
+Answer:",True,True
+"If two non-zero vectors are added together, and the resultant vector is zero, what must be true of the two vectors?
+A. They have equal magnitude and are pointed in the same direction.
+B. They have equal magnitude and are pointed in opposite directions.
+C. They have different magnitudes and are pointed in opposite directions.
+D. It is not possible for the sum of two non-zero vectors to be zero.
+Answer:",True,True
+"A proton enters a solenoid. Upon entry, the proton is moving in a straight line along the axis of the solenoid. Which of the following is a correct description of the proton’s motion within the solenoid?
+A. The proton will be bent in a parabolic path.
+B. The proton will be bent in a circular path.
+C. The proton will continue in its straight path at constant velocity.
+D. The proton will continue in its straight path and slow down.
+Answer:",True,True
+"A sound wave with frequency f travels through air at speed v. With what speed will a sound wave with frequency 4f travel through the air?
+A. v/4
+B. v
+C. 2v
+D. 4v
+Answer:",False,True
+"Under what conditions is the net electric flux through a closed surface proportional to the enclosed charge?
+A. under any conditions
+B. only when the enclosed charge is symmetrically distributed
+C. only when all nearby charges are symmetrically distributed
+D. only when there are no charges outside the surface
+Answer:",False,True
+"A beam of monochromatic light entering a glass window pane from the air will experience a change in
+A. frequency and wavelength
+B. speed and wavelength
+C. speed only
+D. wavelength only
+Answer:",True,True
+"Data is collected in an experiment preformed on an ideal gas. In the experiment, temperature (in K) is the independent variable and volume (in m^3) is the dependent variable. If a plot is produced where the dependent variable is on the vertical axis, which of the following is true about the slope and y-intercept of the graph?
+A. The slope will be linearly proportional to the pressure of the gas and the intercept will be 0 m^3.
+B. The slope will be inversely proportional to the pressure of the gas and the intercept will be 0 m^3.
+C. The slope will be linearly proportional to the pressure of the gas and the intercept will not be 0 m^3.
+D. The slope will be inversely proportional to the pressure of the gas and the intercept will not be 0 m^3.
+Answer:",True,False
+"A toy car and a toy truck collide. If the toy truck’s mass is double the toy car’s mass, then, compared to the acceleration of the truck, the acceleration of the car during the collision will be
+A. double the magnitude and in the same direction
+B. double the magnitude and in the opposite direction
+C. half the magnitude and in the same direction
+D. half the magnitude and in the opposite direction
+Answer:",False,True
+"A sphere, a cube, and a cylinder, all of equal mass, are released from rest from the top of a short incline. The surface of the incline is extremely slick, so much so that the objects do not rotate when released, but rather slide with negligible friction. Which reaches the base of the incline first?
+A. the sphere
+B. the cube
+C. the cylinder
+D. All reach the base at the same time.
+Answer:",True,True
+"A car starts from rest and uniformly accelerates to a final speed of 20.0 m/s in a time of 15.0 s. How far does the car travel during this time?
+A. 150 m 
+B. 300 m
+C. 450 m
+D. 600 m
+Answer:",False,False
+"At what angle to the horizontal should an ideal projectile be launched so that its horizontal displacement (the range) is equal to its maximum vertical displacement?
+A. sin–1 (1/g)
+B. cos–1 (1/g)
+C. 45°
+D. tan–1 4
+Answer:",True,False
+"A cannon is mounted on a truck that moves forward at a speed of 5 m/s. The operator wants to launch a ball from a cannon so the ball goes as far as possible before hitting the level surface. The muzzle velocity of the cannon is 50 m/s. At what angle from the horizontal should the operator point the cannon?
+A. 5°
+B. 41°
+C. 45°
+D. 49°
+Answer:",True,False
+"Two charged, massive particles are isolated from all influence except those between the particles. They have charge and mass such that the net force between them is 0 N. Which of the following is NOT true?
+A. The particles must have the same sign of charge.
+B. If the distance between the particles changes, the force will no longer be 0 N.
+C. The particles must have the same mass.
+D. Such a situation is impossible as the net force between the two particles cannot be 0.
+Answer:",False,False
+"Which one of the following statements is true concerning the motion of an ideal projectile launched at an angle of 45° to the horizontal?
+A. The acceleration vector points opposite to the velocity vector on the way up and in the same direction as the velocity vector on the way down.
+B. The speed at the top of the trajectory is zero.
+C. The object's total speed remains constant during the entire flight.
+D. The vertical speed decreases on the way up and increases on the way down.
+Answer:",False,True
+"Two electrically charged balls are separated by a short distance, producing a force of 50 μN between them. Keeping the charge of each ball the same, the mass of one of the balls but not the other is doubled. What is the new electric force between the balls?
+A. 50 μN
+B. 100 μN
+C. 200 μN
+D. 400 μN
+Answer:",True,True
+"A moving 1.5-kg cart collides with and sticks to a 0.5-kg cart which was initially at rest. Immediately after the collision, the carts each have the same ______ as each other.
+A. Velocity
+B. Kinetic energy
+C. Mass
+D. Linear momentum
+Answer:",False,True
+"A rock is dropped off a cliff and strikes the ground with an impact velocity of 30 m/s. How high was the cliff?
+A. 20 m
+B. 30 m
+C. 45 m
+D. 60 m
+Answer:",False,True
+"A car moving with speed v reaches the foot of an incline of angle θ. The car coasts up the incline without using the engine. Neglecting friction and air resistance, which of the following is correct about the magnitude of the car’s horizontal acceleration ax and vertical acceleration ay?
+A. ax = 0; ay < g
+B. ax = 0; ay = g
+C. ax < g; ay < g
+D. ax < g; ay = g
+Answer:",False,False
+"Which of the following would increase the capacitance of a parallel-plate capacitor?
+A. Using smaller plates
+B. Replacing the dielectric material between the plates with one that has a smaller dielectric constant
+C. Decreasing the voltage between the plates
+D. Moving the plates closer together
+Answer:",True,True
+"A man stands with his hands to his sides on a frictionless platform that is rotating. Which of the following could change the angular momentum of the man-platform system?
+A. The man catches a baseball thrown to him by a friend.
+B. The man thrusts his arms out away from his body
+C. The man thrusts his arms out away from his body, and then quickly brings his arms back to his side again.
+D. The man jumps straight up in the air and lands back on the platform.
+Answer:",False,True
+"A cylinder with a movable piston contains a gas at pressure P = 1 × 10^5 Pa, volume V = 20 cm^3, and temperature T = 273 K. The piston is moved downward in a slow steady fashion allowing heat to escape the gas and the temperature to remain constant. If the final volume of the gas is 5 cm^3, what will be the resulting pressure?
+A. 0.25 × 10^5 Pa
+B. 2 × 10^5 Pa
+C. 4 × 10^5 Pa
+D. 8 × 10^5 Pa
+Answer:",False,True
+"Which of the following types of electromagnetic radiation has the longest wavelength?
+A. Gamma rays
+B. Ultraviolet
+C. Blue light
+D. Orange light
+Answer:",True,True
+"An electric motor has a label on it that reads: Input: 120V AC, 1.0 Amps, 60 Hz - Efficiency - 75%. At what constant speed can the motor lift up a 6 kg mass?
+A. 0.5 m/s
+B. 1.0 m/s
+C. 1.5 m/s
+D. 2.0 m/s
+Answer:",True,False
+"A convex lens of focal length f = 0.2 m is used to examine a small coin lying on a table. During the examination, the lens is held a distance 0.3 m above the coin and is moved slowly to a distance of 0.1 m above the coin. During this process, what happens to the image of the coin?
+A. The image continually increases in size.
+B. The image continually decreases in size.
+C. The image gets smaller at first and then bigger in size.
+D. The image flips over.
+Answer:",False,False
+"The Space Shuttle orbits 300 km above Earth’s surface; Earth’s radius is 6,400 km. What is the gravitational acceleration experienced by the Space Shuttle?
+A. Zero
+B. 4.9 m/s^2
+C. 9.8 m/s^2
+D. 8.9 m/s^2
+Answer:",True,True
+"An astronaut lands on a planet whose mass and radius are each twice that of Earth. If the astronaut weighs 800 N on Earth, how much will he weigh on this planet?
+A. 200 N
+B. 400 N
+C. 800 N
+D. 1600 N
+Answer:",False,False
+"Two people, one of mass 100 kg and the other of mass 50 kg, stand facing each other on an ice-covered (essentially frictionless) pond. If the heavier person pushes on the lighter one with a force F, then
+A. the force felt by the heavier person is (-1/2)F
+B. the force felt by the person is -2F
+C. the magnitude of the acceleration of the lighter person will be half of the magnitude of the acceleration of the heavier person
+D. the magnitude of the acceleration of the lighter person will be twice the magnitude of the acceleration of the heavier person
+Answer:",True,True
+"A 30 mF capacitor has 6 millicoulombs of charge on each plate. The energy stored in the capacitor is most nearly
+A. 5.4 × 10–10 J
+B. 9.0 × 10–8 J
+C. 0.6 J
+D. 12.5 J
+Answer:",False,False
+"Which configuration of battery and resistors will create a circuit with the greatest current?
+A. A high voltage battery with resistors arranged in series
+B. A high voltage battery with resistors arranged in parallel
+C. A low voltage battery with resistors arranged in series
+D. A low voltage battery with resistors arranged in parallel
+Answer:",False,False
+"A rubber ball (mass = 0.08 kg) is dropped from a height of 3.2 m, and after bouncing off the floor, rises almost to its original height. If the impact time with the floor is measured to be 0.04 s, what average force did the floor exert on the ball?
+A. 0.16 N
+B. 0.16 N
+C. 0.32 N
+D. 0.36 N
+Answer:",True,False
+"Two objects, a sphere and a block of the same mass, are released from rest at the top of an inclined plane. The sphere rolls down the inclined plane without slipping. The block slides down the plane without friction. Which object reaches the bottom of the ramp first?
+A. The sphere, because it gains rotational kinetic energy, but the block does not
+B. The sphere, because it gains mechanical energy due to the torque exerted on it, but the block does not
+C. The block, because it does not lose mechanical energy due to friction, but the sphere does
+D. The block, because it does not gain rotational kinetic energy, but the sphere does
+Answer:",True,True
+"Which of the following changes to a double-slit interference experiment would increase the widths of the fringes in the interference pattern that appears on the screen?
+A. Use light of a shorter wavelength.
+B. Move the screen closer to the slits.
+C. Move the slits closer together.
+D. Use light with a lower wave speed.
+Answer:",False,True
+"A stone is thrown vertically upward with an initial speed of 5 m/s. What is the velocity of the stone 3 seconds later?
+A. 25 m/s, upward
+B. 25 m/s, downward
+C. 35 m/s, upward
+D. 35 m/s, downward
+Answer:",True,False
+"A particle is subjected to a conservative force whose potential energy function is U(x) = (x – 2)3 – 12x where U is given in joules when x is measured in meters. Which of the following represents a position of stable equilibrium?
+A. x = –4
+B. x = –2
+C. x = 0
+D. x = 4
+Answer:",True,False
+"An electron (mass = m, charge = -E) is rotated with speed V upwards, in the plane of the page, into a region containing a uniform magnetic field B, that is directed into the plane of the page. Describe the electron's subsequent circular motion.
+A. Clockwise rotation; radius of path = mv/(eB)
+B. Counterclockwise rotation; radius of path = mv/(eB)
+C. Clockwise rotation; radius of path = eB/(mv)
+D. Counterclockwise rotation; radius of path = eB/(mv)
+Answer:",False,True
+"A ball of mass is attached to a string connected to the ceiling, forming a pendulum. When the string is raised to an angle of 50 degrees below the horizontal (the ceiling) and released, the ball swings back and forth with a period of 0.4 s. Which of the following changes to the pendulum would decrease the period of the pendulum?
+A. Increasing the mass of the ball
+B. Decreasing the length of the string
+C. Decreasing the angle of the string from the horizontal when released
+D. Decreasing the mass of the ball
+Answer:",True,True
+"What happens to the image formed by a concave mirror as the object is moved from far away to near the focal point?
+A. The image moves away from the mirror and gets shorter.
+B. The image moves away from the mirror and gets taller.
+C. The image moves toward the mirror and gets shorter.
+D. The image moves toward the mirror and gets taller.
+Answer:",False,True
+"A disk of radius 0.1 m initially at rest undergoes an angular acceleration of 2.0 rad/s^2. If the disk only rotates, find the total distance traveled by a point on the rim of the disk in 4.0 s.
+A. 0.4 m
+B. 0.8 m
+C. 1.2 m
+D. 1.6 m
+Answer:",False,False
+"A stone is thrown horizontally with an initial speed of 10 m/s from a bridge. Assuming that air resistance is negligible, how long would it take the stone to strike the water 80 m below the bridge?
+A. 1 s
+B. 2 s
+C. 4 s
+D. 8 s
+Answer:",True,False
+"Which of the following statements about electric and magnetic fields is FALSE:
+A. A charge moving along the direction of an electric field will experience a force, but a charge moving along the direction of a magnetic field will not experience a force.
+B. All charges experience a force in an electric field, but only moving charges can experience a force in a magnetic field.
+C. A positive charge moves in the direction of an electric field; a positive charge moves perpendicular to a magnetic field.
+D. All moving charges experience a force parallel to an electric field and perpendicular to a magnetic field.
+Answer:",True,False
+"The Space Shuttle orbits 300 km above the Earth’s surface; the Earth’s radius is 6400 km. What is the acceleration due to Earth’s gravity experienced by the Space Shuttle?
+A. 4.9 m/s^2
+B. 8.9 m/s^2
+C. 9.8 m/s^2
+D. 10.8 m/s^2
+Answer:",False,False
+"A confined ideal gas undergoes a cyclical process in three steps—an isobaric step, followed by an isochoric step, followed by an isothermal step. Which of the following must be true?
+A. The change in internal energy of the gas is equal to the work done during the isobaric step.
+B. The change in internal energy of the gas is equal to the work done during the isobaric step minus the work done during the isothermal step.
+C. The total work done during the cycle is positive.
+D. The total work done during the cycle is equal but opposite to the net amount of heat transferred.
+Answer:",True,True
+"A sphere starts from rest atop a hill with a constant angle of inclination and is allowed to roll without slipping down the hill. What force provides the torque that causes the sphere to rotate?
+A. Static friction
+B. Kinetic friction
+C. The normal force of the hill on the sphere
+D. Gravity
+Answer:",True,True
+"A block is dragged along a table and experiences a frictional force, f, that opposes its movement. The force exerted on the block by the table is
+A. zero
+B. parallel to the table
+C. perpendicular to the table
+D. neither parallel nor perpendicular to the table
+Answer:",False,False
+"A table supports a wooden block placed on the tabletop. Which fundamental force of nature is responsible for this interaction, and why?
+A. The electric force, because the protons in the nuclei of the top atomic layer of the table repel the nuclei in the bottom atomic layer of the wood.
+B. The gravitational force, because by F = GMm/r^2, the force of the table on the wood at that close range is sufficient to balance the force of the Earth on the wood.
+C. The electric force, because the outer electrons in the top atomic layer of the table repel the outer electrons in the bottom atomic layer of the wood.
+D. The strong nuclear force, because the protons in the nuclei of the top atomic layer of the table repel the nuclei in the bottom atomic layer of the wood.
+Answer:",True,False
+"Which of the following is NOT equal to one tesla?
+A. 1 J/(A*m^2)
+B. 1 kg/(C*s)
+C. 1 N/(A*m)
+D. 1 A*N/V
+Answer:",False,True
+"A children’s toy consists of a cart whose very light wheels are attached to a rubber band. This rubber band can wind and unwind around the axle supporting the wheels. This toy is given a shove, after which the toy rolls across a flat surface and up a ramp. It is observed that the toy does not go a consistent distance up the ramp—in some trials it ends up higher than in other trials, even though the shove imparts the same kinetic energy to the cart each time. Which of the following is a reasonable explanation for this phenomenon?
+A. Depending on how the rubber band is initially wound, more or less potential energy can be transferred from the rubber band to the kinetic energy of the car’s motion.
+B. The normal force on the cart’s wheels will be different depending on how much the rubber band winds or unwinds.
+C. How much energy is transferred from kinetic energy to gravitational potential energy depends on the vertical height at which the cart ends up.
+D. Some of the cart’s initial kinetic energy will be dissipated due to work done by friction.
+Answer:",False,True
+"An object is released from rest and falls a distance h during the first second of time. How far will it fall during the next second of time?
+A. h
+B. 2h
+C. 3h
+D. 4h
+Answer:",True,True
+"Two ice skaters are moving on frictionless ice and are about to collide. The 50-kg skater is moving directly west at 4 m/s. The 75-kg skater is moving directly north at 2 m/s. After the collision they stick together. For this scenario, which of the following is true?
+A. The linear momentum of the system is conserved because the net force on the system is nonzero during the collision.
+B. Only the kinetic energy of the system is conserved because it is an inelastic collision.
+C. Only the kinetic energy of the system is conserved because it is an elastic collision.
+D. The linear momentum of the system is conserved because the net force on the system is zero.
+Answer:",True,True
+"The mass of the Earth is 5.97 × 10^24 kg. The Moon, whose center is 3.84 × 10^8 m from the Earth’s center, has mass 7.35 × 10^22 kg. Which of the following is the best estimate of the gravitational force of the Earth on the Moon?
+A. 10^39 N
+B. 10^29 N
+C. 10^19 N
+D. 10^9 N
+Answer:",False,False
+"An object of volume 2 × 10^-3 m^3 and weight 6 N is placed into a tank of water, where it floats. What percentage of the object's volume is above the surface of the water?
+A. 12%
+B. 30%
+C. 60%
+D. 70%
+Answer:",False,False
+"The position of an object is given by the equations x = 2.0t^3 + 4.0t + 6.25, where x is in meters and t is in seconds. What is the acceleration of the object at t = 1.50 s?
+A. 6 m/s^2
+B. 12 m/s^2
+C. 18 m/s^2
+D. 24 m/s^2
+Answer:",True,False
+"A man stands in an elevator as it begins to ascend. Does the normal force from the floor do work on the man?
+A. Yes, and the work done will be positive.
+B. Yes, and the work done will be negative.
+C. Yes, but the sign can’t be determined.
+D. No.
+Answer:",False,False
+"How long would it take a car, starting from rest and accelerating uniformly in a straight line at 5 m/s^2, to cover a distance of 200 m ?
+A. 9.0 s
+B. 10.5 s
+C. 12.0 s
+D. 15.5 s
+Answer:",True,False
+"Which of the following conditions are necessary for an object to be in static equilibrium? I. The vector sum of all torques on the object must equal zero. II. The vector sum of all forces on the object must equal zero. III. The sum of the object’s potential and kinetic energies must be zero.
+A. I only
+B. II only
+C. III only
+D. I and II only
+Answer:",True,True
+"A student pushes a puck across a table, moving it from position x = 0 to position x = 0.2 m. After he lets go, the puck continues to travel across the table, coming to rest at position x = 1.2 m. When the puck is at position x = 1.0 m, which of the following is a correct assertion about the net force on the puck?
+A. The net force is in the negative direction, because the puck is moving in the positive direction but slowing down.
+B. The net force is down, because the puck is near the Earth, where gravitational acceleration is 10 m/s^2 downward.
+C. The net force is in the positive direction, because the student’s push caused the puck to speed up in the positive direction.
+D. The net force is zero, because the student’s push in the positive direction must equal the force of friction in the negative direction.
+Answer:",False,True
+"Experimenter A uses a very small test charge qo, and experimenter B uses a test charge 2qo to measure an electric field produced by two parallel plates. A finds a field that is
+A. greater than the field found by B
+B. the same as the field found by B
+C. less than the field found by B
+D. either greater or less than the field found by B, depending on the accelerations of the test charges
+Answer:",True,True
+"Two objects, A and B, have equal charge and equal mass. Neither body is in motion because the gravitational and electrostatic forces between them are equal. If the mass of Object A is halved, equilibrium will be maintained if
+A. the charge on Object A were doubled
+B. the charge on Object B were halved
+C. the charge on Object B were doubled
+D. the mass on Object B were halved
+Answer:",False,False
+"A 2 μF capacitor is connected directly to a battery. When the capacitor is fully charged, it stores 600 μC of charge. An experimenter replaces the 2 μF capacitor with three 18 μF capacitors in series connected to the same battery. Once the capacitors are fully charged, what charge is stored on each capacitor?
+A. 100 μC
+B. 200 μC
+C. 600 μC
+D. 1800 μC
+Answer:",False,False
+"A particle's kinetic energy is changing at a rate of –6.0 J/s when its speed is 3.0 m/s. What is the magnitude of the force on the particle at this moment?
+A. 0.5 N
+B. 2.0 N
+C. 4.5 N
+D. 9.0 N
+Answer:",False,False
+"A car rounds a banked curve of uniform radius. Three forces act on the car: a friction force between the tires and the road, the normal force from the road, and the weight of the car. Which provides the centripetal force which keeps the car in circular motion?
+A. the friction force alone
+B. the normal force alone
+C. the weight alone
+D. a combination of the normal force and the friction force
+Answer:",True,True
+"A stone is thrown horizontally with an initial speed of 30 m/s from a bridge. Find the stone's total speed when it enters the water 4 seconds later, assuming that air resistance is negligible.
+A. 30 m/s
+B. 40 m/s
+C. 50 m/s
+D. 60 m/s
+Answer:",True,True
+"What happens to the force of gravitational attraction between two small objects if the mass of each object is doubled and the distance between their centers is doubled?
+A. It is doubled.
+B. It is quadrupled.
+C. It is halved.
+D. It remains the same.
+Answer:",False,False
+"How much current does a 60 W light bulb draw if it operates at a voltage of 120 V ?
+A. 0.25 A
+B. 0.5 A
+C. 2:00 AM
+D. 4:00 AM
+Answer:",False,True
+"What happens to the pressure, P, of an ideal gas if the temperature is increased by a factor of 2 and the volume is increased by a factor of 8 ?
+A. P decreases by a factor of 16.
+B. P decreases by a factor of 4.
+C. P decreases by a factor of 2.
+D. P increases by a factor of 4.
+Answer:",False,False
+"A beam of monochromatic light entering a glass window pane from the air will experience a change in
+A. frequency and wavelength
+B. frequency and speed
+C. speed and wavelength
+D. speed only
+Answer:",True,True
+"A rigid, solid container of constant volume holds an ideal gas of volume v1 and temperature T1 and pressure P1. The temperature is increased in an isochoric process. Which of the following is NOT true?
+A. The average speed of the molecules increases.
+B. The pressure increases.
+C. The kinetic energy of the system increases.
+D. The volume increases.
+Answer:",True,True
+"A string of fixed tension and linear mass density is attached to a vibrating speaker. It is observed that a speaker frequency of 60 Hz does not produce standing waves in the string. Which explanation for this phenomenon is correct?
+A. The string length is not a multiple of half the wavelength of the wave.
+B. The wave speed on the string is fixed.
+C. 60 Hz is in the lowest range of audible sound.
+D. The wavelength of the wave produced by the speaker is equal to the speed of waves on the string divided by 60 Hz.
+Answer:",True,True
+"A spherical charge distribution varies with the radius r by the equation ρ = ar, where ρ is the volume charge density and a is a positive constant. The distribution goes out to a radius R. Which of the following is true of the electric field strength due to this charge distribution at a distance r from the center?
+A. It increases as r approaches infinity.
+B. It decreases linearly for r > R.
+C. It increases linearly for r > R.
+D. It increases non-linearly for r < R.
+Answer:",False,False
+"An alarm whose frequency is 400 Hz is dropped out of a third-floor window. The student who drops it measures the frequency with a very sensitive oscilloscope. The measured frequency
+A. appears higher than 400 Hz and the frequency increase as it falls
+B. appears higher than 400 Hz and the frequency decreases as it falls
+C. appears lower than 400 Hz and the frequency decreases as it falls
+D. appears lower than 400 Hz and the frequency increases as it falls
+Answer:",True,False
+"Heat is added to a cylindrical aluminum rod of radius Q and length ℓ. The temperature difference between the two ends of the rod varies from 10°C to 20°C. What geometric factors will influence the rate heat is transferred along the rod?
+A. Only the length
+B. Only the area of the rod
+C. Both the length and area
+D. Neither the length nor area
+Answer:",True,True
+"Optometrists use a linear scale of lens power, measured in diopters, to prescribe corrective lenses. Sufferers of myopia, or nearsightedness, have difficulty resolving distant objects because the lenses in their eyes are too strong. If a myopic person has a prescription of -5 diopters, what image do her corrective lenses create for distant objects?
+A. An upright, real image about 20 cm in front of her eyes
+B. An upright, virtual image about 20 cm in front of her eyes
+C. An inverted, real image about 20 cm behind her eyes
+D. An inverted, virtual image 5 cm behind her eyes
+Answer:",False,True
+"A nonconducting sphere is given a nonzero net electric charge, +Q, and then brought close to a neutral conducting sphere of the same radius. Which of the following will be true?
+A. An electric field will be induced within the conducting sphere.
+B. The conducting sphere will develop a net electric charge of –Q.
+C. The spheres will experience an electrostatic attraction.
+D. The spheres will experience an electrostatic repulsion.
+Answer:",True,True
+"A charged particle moves through a magnetic field and experiences a force f. New particles are sent into the same magnetic field. If the new particles have twice the charge, twice the mass, and twice the velocity, the new force would be
+A. 4F
+B. 2F
+C. F
+D. 1/2 F
+Answer:",False,True
+"An electric dipole consists of a pair of equal but opposite point charges of magnitude 4.0 nC separated by a distance of 2.0 cm. What is the electric field strength at the point midway between the charges?
+A. 0
+B. 9.0 × 10^4 V/m
+C. 1.8 × 10^5 V/m
+D. 7.2 × 10^5 V/m
+Answer:",False,False
+"Two isolated particles, A and B, are 4 m apart. Particle A has a net charge of 2Q, and B has a net charge of Q. The ratio of the magnitude of the electric force on A to that on B is
+A. 4:01
+B. 2:01
+C. 1:01
+D. 1:02
+Answer:",False,True
+"A rock drops onto a pond with a smooth surface. A few moments later, the wave produced by the rock’s impact arrives at the shore, touching the ankles of a wading child. Which of the following observations provides evidence that the portion of the wave hitting the child’s ankles carries less energy than the wave did when it was first created by the rock’s impact?
+A. The wave is moving more slowly.
+B. The wave pulse’s width has become greater.
+C. The wave pulse’s width has become smaller.
+D. The wave’s height has become smaller.
+Answer:",True,True
+"Physics students are checking the constant acceleration equations of kinematics by measuring the velocity of a tennis ball that is dropped and falls 6 meters and then passes through a photogate. The predicted velocity is 20% above the velocity measured by the photogate. Which of the following best describes the cause of the large percent difference?
+A. The ball changes its shape while falling.
+B. The acceleration of gravity varies as the ball is falling.
+C. Air resistance increases the acceleration of the ball.
+D. The acceleration of the balls varies with the velocity.
+Answer:",False,False
+"Mercury orbits the sun in about one-fifth of an Earth year. If 1 AU is defined as the distance from the Earth to the sun, what is the approximate distance between Mercury and the sun?
+A. (1/25) AU
+B. (1/9) AU
+C. (1/5) AU
+D. (1/3) AU
+Answer:",False,False
+"The Gravitron is a carnival ride that looks like a large cylinder. People stand inside the cylinder against the wall as it begins to spin. Eventually, it is rotating fast enough that the floor can be removed without anyone falling. Given then the coefficient of friction between a person’s clothing and the wall is μ, the tangential speed is v, and the radius of the ride is R, what is greatest mass that a person can be to safely go on this ride?
+A. μv^2/(rg)
+B. r^2v^2/(μg)
+C. rg/(μv^2)
+D. None of the above.
+Answer:",False,False
+"An artificial satellite orbits Earth just above the atmosphere in a circle with constant speed. A small meteor collides with the satellite at point P in its orbit, increasing its speed by 1%, but not changing the instantaneous direction of the satellite’s velocity. Which of the following describes the satellite’s new orbit?
+A. The satellite now orbits in an ellipse, with P as the farthest approach to Earth.
+B. The satellite now orbits in an ellipse, with P as the closest approach to Earth.
+C. The satellite now orbits in a circle of larger radius.
+D. The satellite now orbits in a circle of smaller radius.
+Answer:",False,False

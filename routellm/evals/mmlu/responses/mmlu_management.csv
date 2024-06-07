@@ -1,0 +1,619 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"What is the term for a sub-optimal but acceptable outcome of negotiations between parties?
+A. Bargaining
+B. Satisficing
+C. Accepting
+D. Compromising
+Answer:",True,True
+"What is the term for the 'rule of thumb' type of bias in decision making?
+A. Framing bias
+B. Hindsight bias
+C. Over-confidence bias
+D. Heuristics
+Answer:",True,True
+"What is a normative perspective?
+A. The way things are.
+B. The way things are going to be.
+C. The way things should be.
+D. The way things were.
+Answer:",True,True
+"In the 'five forces model', what is the type of competitive activity that exists between organisations?
+A. The potential for entry into the industry
+B. The threat of substitute products
+C. The power of customers
+D. The level of rivalry
+Answer:",True,True
+"Which one of the following political leaders could not be termed a 'transformational' leader?
+A. Margaret Thatcher
+B. Mikhail Gorbachov
+C. Nelson Mandela
+D. Bill Clinton
+Answer:",False,True
+"What is a Gantt chart a type of?
+A. Work flow design
+B. Work schedule design
+C. Work rate design
+D. Work output design
+Answer:",True,True
+"Which one of the following is a feature of McGregor's Theory X?
+A. Workers enjoy responsibility.
+B. Workers view physical and mental effort as a natural part of work.
+C. Workers like to show initiative.
+D. Workers like to be directed.
+Answer:",True,True
+"What is the term for power derived from status or position in an organisation?
+A. Referent
+B. Expert
+C. Reward
+D. Legitimate
+Answer:",True,True
+"Which writer is most associated with bureaucratic structures?
+A. Henry Fayol
+B. Max Weber
+C. Adam Smith
+D. Mary Parker Follett
+Answer:",True,True
+"Who of the following is the industrial philanthropist?
+A. Frederick Taylor
+B. Seebohm Rowntree
+C. Henry Ford
+D. Max Weber
+Answer:",False,True
+"Individualism as a guiding moral philosophy was advocated by which economist?
+A. John Kenneth Galbraith
+B. John Maynard Keynes
+C. Milton Friedman
+D. Alfred Marshall
+Answer:",True,True
+"The Hawthorn Studies are most associated with which writer?
+A. Mary Parker Follett
+B. Elton Mayo
+C. Lillian Gilbreth
+D. Frederick Taylor
+Answer:",True,True
+"How can you describe the thinking and outlook of transformational leaders?
+A. Strategic
+B. Operational
+C. Functional
+D. Developmental
+Answer:",False,True
+"What are the key characteristics of transactional leaders?
+A. Guiding, mentoring and motivating
+B. Guiding, commanding and motivating
+C. Guiding, demonstrating and motivating
+D. Guiding, mentoring and demonstrating
+Answer:",False,False
+"What is not an assumption underpinning the rational decision making model?
+A. Incomplete information
+B. An agreed goal
+C. A structured problem
+D. High level of certainty regarding the environment
+Answer:",True,True
+"Which one of the following is not one of Drucker's five guiding principles of management?
+A. Making people's strengths effective and their weaknesses irrelevant.
+B. Enhancing the ability of people to contribute.
+C. To operate the organisation's status system.
+D. Integrating people in a common venture by thinking through, setting and exemplifying the organisational objectives, values and goals.
+Answer:",True,True
+"What is a paradigm?
+A. A theoretical assumption
+B. An illustration
+C. A theoretical model
+D. An example serving as a model
+Answer:",False,True
+"What one of the following is not a key management skill in planning?
+A. Conceptual skills
+B. Analytical skills
+C. IT and computing skills
+D. Communication skills
+Answer:",True,True
+"According to Belbin (1981) an extroverted and enthusiastic person fits with what role?
+A. Co-ordinator
+B. Shaper
+C. Resource investigator
+D. Implementer
+Answer:",True,True
+"Which is not a recognised form of business continuity planning?
+A. Contingency planning
+B. Scenario planning
+C. Financial planning
+D. Building planning
+Answer:",True,True
+"What is the term for an organisation that adapts to changes in the environment by quickly responding to shifts in supply and demand conditions?
+A. Opportunistic organisation
+B. Enterprising organisation
+C. International organisation
+D. Agile organisation
+Answer:",True,True
+"Which of these is not part of the recognised challenges for modern managers?
+A. Micro-managing the workforce
+B. Managing communications
+C. Managing change
+D. Managing the learning organisation
+Answer:",True,True
+"To what does emotional intelligence refer?
+A. How people view and understand the world.
+B. How people view and understand themselves.
+C. How people view and understand others.
+D. How people view and understand themselves and others.
+Answer:",True,True
+"Of what is individual freedom to schedule work an example?
+A. Job design
+B. Job enrichment
+C. Job rate
+D. Job planning
+Answer:",False,True
+"What are workers primarily motivated by according to the instrumental approach?
+A. Peer recognition
+B. Promotion
+C. Greater freedom
+D. Economic reward
+Answer:",True,True
+"Which is not a characteristic of corporate social responsibility?
+A. Product safety
+B. Consumer rights
+C. Environmental policies
+D. Price-fixing
+Answer:",True,True
+"Who was a major protagonist of utilitarianism?
+A. John Stuart Mill
+B. Thomas Hobbes
+C. Karl Marx
+D. Adam Smith
+Answer:",True,True
+"As what is ensuring that one individual does not carry the burden of a whole work task referred to?
+A. Work specialisation
+B. Work design
+C. Work schedule
+D. Work shift
+Answer:",False,True
+"How do you describe a work group that comprises workers with demarcated tasks and distant line managers?
+A. Dependent
+B. Independent
+C. Interdependent
+D. Collaborative
+Answer:",False,True
+"Specialisation is a feature of which organisational structure?
+A. Matrix
+B. Divisional
+C. Multi-divisional
+D. Functional
+Answer:",True,True
+"Which one is not an element in the primary activities of a value chain?
+A. Procurement
+B. Inbound logistics
+C. Outbound logistics
+D. Service
+Answer:",False,True
+"What is the term for the act of getting individuals to behave in ways that are acceptable to a group?
+A. Indoctrination
+B. Brainwashing
+C. Propaganda
+D. Socialisation
+Answer:",True,True
+"When does an acquisition take place?
+A. Two equal partners decide to work together.
+B. Two equal partners share resources.
+C. Two unequal partners join together.
+D. Two unequal partners become one after a buyout.
+Answer:",True,True
+"Who of these is the entrepreneur?
+A. Barack Obama
+B. James Dyson
+C. Damien Hirst
+D. Mo Farah
+Answer:",True,True
+"Which of these is not an advantage of a virtual team?
+A. Team members can be recruited for their specific skills or experience.
+B. No overhead costs associated with physical buildings.
+C. Conflict can be resolved easily using face-to-face meetings.
+D. Low transport or commuting costs.
+Answer:",True,True
+"What is the richest form of information?
+A. Telephone
+B. Face-to-face
+C. E-mail
+D. Video conference
+Answer:",True,True
+"What is the purpose of a 'quality circle'?
+A. Bring together managers and workers to find improvements.
+B. Bring together managers and workers to discuss output.
+C. Bring together managers and workers to review quality of work.
+D. Bring together managers and workers to review targets.
+Answer:",True,True
+"What is the guiding principle behind New Public Management?
+A. Profit maximisation
+B. Introducing private sector business principles into the public sector
+C. Replacing public management with private sector management
+D. Restructuring public organisations
+Answer:",True,True
+"Profitability stemming from how well a firm positions itself in the market is a key feature of which writer's view on strategy?
+A. Peter Drucker
+B. Jay Barney
+C. Michael Porter
+D. Henry Mintzberg
+Answer:",True,True
+"Functional structures help to create...
+A. teamwork
+B. specialisation
+C. project work groups
+D. multi-skilled employees
+Answer:",True,True
+"What is a succession plan?
+A. Dismissing an employee for a more favourable employee
+B. A formal process of planning to fill a role that will become vacant
+C. A vote of no confidence in a board member
+D. The formal process of acquiring a new staff member
+Answer:",True,True
+"What is the definition of a scenario in scenario planning?
+A. An imagined sequence of future events
+B. An unpredictable event
+C. A planned for event
+D. An unplanned for event
+Answer:",True,True
+"What assumption is the garbage can model of decision making based on?
+A. Limited knowledge and great insight
+B. Limited knowledge but high level of experience
+C. Limited knowledge and uncertainty
+D. Limited knowledge and high risk
+Answer:",True,True
+"By which principle is utilitarianism defined?
+A. Equality for everyone
+B. Maximisation of outcomes for individuals
+C. The best outcome for the majority of people
+D. The least worst outcome for everybody
+Answer:",True,True
+"What is the term for the set of behaviours and tasks that a member of the group is expected to perform because he or she is a member of the group?
+A. Group roles
+B. Virtual teamwork
+C. Synergy
+D. Role making
+Answer:",True,True
+"What is the term for a process that enables an organisation to assess and demonstrate its social, economic, and environmental benefits and limitation?
+A. Social plan
+B. Social strategy
+C. Social audit
+D. Social account
+Answer:",True,True
+"What type of organisational culture is most likely to deliver stability and efficiency?
+A. Task culture
+B. Role culture
+C. Power culture
+D. People culture
+Answer:",True,True
+"Who of the following is a leading writer on contingency theory of leadership?
+A. Rosabeth Kanter
+B. Joan Woodward
+C. Rensis Likert
+D. Fred Fiedler
+Answer:",True,True
+"What are characteristics of a programmed decision?
+A. Complex and risky
+B. Uncertain and non-routine
+C. Low risk and certain
+D. Routine and non-complex
+Answer:",True,True
+"What is not an advantage of a hierarchical structure?
+A. Clear chain of command
+B. Quick response to change
+C. Discipline and stability
+D. Small span of control
+Answer:",True,True
+"What is a strategic alliance?
+A. Any form of partnership between one firm and another
+B. Formal agreement committing two or more firms to exchange resources to produce products or services
+C. Formal agreement to share profits from a shared investment
+D. Formal agreement to share knowledge
+Answer:",True,True
+"What are group norms?
+A. Modes of behaviour that are acceptable to and shared by group members
+B. Modes of behaviour that are shared by some members of the group
+C. Modes of behaviour that challenge group values and beliefs
+D. Modes of behaviour that are different of those of the other group members
+Answer:",True,True
+"Which of the following is not a recognised type of plan?
+A. Business
+B. Succession
+C. Ad hoc
+D. Financial
+Answer:",False,True
+"What is the term for the extent to which competition in one country is influenced by competition in other countries?
+A. International trade
+B. Global economics
+C. Global competition
+D. Globalisation
+Answer:",True,False
+"As what are key factors that reflect the situation of an organisation referred to?
+A. Administrations
+B. Processes
+C. Activities
+D. Contingencies
+Answer:",True,True
+"Which of these does not form part of the key streams identified by March (1988) in decision making in highly ambiguous environments?
+A. Expectations
+B. Choice opportunities
+C. Problems
+D. Solutions
+Answer:",False,True
+"What does PEST stand for?
+A. Political, environmental, strategic, testing
+B. Political, environmental, strategic, technological
+C. Political, economic, strategic, technological
+D. Political, economic, social, technological
+Answer:",True,True
+"What does the acronym SMART stand for?
+A. Suitable, measurable, actionable, rewarded and timely
+B. Specific, measurable, actionable, resourced and timely
+C. Standardised, measurable, achievable, rewarded, and timely
+D. Specific, measurable, achievable, rewarded and timely
+Answer:",True,False
+"Which writer was concerned with the reaction of workers to key characteristics of bureaucracies?
+A. Merton
+B. Weber
+C. Gouldner
+D. Mayo
+Answer:",True,False
+"What is the optimal span of control?
+A. 2
+B. 5
+C. 7
+D. None of the above
+Answer:",True,True
+"What one of these is not a recognised type of authority?
+A. Executive
+B. Functional
+C. Line management
+D. Supplier
+Answer:",True,True
+"Which one of the following is not a characteristic of a team?
+A. Minimal and formal knowledge sharing
+B. Collective output
+C. Individual and collective responsibility
+D. Fluid dimension to roles and tasks
+Answer:",True,True
+"Which of these factors is not one of the competing responsibilities that influence corporate social responsibility?
+A. Ethical
+B. Economic
+C. Discretionary
+D. Technical
+Answer:",True,True
+"What is the term used in Ansoff's matrix for increasing market share with existing products in existing markets?
+A. Product development
+B. Market penetration
+C. Diversification
+D. Market development
+Answer:",True,True
+"What is characteristic for the location of a virtual team?
+A. In the same building
+B. In the same industry
+C. In the same country
+D. remotely
+Answer:",True,True
+"According to the Five Factor model, 'extraversion' as a personality type is characterised by what type of people?
+A. Good natured
+B. Calm and self-confident
+C. Sensitive and curious
+D. Assertive and sociable
+Answer:",True,True
+"What is the overriding philosophy underpinning the strategic direction of an organisation?
+A. Vision statement
+B. Mission statement
+C. Strategy statement
+D. Business statement
+Answer:",True,False
+"What is the term for the action in which managers at an organisation analyse the current situation of their organisation and then develop plans to accomplish its mission and achieve its goals?
+A. Synergy planning
+B. Strategy formulation
+C. Functional planning
+D. SWOT analysis
+Answer:",True,True
+"What is Frank Gilbreth`s work most noted for?
+A. Working conditions
+B. Time and motion studies
+C. Work psychology
+D. Work as a social setting
+Answer:",True,True
+"What is another name for contingency planning?
+A. Synergy planning
+B. Ad hoc planning
+C. Business level planning
+D. Scenario planning
+Answer:",True,True
+"Which feature does not form one of Fayol's 14 principles of management?
+A. Esprit de corps
+B. Initiative
+C. Order
+D. Individualism
+Answer:",True,True
+"What one of the following is not a characteristic of the job characteristics model?
+A. Task identity
+B. Autonomy
+C. Reward
+D. Feedback
+Answer:",True,True
+"Workers' acceptance of change is characteristic of what type of culture?
+A. Team culture
+B. Collaborative culture
+C. Group culture
+D. Collective culture
+Answer:",False,False
+"What is a virtual organisation?
+A. An organisation that uses information and communications technologies (ICT's) to coordinate activities without physical boundaries between different functions
+B. An organisation that uses internet technologies to sell products to customers
+C. An organisation that manages the supply chain using digital technologies
+D. An organisation that coordinates the workforce via video conferencing
+Answer:",True,True
+"From what does a chain of command extend?
+A. Bottom to top
+B. Top to bottom
+C. Diagonally
+D. Laterally
+Answer:",True,True
+"What do you call a style of leadership that takes account of others' views, opinions and ideas?
+A. Laissez-faire
+B. People-oriented
+C. Democratic
+D. Autocratic
+Answer:",True,True
+"What is the guiding principle of scientific management?
+A. Experimentation
+B. Fluid working relationships
+C. Freedom of association
+D. One best way to do a job
+Answer:",True,True
+"What is the term Tuckman uses for reaching consensus as a group?
+A. Storming
+B. Performing
+C. Forming
+D. Norming
+Answer:",True,True
+"What theory is built around the principle that 'people make choices regarding how to behave based on values and beliefs'?
+A. Expectancy
+B. Instrumental
+C. Classical
+D. Contingency
+Answer:",True,True
+"What is the term for decisions limited by human capacity to absorb and analyse information?
+A. Cognitive rationality
+B. Conscious rationality
+C. Bounded rationality
+D. Restricted rationality
+Answer:",True,True
+"What is a definition of an objective?
+A. A defined specified outcome to be achieved in the long-term
+B. A clear set of goals to be attained given a set number of resources
+C. A clearly defined and measurable outcome to be achieved over a specified timeframe
+D. A set standard of performance agreed by workers and managers
+Answer:",True,True
+"What is not a purpose of an organisational structure?
+A. To coordinate people and resources
+B. To organise lines of communication
+C. To formalise authority
+D. To limit workers' rights
+Answer:",True,True
+"To what time-frame do strategic plans relate?
+A. Long-term
+B. Medium-term
+C. Short-term
+D. Unspecified time it takes to achieve an aim
+Answer:",False,True
+"What is the term for organisational development through a formally designed organisational structure?
+A. Organic
+B. Mechanistic
+C. Formal
+D. Structured
+Answer:",False,True
+"'There is no discernible link between planning and performance'. Who is this position held by?
+A. Michael Porter
+B. Milton Friedman
+C. Gary Hamel
+D. Henry Mintzberg
+Answer:",True,True
+"What does situational theory of leadership emphasise?
+A. Personality traits
+B. Events
+C. Environment
+D. Political situation
+Answer:",True,False
+"What is intuitive decision making based on?
+A. Guesswork
+B. Gambling
+C. Instinct
+D. Rationality
+Answer:",True,True
+"Enhancement of job satisfaction and productivity are key characteristics of which theoretical perspective of work design?
+A. Process improvement
+B. Techno-structural change model
+C. Job characteristics model
+D. Socio-technical systems
+Answer:",False,False
+"Which 18th century writer produced a famous book called 'The Wealth of Nations'?
+A. Frederick Taylor
+B. Henry Mintzberg
+C. Adam Smith
+D. Dr Samuel Johnson
+Answer:",True,True
+"Which one of these characteristics is most commonly associated with the 'rational goal' model of management?
+A. Worker welfare
+B. Health and safety
+C. Interpersonal relationships
+D. Productivity
+Answer:",True,True
+"In what order do managers typically perform the managerial functions?
+A. organising, planning, controlling, leading
+B. organising, leading, planning, controlling
+C. planning, organising, leading, controlling
+D. planning, organising, controlling, leading
+Answer:",True,True
+"How does lateral communication in an organisation occur?
+A. Information passes upwards.
+B. Information passes downwards.
+C. Information is a two-way process.
+D. Information passes between different departments and functions.
+Answer:",True,True
+"Of what is advertising a form?
+A. Focusing strategy
+B. Differentiation
+C. Cost leadership
+D. Growth
+Answer:",True,True
+"What is not a component of an agile organisation?
+A. Market focus and position
+B. Human resources: multi-skilling
+C. Organisational structure
+D. Project-based culture
+Answer:",False,False
+"Of what is worker autonomy in decision making an example?
+A. Worker freedom
+B. Greater worker negotiation
+C. Worker empowerment
+D. Increased worker power
+Answer:",True,True
+"Vertical integration forwards is when a firm mergers or acquires another
+A. Towards the source of supply
+B. Towards the consumer
+C. At the same stage of the supply chain
+D. In another industry
+Answer:",True,True
+"What is the term for an autonomous business entity within an overall corporate enterprise which is set apart from other areas of the business?
+A. Subsidiary
+B. Strategic partnership
+C. Strategic alliance
+D. Strategic business unit
+Answer:",True,True
+"What is not a characteristic of a corporate social responsibility framework?
+A. Retaining the status quo
+B. Understanding society
+C. Harnessing diversity
+D. Building capacity
+Answer:",True,True
+"What is a whistleblower?
+A. Someone who reports illegal or unethical acts
+B. Someone who commits illegal or unethical acts
+C. Someone who benefits from illegal or unethical acts
+D. Someone who devises illegal or unethical acts
+Answer:",True,True
+"What is T-group training?
+A. A group whose aim is transformational change
+B. A group brought together to deliver training programmes
+C. Team training for the purposes of advancing technology
+D. Team building activities involving learning
+Answer:",True,True
+"What is a social enterprise concerned with?
+A. Profit maximisation
+B. Maximising market share
+C. Providing public service
+D. Running a business to create social benefits
+Answer:",True,True
+"Which of the following is not part of Schein's model of the formation of culture?
+A. Shared values
+B. Pre-conceptions
+C. Shared beliefs
+D. Norms
+Answer:",True,True
+"What is not one of the layers of cultural influence?
+A. Social
+B. Business
+C. Organisational
+D. Company
+Answer:",True,False

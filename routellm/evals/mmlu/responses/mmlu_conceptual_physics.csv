@@ -1,0 +1,1411 @@
+prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+"A 10-N force at an angle 45° above the horizontal has a horizontal component of about
+A. 7 N
+B. 5 N
+C. 10 N
+D. 12 N
+Answer:",True,True
+"A completely submerged object always displaces its own
+A. weight of fluid.
+B. volume of fluid.
+C. density of fluid.
+D. All of these.
+Answer:",True,True
+"When a diver points a flashlight upward toward the surface of the water at an angle 20° from the normal, the beam of light
+A. totally internally reflects
+B. passes into the air above
+C. is absorbed
+D. None of these
+Answer:",False,True
+"According to four-dimensional geometry, the angles of a triangle add to 180°
+A. always.
+B. sometimes.
+C. never.
+D. on planet Earth only.
+Answer:",False,True
+"A voltage will be induced in a wire loop when the magnetic field within that loop
+A. changes
+B. aligns with the electric field
+C. is at right angles to the electric field
+D. converts to magnetic energy
+Answer:",True,True
+"Among these colors, the one that has the most energy per photon is
+A. red
+B. yellow-green
+C. blue
+D. violet
+Answer:",True,True
+"According to general relativity,
+A. mass distorts spacetime.
+B. gravity affects clocks.
+C. light can’t escape from a black hole.
+D. All of these.
+Answer:",True,True
+"A step-up transformer in an electric circuit can step up
+A. voltage
+B. energy
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"Spectral lines of the elements are
+A. chaotic
+B. ordered
+C. positioned by amplitude
+D. in phase
+Answer:",True,True
+"A wave transfers
+A. amplitude
+B. wavelength
+C. frequency
+D. energy
+Answer:",True,True
+"Immediately after two separated charged particles are released from rest, both increase in acceleration. The sign of charge of the particles is therefore
+A. the same
+B. opposite
+C. Either of these
+D. Need more information
+Answer:",False,False
+"The surface of planet Earth loses energy to outer space due mostly to
+A. conduction
+B. convection
+C. radiation
+D. radioactivity
+Answer:",True,True
+"In a series circuit, if the current in one lamp is 2 A, the current in the lamp next to it is
+A. half, 1 A
+B. 2 A
+C. Depends on which lamp is closer to the battery
+D. Not enough information to say
+Answer:",False,True
+"As a blinking light source approaching you gains speed, you see the frequency of flashes
+A. increase.
+B. decrease.
+C. remain unchanged.
+D. None of these.
+Answer:",True,True
+"In the absence of air resistance a ball of mass m is tossed upward to reach a height of 20 m. At the 10-m position half way up the net force on the ball is
+A. 2mg
+B. mg
+C. mg/2
+D. mg/4
+Answer:",False,True
+"Pumice is a volcanic rock that floats in water. The density of pumice compared with that of water is
+A. less.
+B. equal.
+C. greater.
+D. none because it sinks.
+Answer:",True,True
+"When you look at the red petals of a rose the color light you're seeing is
+A. red.
+B. green.
+C. white minus red.
+D. a mixture of green and yellow.
+Answer:",True,True
+"Compared with the sound you hear from the siren of a stationary fire engine the sound you hear when it approaches you has an increased
+A. speed
+B. frequency
+C. wavelength
+D. All of these
+Answer:",True,True
+"When you squeeze an air-filled party balloon, you increase its
+A. volume
+B. mass
+C. weight
+D. density
+Answer:",True,True
+"Polarization is a property of
+A. transverse waves
+B. longitudinal waves
+C. all waves
+D. None of these
+Answer:",True,True
+"In a vacuum, an object has no
+A. buoyant force
+B. mass
+C. weight
+D. All of these
+Answer:",True,True
+"Temperature is generally proportional to a substance’s
+A. thermal energy.
+B. vibrational kinetic energy.
+C. average translational kinetic energy.
+D. rotational kinetic energy.
+Answer:",True,True
+"In a hydraulic press operation, the output piston cannot
+A. move farther than the input piston
+B. exceed the force input
+C. exceed the input piston’s speed
+D. produce increased energy
+Answer:",True,True
+"When a spinning system contracts in the absence of an external torque its rotational speed increases and its angular momentum
+A. decreases
+B. increases
+C. remains unchanged
+D. may increase or decrease
+Answer:",False,True
+"According to Hooke’s law, if you hang by a tree branch and note how much it bends, then hanging with twice the weight produces
+A. half the bend.
+B. the same bend if the branch doesn’t break.
+C. twice the bend.
+D. 4 times the bend.
+Answer:",False,True
+"When an increase in speed doubles the kinetic energy of a moving body its momentum
+A. increases but less than doubles
+B. doubles
+C. more than doubles
+D. depends on factors not stated
+Answer:",True,True
+"Suppose the number of neutrons in a reactor that is starting up doubles each minute reaching one billion neutrons in 10 minutes. When did the number of neutrons reach half a billion?
+A. 1 minute.
+B. 2 minutes.
+C. 5 minutes.
+D. 9 minutes.
+Answer:",True,True
+"If an object is already moving and the sum of all the vector forces on a mass is zero, then the object will
+A. move at a constant speed in a straight line
+B. accelerate at a constant rate in a straight line
+C. come to rest
+D. increase its amount of inertia
+Answer:",True,True
+"Relativity equations for time, length, and momentum hold true for
+A. everyday low speeds.
+B. relativistic speeds.
+C. Both of these.
+D. Neither of these.
+Answer:",True,True
+"Put a saucer of water on your table. A process that then occurs is
+A. evaporation
+B. condensation
+C. Both
+D. Neither
+Answer:",False,False
+"A barometer that uses water instead of mercury will be
+A. shorter
+B. taller
+C. equal in height
+D. inoperable
+Answer:",False,True
+"A heavy rock and a light rock in free fall (zero air resistance) have the same acceleration. The heavy rock doesn't have a greater acceleration because the
+A. force due to gravity is the same on each.
+B. air resistance is always zero in free fall.
+C. inertia of both rocks is the same.
+D. ratio of force to mass is the same.
+Answer:",False,True
+"When an increase in speed doubles the momentum of a moving body its kinetic energy
+A. increases but less than doubles
+B. doubles
+C. more than doubles
+D. depends on factors not stated
+Answer:",False,True
+"The equation E = mc^2 indicates that energy
+A. equals mass moving at the speed of light squared.
+B. equals moving mass.
+C. is fundamentally different than mass.
+D. and mass are closely related.
+Answer:",True,True
+"General relativity predicts that
+A. light leaving the Sun is slowed by gravity.
+B. light passing the Sun is deflected.
+C. a clock on the Sun’s surface runs faster than on Earth.
+D. All of these.
+Answer:",True,False
+"When an element ejects an alpha particle, the atomic number of the resulting element
+A. reduces by 2
+B. reduces by 4
+C. increases by 2
+D. increases by 4
+Answer:",True,True
+"As more lamps are connected in parallel in a circuit, the current in the power source
+A. increases
+B. decreases
+C. remains the same
+D. Not enough information to say
+Answer:",False,True
+"An airplane with its nose pointing north with an airspeed of 40 km/h in a 30-km/h crosswind (at right angles) has a groundspeed of
+A. 30 km/h
+B. 40 km/h
+C. 50 km/h
+D. 60 km/h
+Answer:",False,True
+"The energy of an emitted photon is related to its
+A. amplitude
+B. polarization
+C. momentum
+D. frequency
+Answer:",True,True
+"Thermal conduction involves mainly
+A. electrons
+B. protons
+C. neutrons
+D. ions
+Answer:",True,True
+"Compared with the current in an LED lamp the current in the connecting wire is
+A. less.
+B. more.
+C. the same.
+D. Need more information.
+Answer:",True,True
+"Bow waves are produced by waves of water
+A. overlapping one another
+B. constructively interfering
+C. moving slower than the source producing them
+D. All of these
+Answer:",True,True
+"The speed of sound is slightly greater on a
+A. cold day
+B. hot day
+C. day with steady temperature
+D. None of these
+Answer:",True,True
+"Consider two mercury barometers, one having a cross-sectional area of 1 cm2 and the other 2 cm2. The height of mercury in the narrower tube is
+A. half
+B. twice
+C. the same
+D. None of these
+Answer:",False,True
+"The second law of thermodynamics tells us that heat doesn’t flow from
+A. hot to cold ever
+B. cold to hot ever
+C. hot to cold without external energy
+D. cold to hot without external energy
+Answer:",False,True
+"In a mixture of hydrogen oxygen and nitrogen gases at a given temperature the molecules having the greatest average speed are those of
+A. hydrogen.
+B. oxygen.
+C. nitrogen.
+D. But all have the same speed on average.
+Answer:",True,True
+"Compared with the power input, the power output of an ideal transformer is
+A. greater
+B. less
+C. the same
+D. Any of these
+Answer:",True,True
+"The amount of air drag on an 0.8-N flying squirrel dropping vertically at terminal velocity is
+A. less than 0.8 N
+B. 0.8 N
+C. greater than 0.8 N
+D. dependent on the orientation of its body
+Answer:",False,True
+"The vibrations in a longitudinal wave move in a direction
+A. along and parallel to the wave
+B. perpendicular to the wave
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"The potential energy of a compressed spring and the potential energy of a charged object both depend on
+A. the work done on them
+B. motion
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"A step-up transformer in an electrical circuit can step up
+A. voltage
+B. energy
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"The neutrons in an atom are normally found
+A. inside the nucleus
+B. outside the nucleus
+C. Either of these
+D. Neither of these
+Answer:",True,True
+"The greenish-blue color of ocean water is due mostly to light that hasn’t been
+A. absorbed
+B. reflected
+C. scattered
+D. refracted
+Answer:",True,True
+"Noise-canceling devices make use of sound
+A. destruction
+B. interference
+C. resonance
+D. amplification
+Answer:",True,True
+"Black is the combination of
+A. all the colors together
+B. two or more appropriate colors
+C. light when a prism is held upside down
+D. None of these
+Answer:",False,True
+"In a circuit of two lamps in parallel, if the current in one lamp is 2 A, the current in the other lamp is
+A. about 1 A
+B. 2 A
+C. Depends on which lamp is closer to the battery
+D. Not enough information to say
+Answer:",True,False
+"Which of these changes when light refracts in passing from one medium to another?
+A. Speed only
+B. Wavelength only
+C. Both speed and wavelength
+D. Neither of these
+Answer:",True,True
+"If the frequency of one source of sound is 500 Hz and a second sound source is 504 Hz, then when the two waves interfere with each other, the beat frequency will be
+A. 2 Hz
+B. 4 Hz
+C. 8 Hz
+D. 16 Hz
+Answer:",False,True
+"The loudness of a sound is most closely related to its
+A. frequency
+B. period
+C. wavelength
+D. amplitude
+Answer:",True,True
+"The electric field inside the dome of a Van de Graaff generator is zero when the dome is
+A. charged
+B. uncharged
+C. Either of these
+D. Neither of these
+Answer:",False,False
+"The redness of a sunrise or sunset is due mostly to light that hasn’t been
+A. absorbed
+B. transmitted
+C. scattered
+D. polarized
+Answer:",True,True
+"When a nucleus of uranium-238 emits an alpha particle, left behind is
+A. thorium-242
+B. thorium-238
+C. thorium-234
+D. radium-214
+Answer:",True,True
+"The Doppler effect occurs when a source of sound moves
+A. toward you
+B. away from you
+C. Both of these
+D. None of these
+Answer:",True,True
+"When a proton is plucked from an atomic nucleus, the atom has a decrease in
+A. charge
+B. energy
+C. mass
+D. all of these
+Answer:",True,True
+"If the Sun were twice as massive, its pull on Mars would be
+A. unchanged
+B. twice as much
+C. half as much
+D. four times as much
+Answer:",False,True
+"During the time an aircraft produces a sonic boom the aircraft is
+A. breaking the sound barrier
+B. pulling out of a subsonic dive
+C. flying faster than sound
+D. Each of these produces a sonic boom
+Answer:",True,True
+"When food is exposed to gamma radiation, the food
+A. becomes slightly radioactive
+B. doesn’t become radioactive
+C. will spoil faster
+D. should be avoided
+Answer:",True,True
+"The red glow in the neon tube of an advertising sign is a result of
+A. fluorescence.
+B. coherence.
+C. polarization.
+D. de-excitation.
+Answer:",True,True
+"Light that is not transmitted by opaque materials is
+A. reflected or converted to internal energy in the material.
+B. mainly reflected.
+C. mainly refracted.
+D. transmitted at a lower frequency.
+Answer:",True,True
+"Imagine you're standing on the surface of a shrinking planet. If it shrinks to one-tenth its original diameter with no change in mass on the shrunken surface you'd weigh
+A. 1/100 as much
+B. 10 times as much
+C. 100 times as much
+D. 1000 times as much
+Answer:",False,True
+"A magnetic force acting on a beam of electrons can change its
+A. direction
+B. energy
+C. Both of these
+D. Neither of these
+Answer:",False,True
+"Microscopic slush in water tends to make the water
+A. more dense
+B. less dense
+C. more slippery
+D. warmer
+Answer:",False,True
+"The speed of sound in air depends on
+A. frequency.
+B. wavelength.
+C. air temperature.
+D. All of these.
+Answer:",True,True
+"Heat comes from the Sun to Earth by the process of
+A. conduction
+B. convection
+C. radiation
+D. All of these, although radiation is greatest
+Answer:",True,True
+"A torque is a force
+A. like any other force
+B. multiplied by a lever arm
+C. that is fictitious
+D. that accelerates things
+Answer:",True,True
+"All of the following are electromagnetic waves EXCEPT
+A. microwaves
+B. light waves
+C. X-rays
+D. None is outside the family; all are electromagnetic waves
+Answer:",True,True
+"Big brother and little sister can balance on a seesaw because of balanced
+A. forces
+B. torques
+C. energies
+D. All of these
+Answer:",True,True
+"Any atom that emits an alpha particle or beta particle
+A. becomes an atom of a different element always.
+B. may become an atom of a different element.
+C. becomes a different isotope of the same element.
+D. increases its mass.
+Answer:",False,True
+"Regelation occurs due to water’s
+A. high specific heat
+B. open-structured ice crystals
+C. high rate of expansion
+D. slight tendency to freeze when its temperature is lowered
+Answer:",False,True
+"A big fish swims upon and swallows a small fish that is at rest. Right after lunch, the fattened big fish has a change in
+A. speed
+B. momentum
+C. Both
+D. Neither
+Answer:",False,False
+"A capacitor can store
+A. charge
+B. energy
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"For a tube closed at one end, the length of the tube at a frequency of 256 Hz will be
+A. one-quarter the value for a tube open at both ends
+B. one-half the value for a tube open at both ends
+C. twice the value for a tube open at both ends
+D. four times the value for a tube open at both ends
+Answer:",False,False
+"The period of a 10-Hz wave is
+A. 1/10 s
+B. 1.0 s
+C. 10 s
+D. None of these
+Answer:",True,True
+"If the Sun collapsed to become a black hole Planet Earth would
+A. continue in its present orbit.
+B. likely be sucked into the black hole.
+C. be pulled apart by tidal forces.
+D. Both C and D.
+Answer:",True,True
+"The electric field between a pair of oppositely charged parallel plates
+A. gets weaker with distance inside the plates
+B. follows the inverse-square law
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"The flight of a blimp best illustrates
+A. Archimedes’ principle
+B. Pascal’s principle
+C. Bernoulli’s principle
+D. Boyle’s law
+Answer:",True,True
+"The distance of your image behind a plane mirror is equal to
+A. half your height
+B. half your distance from the mirror
+C. your distance in front of the mirror
+D. more than your distance in front of the mirror
+Answer:",True,True
+"The discrete orbits of electrons are best understood when modeled by
+A. high-speed particles
+B. particles on springs
+C. waves
+D. photons
+Answer:",True,True
+"Heat engines, such as a jet engine, are more efficient when run at
+A. high temperatures
+B. constant temperatures
+C. low temperatures
+D. a constant rate
+Answer:",True,True
+"The phenomenon of interference occurs for
+A. sound waves
+B. light waves
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"As more lamps are connected in a series circuit the current in the power source
+A. increases.
+B. decreases.
+C. remains much the same.
+D. Need more information.
+Answer:",True,True
+"When you buy a pipe in a hardware store, the water isn’t included. When you buy copper wire, electrons
+A. must be supplied by you
+B. are included in the wire
+C. may fall out—hence insulation
+D. None of these
+Answer:",False,True
+"When a uranium nucleus undergoes fission the energy released is primarily in the form of
+A. gamma radiation.
+B. kinetic energy of fission fragments.
+C. kinetic energy of ejected neutrons.
+D. All of these about equally.
+Answer:",True,True
+"Most of the radiation in Earth’s biosphere is
+A. natural background radiation
+B. the result of military activities
+C. from nuclear power plants
+D. in the form of cosmic rays
+Answer:",True,True
+"When white light enters a prism green light is bent more than
+A. blue light.
+B. violet light.
+C. red light.
+D. None of these choices is correct.
+Answer:",True,True
+"When a ball at rest hangs by a single vertical string tension in the string is mg. If the ball is made to move in amhorizontal circle so that the string describes a cone string tension
+A. is mg
+B. is greater than mg always
+C. is less than mg always
+D. may be greater or less than mg depending on the speed of the ball
+Answer:",False,True
+"When a tin can is whirled in a horizontal circle, the net force on the can acts
+A. inward
+B. outward
+C. upward
+D. None of these
+Answer:",True,True
+"The highest ocean tides occur when Earth and the Moon are
+A. lined up with the Sun
+B. at right angles to the Sun
+C. at any angle to the Sun
+D. lined up during spring
+Answer:",True,True
+"Lift a 100-N crate with an ideal pulley system by pulling a rope downward with 25 N of force. For every 1-m length of rope pulled down, the crate rises
+A. 25 cm
+B. 25 m
+C. 50 cm
+D. None of these
+Answer:",False,False
+"Hot sand cools off faster at night than does vegetation. Compared with vegetation, sand’s specific heat capacity is
+A. lower
+B. higher
+C. about the same
+D. Can’t say
+Answer:",True,True
+"The color of light most intense in the solar radiation curve is
+A. infrared
+B. red
+C. yellow-green
+D. violet
+Answer:",True,True
+"If the current in the filament of a lamp is 3 A, the current in the connecting wire is
+A. less than 3 A
+B. 3 A
+C. more than 3 A
+D. Not enough information to say
+Answer:",False,True
+"If two protons and two neutrons are removed from the nucleus of neon-20, a nucleus of which element remains?
+A. Magnesium-22
+B. Magnesium-20
+C. Oxygen-18
+D. Oxygen-16
+Answer:",True,True
+"If a star that is 20 light-years from Earth explodes, gravitational waves from the explosion would reach Earth in
+A. less than 20 years.
+B. 20 years.
+C. more than 20 years.
+D. None of these.
+Answer:",False,True
+"In a mixture of hydrogen, oxygen, and nitrogen gases at a given temperature, the fastest molecules on average are those of
+A. hydrogen
+B. oxygen
+C. nitrogen
+D. All have same average speed
+Answer:",True,True
+"The mutual induction of electric and magnetic fields can produce
+A. light
+B. energy
+C. Both of these
+D. Neither of these
+Answer:",False,True
+"When a model car speeds up to three times its original speed, its kinetic energy is
+A. the same
+B. twice as great
+C. three times greater
+D. None of these
+Answer:",True,True
+"If an iron nucleus split in two, its fission fragments would have
+A. less mass per nucleon
+B. more mass per nucleon
+C. the same mass per nucleon
+D. either more or less mass per nucleon
+Answer:",False,True
+"The surface of Planet Earth loses energy to outer space due mostly to
+A. conduction.
+B. convection.
+C. radiation.
+D. radioactivity.
+Answer:",True,True
+"The direction of natural processes is from states of
+A. higher order to lower order
+B. lower order to higher order
+C. disorganization to organization
+D. disorder to equilibrium
+Answer:",False,True
+"A principal source of the Earth’s internal energy is
+A. tidal friction.
+B. gravitational pressure.
+C. radioactivity.
+D. solar radiation.
+Answer:",True,True
+"A diffraction grating relies on light
+A. interference
+B. amplitudes
+C. variations in brightness
+D. being composed of photons
+Answer:",True,True
+"A satellite in Earth orbit is above Earth’s
+A. atmosphere
+B. gravitational field
+C. Both
+D. Neither
+Answer:",True,True
+"The time it takes for a pendulum swinging to and fro refers to its
+A. frequency
+B. period
+C. wavelength
+D. amplitude
+Answer:",True,True
+"As entropy in a system increases, energy in the system
+A. becomes more ordered
+B. becomes less ordered
+C. reaches equilibrium
+D. moves toward destruction
+Answer:",True,True
+"When water changes to steam, energy is
+A. absorbed by the water
+B. released by the water
+C. conserved as the phase change occurs
+D. changed to a different form
+Answer:",False,True
+"According to Coulomb, a pair of charged particles placed twice as close to each other experience a force
+A. twice as strong
+B. four times as strong
+C. half as strong
+D. one-fourth as strong
+Answer:",True,True
+"The factors, both of which will increase the magnetic field strength of an electromagnet, are
+A. increased electrical current and fewer coils of wire
+B. increased diameter of coil and an increase in the number of coils
+C. an increase in the electrical current and using a strong ferromagnetic material like iron
+D. using an air core instead of iron and increasing the diameter of the coil
+Answer:",True,True
+"The team that wins in a tug-of-war is the team that
+A. produces more tension in the rope than the opponent
+B. pushes hardest on the ground
+C. Both
+D. Neither
+Answer:",False,True
+"Which type of radiation from cosmic sources predominates on the inside of high-flying commercial airplanes?
+A. Alpha
+B. Beta
+C. Gamma
+D. None of these
+Answer:",True,True
+"Thermal convection involves mainly
+A. radiant energy
+B. fluids
+C. insulators
+D. All of these
+Answer:",True,True
+"A 10-Ω resistor carries 10 A. The voltage across the resistor is
+A. 0
+B. more than 0 but less than 10 V
+C. 10 V
+D. more than 10 V
+Answer:",False,True
+"A cannonball is fired horizontally at 10 m/s from a cliff. Its speed one second after being fired is about
+A. 10 m/s
+B. 14 m/s
+C. 16 m/s
+D. 20 m/s
+Answer:",False,True
+"The average speed of a gazelle traveling a distance of 2 km in a time of one-half hour is
+A. 1 km/h
+B. 2 km/h
+C. 4 km/h
+D. greater than 4 km/h
+Answer:",True,True
+"The metal detectors people walk through at airports operate via
+A. Ohm’s law
+B. Faraday’s law
+C. Coulomb’s law
+D. Newton’s laws
+Answer:",True,True
+"Sound travels in
+A. solids
+B. liquids
+C. gases
+D. All of these
+Answer:",True,True
+"When a fusion reaction converts a pair of hydrogen isotopes to an alpha particle and a neutron most of the energy released is in the form of
+A. gamma radiation.
+B. kinetic energy of the alpha particle.
+C. kinetic energy of the neutron.
+D. All of these about equally.
+Answer:",False,False
+"Polarization is a property of
+A. transverse waves.
+B. longitudinal waves.
+C. all waves.
+D. None of these.
+Answer:",True,True
+"The phenomenon of beats results from sound
+A. reflection.
+B. refraction.
+C. interference.
+D. All of these.
+Answer:",False,False
+"The lowest possible temperature is absolute zero, at
+A. 0 kelvin
+B. −273°C
+C. Both are the same
+D. None of these
+Answer:",True,True
+"Refraction occurs when a wave crosses a boundary and changes
+A. speed and direction
+B. intensity
+C. frequency
+D. amplitude
+Answer:",True,True
+"When you tap a piece of wood, it will produce a characteristic sound related to its
+A. wavelength
+B. amplitude
+C. period
+D. natural frequency
+Answer:",True,True
+"When wind speeds up as it blows over the top of a hill, atmospheric pressure there
+A. increases
+B. decreases
+C. isn’t affected
+D. reduces to zero
+Answer:",True,True
+"When white light passes through a prism, the light that bends more than green is
+A. red
+B. yellow
+C. blue
+D. None of these
+Answer:",True,True
+"If you travel at high speed, then compared with your friends who “stay at home,” you are
+A. older.
+B. younger.
+C. neither younger nor older.
+D. longer.
+Answer:",False,True
+"The component of velocity that can remain constant for a tossed baseball is
+A. horizontal
+B. vertical
+C. Either of these
+D. None of these
+Answer:",True,True
+"The crystals that make up minerals are composed of
+A. atoms with a definite geometrical arrangement.
+B. molecules that perpetually move.
+C. X-ray patterns.
+D. 3-dimensional chessboards.
+Answer:",True,True
+"Two vectors, one 3 N and the other 4 N, can have a resultant of
+A. 0 N
+B. 5 N
+C. 8 N
+D. Any of these
+Answer:",False,False
+"Radioactivity has been around on Earth since the
+A. middle of the 1900s
+B. Industrial Revolution
+C. advent of medical technology
+D. Earth formed
+Answer:",True,True
+"When the shadow of the Moon falls on Earth, we have a
+A. lunar eclipse.
+B. solar eclipse.
+C. solar eclipse if it’s daytime and lunar eclipse if it’s nighttime.
+D. very dangerous event.
+Answer:",True,True
+"In both fission and fusion, energy is released while mass
+A. decreases
+B. remains unchanged; is conserved
+C. increases
+D. may decrease or increase
+Answer:",True,True
+"When relatively slow-moving molecules condense from the air, the temperature of the remaining air tends to
+A. remain unchanged
+B. decrease
+C. increase
+D. spread out uniformly
+Answer:",False,True
+"If the volume of an object were to double, with no change in mass, its density would
+A. halve.
+B. double.
+C. be the same.
+D. None of these.
+Answer:",True,True
+"The pressure at the bottom of a pond does NOT depend on the
+A. acceleration due to gravity.
+B. water density.
+C. depth of the pond.
+D. surface area of the pond.
+Answer:",True,True
+"The blueness of the daytime sky is due mostly to light
+A. absorption
+B. transmission
+C. reflection
+D. scattering
+Answer:",True,True
+"A galvanometer can be calibrated to read electric
+A. current
+B. voltage
+C. Either of these
+D. Neither of these
+Answer:",True,True
+"Which of these temperatures is likely when a container of water at 20°C is mixed with water at 28°C?
+A. 19°C
+B. 22°C
+C. 30°C
+D. Higher than 30°C
+Answer:",True,True
+"To view your full-face image in a steamy mirror compared with the height of your face the minimum height of the patch to wipe away is
+A. one-quarter.
+B. one-half.
+C. the same.
+D. dependent on your distance from the mirror.
+Answer:",False,True
+"The vibrations in a transverse wave move in a direction
+A. along the wave
+B. perpendicular to the wave
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"A 1134-Hz tuning fork is sounded at the same time a piano note is struck. You hear three beats per second. The frequency of the piano string is
+A. 1131 Hz
+B. 1134 Hz
+C. 1137 Hz
+D. More information is needed
+Answer:",False,True
+"Huygens’ principle for light is primarily described by
+A. waves
+B. rays
+C. particles
+D. photons
+Answer:",True,True
+"When the temperature of a strip of iron is increased, the length of the strip
+A. also increases.
+B. actually decreases.
+C. may increase and may decrease.
+D. decreases in width as it gets longer.
+Answer:",True,True
+"When light undergoes interference, it can sometimes
+A. build up to more than the sum of amplitudes
+B. cancel completely
+C. Both of these
+D. Neither of these
+Answer:",False,False
+"When the color yellow is seen on your TV screen the phosphors being activated on the screen are
+A. mainly yellow.
+B. blue and red.
+C. green and yellow.
+D. red and green.
+Answer:",True,True
+"Which of these does NOT belong in the family of electromagnetic waves?
+A. Light
+B. Sound
+C. Radio waves
+D. X-rays
+Answer:",True,True
+"A math book and a physics book sitting on a table are tied together with a length of string. With the string taut one book is pushed off the edge of the table. As it falls the other book is dragged horizontally across the table surface. With no friction acceleration of the books is
+A. zero
+B. g/2
+C. g
+D. a value between zero and g
+Answer:",False,False
+"A motor and a generator are
+A. similar devices
+B. very different devices
+C. forms of transformers
+D. energy sources
+Answer:",True,True
+"As more lamps are connected in parallel in a circuit the current in the power source
+A. increases.
+B. decreases.
+C. remains much the same.
+D. Need more information.
+Answer:",False,True
+"Newton’s law of cooling applies to objects that
+A. cool
+B. warm up
+C. Both
+D. Neither
+Answer:",True,True
+"The fact that the Moon always shows its same face to Earth is evidence that the Moon rotates about its axis about once per
+A. day
+B. month
+C. year
+D. None of these for the moon does not rotate about an axis
+Answer:",True,True
+"Consider a ball rolling in a horizontal circular path on the inside surface of a cone. The normal force on the ball
+A. is mg
+B. is greater than mg always
+C. may be greater or less than mg
+D. is less than mg always
+Answer:",False,False
+"The compressions and rarefactions in sound normally travel
+A. in the same direction
+B. in opposite directions
+C. at right angles to each other
+D. None of these
+Answer:",True,True
+"The power required to raise a 100-kg crate a vertical distance of 2 m in a time of 4 s is
+A. 200 W
+B. 500 W
+C. 800 W
+D. 2000 W
+Answer:",False,True
+"The phenomenon of beats is the result of sound
+A. destruction
+B. interference
+C. resonance
+D. amplification
+Answer:",True,True
+"Interference is characteristic of
+A. sound waves
+B. light waves
+C. water waves
+D. All of these
+Answer:",True,True
+"In either a fission event or a fusion event, a quantity that remains unchanged is the
+A. kinetic energy
+B. mass
+C. number of nucleons
+D. binding of nucleons
+Answer:",False,True
+"The magnetic force on a moving charged particle can change the particle's
+A. speed
+B. direction
+C. Both of these
+D. Neither of these
+Answer:",False,True
+"If you were to travel at a speed close to the speed of light, you could notice that your own
+A. mass changes.
+B. pulse decreases.
+C. Both of these.
+D. Neither of these.
+Answer:",False,True
+"Electricity and magnetism connect to form
+A. mass
+B. energy
+C. ultrahigh-frequency sound
+D. light
+Answer:",False,True
+"Sound travels in air by a series of
+A. compressions
+B. rarefactions
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"When a cannonball is fired from a cannon, both the cannonball and the cannon experience equal
+A. amounts of force
+B. accelerations
+C. Both
+D. Neither
+Answer:",False,True
+"The nucleus of an electrically neutral iron atom contains 26 protons. The number of electrons this iron atom has is
+A. 52
+B. 26
+C. 24
+D. None.
+Answer:",True,True
+"To say that a rose petal is red is to say that it
+A. absorbs red
+B. reflects red
+C. emits red
+D. transmits red
+Answer:",True,True
+"Compared with a sound of 60 decibels, a sound of 80 decibels has an intensity
+A. 10 times greater
+B. 100 times greater
+C. 1000 times greater
+D. more than 1000 times greater
+Answer:",False,True
+"When red and blue light are overlapped, the color produced is
+A. magenta
+B. yellow
+C. cyan
+D. white
+Answer:",True,True
+"When 100 J are put into a device that puts out 40 J of useful work, the efficiency of the device is
+A. 40%
+B. 50%
+C. 60%
+D. 140%
+Answer:",True,True
+"Shock waves are produced by waves of sound
+A. overlapping one another
+B. constructively interfering
+C. moving slower than the source producing them
+D. All of these
+Answer:",False,True
+"A rock suspended by a weighing scale weighs 5 N out of water and 3 N when submerged in water. What is the buoyant force on the rock?
+A. 3 N
+B. 5 N
+C. 8 N
+D. None of these
+Answer:",False,False
+"The work done on a 100-kg crate that is hoisted 2 m in a time of 4 s is
+A. 200 J
+B. 500 J
+C. 800 J
+D. 2000 J
+Answer:",True,False
+"A capacitor loses half its remaining charge every second. If after five seconds its charge is q what was its initial charge?
+A. 4q.
+B. 8q.
+C. 16q.
+D. 32q.
+Answer:",False,True
+"The mass of an atom comes mostly from its _ ; and its volume from its _.
+A. nucleons; nucleons.
+B. electrons; electrons.
+C. electrons; nucleons.
+D. nucleons; electrons.
+Answer:",True,True
+"The definition of magnetic inclination is the angle between
+A. magnetic north and geographic north
+B. magnetic north and geographic south
+C. the earth’s magnetic field at any point and the vertical
+D. the earth’s magnetic field at any point and the horizontal
+Answer:",False,False
+"The pitch of a sound is mostly related to its
+A. intensity
+B. frequency
+C. amplitude
+D. speed
+Answer:",True,True
+"As more lamps are connected to a series circuit, the current in the power source
+A. increases
+B. decreases
+C. remains the same
+D. None of these
+Answer:",True,True
+"When an element ejects an alpha particle, the mass number of the resulting element
+A. reduces by 2
+B. reduces by 4
+C. increases by 2
+D. increases by 4
+Answer:",False,True
+"An electron can be speeded up by
+A. an electric field
+B. a magnetic field
+C. Both of these
+D. Neither of these
+Answer:",False,True
+"A certain element emits 1 alpha particle, and its products then emit 2 beta particles in succession. The atomic number of the resulting element is changed by
+A. zero
+B. minus 1
+C. minus 2
+D. plus 1
+Answer:",False,False
+"When an object is set vibrating by a wave that has a matching frequency, what occurs is
+A. forced vibration
+B. resonance
+C. refraction
+D. amplitude reduction
+Answer:",True,True
+"The red glow in the neon tube of an advertising sign is a result of
+A. fluorescence
+B. incandescence
+C. de-excitation
+D. polarization
+Answer:",True,True
+"At very high speeds, an object appears to an observer at rest to be
+A. shorter in the direction of travel.
+B. shrunken in all directions.
+C. shorter in the direction perpendicular to travel.
+D. longer in all directions.
+Answer:",True,True
+"When a wave moves from shallow water to deep water, the
+A. frequency decreases, the wavelength increases, and the speed increases
+B. frequency does not change, the wavelength increases, and the speed increases
+C. frequency does not change, the wavelength decreases, and the speed decreases
+D. frequency does not change, the wavelength increases, and the speed decreases
+Answer:",True,True
+"When you drop a ball from rest it accelerates downward at 9.8 m/s^2. If you instead throw it downward assuming no air resistance its acceleration immediately after leaving your hand is
+A. 9.8 m/s2
+B. more than 9.8 m/s2
+C. less than 9.8 m/s2
+D. Cannot say unless the speed of throw is given.
+Answer:",True,True
+"Carbon-14 is primarily produced by cosmic radiation in the
+A. atmosphere
+B. food we eat
+C. Earth’s interior
+D. fallout of nuclear bomb tests
+Answer:",True,True
+"Chain reactions in a fission reactor are caused by
+A. kinetic energy
+B. energy conversion
+C. mass conversion
+D. ejected neutrons
+Answer:",True,True
+"Satellites in circular Earth orbit maintain a constant speed because gravitational force on them is
+A. zero
+B. practically zero
+C. appreciably weaker than at Earth’s surface
+D. without a component of force along their circular path
+Answer:",True,True
+"The complementary color of blue is
+A. magenta
+B. yellow
+C. cyan
+D. white
+Answer:",False,True
+"The difference between dc and ac in electric circuits is that in dc, charges flow
+A. steadily in one direction
+B. in one direction
+C. to and fro
+D. All of these
+Answer:",False,False
+"To receive an electric shock there must be a
+A. current in one direction.
+B. presence of moisture.
+C. high voltage and low body resistance.
+D. voltage difference across part or all of your body.
+Answer:",True,True
+"A karate chop delivers a force of 3000 N to a board that breaks. The force that the board exerts on the hand during this event is
+A. less than 3000 N
+B. 3000 N
+C. greater than 3000 N
+D. Need more information
+Answer:",False,True
+"Find the speed of a wave by multiplying its frequency by its
+A. period
+B. wavelength
+C. amplitude
+D. None of these
+Answer:",True,True
+"The magnitude of the gravitational force on a satellite is constant if the orbit is
+A. parabolic
+B. circular
+C. elliptical
+D. All of these
+Answer:",True,True
+"The impulse–momentum relationship is a direct result of Newton’s
+A. first law
+B. second law
+C. third law
+D. law of gravity
+Answer:",True,True
+"A common nuclear fission reactor
+A. heats water
+B. generates electricity directly
+C. gets energy from nothing
+D. is a major polluter of the atmosphere
+Answer:",True,True
+"The process of boiling water tends to
+A. warm the water
+B. cool the water
+C. Both
+D. Neither
+Answer:",False,True
+"When you scale up an object to 3 times its linear size, the surface area increases by
+A. 3 and the volume by 9.
+B. 3 and the volume by 27.
+C. 9 and the volume by 27.
+D. 4 and the volume by 8.
+Answer:",True,True
+"If you change the magnetic field in a closed loop of wire, what is created in the loop is a(n)
+A. current
+B. voltage
+C. electric field
+D. All of these
+Answer:",False,True
+"Clocks on a fast-moving spaceship whizzing past Earth appear to run slow when viewed from
+A. inside the spaceship.
+B. Earth.
+C. Both of these.
+D. Neither of these.
+Answer:",True,True
+"The model of light most supported by the photoelectric effect is the
+A. wave model
+B. particle model
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"Compared with a fundamental tone, the frequency of its second harmonic is
+A. half as much
+B. twice as much
+C. the same
+D. four times as much
+Answer:",True,True
+"A string is plucked producing four loops (antinodes). The length of the string is 12.00 m. The wavelength of the wave must be
+A. 48.0 m
+B. 24.0 m
+C. 6.00 m
+D. 3.00 m
+Answer:",True,True
+"During the time an aircraft produces a sonic boom, the aircraft is
+A. breaking the sound barrier
+B. pulling out of a subsonic dive
+C. flying faster than sound
+D. All of these
+Answer:",True,True
+"The principal source of Earth’s internal energy is
+A. tidal friction
+B. gravitational pressure
+C. radioactivity
+D. geothermal heat
+Answer:",True,True
+"When you brush your hair and scrape electrons from your hair, the charge of your hair becomes
+A. positive
+B. negative
+C. Both of these
+D. Neither of these
+Answer:",False,True
+"Astrophysicists are able to identify the elements in the outer layers of a star by studying its
+A. Doppler effect.
+B. molecular structure.
+C. temperature.
+D. spectrum.
+Answer:",True,True
+"Relativistic equations for time dilation length contraction and relativistic momentum and energy hold true
+A. at speeds near that of light.
+B. at everyday low speeds.
+C. at all speeds.
+D. only approximately.
+Answer:",False,True
+"In his special theory of relativity, Einstein stated that the laws of physics are
+A. different in different situations.
+B. common sense applied to microscopic and macroscopic things.
+C. the same in all frames of reference.
+D. the same in all uniformly moving frames of reference.
+Answer:",True,True
+"When an element ejects a beta particle, the atomic number of that element
+A. reduces by 1
+B. increases by 1
+C. reduces by 2
+D. increases by 2
+Answer:",True,True
+"The amount of heat transferred to a system can be measured in
+A. calories
+B. joules
+C. Either
+D. Neither
+Answer:",True,True
+"Compared with the sound you hear from the siren of a stationary fire engine, its sound when it approaches you has an increased
+A. speed
+B. frequency
+C. Both of these
+D. Neither of these
+Answer:",True,True
+"Light reflecting from a smooth surface undergoes a change in
+A. frequency.
+B. wavelength.
+C. All of these.
+D. None of these.
+Answer:",False,True
+"What Einstein discovered about space and time is that they
+A. are separate entities.
+B. are parts of one whole.
+C. follow an inverse-square law.
+D. are special to space travelers.
+Answer:",True,True
+"All parts of a laser beam have the same
+A. frequency
+B. phase
+C. speed
+D. All of these
+Answer:",True,True
+"The rotational inertia of an object is greater when most of the mass is located
+A. near the rotational axis
+B. away from the axis
+C. on the rotational axis
+D. off center
+Answer:",True,True
+"When small pieces of material are assembled into a larger piece, the combined surface area
+A. greatly increases
+B. slightly increases
+C. decreases
+D. is unchanged
+Answer:",False,True
+"A rainbow is the result of light in raindrops that undergoes
+A. internal reflection
+B. dispersion
+C. refraction
+D. All of these
+Answer:",True,True
+"In the atomic nucleus, electrical forces tend to
+A. hold particles together
+B. push particles apart
+C. produce orbital motion
+D. charge particles
+Answer:",False,True
+"The fact that the acceleration of free fall is the same for all masses is explained by Newton’s
+A. first law
+B. second law
+C. third law
+D. law of action–reaction
+Answer:",False,True
+"Compared with radiation from the Sun, terrestrial radiation has a lower
+A. wavelength
+B. frequency
+C. Both
+D. Neither
+Answer:",False,True
+"When we speak of time dilation, we mean that time
+A. compresses with speed.
+B. stretches with speed.
+C. is a constant at all speeds.
+D. is related to space.
+Answer:",True,True
+"The magnetic field lines about a current-carrying wire form
+A. circles
+B. radial lines
+C. eddy currents
+D. energy loops
+Answer:",True,True
+"An inflated balloon with a heavy rock tied to it is dropped into a deep lake. As the balloon sinks deeper and deeper the buoyant force acting on it
+A. increases.
+B. decreases.
+C. remains largely unchanged.
+D. Need more information.
+Answer:",False,True
+"A radioactive sample has a half-life of 1 hour. If we start with 1.000 gram of it at noon, how much remains at 3:00 pm?
+A. 0.50 g
+B. 0.25 g
+C. 0.125 g
+D. 0.0625 g
+Answer:",True,False
+"Boiling and freezing occur when water is subjected to
+A. decreased temperatures
+B. decreased atmospheric pressure
+C. increased temperatures
+D. increased atmospheric pressure
+Answer:",False,True
+"When you bend the branch of a tree by hanging on its end, the top side of the branch is under
+A. tension.
+B. compression.
+C. Both.
+D. Neither.
+Answer:",False,True
+"A simple and correct way to comprehend satellites orbiting Earth is to view them as
+A. balanced between gravitational and centripetal forces.
+B. beyond the main pull of Earth gravity.
+C. in mechanical equilibrium with a net force of zero.
+D. having sufficient tangential velocities to fall around rather than into Earth.
+Answer:",True,True
