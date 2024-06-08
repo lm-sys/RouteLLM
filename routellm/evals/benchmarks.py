@@ -42,7 +42,7 @@ class Benchmark(abc.ABC):
 class MMLU(Benchmark):
     def __init__(self, domains, overwrite_cache):
         self.overwrite_cache = overwrite_cache
-        self.cache_path = f"{CURRENT_DIR}/mmlu/thresholds_cache.npy"
+        self.cache_path = f"{CURRENT_DIR}/mmlu/cache.npy"
 
         try:
             self.cache = np.load(self.cache_path, allow_pickle=True).item()
@@ -154,7 +154,7 @@ class MTBench(Benchmark):
         print(f"{len(self.questions)} questions for MT bench after decontamination.")
 
         self.overwrite_cache = overwrite_cache
-        self.cache_path = f"{CURRENT_DIR}/mt_bench/thresholds_cache.npy"
+        self.cache_path = f"{CURRENT_DIR}/mt_bench/cache.npy"
 
         try:
             self.cache = np.load(self.cache_path, allow_pickle=True).item()
@@ -290,7 +290,7 @@ class MTBench(Benchmark):
 class GSM8K(Benchmark):
     def __init__(self, overwrite_cache):
         self.overwrite_cache = overwrite_cache
-        self.cache_path = f"{CURRENT_DIR}/gsm8k/thresholds_cache.npy"
+        self.cache_path = f"{CURRENT_DIR}/gsm8k/cache.npy"
 
         try:
             self.cache = np.load(self.cache_path, allow_pickle=True).item()
