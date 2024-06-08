@@ -10,7 +10,8 @@ import tiktoken
 import tqdm
 from openai import OpenAI
 
-from routellm.constants import ALL_MMLU_DOMAINS, MODEL_LIST
+from routellm.constants import MODEL_LIST
+from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
 
 choices = ["A", "B", "C", "D"]
 tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo")

@@ -7,7 +7,8 @@ import pandas as pd
 import yaml
 from benchmarks import GSM8K, MMLU, MTBench
 
-from routellm.constants import ALL_MMLU_DOMAINS, MODEL_LIST
+from routellm.constants import MODEL_LIST
+from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"

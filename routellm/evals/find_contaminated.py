@@ -7,7 +7,7 @@ import torch
 import tqdm
 from openai import OpenAI
 
-from routellm.constants import ALL_MMLU_DOMAINS
+from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
 
 THRESHOLD = 0.95
 client = OpenAI()
