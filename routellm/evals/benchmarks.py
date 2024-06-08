@@ -51,7 +51,8 @@ class MMLU(Benchmark):
         all_data = pd.DataFrame()
         for domain in tqdm(domains, desc="Loading domain data"):
             all_data = pd.concat(
-                [all_data, self.load_domain_data(domain)], ignore_index=True
+                [all_data, pd.read_csv(f"{CURRENT_DIR}/mmlu/responses/mmlu_{domain}.csv")],
+                ignore_index=True,
             )
         original_length = len(all_data)
 
