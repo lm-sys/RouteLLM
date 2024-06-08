@@ -74,28 +74,27 @@ class MMLU(Benchmark):
 
         if router_name not in self.cache or router_name in self.overwrite_cache:
             if router.NO_PARALLEL:
-                thresholds = self.all_data["prompt"].progress_apply(
-                    router.calculate_threshold
+                strong_win_rates = self.all_data["prompt"].progress_apply(
+                    router.calculate_strong_win_rate
                 )
             else:
-                thresholds = self.all_data["prompt"].parallel_map(
-                    router.calculate_threshold
+                strong_win_rates = self.all_data["prompt"].parallel_map(
+                    router.calculate_strong_win_rate
                 )
-            self.cache[router_name] = thresholds
+            self.cache[router_name] = strong_win_rates
             np.save(self.cache_path, self.cache)
         else:
-            thresholds = self.cache[router_name]
+            strong_win_rates = self.cache[router_name]
 
-        # Choose cutoffs split into 10 equally sized bins (including duplicates)
-        _, cutoffs = pd.qcut(thresholds, num_results, retbins=True)
-        print(f"Calculated cutoffs for {router_name}: {cutoffs}")
-        self.all_data["threshold"] = thresholds
+        # Choose thresholds split into 10 equally sized bins (including duplicates)
+        _, thresholds = pd.qcut(strong_win_rates, num_results, retbins=True)
+        self.all_data["strong_win_rates"] = strong_win_rates
 
-        for i, cutoff in enumerate(cutoffs):
+        for i, threshold in enumerate(thresholds):
             selection = (
-                self.all_data["threshold"] >= cutoff
-                if i != len(cutoffs) - 1
-                else self.all_data["threshold"] > cutoff
+                self.all_data["strong_win_rates"] >= threshold
+                if i != len(thresholds) - 1
+                else self.all_data["strong_win_rates"] > threshold
             )
             results = np.where(
                 selection,
@@ -108,7 +107,9 @@ class MMLU(Benchmark):
                 DEFAULT_PAIR.weak,
             )
             model_counts = Counter(models)
-            yield cutoff, sum(results) / len(results) * 100, model_counts, len(results)
+            yield threshold, sum(results) / len(results) * 100, model_counts, len(
+                results
+            )
 
     def get_optimal_accuracy(self, gpt4_percent):
         df = self.all_data
@@ -167,30 +168,29 @@ class MTBench(Benchmark):
 
         if router_name not in self.cache or router_name in self.overwrite_cache:
             if router.NO_PARALLEL:
-                thresholds = self.questions["turns"].progress_apply(
+                strong_win_rates = self.questions["turns"].progress_apply(
                     # Only use first turn for routing
-                    lambda turn: router.calculate_threshold(turn[0])
+                    lambda turn: router.calculate_strong_win_rate(turn[0])
                 )
             else:
-                thresholds = self.questions["turns"].parallel_apply(
-                    lambda turn: router.calculate_threshold(turn[0])
+                strong_win_rates = self.questions["turns"].parallel_apply(
+                    lambda turn: router.calculate_strong_win_rate(turn[0])
                 )
-            self.cache[router_name] = thresholds
+            self.cache[router_name] = strong_win_rates
             np.save(self.cache_path, self.cache)
         else:
-            thresholds = self.cache[router_name]
+            strong_win_rates = self.cache[router_name]
 
-        _, cutoffs = pd.qcut(thresholds, num_results, retbins=True)
-        print(f"Calculated cutoffs for {router_name}: {cutoffs}")
+        _, thresholds = pd.qcut(strong_win_rates, num_results, retbins=True)
         questions = self.questions[["question_id", "turns"]]
-        questions["threshold"] = thresholds
+        questions["strong_win_rates"] = strong_win_rates
 
-        for i, cutoff in enumerate(cutoffs):
+        for i, threshold in enumerate(thresholds):
             questions["routed_model"] = np.where(
                 (
-                    questions["threshold"] >= cutoff
-                    if i != len(cutoffs) - 1
-                    else questions["threshold"] > cutoff
+                    questions["strong_win_rates"] >= threshold
+                    if i != len(thresholds) - 1
+                    else questions["strong_win_rates"] > threshold
                 ),
                 DEFAULT_PAIR.strong,
                 DEFAULT_PAIR.weak,
@@ -215,7 +215,7 @@ class MTBench(Benchmark):
 
             assert total == sum(model_counts.values()) == len(self.questions) * 2
 
-            yield cutoff, score, model_counts, total
+            yield threshold, score, model_counts, total
 
     def get_model_accuracy(self, model):
         questions = self.questions[["question_id"]]
@@ -313,28 +313,27 @@ class GSM8K(Benchmark):
 
         if router_name not in self.cache or router_name in self.overwrite_cache:
             if router.NO_PARALLEL:
-                thresholds = self.all_data["prompt"].progress_apply(
-                    router.calculate_threshold
+                strong_win_rates = self.all_data["prompt"].progress_apply(
+                    router.calculate_strong_win_rate
                 )
             else:
-                thresholds = self.all_data["prompt"].parallel_map(
-                    router.calculate_threshold
+                strong_win_rates = self.all_data["prompt"].parallel_map(
+                    router.calculate_strong_win_rate
                 )
-            self.cache[router_name] = thresholds
+            self.cache[router_name] = strong_win_rates
             np.save(self.cache_path, self.cache)
         else:
-            thresholds = self.cache[router_name]
+            strong_win_rates = self.cache[router_name]
 
-        # Choose cutoffs split into 10 equally sized bins (including duplicates)
-        _, cutoffs = pd.qcut(thresholds, num_results, retbins=True)
-        print(f"Calculated cutoffs for {router_name}: {cutoffs}")
-        self.all_data["threshold"] = thresholds
+        # Choose thresholds split into 10 equally sized bins (including duplicates)
+        _, thresholds = pd.qcut(strong_win_rates, num_results, retbins=True)
+        self.all_data["strong_win_rates"] = strong_win_rates
 
-        for i, cutoff in enumerate(cutoffs):
+        for i, threshold in enumerate(thresholds):
             selection = (
-                self.all_data["threshold"] >= cutoff
-                if i != len(cutoffs) - 1
-                else self.all_data["threshold"] > cutoff
+                self.all_data["strong_win_rates"] >= threshold
+                if i != len(thresholds) - 1
+                else self.all_data["strong_win_rates"] > threshold
             )
             results = np.where(
                 selection,
@@ -343,7 +342,9 @@ class GSM8K(Benchmark):
             )
             models = np.where(selection, DEFAULT_PAIR.strong, DEFAULT_PAIR.weak)
             model_counts = Counter(models)
-            yield cutoff, sum(results) / len(results) * 100, model_counts, len(results)
+            yield threshold, sum(results) / len(results) * 100, model_counts, len(
+                results
+            )
 
     def get_model_accuracy(self, model):
         df = self.all_data

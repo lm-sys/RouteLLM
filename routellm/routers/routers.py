@@ -31,11 +31,11 @@ class Router(abc.ABC):
     # This is normally the winrate of the GPT-4 model, but it may have a different meaning depending on the router.
     # If this value is >= the user defined cutoff, the router will choose GPT-4, otherwise, it will choose Mixtral.
     @abc.abstractmethod
-    def calculate_threshold(self, prompt):
+    def calculate_strong_win_rate(self, prompt):
         pass
 
     def route(self, prompt, threshold):
-        if self.calculate_threshold(prompt) >= threshold:
+        if self.calculate_strong_win_rate(prompt) >= threshold:
             return DEFAULT_PAIR.strong
         else:
             return DEFAULT_PAIR.weak
@@ -72,7 +72,7 @@ class CausalLLMRouter(Router):
             to_openai_api_messages, system_message, classifier_message
         )
 
-    def calculate_threshold(self, prompt):
+    def calculate_strong_win_rate(self, prompt):
         input = {}
         input["messages"] = self.to_openai_messages([prompt])
         output = self.router_model(input)
@@ -93,7 +93,7 @@ class BERTRouter(Router):
         )
         self.tokenizer = AutoTokenizer.from_pretrained(config["model_path"])
 
-    def calculate_threshold(self, prompt):
+    def calculate_strong_win_rate(self, prompt):
         inputs = self.tokenizer(
             prompt, return_tensors="pt", padding=True, truncation=True
         )
@@ -147,7 +147,7 @@ class SWRankingRouter(Router):
         max_sim = np.max(similarities)
         return 10 * 10 ** (similarities / max_sim)
 
-    def calculate_threshold(
+    def calculate_strong_win_rate(
         self,
         prompt,
     ):
@@ -189,7 +189,7 @@ class MatrixFactorizationRouter(Router):
         self.gpt4_id = MODEL_IDS[model_pair.strong]
         self.mixtral_id = MODEL_IDS[model_pair.weak]
 
-    def calculate_threshold(self, prompt):
+    def calculate_strong_win_rate(self, prompt):
         winrate = self.model.pred_win_rate(self.gpt4_id, self.mixtral_id, prompt)
         return winrate
 
@@ -200,7 +200,7 @@ class RandomRouter(Router):
     def __init__(self, config, model_pair):
         del config, model_pair
 
-    def calculate_threshold(
+    def calculate_strong_win_rate(
         self,
         prompt,
     ):
