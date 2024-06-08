@@ -124,7 +124,7 @@ if __name__ == "__main__":
         description="Evaluate routers on various benchmarks."
     )
     parser.add_argument(
-        "--router-list",
+        "--routers",
         nargs="+",
         type=str,
         default=["random"],
@@ -173,7 +173,7 @@ if __name__ == "__main__":
     config = yaml.safe_load(open(args.config, "r"))
 
     all_results = []
-    for router in args.router_list:
+    for router in args.routers:
         # Ensure reproducibility on a per-router basis
         random.seed(0)
         router_config = config.get(router, {})
