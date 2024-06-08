@@ -133,13 +133,6 @@ async def create_chat_completion(request: ChatCompletionRequest):
             ).model_dump(),
             status_code=400,
         )
-    elif len(request.messages) > 2:
-        return JSONResponse(
-            ErrorResponse(
-                message="Too many messages. We only support at most 2 messages."
-            ).model_dump(),
-            status_code=400,
-        )
     elif router not in ROUTERS_MAP:
         return JSONResponse(
             ErrorResponse(
@@ -158,12 +151,10 @@ async def create_chat_completion(request: ChatCompletionRequest):
     threshold = float(threshold)
 
     # Use user prompt for routing unless it's not present
-    if len(request.messages) == 1:
-        # System prompt
-        prompt = request.messages[0]["content"]
-    else:
-        # User prompt
+    if request.messages[0]["role"] == "system":
         prompt = request.messages[1]["content"]
+    else:
+        prompt = request.messages[0]["content"]
 
     route_fn = ROUTERS_MAP[router].route
     if asyncio.iscoroutinefunction(route_fn):
