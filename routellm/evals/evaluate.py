@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import yaml
-from benchmarks import GSM8K, MMLU, MTBench
 
-from routellm.model_pair import DEFAULT_PAIR
+from routellm.evals.benchmarks import GSM8K, MMLU, MTBench
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
+from routellm.model_pair import DEFAULT_PAIR
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
