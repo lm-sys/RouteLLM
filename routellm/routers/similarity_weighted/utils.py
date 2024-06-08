@@ -8,10 +8,6 @@ from sklearn.linear_model import LogisticRegression
 
 choices = ["A", "B", "C", "D"]
 OPENAI_CLIENT = OpenAI()
-ANYSCALE_CLIENT = OpenAI(
-    base_url="https://api.endpoints.anyscale.com/v1",
-    api_key=os.environ.get("ANYSCALE_API_KEY"),
-)
 
 
 def compute_tiers(model_ratings, num_tiers):

@@ -10,7 +10,7 @@ from benchmarks import GSM8K, MMLU, MTBench
 from routellm.constants import ALL_MMLU_DOMAINS, MODEL_LIST
 from routellm.routers.routers import ROUTER_CLS
 
-ANYSCALE_API_KEY = os.environ.get("ANYSCALE_API_KEY")
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 def generate_results(

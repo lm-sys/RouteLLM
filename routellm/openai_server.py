@@ -5,8 +5,6 @@ It current only supports Chat Completions: https://platform.openai.com/docs/api-
 
 import argparse
 import asyncio
-import atexit
-import json
 import logging
 import os
 import time
@@ -24,13 +22,14 @@ from pydantic import BaseModel, Field
 from routellm.constants import MODEL_LIST
 from routellm.routers.routers import ROUTER_CLS
 
-ANYSCALE_API_KEY = os.environ.get("ANYSCALE_API_KEY")
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 ROUTERS_MAP = {}
 
 app = fastapi.FastAPI()
 openai_client = AsyncOpenAI()
 anyscale_client = AsyncOpenAI(
-    base_url="https://api.endpoints.anyscale.com/v1", api_key=ANYSCALE_API_KEY
+    base_url="https://api.endpoints.anyscale.com/v1",
+    api_key=os.environ.get("ANYSCALE_API_KEY"),
 )
 count = defaultdict(int)
 
@@ -96,7 +95,6 @@ class ChatCompletionResponse(BaseModel):
 
 async def create_completion(model, prompt, **kwargs):
     temperature = kwargs["temperature"]
-    temperature_str = str(temperature)
 
     if model == "mixtral-8x7b-instruct-v0.1":
         model_for_api = "mistralai/Mixtral-8x7B-Instruct-v0.1"
