@@ -5,14 +5,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import yaml
-from benchmarks import (
-    GSM8KOffline,
-    MMLUOffline,
-    MTBenchOffline,
-)
+from benchmarks import GSM8K, MMLU, MTBench
 
-from routellm.routers.routers import ROUTER_CLS
 from routellm.constants import ALL_MMLU_DOMAINS, MODEL_LIST
+from routellm.routers.routers import ROUTER_CLS
 
 ANYSCALE_API_KEY = os.environ.get("ANYSCALE_API_KEY")
 
@@ -164,13 +160,13 @@ if __name__ == "__main__":
     if args.benchmark == "mmlu":
         print("Running eval for full MMLU.")
         mmlu_domains = ALL_MMLU_DOMAINS
-        benchmark = MMLUOffline(mmlu_domains, args.overwrite_cache)
+        benchmark = MMLU(mmlu_domains, args.overwrite_cache)
     elif args.benchmark == "mt-bench":
         print("Running eval for MT Bench.")
-        benchmark = MTBenchOffline(args.overwrite_cache)
+        benchmark = MTBench(args.overwrite_cache)
     elif args.benchmark == "gsm8k":
         print("Running eval for GSM8k.")
-        benchmark = GSM8KOffline(args.overwrite_cache)
+        benchmark = GSM8K(args.overwrite_cache)
     else:
         raise ValueError(f"Invalid benchmark {args.benchmark}")
 

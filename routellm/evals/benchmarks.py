@@ -38,7 +38,7 @@ class Benchmark(abc.ABC):
         pass
 
 
-class MMLUOffline(Benchmark):
+class MMLU(Benchmark):
     def __init__(self, domains, overwrite_cache):
         self.overwrite_cache = overwrite_cache
         self.cache_path = f"{CURRENT_DIR}/mmlu/thresholds_cache.npy"
@@ -126,7 +126,7 @@ class MMLUOffline(Benchmark):
         return len(df[df[model] == True]) / len(df) * 100
 
 
-class MTBenchOffline(Benchmark):
+class MTBench(Benchmark):
     def __init__(self, overwrite_cache):
         self.judgements = pd.read_json(
             f"{CURRENT_DIR}/mt_bench/judgements.jsonl", lines=True
@@ -282,7 +282,7 @@ class MTBenchOffline(Benchmark):
         return combined_judgements["score_optimal"].mean()
 
 
-class GSM8KOffline(Benchmark):
+class GSM8K(Benchmark):
     def __init__(self, overwrite_cache):
         self.overwrite_cache = overwrite_cache
         self.cache_path = f"{CURRENT_DIR}/gsm8k/thresholds_cache.npy"

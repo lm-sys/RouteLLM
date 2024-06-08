@@ -8,13 +8,13 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 import routellm.routers.similarity_weighted.utils as sw_utils
+from routellm.constants import MODEL_LIST
 from routellm.routers.causal_llm.llm_utils import (
     load_model_config,
     load_prompt_format,
     to_openai_api_messages,
 )
 from routellm.routers.causal_llm.model import CausalLLMClassifier
-from routellm.constants import MODEL_LIST
 
 
 def no_parallel(cls):
