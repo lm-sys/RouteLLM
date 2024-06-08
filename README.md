@@ -39,9 +39,7 @@ python -m routellm.evals.evaluate --routers random sw_ranking bert --benchmark g
 - `--routers` specifies the list of routers to evaluate.
 - `--benchmark` specifies the specific benchmark to evaluate the routers on.
 
-By default, the evaluation results will be printed to the console. A plot of router performance will also be generated in the current directory (override using `--output`).
-
-To avoid recomputing the results, the results for a router on a given benchmark is cached by default. This behavior can be overridden by using the `--overwrite-cache` flag, which takes in a list of routers to overwrite the cache for.
+By default, the evaluation results will be printed to the console. A plot of router performance will also be generated in the current directory (override using `--output`). To avoid recomputing results, the results for a router on a given benchmark is cached by default. This behavior can be overridden by using the `--overwrite-cache` flag, which takes in a list of routers to overwrite the cache for.
 
 The results for all our benchmarks are cached for speed. For MT Bench, we use the precomputed judgements for the desired model pair. For MMLU and GSM8K, we utilized [SGLang](https://github.com/sgl-project/sglang) to efficiently compute the results for the desired model pair and stored these results - the full code for this can be found in the respective benchmark directories.
 
@@ -55,7 +53,7 @@ Out of the box, RouteLLM supports the following routers trained on the `gpt-4-11
 - `causal_llm`
 - `matrix_factorization`
 
-While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well.
+While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well (see Section 4.4 of our paper).
 
 ### Adding a new router
 
