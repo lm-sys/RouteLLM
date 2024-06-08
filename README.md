@@ -43,6 +43,8 @@ By default, the evaluation results will be printed to the console. A plot of rou
 
 To avoid recomputing the results, the results for a router on a given benchmark is cached by default. This behavior can be overridden by using the `--overwrite-cache` flag, which takes in a list of routers to overwrite the cache for.
 
+The results for all our benchmarks are cached for speed. For MT Bench, we use the precomputed judgements for the desired model pair. For MMLU and GSM8K, we utilized [SGLang](https://github.com/sgl-project/sglang) to efficiently compute the results for the desired model pair and stored these results - the full code for this can be found in the respective benchmark directories.
+
 ## Routers
 
 Out of the box, RouteLLM supports the following routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair:
