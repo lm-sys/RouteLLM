@@ -11,6 +11,7 @@ from routellm.constants import MODEL_LIST
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
+pd.options.mode.copy_on_write = True
 tqdm.pandas()
 pandarallel.initialize(progress_bar=True)
 
@@ -51,7 +52,10 @@ class MMLU(Benchmark):
         all_data = pd.DataFrame()
         for domain in tqdm(domains, desc="Loading domain data"):
             all_data = pd.concat(
-                [all_data, pd.read_csv(f"{CURRENT_DIR}/mmlu/responses/mmlu_{domain}.csv")],
+                [
+                    all_data,
+                    pd.read_csv(f"{CURRENT_DIR}/mmlu/responses/mmlu_{domain}.csv"),
+                ],
                 ignore_index=True,
             )
         original_length = len(all_data)
@@ -133,7 +137,7 @@ class MTBench(Benchmark):
             f"{CURRENT_DIR}/mt_bench/judgements.jsonl", lines=True
         )
         self.questions = pd.read_json(
-            f"{CURRENT_DIR}/mt_bench/judgements.jsonl", lines=True
+            f"{CURRENT_DIR}/mt_bench/question.jsonl", lines=True
         )
         contaminated_prompts = pd.read_json(
             f"{CURRENT_DIR}/mt_bench/contaminated_prompts.jsonl", lines=True

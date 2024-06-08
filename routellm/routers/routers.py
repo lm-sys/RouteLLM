@@ -15,6 +15,7 @@ from routellm.routers.causal_llm.llm_utils import (
     to_openai_api_messages,
 )
 from routellm.routers.causal_llm.model import CausalLLMClassifier
+from routellm.routers.matrix_factorization.model import MFModel
 
 
 def no_parallel(cls):
@@ -111,20 +112,24 @@ class BERTRouter(Router):
 class SWRankingRouter(Router):
     def __init__(self, config, model_list, num_tiers=10):
         self.model_list = model_list
+        arena_df_path, arena_embedding_path = (
+            config["arena_df_path"],
+            config["arena_embedding_path"],
+        )
         try:
-            if self.ARENA_DF_PATH.endswith(".json"):
-                self.arena_df = pd.read_json(config["arena_df_path"])
+            if arena_df_path.endswith(".json"):
+                self.arena_df = pd.read_json(arena_df_path)
             else:
-                self.arena_df = pd.read_json(config["arena_df_path"], lines=True)
+                self.arena_df = pd.read_json(arena_df_path, lines=True)
         except FileNotFoundError:
             raise FileNotFoundError(
-                f"Expected data file not found at path: {config['arena_df_path']}"
+                f"Expected data file not found at path: {arena_df_path}"
             )
         try:
-            self.arena_conv_embedding = np.load(config["arena_embedding_path"])
+            self.arena_conv_embedding = np.load(arena_embedding_path)
         except FileNotFoundError:
             raise FileNotFoundError(
-                f"Expected data file not found at path: {config['arena_embedding_path']}"
+                f"Expected data file not found at path: {arena_embedding_path}"
             )
         self.embedding_model = "text-embedding-3-small"
 
@@ -184,7 +189,7 @@ class SWRankingRouter(Router):
 class MatrixFactorizationRouter(Router):
     def __init__(self, config, model_list):
         self.model_list = model_list
-        self.model = sw_utils.MFModel(config["hidden_size"])
+        self.model = MFModel(config["hidden_size"])
         self.model.load(config["checkpoint_path"])
         self.model = self.model.eval().to("cuda")
         assert model_list == ["mixtral-8x7b-instruct-v0.1", "gpt-4-1106-preview"]
@@ -199,8 +204,8 @@ class MatrixFactorizationRouter(Router):
 # Parallelism makes the randomness non deterministic
 @no_parallel
 class RandomRouter(Router):
-    def __init__(self, model_list):
-        self.model_list = model_list
+    def __init__(self, config, model_list):
+        del config, model_list
 
     def calculate_threshold(
         self,
