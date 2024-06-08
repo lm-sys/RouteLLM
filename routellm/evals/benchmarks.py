@@ -7,7 +7,7 @@ import pandas as pd
 from pandarallel import pandarallel
 from tqdm import tqdm
 
-from routellm.constants import MODEL_LIST
+from routellm.model_pair import DEFAULT_PAIR
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -99,13 +99,13 @@ class MMLU(Benchmark):
             )
             results = np.where(
                 selection,
-                self.all_data[MODEL_LIST[1]],
-                self.all_data[MODEL_LIST[0]],
+                self.all_data[DEFAULT_PAIR.strong],
+                self.all_data[DEFAULT_PAIR.weak],
             )
             models = np.where(
                 selection,
-                MODEL_LIST[1],
-                MODEL_LIST[0],
+                DEFAULT_PAIR.strong,
+                DEFAULT_PAIR.weak,
             )
             model_counts = Counter(models)
             yield cutoff, sum(results) / len(results) * 100, model_counts, len(results)
@@ -115,10 +115,10 @@ class MMLU(Benchmark):
         total = len(df)
 
         gpt4_calls = total * gpt4_percent
-        mixtral_correct = len(df[df[MODEL_LIST[0]] == True])
+        mixtral_correct = len(df[df[DEFAULT_PAIR.weak] == True])
 
-        df_sub = df[df[MODEL_LIST[0]] == False]
-        df_sub = df_sub[df_sub[MODEL_LIST[1]] == True]
+        df_sub = df[df[DEFAULT_PAIR.weak] == False]
+        df_sub = df_sub[df_sub[DEFAULT_PAIR.strong] == True]
 
         gpt4_bonus = min(gpt4_calls, len(df_sub))
         opt_correct = mixtral_correct + gpt4_bonus
@@ -192,8 +192,8 @@ class MTBench(Benchmark):
                     if i != len(cutoffs) - 1
                     else questions["threshold"] > cutoff
                 ),
-                MODEL_LIST[1],
-                MODEL_LIST[0],
+                DEFAULT_PAIR.strong,
+                DEFAULT_PAIR.weak,
             )
 
             results = questions.merge(
@@ -206,10 +206,10 @@ class MTBench(Benchmark):
             score = results["score"].mean()
 
             model_counts = results["model"].value_counts().to_dict()
-            if MODEL_LIST[0] not in model_counts:
-                model_counts[MODEL_LIST[0]] = 0
-            if MODEL_LIST[1] not in model_counts:
-                model_counts[MODEL_LIST[1]] = 0
+            if DEFAULT_PAIR.weak not in model_counts:
+                model_counts[DEFAULT_PAIR.weak] = 0
+            if DEFAULT_PAIR.strong not in model_counts:
+                model_counts[DEFAULT_PAIR.strong] = 0
 
             total = len(results)
 
@@ -234,7 +234,7 @@ class MTBench(Benchmark):
         max_gpt4_calls = int(len(self.questions) * gpt4_percent)
 
         gpt4_judgements = (
-            self.judgements[self.judgements["model"] == "gpt-4-1106-preview"][
+            self.judgements[self.judgements["model"] == DEFAULT_PAIR.strong][
                 ["question_id", "model", "score"]
             ]
             .groupby(by=["model", "question_id"], as_index=False)
@@ -242,7 +242,7 @@ class MTBench(Benchmark):
         )
 
         mixtral_judgements = (
-            self.judgements[self.judgements["model"] == MODEL_LIST[0]][
+            self.judgements[self.judgements["model"] == DEFAULT_PAIR.weak][
                 [
                     "question_id",
                     "model",
@@ -338,10 +338,10 @@ class GSM8K(Benchmark):
             )
             results = np.where(
                 selection,
-                self.all_data[MODEL_LIST[1]],
-                self.all_data[MODEL_LIST[0]],
+                self.all_data[DEFAULT_PAIR.strong],
+                self.all_data[DEFAULT_PAIR.weak],
             )
-            models = np.where(selection, MODEL_LIST[1], MODEL_LIST[0])
+            models = np.where(selection, DEFAULT_PAIR.strong, DEFAULT_PAIR.weak)
             model_counts = Counter(models)
             yield cutoff, sum(results) / len(results) * 100, model_counts, len(results)
 
@@ -354,10 +354,10 @@ class GSM8K(Benchmark):
         total = len(df)
 
         gpt4_calls = total * gpt4_percent
-        mixtral_correct = len(df[df[MODEL_LIST[0]] == True])
+        mixtral_correct = len(df[df[DEFAULT_PAIR.weak] == True])
 
-        df_sub = df[df[MODEL_LIST[0]] == False]
-        df_sub = df_sub[df_sub[MODEL_LIST[1]] == True]
+        df_sub = df[df[DEFAULT_PAIR.weak] == False]
+        df_sub = df_sub[df_sub[DEFAULT_PAIR.strong] == True]
 
         gpt4_bonus = min(gpt4_calls, len(df_sub))
         opt_correct = mixtral_correct + gpt4_bonus

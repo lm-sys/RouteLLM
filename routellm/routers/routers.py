@@ -8,7 +8,7 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 import routellm.routers.similarity_weighted.utils as sw_utils
-from routellm.constants import MODEL_LIST
+from routellm.model_pair import DEFAULT_PAIR
 from routellm.routers.causal_llm.llm_utils import (
     load_model_config,
     load_prompt_format,
@@ -36,9 +36,9 @@ class Router(abc.ABC):
 
     def route(self, prompt, threshold):
         if self.calculate_threshold(prompt) >= threshold:
-            return MODEL_LIST[1]
+            return DEFAULT_PAIR.strong
         else:
-            return MODEL_LIST[0]
+            return DEFAULT_PAIR.weak
 
     def __str__(self):
         return NAME_TO_CLS[self.__class__]
@@ -49,10 +49,10 @@ class CausalLLMRouter(Router):
     def __init__(
         self,
         config,
-        model_list,
+        model_pair,
         score_threshold=2,
     ):
-        self.model_list = model_list
+        del model_pair
         model_config = load_model_config(config["model_config_path"])
         prompt_format = load_prompt_format(model_config.model_id)
         self.router_model = CausalLLMClassifier(
@@ -84,10 +84,10 @@ class BERTRouter(Router):
     def __init__(
         self,
         config,
-        model_list,
+        model_pair,
         num_labels=3,
     ):
-        self.model_list = model_list
+        del model_pair
         self.model = AutoModelForSequenceClassification.from_pretrained(
             config["model_path"], num_labels=num_labels
         )
@@ -110,8 +110,8 @@ class BERTRouter(Router):
 
 
 class SWRankingRouter(Router):
-    def __init__(self, config, model_list, num_tiers=10):
-        self.model_list = model_list
+    def __init__(self, config, model_pair, num_tiers=10):
+        self.model_pair = model_pair
         arena_df_path, arena_embedding_path = (
             config["arena_df_path"],
             config["arena_embedding_path"],
@@ -143,12 +143,6 @@ class SWRankingRouter(Router):
             lambda x: self.model2tier[x]
         )
 
-        res = sw_utils.compute_elo_mle_with_tie(self.arena_df)
-        self.gap = (
-            res[self.model2tier["gpt-4-1106-preview"]]
-            - res[self.model2tier["mixtral-8x7b-instruct-v0.1"]]
-        )
-
     def get_weightings(self, similarities):
         max_sim = np.max(similarities)
         return 10 * 10 ** (similarities / max_sim)
@@ -175,8 +169,8 @@ class SWRankingRouter(Router):
         res = sw_utils.compute_elo_mle_with_tie(self.arena_df, sample_weight=weightings)
 
         mixtral_score, gpt4_score = (
-            res[self.model2tier["mixtral-8x7b-instruct-v0.1"]],
-            res[self.model2tier["gpt-4-1106-preview"]],
+            res[self.model2tier[DEFAULT_PAIR.weak]],
+            res[self.model2tier[DEFAULT_PAIR.strong]],
         )
         mixtral_winrate = 1 / (1 + 10 ** ((gpt4_score - mixtral_score) / 400))
         gpt4_winrate = 1 - mixtral_winrate
@@ -187,13 +181,13 @@ class SWRankingRouter(Router):
 
 @no_parallel
 class MatrixFactorizationRouter(Router):
-    def __init__(self, config, model_list):
-        self.model_list = model_list
+    def __init__(self, config, model_pair):
+        self.model_pair = model_pair
         self.model = MFModel(config["hidden_size"])
         self.model.load(config["checkpoint_path"])
         self.model = self.model.eval().to("cuda")
-        self.gpt4_id = MODEL_IDS[MODEL_LIST[1]]
-        self.mixtral_id = MODEL_IDS[MODEL_LIST[0]]
+        self.gpt4_id = MODEL_IDS[model_pair.strong]
+        self.mixtral_id = MODEL_IDS[model_pair.weak]
 
     def calculate_threshold(self, prompt):
         winrate = self.model.pred_win_rate(self.gpt4_id, self.mixtral_id, prompt)
@@ -203,8 +197,8 @@ class MatrixFactorizationRouter(Router):
 # Parallelism makes the randomness non deterministic
 @no_parallel
 class RandomRouter(Router):
-    def __init__(self, config, model_list):
-        del config, model_list
+    def __init__(self, config, model_pair):
+        del config, model_pair
 
     def calculate_threshold(
         self,

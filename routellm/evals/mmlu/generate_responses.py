@@ -10,7 +10,7 @@ import tiktoken
 import tqdm
 from openai import OpenAI
 
-from routellm.constants import MODEL_LIST
+from routellm.model_pair import DEFAULT_PAIR
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
 
 choices = ["A", "B", "C", "D"]
@@ -169,7 +169,7 @@ def generate_domain_data(args, domain):
 
     result_df = pd.DataFrame(
         zip(prompts, mixtral_cors, gpt4_cors),
-        columns=["prompt", MODEL_LIST[0], MODEL_LIST[1]],
+        columns=["prompt", DEFAULT_PAIR.weak, DEFAULT_PAIR.strong],
     )
 
     result_df.to_csv(cache_key, index=False)
