@@ -1,0 +1,13 @@
+sw_ranking:
+  arena_df_path:
+  arena_embedding_path:
+causal_llm:
+  model_checkpoint_path:
+  model_config_path:
+  system_message:
+  classifier_message:
+bert:
+  model_path:
+matrix_factorization:
+  checkpoint_path:
+  hidden_size:
