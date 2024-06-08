@@ -15,7 +15,7 @@ from routellm.routers.causal_llm.llm_utils import (
     to_openai_api_messages,
 )
 from routellm.routers.causal_llm.model import CausalLLMClassifier
-from routellm.routers.matrix_factorization.model import MFModel
+from routellm.routers.matrix_factorization.model import MODEL_IDS, MFModel
 
 
 def no_parallel(cls):
@@ -192,9 +192,8 @@ class MatrixFactorizationRouter(Router):
         self.model = MFModel(config["hidden_size"])
         self.model.load(config["checkpoint_path"])
         self.model = self.model.eval().to("cuda")
-        assert model_list == ["mixtral-8x7b-instruct-v0.1", "gpt-4-1106-preview"]
-        self.gpt4_id = 24
-        self.mixtral_id = 36
+        self.gpt4_id = MODEL_IDS[MODEL_LIST[1]]
+        self.mixtral_id = MODEL_IDS[MODEL_LIST[0]]
 
     def calculate_threshold(self, prompt):
         winrate = self.model.pred_win_rate(self.gpt4_id, self.mixtral_id, prompt)
