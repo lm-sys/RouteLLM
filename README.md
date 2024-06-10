@@ -54,11 +54,13 @@ The results for all our benchmarks are cached for speed. For MT Bench, we use th
 
 Out of the box, RouteLLM supports the following routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair:
 
-- `random`: Routes to a random LLM.
-- `sw_ranking`
-- `bert`
-- `causal_llm`
-- `matrix_factorization`
+- `random`: Randomly routes to either model.
+- `sw_ranking`: Uses Elo calculations for routing, weighted according to the similarity of the prompt to the preference data.
+- `bert`: Uses a BERT classifier trained on the preference data.
+- `causal_llm`: Uses a LLM-based classifier tuned on the preference data.
+- `matrix_factorization`: Uses a matrix factorization model trained on the preference data.
+
+For the full details of how these routers were trained, please refer to our paper.
 
 While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well (see Section 4.4 of our paper).
 
@@ -67,3 +69,4 @@ While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8
 Adding a new router to RouteLLM is straightforward. You need to implement the abstract `Router` class in `routers.py` and add the new router to the `ROUTER_CLS` dictionary. Then, you can use immediately the new router in the server or evaluation framework.
 
 There is only a single method to implement: `calculate_strong_win_rate`, which takes in the user prompt and returns the win rate for the strong model conditioned on that given prompt - if this win rate is great than user-specified cost threshold, then the request is routed to the strong model. Otherwise, it is routed to the weak model.
+
