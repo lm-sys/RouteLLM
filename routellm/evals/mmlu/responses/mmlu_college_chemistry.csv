@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "The rate, r, of a zero-order chemical reaction A → B can be expressed as which of the following?
 A. r = k ln[A]
 B. r = k [A]^2

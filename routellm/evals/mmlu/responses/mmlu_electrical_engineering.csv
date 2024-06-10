@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "The Barkhausen criterion for an oscillator
 A. Loop gain should be unity
 B. Loop gain should be less than unity

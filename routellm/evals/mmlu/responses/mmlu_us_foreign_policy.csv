@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "What is the structure of the United Nations Security Council?
 A. 5 permanent members with veto power, 10 rotating members with no veto power
 B. 5 permanent members and 10 rotating members, all with veto power

@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "This is a hierarchy of effects or sequential model used to explain how advertising works:
 A. ADD.
 B. AIDA.

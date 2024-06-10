@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I slammed on my breaks to miss the ball as it came in to the road. Scenario 2 | I taught my children to play the xylophone.
 A. Wrong, Wrong
 B. Wrong, Not wrong

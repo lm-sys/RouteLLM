@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "As of 2016, about what percentage of adults aged 18 years or older were overweight?
 A. 10%
 B. 20%

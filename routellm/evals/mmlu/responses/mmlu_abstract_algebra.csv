@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "Find the degree for the given field extension Q(sqrt(2), sqrt(3), sqrt(18)) over Q.
 A. 0
 B. 4

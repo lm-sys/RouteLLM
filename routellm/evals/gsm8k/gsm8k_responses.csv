@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview,mixtral-8x7b-instruct-v0.1_response,gpt-4-1106-preview_response
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview,mistralai/Mixtral-8x7B-Instruct-v0.1_response,gpt-4-1106-preview_response
 Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?,True,True," Janet starts with 16 eggs per day.
 She eats 3 for breakfast, so she has 16 - 3 = 13 eggs left.
 She uses 4 for baking, so she has 13 - 4 = 9 eggs left.

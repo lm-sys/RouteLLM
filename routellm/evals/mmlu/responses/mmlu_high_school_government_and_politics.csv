@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "Which of the following best describes the balance the Supreme Court has struck between the establishment clause and the free-exercise clause?
 A. Freedom of speech is protected except in certain situations, such as yelling ""fire"" in a crowded theater.
 B. Once a church has been recognized by the federal government, its tax-exempt status can never be revoked.

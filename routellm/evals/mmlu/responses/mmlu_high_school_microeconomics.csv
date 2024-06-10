@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "Marginal revenue equals marginal cost at the point where
 A. total revenue is greater than total cost at its greatest distance
 B. total revenue is equal to total cost

@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "London dispersion forces are caused by
 A. temporary dipoles created by the position of electrons around the nuclei in a molecule
 B. the three-dimensional intermolecular bonding present in all covalent substances

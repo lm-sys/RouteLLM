@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "Based on the characteristic population curves that result from plotting population growth of a species, the most effective means of controlling the mosquito population is to
 A. maintain the population at a point corresponding to the midpoint of its logistic curve
 B. opt for zero population control once the K value of the curve has been reached

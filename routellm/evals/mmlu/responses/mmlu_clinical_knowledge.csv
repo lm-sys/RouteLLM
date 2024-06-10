@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "What size of cannula would you use in a patient who needed a rapid blood transfusion (as of 2020 medical knowledge)?
 A. 18 gauge.
 B. 20 gauge.

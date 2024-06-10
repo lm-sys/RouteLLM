@@ -1,4 +1,4 @@
-prompt,mixtral-8x7b-instruct-v0.1,gpt-4-1106-preview
+prompt,mistralai/Mixtral-8x7B-Instruct-v0.1,gpt-4-1106-preview
 "Which of these principles is not an element of the responsibility to protect?
 A. The responsibility to prevent.
 B. The responsibility to react.
