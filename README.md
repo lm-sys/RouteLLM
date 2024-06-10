@@ -4,6 +4,11 @@ RouteLLM is a framework for serving and evaluating routers for large language mo
 
 The core setup is routing between a pair of LLMs - a strong model and a weak model. Each router takes in **only** the user prompt, and decides which LLM to route that request to using any strategy. Each routing request is also associated with a _cost threshold_, which is a user-specified value between 0 and 1 that determines the cost-quality tradeoff of that request. A higher cost threshold corresponds to a stronger restriction on the cost of the request, reducing cost but leading to a looser restriction on quality as well.
 
+<p float="left">
+  <img src="assets/gsm8k.png" width="40%" />
+  <img src="assets/mt-bench.png" width="40%" />
+</p>
+
 ## Installation
 
 **From source:**
