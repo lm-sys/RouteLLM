@@ -27,10 +27,29 @@ def generate_results(
         plt.plot(
             df_per_method["strong_percentage"],
             df_per_method["accuracy"],
-            label=f"{method}_accuracy",
-            marker="x",
+            label=f"{method}",
+            marker=".",
             linestyle="-",
         )
+
+    weak_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.weak)
+    print(ROUTED_PAIR.weak, weak_accuracy)
+
+    strong_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.strong)
+    print(ROUTED_PAIR.strong, strong_accuracy)
+
+    plt.axhline(
+        y=weak_accuracy,
+        color="grey",
+        linestyle="--",
+        label=ROUTED_PAIR.weak,
+    )
+    plt.axhline(
+        y=strong_accuracy,
+        color="red",
+        linestyle="--",
+        label=ROUTED_PAIR.strong,
+    )
 
     if plot_optimal:
         optimal_accs = []
@@ -40,32 +59,14 @@ def generate_results(
         plt.plot(
             optimal_range,
             optimal_accs,
-            label="Optimal Accuracy",
-            marker="o",
+            label="Optimal",
+            marker="x",
             linestyle="-",
         )
 
-    weak_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.weak)
-    print(f"{ROUTED_PAIR.weak} accuracy:", weak_accuracy)
-
-    strong_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.strong)
-    print(f"{ROUTED_PAIR.strong} accuracy:", strong_accuracy)
-
-    plt.axhline(
-        y=weak_accuracy,
-        color="purple",
-        linestyle="--",
-        label=f"{ROUTED_PAIR.weak} Accuracy",
-    )
-    plt.axhline(
-        y=strong_accuracy,
-        color="orange",
-        linestyle="--",
-        label=f"{ROUTED_PAIR.strong} Accuracy",
-    )
     plt.xlabel("Strong Model Calls (%)")
-    plt.ylabel("Count / Accuracy")
-    plt.title(f"Model Calls and Accuracy ({benchmark_name})")
+    plt.ylabel("Performance")
+    plt.title(f"Model Calls and Performance ({benchmark_name})")
     plt.legend()
 
     file_name = f"{output}/{benchmark_name}.png"
