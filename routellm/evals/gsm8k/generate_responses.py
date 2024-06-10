@@ -123,19 +123,19 @@ evaluate_args_base = {
     "host": "http://localhost",
     "port": "6060",
 }
-mixtral_cors, mixtral_responses = main(
+weak_cors, weak_responses = main(
     SimpleNamespace(**evaluate_args_base, backend="router-random-1.0"),
 )
-gpt4_cors, gpt4_responses = main(
+strong_cors, strong_responses = main(
     SimpleNamespace(**evaluate_args_base, backend="router-random-0.0"),
 )
 current_dir = os.path.dirname(os.path.abspath(__file__))
 prompts = pd.read_json(f"{current_dir}/test.jsonl", lines=True)["question"].tolist()
 
-assert len(mixtral_cors) == len(gpt4_cors)
+assert len(weak_cors) == len(strong_cors)
 
 result_df = pd.DataFrame(
-    zip(prompts, mixtral_cors, gpt4_cors, mixtral_responses, gpt4_responses),
+    zip(prompts, weak_cors, strong_cors, weak_responses, strong_responses),
     columns=[
         "prompt",
         ROUTED_PAIR.weak,

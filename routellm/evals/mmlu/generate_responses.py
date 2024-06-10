@@ -151,24 +151,24 @@ def generate_domain_data(args, domain):
     test_df = pd.read_csv(f"{current_dir}/data/test/{domain}_test.csv", header=None)
 
     # Dummy router just to get the results
-    mixtral_cors, _, _, _, prompts = evaluate(
+    weak_cors, _, _, _, prompts = evaluate(
         SimpleNamespace(**vars(args), backend="router-random-1.0"),
         domain,
         dev_df,
         test_df,
     )
 
-    gpt4_cors, _, _, _, _ = evaluate(
+    strong_cors, _, _, _, _ = evaluate(
         SimpleNamespace(**vars(args), backend="router-random-0.0"),
         domain,
         dev_df,
         test_df,
     )
 
-    assert len(mixtral_cors) == len(gpt4_cors)
+    assert len(weak_cors) == len(strong_cors)
 
     result_df = pd.DataFrame(
-        zip(prompts, mixtral_cors, gpt4_cors),
+        zip(prompts, weak_cors, strong_cors),
         columns=["prompt", ROUTED_PAIR.weak, ROUTED_PAIR.strong],
     )
 

@@ -29,8 +29,8 @@ class Benchmark(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def get_optimal_accuracy(self, gpt4_percent: float) -> float:
-        """Takes in % gpt4 calls and returns the optimal score for the benchmark given these % of calls."""
+    def get_optimal_accuracy(self, strong_percent: float) -> float:
+        """Takes in % strong model calls and returns the optimal score for the benchmark given these % of calls."""
         pass
 
     @abc.abstractmethod
@@ -111,18 +111,18 @@ class MMLU(Benchmark):
                 results
             )
 
-    def get_optimal_accuracy(self, gpt4_percent):
+    def get_optimal_accuracy(self, strong_percent):
         df = self.all_data
         total = len(df)
 
-        gpt4_calls = total * gpt4_percent
-        mixtral_correct = len(df[df[ROUTED_PAIR.weak] == True])
+        strong_calls = total * strong_percent
+        weak_correct = len(df[df[ROUTED_PAIR.weak] == True])
 
         df_sub = df[df[ROUTED_PAIR.weak] == False]
         df_sub = df_sub[df_sub[ROUTED_PAIR.strong] == True]
 
-        gpt4_bonus = min(gpt4_calls, len(df_sub))
-        opt_correct = mixtral_correct + gpt4_bonus
+        strong_bonus = min(strong_calls, len(df_sub))
+        opt_correct = weak_correct + strong_bonus
         opt_accuracy = opt_correct / total * 100
 
         return opt_accuracy
@@ -230,10 +230,10 @@ class MTBench(Benchmark):
 
         return results["score"].mean()
 
-    def get_optimal_accuracy(self, gpt4_percent):
-        max_gpt4_calls = int(len(self.questions) * gpt4_percent)
+    def get_optimal_accuracy(self, strong_percent):
+        max_strong_calls = int(len(self.questions) * strong_percent)
 
-        gpt4_judgements = (
+        strong_judgements = (
             self.judgements[self.judgements["model"] == ROUTED_PAIR.strong][
                 ["question_id", "model", "score"]
             ]
@@ -241,7 +241,7 @@ class MTBench(Benchmark):
             .mean()
         )
 
-        mixtral_judgements = (
+        weak_judgements = (
             self.judgements[self.judgements["model"] == ROUTED_PAIR.weak][
                 [
                     "question_id",
@@ -253,35 +253,33 @@ class MTBench(Benchmark):
             .mean()
         )
 
-        combined_judgements = gpt4_judgements.merge(
-            mixtral_judgements,
+        combined_judgements = strong_judgements.merge(
+            weak_judgements,
             on=["question_id"],
             how="left",
-            suffixes=("_gpt4", "_mixtral"),
+            suffixes=("_strong", "_weak"),
         )
         combined_judgements["diff"] = (
-            combined_judgements["score_gpt4"] - combined_judgements["score_mixtral"]
+            combined_judgements["score_strong"] - combined_judgements["score_weak"]
         )
         combined_judgements = combined_judgements.sort_values(
             by=["diff"], ascending=False
         ).reset_index(drop=True)
 
-        if len(combined_judgements[combined_judgements["diff"] > 0]) > max_gpt4_calls:
-            combined_judgements.loc[:max_gpt4_calls, "score_optimal"] = (
-                combined_judgements.loc[:max_gpt4_calls, "score_gpt4"]
+        if len(combined_judgements[combined_judgements["diff"] > 0]) > max_strong_calls:
+            combined_judgements.loc[:max_strong_calls, "score_optimal"] = (
+                combined_judgements.loc[:max_strong_calls, "score_strong"]
             )
-            combined_judgements.loc[max_gpt4_calls:, "score_optimal"] = (
-                combined_judgements.loc[max_gpt4_calls:, "score_mixtral"]
+            combined_judgements.loc[max_strong_calls:, "score_optimal"] = (
+                combined_judgements.loc[max_strong_calls:, "score_weak"]
             )
         else:
             combined_judgements["score_optimal"] = combined_judgements[
-                "score_gpt4"
-            ].where(
-                combined_judgements["diff"] > 0, combined_judgements["score_mixtral"]
-            )
+                "score_strong"
+            ].where(combined_judgements["diff"] > 0, combined_judgements["score_weak"])
 
         assert (
-            len(gpt4_judgements) == len(mixtral_judgements) == len(combined_judgements)
+            len(strong_judgements) == len(weak_judgements) == len(combined_judgements)
         )
 
         return combined_judgements["score_optimal"].mean()
@@ -350,18 +348,18 @@ class GSM8K(Benchmark):
         df = self.all_data
         return len(df[df[model] == True]) / len(df) * 100
 
-    def get_optimal_accuracy(self, gpt4_percent):
+    def get_optimal_accuracy(self, strong_percent):
         df = self.all_data
         total = len(df)
 
-        gpt4_calls = total * gpt4_percent
-        mixtral_correct = len(df[df[ROUTED_PAIR.weak] == True])
+        strong_calls = total * strong_percent
+        weak_correct = len(df[df[ROUTED_PAIR.weak] == True])
 
         df_sub = df[df[ROUTED_PAIR.weak] == False]
         df_sub = df_sub[df_sub[ROUTED_PAIR.strong] == True]
 
-        gpt4_bonus = min(gpt4_calls, len(df_sub))
-        opt_correct = mixtral_correct + gpt4_bonus
+        strong_bonus = min(strong_calls, len(df_sub))
+        opt_correct = weak_correct + strong_bonus
         opt_accuracy = opt_correct / total * 100
 
         return opt_accuracy

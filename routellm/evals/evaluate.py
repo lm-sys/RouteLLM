@@ -22,10 +22,10 @@ def generate_results(
     for method in df_router_result["method"].unique():
         df_per_method = df_router_result[
             df_router_result["method"] == method
-        ].sort_values(by=["gpt4_percentage"])
+        ].sort_values(by=["strong_percentage"])
 
         plt.plot(
-            df_per_method["gpt4_percentage"],
+            df_per_method["strong_percentage"],
             df_per_method["accuracy"],
             label=f"{method}_accuracy",
             marker="x",
@@ -35,8 +35,8 @@ def generate_results(
     if plot_optimal:
         optimal_accs = []
         optimal_range = range(0, 101, 10)
-        for gpt4_percent in optimal_range:
-            optimal_accs.append(benchmark.get_optimal_accuracy(gpt4_percent / 100))
+        for strong_percent in optimal_range:
+            optimal_accs.append(benchmark.get_optimal_accuracy(strong_percent / 100))
         plt.plot(
             optimal_range,
             optimal_accs,
@@ -45,20 +45,25 @@ def generate_results(
             linestyle="-",
         )
 
-    mixtral_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.weak)
-    print("Mixtral model accuracy:", mixtral_accuracy)
+    weak_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.weak)
+    print(f"{ROUTED_PAIR.weak} accuracy:", weak_accuracy)
 
-    gpt4_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.strong)
-    print("GPT-4 model accuracy:", gpt4_accuracy)
+    strong_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.strong)
+    print(f"{ROUTED_PAIR.strong} accuracy:", strong_accuracy)
 
     plt.axhline(
-        y=mixtral_accuracy,
+        y=weak_accuracy,
         color="purple",
         linestyle="--",
-        label="Mixtral Accuracy",
+        label=f"{ROUTED_PAIR.weak} Accuracy",
     )
-    plt.axhline(y=gpt4_accuracy, color="orange", linestyle="--", label="GPT-4 Accuracy")
-    plt.xlabel("GPT-4 Calls (%)")
+    plt.axhline(
+        y=strong_accuracy,
+        color="orange",
+        linestyle="--",
+        label=f"{ROUTED_PAIR.strong} Accuracy",
+    )
+    plt.xlabel("Strong Model Calls (%)")
     plt.ylabel("Count / Accuracy")
     plt.title(f"Model Calls and Accuracy ({benchmark_name})")
     plt.legend()
@@ -70,14 +75,14 @@ def generate_results(
     def pct_call_metric(row):
         df_per_method = df_router_result[
             df_router_result["method"] == row["method"]
-        ].sort_values(by=["gpt4_percentage"])
+        ].sort_values(by=["strong_percentage"])
         pct_calls = []
 
         for pct in [0.2, 0.5, 0.8]:
             pct_call = np.interp(
-                pct * (gpt4_accuracy - mixtral_accuracy) + mixtral_accuracy,
+                pct * (strong_accuracy - weak_accuracy) + weak_accuracy,
                 df_per_method["accuracy"],
-                df_per_method["gpt4_percentage"],
+                df_per_method["strong_percentage"],
             )
             pct_calls.append(f"{pct_call:.2f}%")
 
@@ -86,25 +91,25 @@ def generate_results(
     def auc_metric(row):
         df_per_method = df_router_result[
             df_router_result["method"] == row["method"]
-        ].sort_values(by=["gpt4_percentage"])
+        ].sort_values(by=["strong_percentage"])
         return np.trapz(
-            df_per_method["accuracy"], df_per_method["gpt4_percentage"] / 100
+            df_per_method["accuracy"], df_per_method["strong_percentage"] / 100
         )
 
     def apgr_metric(row):
         df_per_method = df_router_result[
             df_router_result["method"] == row["method"]
-        ].sort_values(by=["gpt4_percentage"])
+        ].sort_values(by=["strong_percentage"])
 
-        mixtral_auc = np.zeros([len(df_per_method)], dtype=float)
-        mixtral_auc.fill(mixtral_accuracy)
-        mixtral_auc = np.trapz(mixtral_auc, df_per_method["gpt4_percentage"] / 100)
+        weak_auc = np.zeros([len(df_per_method)], dtype=float)
+        weak_auc.fill(weak_accuracy)
+        weak_auc = np.trapz(weak_auc, df_per_method["strong_percentage"] / 100)
 
-        gpt4_auc = np.zeros([len(df_per_method)], dtype=float)
-        gpt4_auc.fill(gpt4_accuracy)
-        gpt4_auc = np.trapz(gpt4_auc, df_per_method["gpt4_percentage"] / 100)
+        strong_auc = np.zeros([len(df_per_method)], dtype=float)
+        strong_auc.fill(strong_accuracy)
+        strong_auc = np.trapz(strong_auc, df_per_method["strong_percentage"] / 100)
 
-        return (row["AUC"] - mixtral_auc) / (gpt4_auc - mixtral_auc)
+        return (row["AUC"] - weak_auc) / (strong_auc - weak_auc)
 
     metrics = pd.DataFrame({"method": df_router_result["method"].unique()})
     metrics[["20% qual", "50% qual", "80% qual"]] = metrics.apply(
@@ -202,7 +207,7 @@ if __name__ == "__main__":
             result = {
                 "method": str(router),
                 "threshold": threshold,
-                "gpt4_percentage": model_counts[ROUTED_PAIR.strong] / total * 100,
+                "strong_percentage": model_counts[ROUTED_PAIR.strong] / total * 100,
                 "accuracy": score,
             }
             all_results.append(result)

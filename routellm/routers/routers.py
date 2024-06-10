@@ -27,9 +27,8 @@ def no_parallel(cls):
 class Router(abc.ABC):
     NO_PARALLEL = False
 
-    # Returns a float between 0 and 1 representing the value used to route to models.
-    # This is normally the winrate of the GPT-4 model, but it may have a different meaning depending on the router.
-    # If this value is >= the user defined cutoff, the router will choose GPT-4, otherwise, it will choose Mixtral.
+    # Returns a float between 0 and 1 representing the value used to route to models, conventionally the winrate of the strong model.
+    # If this value is >= the user defined cutoff, the router will route to the strong model, otherwise, it will route to the weak model.
     @abc.abstractmethod
     def calculate_strong_win_rate(self, prompt):
         pass
@@ -165,15 +164,15 @@ class SWRankingRouter(Router):
         weightings = self.get_weightings(similarities)
         res = sw_utils.compute_elo_mle_with_tie(self.arena_df, sample_weight=weightings)
 
-        mixtral_score, gpt4_score = (
-            res[self.model2tier[self.strong_model]],
+        weak_score, strong_score = (
             res[self.model2tier[self.weak_model]],
+            res[self.model2tier[self.strong_model]],
         )
-        mixtral_winrate = 1 / (1 + 10 ** ((gpt4_score - mixtral_score) / 400))
-        gpt4_winrate = 1 - mixtral_winrate
+        weak_winrate = 1 / (1 + 10 ** ((strong_score - weak_score) / 400))
+        strong_winrate = 1 - weak_winrate
 
-        # If the expected gpt4 winrate is greater than the threshold, use gpt4
-        return gpt4_winrate
+        # If the expected strong winrate is greater than the threshold, use strong
+        return strong_winrate
 
 
 @no_parallel
