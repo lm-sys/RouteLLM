@@ -1,6 +1,8 @@
 sw_ranking:
   arena_df_path:
   arena_embedding_path:
+  strong_model:
+  weak_model:
 causal_llm:
   model_checkpoint_path:
   model_config_path:
@@ -11,3 +13,5 @@ bert:
 matrix_factorization:
   checkpoint_path:
   hidden_size:
+  strong_model:
+  weak_model:

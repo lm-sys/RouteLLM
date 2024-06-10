@@ -8,7 +8,7 @@ import yaml
 
 from routellm.evals.benchmarks import GSM8K, MMLU, MTBench
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
-from routellm.model_pair import DEFAULT_PAIR
+from routellm.model_pair import ROUTED_PAIR
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -45,10 +45,10 @@ def generate_results(
             linestyle="-",
         )
 
-    mixtral_accuracy = benchmark.get_model_accuracy(DEFAULT_PAIR.weak)
+    mixtral_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.weak)
     print("Mixtral model accuracy:", mixtral_accuracy)
 
-    gpt4_accuracy = benchmark.get_model_accuracy(DEFAULT_PAIR.strong)
+    gpt4_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.strong)
     print("GPT-4 model accuracy:", gpt4_accuracy)
 
     plt.axhline(
@@ -179,7 +179,7 @@ if __name__ == "__main__":
         random.seed(0)
         router_config = config.get(router, {})
         router_results = benchmark.evaluate(
-            ROUTER_CLS[router](router_config, DEFAULT_PAIR), args.num_results
+            ROUTER_CLS[router](router_config), args.num_results
         )
         for threshold, score, model_counts, total in router_results:
             print(f"Evaluating router: {router} with threshold {threshold}...")
@@ -202,7 +202,7 @@ if __name__ == "__main__":
             result = {
                 "method": str(router),
                 "threshold": threshold,
-                "gpt4_percentage": model_counts[DEFAULT_PAIR.strong] / total * 100,
+                "gpt4_percentage": model_counts[ROUTED_PAIR.strong] / total * 100,
                 "accuracy": score,
             }
             all_results.append(result)

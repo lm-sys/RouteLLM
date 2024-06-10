@@ -19,7 +19,6 @@ from fastapi.responses import JSONResponse
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
-from routellm.model_pair import DEFAULT_PAIR
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -196,7 +195,7 @@ args = parser.parse_args()
 config = yaml.safe_load(open(args.config, "r"))
 for router in args.routers:
     router_config = config.get(router, {})
-    ROUTERS_MAP[router] = ROUTER_CLS[router](router_config, DEFAULT_PAIR)
+    ROUTERS_MAP[router] = ROUTER_CLS[router](router_config)
 
 if args.verbose:
     logging.basicConfig(level=logging.INFO)

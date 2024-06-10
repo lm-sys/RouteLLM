@@ -8,7 +8,7 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 import routellm.routers.similarity_weighted.utils as sw_utils
-from routellm.model_pair import DEFAULT_PAIR
+from routellm.model_pair import ROUTED_PAIR
 from routellm.routers.causal_llm.llm_utils import (
     load_model_config,
     load_prompt_format,
@@ -36,9 +36,9 @@ class Router(abc.ABC):
 
     def route(self, prompt, threshold):
         if self.calculate_strong_win_rate(prompt) >= threshold:
-            return DEFAULT_PAIR.strong
+            return ROUTED_PAIR.strong
         else:
-            return DEFAULT_PAIR.weak
+            return ROUTED_PAIR.weak
 
     def __str__(self):
         return NAME_TO_CLS[self.__class__]
@@ -49,10 +49,8 @@ class CausalLLMRouter(Router):
     def __init__(
         self,
         config,
-        model_pair,
         score_threshold=2,
     ):
-        del model_pair
         model_config = load_model_config(config["model_config_path"])
         prompt_format = load_prompt_format(model_config.model_id)
         self.router_model = CausalLLMClassifier(
@@ -84,10 +82,8 @@ class BERTRouter(Router):
     def __init__(
         self,
         config,
-        model_pair,
         num_labels=3,
     ):
-        del model_pair
         self.model = AutoModelForSequenceClassification.from_pretrained(
             config["model_path"], num_labels=num_labels
         )
@@ -110,8 +106,9 @@ class BERTRouter(Router):
 
 
 class SWRankingRouter(Router):
-    def __init__(self, config, model_pair, num_tiers=10):
-        self.model_pair = model_pair
+    def __init__(self, config, num_tiers=10):
+        self.strong_model = config["strong_model"]
+        self.weak_model = config["weak_model"]
         arena_df_path, arena_embedding_path = (
             config["arena_df_path"],
             config["arena_embedding_path"],
@@ -169,8 +166,8 @@ class SWRankingRouter(Router):
         res = sw_utils.compute_elo_mle_with_tie(self.arena_df, sample_weight=weightings)
 
         mixtral_score, gpt4_score = (
-            res[self.model2tier[DEFAULT_PAIR.weak]],
-            res[self.model2tier[DEFAULT_PAIR.strong]],
+            res[self.model2tier[self.strong_model]],
+            res[self.model2tier[self.weak_model]],
         )
         mixtral_winrate = 1 / (1 + 10 ** ((gpt4_score - mixtral_score) / 400))
         gpt4_winrate = 1 - mixtral_winrate
@@ -181,24 +178,25 @@ class SWRankingRouter(Router):
 
 @no_parallel
 class MatrixFactorizationRouter(Router):
-    def __init__(self, config, model_pair):
-        self.model_pair = model_pair
+    def __init__(self, config):
         self.model = MFModel(config["hidden_size"])
         self.model.load(config["checkpoint_path"])
         self.model = self.model.eval().to("cuda")
-        self.gpt4_id = MODEL_IDS[model_pair.strong]
-        self.mixtral_id = MODEL_IDS[model_pair.weak]
+        self.strong_model_id = MODEL_IDS[config["strong_model"]]
+        self.weak_model_id = MODEL_IDS[config["weak_model"]]
 
     def calculate_strong_win_rate(self, prompt):
-        winrate = self.model.pred_win_rate(self.gpt4_id, self.mixtral_id, prompt)
+        winrate = self.model.pred_win_rate(
+            self.strong_model_id, self.weak_model_id, prompt
+        )
         return winrate
 
 
 # Parallelism makes the randomness non deterministic
 @no_parallel
 class RandomRouter(Router):
-    def __init__(self, config, model_pair):
-        del config, model_pair
+    def __init__(self, config):
+        del config
 
     def calculate_strong_win_rate(
         self,

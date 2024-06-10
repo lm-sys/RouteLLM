@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from openai import OpenAI
 
-from routellm.model_pair import DEFAULT_PAIR
+from routellm.model_pair import ROUTED_PAIR
 
 """
 The core code is based heavily on the original SGLang implementation.
@@ -138,10 +138,10 @@ result_df = pd.DataFrame(
     zip(prompts, mixtral_cors, gpt4_cors, mixtral_responses, gpt4_responses),
     columns=[
         "prompt",
-        DEFAULT_PAIR.weak,
-        DEFAULT_PAIR.strong,
-        f"{DEFAULT_PAIR.weak}_response",
-        f"{DEFAULT_PAIR.strong}_response",
+        ROUTED_PAIR.weak,
+        ROUTED_PAIR.strong,
+        f"{ROUTED_PAIR.weak}_response",
+        f"{ROUTED_PAIR.strong}_response",
     ],
 )
 

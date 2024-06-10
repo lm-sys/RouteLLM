@@ -11,7 +11,7 @@ import tqdm
 from openai import OpenAI
 
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
-from routellm.model_pair import DEFAULT_PAIR
+from routellm.model_pair import ROUTED_PAIR
 
 choices = ["A", "B", "C", "D"]
 tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo")
@@ -169,7 +169,7 @@ def generate_domain_data(args, domain):
 
     result_df = pd.DataFrame(
         zip(prompts, mixtral_cors, gpt4_cors),
-        columns=["prompt", DEFAULT_PAIR.weak, DEFAULT_PAIR.strong],
+        columns=["prompt", ROUTED_PAIR.weak, ROUTED_PAIR.strong],
     )
 
     result_df.to_csv(cache_key, index=False)
