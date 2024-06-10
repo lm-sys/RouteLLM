@@ -26,6 +26,8 @@ python -m routellm.openai_server --config config.yaml --workers 1 --routers rand
 - `--config` specifies the path to the configuration file, which contains the paths and settings required by each router.
 - `--workers` specifies the number of workers to use with FastAPI.
 
+For OpenAI models, the server will route requests to the official OpenAI client. For all other models, the server will route to an alternate OpenAI compatible server, which can be configured with the `--alt-base-url` and `alt-api-key` flags (uses Anyscale by default).
+
 ## Evaluation
 
 RouteLLM also includes a evaluation framework to measure the performance of different routing strategies on specific benchmarks. We currently support the following benchmarks: [MMLU](https://arxiv.org/abs/2009.03300), [GSM8K](https://arxiv.org/abs/2110.14168), and [MT Bench](https://arxiv.org/abs/2306.05685).

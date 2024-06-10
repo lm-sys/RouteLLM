@@ -26,10 +26,6 @@ ROUTERS_MAP = {}
 
 app = fastapi.FastAPI()
 openai_client = AsyncOpenAI()
-anyscale_client = AsyncOpenAI(
-    base_url="https://api.endpoints.anyscale.com/v1",
-    api_key=os.environ.get("ANYSCALE_API_KEY"),
-)
 count = defaultdict(int)
 
 
@@ -95,21 +91,17 @@ class ChatCompletionResponse(BaseModel):
 async def create_completion(model, prompt, **kwargs):
     temperature = kwargs["temperature"]
 
-    if model == "mixtral-8x7b-instruct-v0.1":
-        model_for_api = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-        client = anyscale_client
-    elif "gpt-4" in model or "gpt-3.5-turbo" in model:
-        model_for_api = model
+    if "gpt-4" in model or "gpt-3.5-turbo" in model:
         client = openai_client
     else:
-        raise ValueError(f"Invalid model {model}")
+        client = alt_client
 
     logging.info(
         f"Creating completion for model: {model}, temperature: {temperature}, prompt: {prompt[:50]}"
     )
     res = await client.chat.completions.create(
         **kwargs,
-        model=model_for_api,
+        model=model,
     )
     logging.info(f"Generated {res.choices[0]}")
 
@@ -191,11 +183,29 @@ parser.add_argument(
     default=["random"],
     choices=list(ROUTER_CLS.keys()),
 )
+parser.add_argument(
+    "--alt-base-url",
+    help="The OpenAI-compatible base URL for non-OpenAI API requests",
+    type=str,
+    default="https://api.endpoints.anyscale.com/v1",
+)
+parser.add_argument(
+    "--alt-api-key",
+    help="The API key for non-OpenAI API requests",
+    type=str,
+    default=os.environ.get("ANYSCALE_API_KEY"),
+)
 args = parser.parse_args()
+
 config = yaml.safe_load(open(args.config, "r"))
 for router in args.routers:
     router_config = config.get(router, {})
     ROUTERS_MAP[router] = ROUTER_CLS[router](router_config)
+
+alt_client = AsyncOpenAI(
+    base_url=args.alt_base_url,
+    api_key=args.alt_api_key,
+)
 
 if args.verbose:
     logging.basicConfig(level=logging.INFO)
