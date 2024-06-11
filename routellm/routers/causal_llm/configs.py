@@ -58,8 +58,8 @@ class RouterModelConfig(BaseModel):
     model_id: str
     model_type: ModelTypeEnum
     num_outputs: int
-    valid_path: str
 
+    valid_path: str = None
     # output special tokens (e.g. [[1]], [[2]], etc.) for CAUSAL models
     special_tokens: List[str] = []
     flash_attention_2: bool = False

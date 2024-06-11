@@ -9,8 +9,8 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 import routellm.routers.similarity_weighted.utils as sw_utils
 from routellm.model_pair import ROUTED_PAIR
+from routellm.routers.causal_llm.configs import RouterModelConfig
 from routellm.routers.causal_llm.llm_utils import (
-    load_model_config,
     load_prompt_format,
     to_openai_api_messages,
 )
@@ -50,7 +50,7 @@ class CausalLLMRouter(Router):
         config,
         score_threshold=4,
     ):
-        model_config = load_model_config(config["model_config_path"])
+        model_config = RouterModelConfig(**config["model_config"])
         prompt_format = load_prompt_format(model_config.model_id)
         self.router_model = CausalLLMClassifier(
             config=model_config,
