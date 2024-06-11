@@ -48,7 +48,7 @@ class CausalLLMRouter(Router):
     def __init__(
         self,
         config,
-        score_threshold=2,
+        score_threshold=4,
     ):
         model_config = load_model_config(config["model_config_path"])
         prompt_format = load_prompt_format(model_config.model_id)

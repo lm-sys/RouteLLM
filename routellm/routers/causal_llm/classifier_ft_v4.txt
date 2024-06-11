@@ -1,6 +1,0 @@
-Remember, a high score (4-5) suggests that the question demands a response of very high quality, showing deep understanding, creativity, and detailed insight. A medium score (3) indicates that the question can be adequately addressed with a moderate level of detail and relevance. A low score (1-2) suggests that the question is either too simple, potentially leading to generic responses, or so vague that a high-quality response is unlikely due to the lack of specificity in the question itself.
-
-[Question]
-{question}
-
-Prediction:

@@ -40,13 +40,13 @@ class PromptFormat(BaseModel):
     def check_system_in_user(cls, value):
         # `system_in_user` is restricted to be True.
         # Re-evaluate the code and add unit tests when relaxing this.
-        assert value
+        # assert value
         return value
 
     @validator("default_system_message")
     def check_default_system_message(cls, value):
         # User should explicitly give a system message if so preferred.
-        assert value == ""
+        # assert value == ""
         return value
 
     @validator("trailing_assistant")

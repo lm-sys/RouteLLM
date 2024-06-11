@@ -1,3 +1,5 @@
+import os
+
 import torch
 import yaml
 from transformers import (
@@ -33,8 +35,11 @@ def get_model(config: RouterModelConfig, model_ckpt: str, pad_token_id: int = 2)
             trust_remote_code=True,
             torch_dtype=torch.bfloat16,
             use_cache=False,
-            use_flash_attention_2=config.flash_attention_2,
+            attn_implementation=(
+                "flash_attention_2" if config.flash_attention_2 else None
+            ),
             attention_dropout=config.attention_dropout,
+            token=os.getenv("LLAMA2_HF_TOKEN"),
         )
     elif config.model_type == ModelTypeEnum.NEW_HEAD:
         return AutoModelForSequenceClassification.from_pretrained(
@@ -52,13 +57,20 @@ def get_model(config: RouterModelConfig, model_ckpt: str, pad_token_id: int = 2)
         )
 
 
-def get_tokenizer(model_id, special_tokens=None, truncation_side="left"):
+def get_tokenizer(
+    model_id, special_tokens=None, truncation_side="left", padding_side="left"
+):
     # Context for legacy=True: https://github.com/huggingface/transformers/issues/25176
-    tokenizer = AutoTokenizer.from_pretrained(model_id, legacy=True)
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_id,
+        legacy=True,
+        truncation_side=truncation_side,
+        padding_side=padding_side,
+        token=os.getenv("LLAMA2_HF_TOKEN"),
+    )
     tokenizer.pad_token = tokenizer.eos_token
     if special_tokens:
         tokenizer.add_tokens(special_tokens, special_tokens=True)
-    tokenizer.truncation_side = truncation_side
     return tokenizer
 
 

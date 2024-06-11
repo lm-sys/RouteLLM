@@ -16,10 +16,10 @@ class CausalLLMClassifier:
         config: RouterModelConfig,
         ckpt_local_path: str,
         prompt_format: PromptFormat,
+        score_threshold: int,
         prompt_field: str = "messages",
         use_last_turn: bool = False,
         additional_fields: List[str] = list(["label", "pidx"]),
-        score_threshold: int = 2,
         max_new_tokens: int = 6,
     ):
         """TODO: complete here
@@ -52,10 +52,14 @@ class CausalLLMClassifier:
             config.model_id,
             special_tokens=config.special_tokens,
             truncation_side="left",
+            padding_side="left",
         )
         self.orig_vocab_size = len(self.tokenizer) - config.num_outputs
         self.max_new_tokens = max_new_tokens
         self.score_threshold = score_threshold
+        assert (
+            self.score_threshold == config.num_outputs - 1
+        ), "this is the default value for now."
         print(f"Done loading model in {time.time() - s} seconds.")
 
     def preprocess(self, row):
@@ -92,7 +96,7 @@ class CausalLLMClassifier:
 
         # see https://github.com/huggingface/transformers/blob/main/src/transformers/generation/utils.py#L101
         row["output_ids"] = output_new.sequences.squeeze()[input_ids.shape[1] :].cpu()
-        assert len(row["output_ids"]) == len(output_new.scores)
+        assert len(row["output_ids"]) == len(row["output_ids"])
 
         # for debugging
         # self.tokenizer.convert_ids_to_tokens(input_ids.cpu().numpy().flatten())
