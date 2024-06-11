@@ -31,6 +31,8 @@ python -m routellm.openai_server --config config.yaml --workers 1 --routers rand
 - `--config` specifies the path to the configuration file, which contains the paths and settings required by each router.
 - `--workers` specifies the number of workers to use with FastAPI.
 
+This means that each server can support multiple routing strategies - users can specify which router and what cost threshold to use for each request using the model name with the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-bert-0.5` specifies that the request should be routed using the BERT router with a cost threshold of 0.5.
+
 For OpenAI models, the server will route requests to the official OpenAI client. For all other models, the server will route to an alternate OpenAI compatible server, which can be configured with the `--alt-base-url` and `alt-api-key` flags (uses Anyscale by default).
 
 ## Evaluation
