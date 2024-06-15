@@ -1,4 +1,5 @@
 import torch
+from huggingface_hub import PyTorchModelHubMixin
 from openai import OpenAI
 
 MODEL_IDS = {
@@ -69,7 +70,7 @@ MODEL_IDS = {
 }
 
 
-class MFModel(torch.nn.Module):
+class MFModel(torch.nn.Module, PyTorchModelHubMixin):
     def __init__(
         self,
         dim,

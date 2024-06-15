@@ -178,8 +178,9 @@ class SWRankingRouter(Router):
 @no_parallel
 class MatrixFactorizationRouter(Router):
     def __init__(self, config):
-        self.model = MFModel(config["hidden_size"])
-        self.model.load(config["checkpoint_path"])
+        self.model = MFModel.from_pretrained(
+            config["checkpoint_path"], dim=config["hidden_size"]
+        )
         self.model = self.model.eval().to("cuda")
         self.strong_model_id = MODEL_IDS[config["strong_model"]]
         self.weak_model_id = MODEL_IDS[config["weak_model"]]
