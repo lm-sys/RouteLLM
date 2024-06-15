@@ -184,8 +184,10 @@ class SWRankingRouter(Router):
 @no_parallel
 class MatrixFactorizationRouter(Router):
     def __init__(self, checkpoint_path, hidden_size, strong_model, weak_model):
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
         self.model = MFModel.from_pretrained(checkpoint_path, dim=hidden_size)
-        self.model = self.model.eval().to("cuda")
+        self.model = self.model.eval().to(device)
         self.strong_model_id = MODEL_IDS[strong_model]
         self.weak_model_id = MODEL_IDS[weak_model]
 
