@@ -26,7 +26,7 @@ dependencies = [
 
 [project.optional-dependencies]
 serve = ["fastapi", "shortuuid", "uvicorn"]
-dev = ["black", "isort"]
+dev = ["black", "isort", "pre-commit"]
 
 [tool.isort]
 profile = "black"
