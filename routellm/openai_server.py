@@ -200,7 +200,7 @@ args = parser.parse_args()
 config = yaml.safe_load(open(args.config, "r"))
 for router in args.routers:
     router_config = config.get(router, {})
-    ROUTERS_MAP[router] = ROUTER_CLS[router](router_config)
+    ROUTERS_MAP[router] = ROUTER_CLS[router](**router_config)
 
 alt_client = AsyncOpenAI(
     base_url=args.alt_base_url,

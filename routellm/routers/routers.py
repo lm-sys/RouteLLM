@@ -47,23 +47,26 @@ class Router(abc.ABC):
 class CausalLLMRouter(Router):
     def __init__(
         self,
-        config,
+        model_config,
+        model_checkpoint_path,
+        system_message,
+        classifier_message,
         score_threshold=4,
     ):
-        model_config = RouterModelConfig(**config["model_config"])
+        model_config = RouterModelConfig(model_config)
         prompt_format = load_prompt_format(model_config.model_id)
         self.router_model = CausalLLMClassifier(
             config=model_config,
-            ckpt_local_path=config["model_checkpoint_path"],
+            ckpt_local_path=model_checkpoint_path,
             score_threshold=score_threshold,
             prompt_format=prompt_format,
             prompt_field="messages",
             additional_fields=[],
             use_last_turn=True,
         )
-        with open(config["system_message"], "r") as pr:
+        with open(system_message, "r") as pr:
             system_message = pr.read()
-        with open(config["classifier_message"], "r") as pr:
+        with open(classifier_message, "r") as pr:
             classifier_message = pr.read()
         self.to_openai_messages = functools.partial(
             to_openai_api_messages, system_message, classifier_message
@@ -80,13 +83,13 @@ class CausalLLMRouter(Router):
 class BERTRouter(Router):
     def __init__(
         self,
-        config,
+        model_path,
         num_labels=3,
     ):
         self.model = AutoModelForSequenceClassification.from_pretrained(
-            config["model_path"], num_labels=num_labels
+            model_path, num_labels=num_labels
         )
-        self.tokenizer = AutoTokenizer.from_pretrained(config["model_path"])
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
     def calculate_strong_win_rate(self, prompt):
         inputs = self.tokenizer(
@@ -105,13 +108,16 @@ class BERTRouter(Router):
 
 
 class SWRankingRouter(Router):
-    def __init__(self, config, num_tiers=10):
-        self.strong_model = config["strong_model"]
-        self.weak_model = config["weak_model"]
-        arena_df_path, arena_embedding_path = (
-            config["arena_df_path"],
-            config["arena_embedding_path"],
-        )
+    def __init__(
+        self,
+        strong_model,
+        weak_model,
+        arena_df_path,
+        arena_embedding_path,
+        num_tiers=10,
+    ):
+        self.strong_model = strong_model
+        self.weak_model = weak_model
         try:
             if arena_df_path.endswith(".json"):
                 self.arena_df = pd.read_json(arena_df_path)
@@ -177,13 +183,11 @@ class SWRankingRouter(Router):
 
 @no_parallel
 class MatrixFactorizationRouter(Router):
-    def __init__(self, config):
-        self.model = MFModel.from_pretrained(
-            config["checkpoint_path"], dim=config["hidden_size"]
-        )
+    def __init__(self, checkpoint_path, hidden_size, strong_model, weak_model):
+        self.model = MFModel.from_pretrained(checkpoint_path, dim=hidden_size)
         self.model = self.model.eval().to("cuda")
-        self.strong_model_id = MODEL_IDS[config["strong_model"]]
-        self.weak_model_id = MODEL_IDS[config["weak_model"]]
+        self.strong_model_id = MODEL_IDS[strong_model]
+        self.weak_model_id = MODEL_IDS[weak_model]
 
     def calculate_strong_win_rate(self, prompt):
         winrate = self.model.pred_win_rate(
@@ -195,9 +199,6 @@ class MatrixFactorizationRouter(Router):
 # Parallelism makes the randomness non deterministic
 @no_parallel
 class RandomRouter(Router):
-    def __init__(self, config):
-        del config
-
     def calculate_strong_win_rate(
         self,
         prompt,

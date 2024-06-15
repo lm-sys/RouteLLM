@@ -185,7 +185,7 @@ if __name__ == "__main__":
         random.seed(0)
         router_config = config.get(router, {})
         router_results = benchmark.evaluate(
-            ROUTER_CLS[router](router_config), args.num_results
+            ROUTER_CLS[router](**router_config), args.num_results
         )
         for threshold, score, model_counts, total in router_results:
             print(f"Evaluating router: {router} with threshold {threshold}...")
