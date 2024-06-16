@@ -1,3 +1,4 @@
+import json
 import math
 import os
 
@@ -87,3 +88,25 @@ def compute_elo_mle_with_tie(
     if "llama-2-70b-chat" in models.index:
         elo_scores += 1082 - elo_scores[models["llama-2-70b-chat"]]
     return pd.Series(elo_scores, index=models.index).sort_values(ascending=False)
+
+
+def preprocess_battles(battles_df):
+    MIN_LEN = 16
+
+    def get_first_turn(prompt_str):
+        return json.loads(prompt_str)[0].strip()
+
+    def get_winner(row):
+        if row["winner_model_a"] == 1:
+            return "model_a"
+        elif row["winner_model_b"] == 1:
+            return "model_b"
+        else:
+            return "tie"
+
+    battles_df["first_turn"] = battles_df["prompt"].apply(get_first_turn)
+    battles_df["winner"] = battles_df.apply(get_winner, axis=1)
+    battles_df = battles_df.loc[battles_df["first_turn"].apply(len) >= MIN_LEN]
+    battles_df = battles_df[["model_a", "model_b", "winner", "first_turn"]]
+
+    return battles_df

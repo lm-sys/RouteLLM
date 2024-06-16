@@ -3,11 +3,10 @@ import functools
 import random
 
 import numpy as np
-import pandas as pd
 import torch
+from datasets import load_dataset
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-import routellm.routers.similarity_weighted.utils as sw_utils
 from routellm.model_pair import ROUTED_PAIR
 from routellm.routers.causal_llm.configs import RouterModelConfig
 from routellm.routers.causal_llm.llm_utils import (
@@ -16,6 +15,12 @@ from routellm.routers.causal_llm.llm_utils import (
 )
 from routellm.routers.causal_llm.model import CausalLLMClassifier
 from routellm.routers.matrix_factorization.model import MODEL_IDS, MFModel
+from routellm.routers.similarity_weighted.utils import (
+    OPENAI_CLIENT,
+    compute_elo_mle_with_tie,
+    compute_tiers,
+    preprocess_battles,
+)
 
 
 def no_parallel(cls):
@@ -110,33 +115,29 @@ class BERTRouter(Router):
 class SWRankingRouter(Router):
     def __init__(
         self,
+        arena_battle_dataset,
+        arena_embedding_dataset,
         strong_model,
         weak_model,
-        arena_df_path,
-        arena_embedding_path,
         num_tiers=10,
     ):
         self.strong_model = strong_model
         self.weak_model = weak_model
-        try:
-            if arena_df_path.endswith(".json"):
-                self.arena_df = pd.read_json(arena_df_path)
-            else:
-                self.arena_df = pd.read_json(arena_df_path, lines=True)
-        except FileNotFoundError:
-            raise FileNotFoundError(
-                f"Expected data file not found at path: {arena_df_path}"
-            )
-        try:
-            self.arena_conv_embedding = np.load(arena_embedding_path)
-        except FileNotFoundError:
-            raise FileNotFoundError(
-                f"Expected data file not found at path: {arena_embedding_path}"
-            )
+
+        self.arena_df = load_dataset(arena_battle_dataset, split="train").to_pandas()
+        self.arena_df = preprocess_battles(self.arena_df)
+
+        self.arena_conv_embedding = load_dataset(
+            arena_embedding_dataset, split="train"
+        ).to_dict()["embeddings"]
         self.embedding_model = "text-embedding-3-small"
 
-        model_ratings = sw_utils.compute_elo_mle_with_tie(self.arena_df)
-        self.model2tier = sw_utils.compute_tiers(model_ratings, num_tiers=num_tiers)
+        assert len(self.arena_df) == len(
+            self.arena_conv_embedding
+        ), "Number of battle embeddings is mismatched to data"
+
+        model_ratings = compute_elo_mle_with_tie(self.arena_df)
+        self.model2tier = compute_tiers(model_ratings, num_tiers=num_tiers)
 
         self.arena_df["model_a"] = self.arena_df["model_a"].apply(
             lambda x: self.model2tier[x]
@@ -155,7 +156,7 @@ class SWRankingRouter(Router):
     ):
         prompt_emb = (
             (
-                sw_utils.OPENAI_CLIENT.embeddings.create(
+                OPENAI_CLIENT.embeddings.create(
                     input=[prompt], model=self.embedding_model
                 )
             )
@@ -168,7 +169,7 @@ class SWRankingRouter(Router):
         )
 
         weightings = self.get_weightings(similarities)
-        res = sw_utils.compute_elo_mle_with_tie(self.arena_df, sample_weight=weightings)
+        res = compute_elo_mle_with_tie(self.arena_df, sample_weight=weightings)
 
         weak_score, strong_score = (
             res[self.model2tier[self.weak_model]],
