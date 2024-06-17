@@ -4,7 +4,6 @@ from collections import Counter
 
 import numpy as np
 import pandas as pd
-from pandarallel import pandarallel
 from tqdm import tqdm
 
 from routellm.model_pair import ROUTED_PAIR
@@ -13,7 +12,6 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 pd.options.mode.copy_on_write = True
 tqdm.pandas()
-pandarallel.initialize(progress_bar=True)
 
 
 class Benchmark(abc.ABC):

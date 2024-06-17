@@ -4,7 +4,9 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import psutil
 import yaml
+from pandarallel import pandarallel
 
 from routellm.evals.benchmarks import GSM8K, MMLU, MTBench
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
@@ -158,11 +160,19 @@ if __name__ == "__main__":
         default=[],
         choices=list(ROUTER_CLS.keys()),
     )
+    parser.add_argument(
+        "--parallel",
+        type=int,
+        default=psutil.cpu_count(logical=False),
+        help="Number of cores to use, all by default.",
+    )
     parser.add_argument("--num-results", type=int, default=10)
     parser.add_argument("--config", type=str, default="config.yaml")
 
     args = parser.parse_args()
     print(args)
+
+    pandarallel.initialize(progress_bar=True, nb_workers=args.parallel)
 
     if args.benchmark == "mmlu":
         print("Running eval for full MMLU.")
