@@ -52,13 +52,23 @@ class Router(abc.ABC):
 class CausalLLMRouter(Router):
     def __init__(
         self,
-        model_config,
         checkpoint_path,
         system_message,
         classifier_message,
         score_threshold=4,
+        special_tokens=["[[1]]", "[[2]]", "[[3]]", "[[4]]", "[[5]]"],
+        num_outputs=5,
+        model_type="causal",
+        model_id="meta-llama/Meta-Llama-3-8B",
+        flash_attention_2=True,
     ):
-        model_config = RouterModelConfig(model_config)
+        model_config = RouterModelConfig(
+            model_id=model_id,
+            model_type=model_type,
+            flash_attention_2=flash_attention_2,
+            special_tokens=special_tokens,
+            num_outputs=num_outputs,
+        )
         prompt_format = load_prompt_format(model_config.model_id)
         self.router_model = CausalLLMClassifier(
             config=model_config,
@@ -189,10 +199,27 @@ class SWRankingRouter(Router):
 
 @no_parallel
 class MatrixFactorizationRouter(Router):
-    def __init__(self, checkpoint_path, hidden_size, strong_model, weak_model):
+    def __init__(
+        self,
+        checkpoint_path,
+        strong_model,
+        weak_model,
+        hidden_size,
+        num_models=64,
+        text_dim=1536,
+        num_classes=1,
+        use_proj=True,
+    ):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-        self.model = MFModel.from_pretrained(checkpoint_path, dim=hidden_size)
+        self.model = MFModel.from_pretrained(
+            checkpoint_path,
+            dim=hidden_size,
+            num_models=num_models,
+            text_dim=text_dim,
+            num_classes=num_classes,
+            use_proj=use_proj,
+        )
         self.model = self.model.eval().to(device)
         self.strong_model_id = MODEL_IDS[strong_model]
         self.weak_model_id = MODEL_IDS[weak_model]

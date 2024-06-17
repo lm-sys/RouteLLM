@@ -74,10 +74,10 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
     def __init__(
         self,
         dim,
-        num_models=64,
-        text_dim=1536,
-        num_classes=1,
-        use_proj=True,
+        num_models,
+        text_dim,
+        num_classes,
+        use_proj,
     ):
         super().__init__()
         self._name = "TextMF"
