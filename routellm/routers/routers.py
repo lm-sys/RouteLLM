@@ -4,7 +4,7 @@ import random
 
 import numpy as np
 import torch
-from datasets import load_dataset
+from datasets import concatenate_datasets, load_dataset
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from routellm.model_pair import ROUTED_PAIR
@@ -115,8 +115,8 @@ class BERTRouter(Router):
 class SWRankingRouter(Router):
     def __init__(
         self,
-        arena_battle_dataset,
-        arena_embedding_dataset,
+        arena_battle_datasets,
+        arena_embedding_datasets,
         strong_model,
         weak_model,
         num_tiers=10,
@@ -124,11 +124,16 @@ class SWRankingRouter(Router):
         self.strong_model = strong_model
         self.weak_model = weak_model
 
-        self.arena_df = load_dataset(arena_battle_dataset, split="train").to_pandas()
+        self.arena_df = concatenate_datasets(
+            [load_dataset(dataset, split="train") for dataset in arena_battle_datasets]
+        ).to_pandas()
         self.arena_df = preprocess_battles(self.arena_df)
 
-        self.arena_conv_embedding = load_dataset(
-            arena_embedding_dataset, split="train"
+        self.arena_conv_embedding = concatenate_datasets(
+            [
+                load_dataset(dataset, split="train")
+                for dataset in arena_embedding_datasets
+            ]
         ).to_dict()["embeddings"]
         self.embedding_model = "text-embedding-3-small"
 
