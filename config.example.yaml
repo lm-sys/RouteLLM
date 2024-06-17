@@ -1,0 +1,31 @@
+sw_ranking:
+    arena_battle_datasets:
+      - lmsys/lmsys-arena-human-preference-55k
+      - routellm/gpt4_judge_battles
+    arena_embedding_datasets:
+      - routellm/arena_battles_embeddings
+      - routellm/gpt4_judge_battles_embeddings
+    strong_model: gpt-4-1106-preview
+    weak_model: mixtral-8x7b-instruct-v0.1
+causal_llm:
+    checkpoint_path: routellm/causal_llm_augmented
+    system_message: routellm/routers/causal_llm/system_ft_v5.txt
+    classifier_message: routellm/routers/causal_llm/classifier_ft_v5.txt
+    model_config:
+        model_id: meta-llama/Meta-Llama-3-8B
+        model_type: causal
+        flash_attention_2: true
+        special_tokens:
+            - "[[1]]"
+            - "[[2]]"
+            - "[[3]]"
+            - "[[4]]"
+            - "[[5]]"
+        num_outputs: 5
+bert:
+    checkpoint_path: routellm/bert_gpt4_augmented
+matrix_factorization:
+    checkpoint_path: routellm/matrix_factorization_gpt4_augmented
+    hidden_size: 128
+    strong_model: gpt-4-1106-preview
+    weak_model: mixtral-8x7b-instruct-v0.1

@@ -72,3 +72,40 @@ Adding a new router to RouteLLM is straightforward. You need to implement the ab
 
 There is only a single method to implement: `calculate_strong_win_rate`, which takes in the user prompt and returns the win rate for the strong model conditioned on that given prompt - if this win rate is great than user-specified cost threshold, then the request is routed to the strong model. Otherwise, it is routed to the weak model.
 
+## Configuration
+
+The configuration for all routers is contained in single YAML file, which is a top-level mapping from router name to the keyword arguments used for router initialization. An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge, as discussed in our paper. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
+
+```yaml
+sw_ranking:
+    arena_battle_datasets:
+      - lmsys/lmsys-arena-human-preference-55k
+      - routellm/gpt4_judge_battles
+    arena_embedding_datasets:
+      - routellm/arena_battles_embeddings
+      - routellm/gpt4_judge_battles_embeddings
+    strong_model: gpt-4-1106-preview
+    weak_model: mixtral-8x7b-instruct-v0.1
+causal_llm:
+    checkpoint_path: routellm/causal_llm_augmented
+    system_message: routellm/routers/causal_llm/system_ft_v5.txt
+    classifier_message: routellm/routers/causal_llm/classifier_ft_v5.txt
+    model_config:
+        model_id: meta-llama/Meta-Llama-3-8B
+        model_type: causal
+        flash_attention_2: true
+        special_tokens:
+            - "[[1]]"
+            - "[[2]]"
+            - "[[3]]"
+            - "[[4]]"
+            - "[[5]]"
+        num_outputs: 5
+bert:
+    checkpoint_path: routellm/bert_gpt4_augmented
+matrix_factorization:
+    checkpoint_path: routellm/matrix_factorization_gpt4_augmented
+    hidden_size: 128
+    strong_model: gpt-4-1106-preview
+    weak_model: mixtral-8x7b-instruct-v0.1
+```

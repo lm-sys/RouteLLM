@@ -166,8 +166,8 @@ if __name__ == "__main__":
         default=psutil.cpu_count(logical=False),
         help="Number of cores to use, all by default.",
     )
+    parser.add_argument("--config", type=str)
     parser.add_argument("--num-results", type=int, default=10)
-    parser.add_argument("--config", type=str, default="config.yaml")
 
     args = parser.parse_args()
     print(args)

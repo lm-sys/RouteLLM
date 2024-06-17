@@ -174,7 +174,7 @@ parser.add_argument(
     action="store_true",
 )
 parser.add_argument("--workers", type=int, default=1)
-parser.add_argument("--config", type=str, default="config.yaml")
+parser.add_argument("--config", type=str)
 parser.add_argument("--port", type=int, default=6060)
 parser.add_argument(
     "--routers",
