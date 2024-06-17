@@ -19,7 +19,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 def generate_results(
     result_list, benchmark, benchmark_name, output, plot_optimal=False
 ):
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(6, 5))
     df_router_result = pd.DataFrame(result_list)
     for method in df_router_result["method"].unique():
         df_per_method = df_router_result[
@@ -68,12 +68,12 @@ def generate_results(
 
     plt.xlabel("Strong Model Calls (%)")
     plt.ylabel("Performance")
-    plt.title(f"Model Calls and Performance ({benchmark_name})")
+    plt.title(f"Router Performance ({benchmark_name})")
     plt.legend()
 
     file_name = f"{output}/{benchmark_name}.png"
     print("Saving plot to", file_name)
-    plt.savefig(file_name)
+    plt.savefig(file_name, bbox_inches="tight")
 
     def pct_call_metric(row):
         df_per_method = df_router_result[
