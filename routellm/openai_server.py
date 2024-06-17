@@ -13,20 +13,36 @@ from typing import Dict, List, Literal, Optional, Union
 
 import fastapi
 import shortuuid
+import tqdm
 import uvicorn
 import yaml
+from fastapi.concurrency import asynccontextmanager
 from fastapi.responses import JSONResponse
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
+from regex import R
 
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 ROUTERS_MAP = {}
 
-app = fastapi.FastAPI()
 openai_client = AsyncOpenAI()
 count = defaultdict(int)
+
+
+@asynccontextmanager
+async def lifespan(app):
+    router_pbar = tqdm.tqdm(args.routers)
+    for router in router_pbar:
+        router_pbar.set_description(f"Loading {router}")
+        router_config = config.get(router, {})
+        ROUTERS_MAP[router] = ROUTER_CLS[router](**router_config)
+    yield
+    ROUTERS_MAP.clear()
+
+
+app = fastapi.FastAPI(lifespan=lifespan)
 
 
 class ErrorResponse(BaseModel):
@@ -173,7 +189,7 @@ parser.add_argument(
     "--verbose",
     action="store_true",
 )
-parser.add_argument("--workers", type=int, default=1)
+parser.add_argument("--workers", type=int, default=0)
 parser.add_argument("--config", type=str)
 parser.add_argument("--port", type=int, default=6060)
 parser.add_argument(
@@ -198,9 +214,6 @@ parser.add_argument(
 args = parser.parse_args()
 
 config = yaml.safe_load(open(args.config, "r"))
-for router in args.routers:
-    router_config = config.get(router, {})
-    ROUTERS_MAP[router] = ROUTER_CLS[router](**router_config)
 
 alt_client = AsyncOpenAI(
     base_url=args.alt_base_url,
@@ -211,5 +224,5 @@ if args.verbose:
     logging.basicConfig(level=logging.INFO)
 
 if __name__ == "__main__":
-    print("Launching server with routers:", list(ROUTERS_MAP.keys()))
+    print("Launching server with routers:", args.routers)
     uvicorn.run("routellm.openai_server:app", port=args.port, workers=args.workers)
