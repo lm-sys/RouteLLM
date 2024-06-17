@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 
 import openai
@@ -12,6 +13,9 @@ from routellm.routers.similarity_weighted.utils import preprocess_battles
 def get_embeddings(battles_df):
     battles_df = preprocess_battles(battles_df)
     print(f"Battles after preprocessing: {battles_df.shape[0]}")
+    battles_df["first_turn"] = battles_df["prompt"].apply(
+        lambda s: json.loads(s)[0].strip()
+    )
 
     client = openai.OpenAI(
         api_key=os.environ["OPENAI_API_KEY"], base_url="https://api.openai.com/v1"

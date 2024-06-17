@@ -107,6 +107,6 @@ def preprocess_battles(battles_df):
     battles_df["first_turn"] = battles_df["prompt"].apply(get_first_turn)
     battles_df["winner"] = battles_df.apply(get_winner, axis=1)
     battles_df = battles_df.loc[battles_df["first_turn"].apply(len) >= MIN_LEN]
-    battles_df = battles_df[["model_a", "model_b", "winner", "first_turn"]]
+    battles_df = battles_df[["model_a", "model_b", "winner"]]
 
     return battles_df
