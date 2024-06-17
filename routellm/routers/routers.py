@@ -53,7 +53,7 @@ class CausalLLMRouter(Router):
     def __init__(
         self,
         model_config,
-        model_checkpoint_path,
+        checkpoint_path,
         system_message,
         classifier_message,
         score_threshold=4,
@@ -62,7 +62,7 @@ class CausalLLMRouter(Router):
         prompt_format = load_prompt_format(model_config.model_id)
         self.router_model = CausalLLMClassifier(
             config=model_config,
-            ckpt_local_path=model_checkpoint_path,
+            ckpt_local_path=checkpoint_path,
             score_threshold=score_threshold,
             prompt_format=prompt_format,
             prompt_field="messages",
@@ -88,13 +88,13 @@ class CausalLLMRouter(Router):
 class BERTRouter(Router):
     def __init__(
         self,
-        model_path,
+        checkpoint_path,
         num_labels=3,
     ):
         self.model = AutoModelForSequenceClassification.from_pretrained(
-            model_path, num_labels=num_labels
+            checkpoint_path, num_labels=num_labels
         )
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(checkpoint_path)
 
     def calculate_strong_win_rate(self, prompt):
         inputs = self.tokenizer(
