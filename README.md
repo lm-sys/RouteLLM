@@ -10,7 +10,7 @@ Our core features include:
 
 - Launch an OpenAI-compatible API that takes in user requests and routes them to the best model for that specific request using a single command.
 - Trained routers are provided out of the box, and we have shown that these routers can reduce cost **by over 2 times** without compromising quality on widely-used benchmarks such as MT Bench.
-- The framework can be easily extended to include new routers and benchmarks, and provides scaffolding to compare the performance of all routers with a single command.
+- Easily extend the framework to include new routers and benchmarks, and compare the performance of all routers with a single command.
 
 ## Installation
 
