@@ -4,10 +4,6 @@ import openai
 
 from routellm.routers.routers import ROUTER_CLS
 
-client = openai.OpenAI(
-    base_url="http://127.0.0.1:6060/v1", api_key="NO_API_KEY_REQUIRED"
-)
-
 system_content = (
     "You are a helpful assistant. Respond to the questions as best as you can."
 )
@@ -31,8 +27,23 @@ if __name__ == "__main__":
         type=str,
         default="What is heavier, a pound of feathers or a kilogram of steel?",
     )
+    parser.add_argument(
+        "--base-url",
+        type=str,
+        default="http://127.0.0.1:6060/v1",
+    )
+    parser.add_argument(
+        "--api-key",
+        type=str,
+        default="NO_API_KEY_REQUIRED",
+    )
     args = parser.parse_args()
     print(args)
+
+    client = openai.OpenAI(
+        base_url=args.base_url,
+        api_key=args.api_key,
+    )
 
     chat_completion = client.chat.completions.create(
         model=f"router-{args.router}-{args.threshold}",
