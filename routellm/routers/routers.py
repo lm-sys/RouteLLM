@@ -139,12 +139,11 @@ class SWRankingRouter(Router):
         ).to_pandas()
         self.arena_df = preprocess_battles(self.arena_df)
 
-        self.arena_conv_embedding = concatenate_datasets(
-            [
-                load_dataset(dataset, split="train")
-                for dataset in arena_embedding_datasets
-            ]
-        ).to_dict()["embeddings"]
+        embeddings = [
+            np.array(load_dataset(dataset, split="train").to_dict()["embeddings"])
+            for dataset in arena_embedding_datasets
+        ]
+        self.arena_conv_embedding = np.concatenate(embeddings)
         self.embedding_model = "text-embedding-3-small"
 
         assert len(self.arena_df) == len(
