@@ -1,13 +1,16 @@
 # RouteLLM
 
-RouteLLM is a framework for serving and evaluating routers for large language models.
+RouteLLM is a framework for serving and evaluating large language model routers.
 
-The core setup is routing between a pair of LLMs - a strong model and a weak model. Each router takes in **only** the user prompt, and decides which LLM to route that request to using any strategy. Each routing request is also associated with a _cost threshold_, which is a user-specified value between 0 and 1 that determines the cost-quality tradeoff of that request. A higher cost threshold corresponds to a stronger restriction on the cost of the request, reducing cost but leading to a looser restriction on quality as well.
-
-<p float="left">
-  <img src="assets/gsm8k.png" width="40%" />
-  <img src="assets/mt-bench.png" width="40%" />
+<p align="center">
+  <img src="assets/router.png" width="50%" />
 </p>
+
+Our core features include:
+
+- Launch an OpenAI-compatible API that takes in user requests and routes them to the best model for that specific request using a single command.
+- Trained routers are provided out of the box, and we have shown that these routers can reduce cost **by over 2 times** without compromising quality on widely-used benchmarks such as MT Bench.
+- The framework can be easily extended to include new routers and benchmarks, and provides scaffolding to compare the performance of all routers with a single command.
 
 ## Installation
 
@@ -19,21 +22,45 @@ cd RouteLLM
 pip install -e .[serve]
 ```
 
+## Motivation
+
+*Not all LLMs are created equal*. There exists wide variation in the costs and capabilities of different models, which leads to a dilemma when deploying LLMs in the real-world: routing all queries to the largest, most capable model leads to the highest-quality responses, but can be prohibitively expensive, whereas routing queries to smaller models can save costs significantly but may result in lower-quality responses. LLM routing is our solution to this problem.
+
+Our core setup is routing between a pair of LLMs - a stronger, more expensive model and a weak, cheaper model. Each router takes in **only** the user prompt, and decides which LLM to route that request to using any strategy. Each routing request is also associated with a _cost threshold_, which is a user-specified value between 0 and 1 that determines the cost-quality tradeoff of that request. A higher cost threshold translates to lower cost but may also lead to lower quality responses.
+
+<!-- <p float="left">
+  <img src="assets/gsm8k.png" width="40%" />
+  <img src="assets/mt-bench.png" width="40%" />
+</p> -->
+
 ## Server
 
 RouteLLM offers a lightweight OpenAI-compatible server for routing requests between two LLMs based on different routing strategies. The server can be started with the following command:
 
 ```
-python -m routellm.openai_server --config config.yaml --workers 1 --routers random sw_ranking
+python -m routellm.openai_server --config config.example.yaml --routers matrix_factorization
 ```
 
-- `--routers` specifies the list of routers available to the server. For instance, here, the server is started with two available routers: `random` and `sw_ranking`.
+- `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `matrix_factorization`. 
 - `--config` specifies the path to the configuration file, which contains the paths and settings required by each router.
-- `--workers` specifies the number of workers to use with FastAPI.
 
-This means that each server can support multiple routing strategies - users can specify which router and what cost threshold to use for each request using the model name with the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-bert-0.5` specifies that the request should be routed using the BERT router with a cost threshold of 0.5.
+Users should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-bert-0.5` specifies that the request should be routed using the BERT router with a cost threshold of 0.5.
 
-For OpenAI models, the server will route requests to the official OpenAI client. For all other models, the server will route to an alternate OpenAI compatible server, which can be configured with the `--alt-base-url` and `alt-api-key` flags (uses Anyscale by default).
+### Server Authentication
+
+For OpenAI models, the server will route requests to the official OpenAI client, so you will need to set the `OPENAI_API_KEY` environment variable before launching the server. For all other models, you nede to configure an alternative OpenAI-compatible server, which can be configured with the `--alt-base-url` and `alt-api-key` flags (we use Anyscale by default).
+
+### Threshold Calibration
+
+The range of meaningful thresholds can vary significantly depending on the router used and the query distribution. Therefore, we recommend calibrating the thresholds based on a sample of your query distribution, as well as the percentage of queries you'd like to route to the stronger model or weaker model.
+
+As an example, we support calibrating thresholds based on a subset of the publicly-available Chatbot Arena dataset. For instance, to calibrate the thresholds for the matrix factorization router such that 20% of calls are routed to the stronger model:
+
+```
+python -m routellm.calibrate_thresholds --task calibrate --routers matrix_factorization --strong-model-pct 0.2
+```
+
+Note that because we are merely calibrating the threshold based on a sample of the dataset, the actual number of calls routed to the stronger or weaker model will differ based on your use case.
 
 ## Evaluation
 
@@ -42,10 +69,10 @@ RouteLLM also includes a evaluation framework to measure the performance of diff
 To evaluate a router on a benchmark, you can use the following command:
 
 ```
-python -m routellm.evals.evaluate --routers random sw_ranking bert --benchmark gsm8k
+python -m routellm.evals.evaluate --config config.example.yaml --routers random sw_ranking bert --benchmark gsm8k
 ```
 
-- `--routers` specifies the list of routers to evaluate.
+- `--routers` specifies the list of routers to evaluate, for instance, `random` and `bert` in this case.
 - `--benchmark` specifies the specific benchmark to evaluate the routers on.
 
 By default, the evaluation results will be printed to the console. A plot of router performance will also be generated in the current directory (override using `--output`). To avoid recomputing results, the results for a router on a given benchmark is cached by default. This behavior can be overridden by using the `--overwrite-cache` flag, which takes in a list of routers to overwrite the cache for.
@@ -54,17 +81,20 @@ The results for all our benchmarks are cached for speed. For MT Bench, we use th
 
 ## Routers
 
-Out of the box, RouteLLM supports the following routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair:
+Out of the box, RouteLLM supports 4 routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair.
 
-- `random`: Randomly routes to either model.
-- `sw_ranking`: Uses Elo calculations for routing, weighted according to the similarity of the prompt to the preference data.
-- `bert`: Uses a BERT classifier trained on the preference data.
-- `causal_llm`: Uses a LLM-based classifier tuned on the preference data.
-- `matrix_factorization`: Uses a matrix factorization model trained on the preference data.
+For most use-cases, **we recommend the `matrix_factorization` router** as we have evaluated it to be very strong and lightweight.
 
-For the full details of how these routers were trained, please refer to our paper.
+The full list of routers:
+1. `sw_ranking`: Uses a weighted Elo calculation for routing, where each vote is weighted according to how similar it is to the user's prompt.
+2. `bert`: Uses a BERT classifier trained on the preference data.
+3. `causal_llm`: Uses a LLM-based classifier tuned on the preference data.
+4. `matrix_factorization`: Uses a matrix factorization model trained on the preference data.
+5. `random`: Randomly routes to either model.
 
 While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well (see Section 4.4 of our paper).
+
+For the full details of how these routers were trained, please refer to our paper.
 
 ## Configuration
 
