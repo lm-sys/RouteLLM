@@ -19,14 +19,12 @@ dependencies = [
 	'openai',
 	'transformers',
 	'tiktoken',
-	'sglang',
-	'pandarallel',
-	'matplotlib',
 	'datasets'
 ]
 
 [project.optional-dependencies]
 serve = ["fastapi", "shortuuid", "uvicorn"]
+eval = ["matplotlib", "pandarallel", "sglang"]
 dev = ["black", "isort", "pre-commit"]
 
 [tool.isort]
