@@ -3,12 +3,13 @@ import random
 
 import numpy as np
 import torch
-from routellm.routers.matrix_factorization.model import MODEL_IDS
 from torch import nn
 from torch.nn import functional as F
 from torch.optim import Adam
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
+
+from routellm.routers.matrix_factorization.model import MODEL_IDS
 
 torch.manual_seed(42)
 np.random.seed(42)
