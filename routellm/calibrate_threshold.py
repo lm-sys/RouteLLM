@@ -3,11 +3,13 @@ import json
 
 import yaml
 from datasets import Dataset, load_dataset
+from pandarallel import pandarallel
 from tqdm import tqdm
 
 from routellm.routers.routers import ROUTER_CLS
 
 tqdm.pandas()
+pandarallel.initialize(progress_bar=True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -24,19 +26,24 @@ if __name__ == "__main__":
     )
     parser.add_argument("--strong-model-pct", type=float)
     parser.add_argument(
-        "--type", type=str, choices=["generate", "calibrate"], default="calibrate"
+        "--task", type=str, choices=["generate", "calibrate"], default="calibrate"
     )
     args = parser.parse_args()
 
     config = yaml.safe_load(open(args.config, "r"))
 
-    if args.type == "generate":
+    if args.task == "generate":
         battles_df = load_dataset(args.battles_dataset, split="train").to_pandas()
         for router in args.routers:
             router = ROUTER_CLS[router](**config.get(router, {}))
-            battles_df[str(router)] = battles_df["prompt"].progress_apply(
-                lambda x: router.calculate_strong_win_rate(json.loads(x)[0])
-            )
+            if router.NO_PARALLEL:
+                battles_df[str(router)] = battles_df["prompt"].progress_apply(
+                    lambda x: router.calculate_strong_win_rate(json.loads(x)[0])
+                )
+            else:
+                battles_df[str(router)] = battles_df["prompt"].parallel_apply(
+                    lambda x: router.calculate_strong_win_rate(json.loads(x)[0])
+                )
             Dataset.from_pandas(battles_df).push_to_hub(
                 "routellm/lmsys-arena-human-preference-55k-thresholds"
             )
