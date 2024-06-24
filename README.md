@@ -57,7 +57,7 @@ The range of meaningful thresholds can vary significantly depending on the route
 As an example, we support calibrating thresholds based on a subset of the publicly-available Chatbot Arena dataset. For instance, to calibrate the thresholds for the matrix factorization router such that 20% of calls are routed to the stronger model:
 
 ```
-python -m routellm.calibrate_thresholds --task calibrate --routers matrix_factorization --strong-model-pct 0.2
+python -m routellm.calibrate_threshold --task calibrate --routers matrix_factorization --strong-model-pct 0.2
 ```
 
 Note that because we are merely calibrating the threshold based on a sample of the dataset, the actual number of calls routed to the stronger or weaker model will differ based on your use case.
