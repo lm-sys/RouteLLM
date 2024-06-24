@@ -225,4 +225,9 @@ if args.verbose:
 
 if __name__ == "__main__":
     print("Launching server with routers:", args.routers)
-    uvicorn.run("routellm.openai_server:app", port=args.port, workers=args.workers)
+    uvicorn.run(
+        "routellm.openai_server:app",
+        port=args.port,
+        host="0.0.0.0",
+        workers=args.workers,
+    )
