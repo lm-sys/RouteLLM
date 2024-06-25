@@ -112,7 +112,7 @@ sw_ranking:
     strong_model: gpt-4-1106-preview
     weak_model: mixtral-8x7b-instruct-v0.1
 causal_llm:
-    checkpoint_path: routellm/causal_llm_augmented
+    checkpoint_path: routellm/causal_llm_gpt4_augmented
     system_message: routellm/routers/causal_llm/system_ft_v5.txt
     classifier_message: routellm/routers/causal_llm/classifier_ft_v5.txt
 bert:
