@@ -19,7 +19,8 @@ Our core features include:
 ```
 git clone https://github.com/lm-sys/RouteLLM.git
 cd RouteLLM
-pip install -e .[serve]
+# Modify depending on your use case.
+pip install -e .[serve,eval]
 ```
 
 ## Motivation
@@ -44,7 +45,7 @@ python -m routellm.openai_server --config config.example.yaml --routers matrix_f
 - `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `matrix_factorization`. 
 - `--config` specifies the path to the configuration file, which contains the paths and settings required by each router.
 
-Users should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-bert-0.5` specifies that the request should be routed using the BERT router with a cost threshold of 0.5.
+Users should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-matrix_factorization-0.5` specifies that the request should be routed using the matrix factorization router with a cost threshold of 0.5.
 
 ### Server Authentication
 
@@ -54,13 +55,13 @@ For OpenAI models, the server will route requests to the official OpenAI client,
 
 The range of meaningful thresholds can vary significantly depending on the router used and the query distribution. Therefore, we recommend calibrating the thresholds based on a sample of your query distribution, as well as the percentage of queries you'd like to route to the stronger model or weaker model.
 
-As an example, we support calibrating thresholds based on a subset of the publicly-available Chatbot Arena dataset. For instance, to calibrate the thresholds for the matrix factorization router such that 20% of calls are routed to the stronger model:
+Out of the box, we support calibrating thresholds based on a publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 20% of calls are routed to the stronger model:
 
 ```
 python -m routellm.calibrate_threshold --task calibrate --routers matrix_factorization --strong-model-pct 0.2
 ```
 
-Note that because we are merely calibrating the threshold based on a sample of the dataset, the actual number of calls routed to the stronger or weaker model will differ based on your use case.
+Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
 
 ## Evaluation
 
