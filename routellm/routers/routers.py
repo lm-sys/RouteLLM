@@ -91,7 +91,11 @@ class CausalLLMRouter(Router):
         input = {}
         input["messages"] = self.to_openai_messages([prompt])
         output = self.router_model(input)
-        return 1 - output["binary_prob"]
+        if output is None:
+            # Route to strong model if output is invalid
+            return 1
+        else:
+            return 1 - output["binary_prob"]
 
 
 @no_parallel
@@ -230,6 +234,30 @@ class MatrixFactorizationRouter(Router):
         return winrate
 
 
+@no_parallel
+class NDRouter(Router):
+    def __init__(
+        self,
+        model_path="notdiamond/notdiamond-0001",
+    ):
+        self.model = AutoModelForSequenceClassification.from_pretrained(model_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+
+    def calculate_strong_win_rate(self, prompt):
+        inputs = self.tokenizer(
+            prompt, truncation=True, max_length=512, return_tensors="pt"
+        )
+        with torch.no_grad():
+            outputs = self.model(**inputs)
+            logits = outputs.logits.numpy()[0]
+
+        exp_scores = np.exp(logits - np.max(logits))
+        softmax_scores = exp_scores / np.sum(exp_scores)
+
+        binary_prob = np.sum(softmax_scores[0])
+        return 1 - binary_prob
+
+
 # Parallelism makes the randomness non deterministic
 @no_parallel
 class RandomRouter(Router):
@@ -247,5 +275,6 @@ ROUTER_CLS = {
     "causal_llm": CausalLLMRouter,
     "bert": BERTRouter,
     "sw_ranking": SWRankingRouter,
+    "nd": NDRouter,
 }
 NAME_TO_CLS = {v: k for k, v in ROUTER_CLS.items()}

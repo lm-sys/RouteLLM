@@ -107,6 +107,9 @@ class CausalLLMClassifier:
             (i for i, x in enumerate(row["output_ids"]) if x >= self.orig_vocab_size),
             None,
         )
+        if label_token_idx is None:
+            return None
+
         # extract logits of predicted labels from scores of each output token
         # (check hf github modeling llama)
         score_logits = np.array(
