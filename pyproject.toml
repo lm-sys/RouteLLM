@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "routellm"
 version = "0.0.1"
+description = "A framework for serving and evaluating large language model routers."
 readme = "README.md"
 classifiers = ["Programming Language :: Python :: 3"]
 dependencies = [
@@ -26,6 +27,10 @@ dependencies = [
 serve = ["fastapi", "shortuuid", "uvicorn"]
 eval = ["matplotlib", "pandarallel", "sglang"]
 dev = ["black", "isort", "pre-commit"]
+
+[project.urls]
+"Homepage" = "https://github.com/lm-sys/RouteLLM"
+"Bug Tracker" = "https://github.com/lm-sys/RouteLLM/issues"
 
 [tool.isort]
 profile = "black"
