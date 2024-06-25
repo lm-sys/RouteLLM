@@ -58,7 +58,7 @@ The range of meaningful thresholds can vary significantly depending on the route
 Out of the box, we support calibrating thresholds based on a publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 20% of calls are routed to the stronger model:
 
 ```
-python -m routellm.calibrate_threshold --task calibrate --routers matrix_factorization --strong-model-pct 0.2
+python -m routellm.calibrate_threshold --task calibrate --routers matrix_factorization --strong-model-pct 0.2 --config config.example.toml
 ```
 
 Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.

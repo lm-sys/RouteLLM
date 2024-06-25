@@ -47,14 +47,12 @@ if __name__ == "__main__":
             Dataset.from_pandas(battles_df).push_to_hub(
                 "routellm/lmsys-arena-human-preference-55k-thresholds"
             )
-    elif args.type == "calibrate":
+    elif args.task == "calibrate":
         thresholds_df = load_dataset(
-            "routellm/lmsys-arena-human-preference-55k-thresholds"
+            "routellm/lmsys-arena-human-preference-55k-thresholds", split="train"
         ).to_pandas()
         for router in args.routers:
-            threshold = thresholds_df[router].quantile(
-                q=1 - args.strong_model_calls_pct
-            )
+            threshold = thresholds_df[router].quantile(q=1 - args.strong_model_pct)
             print(
-                f"Calibrated threshold to achieve {args.strong_model_pct * 100}% strong model calls for {args.router}: {threshold}"
+                f"For {args.strong_model_pct * 100}% strong model calls, calibrated threshold for {router}: {threshold}"
             )
