@@ -60,7 +60,7 @@ class CausalLLMRouter(Router):
         num_outputs=5,
         model_type="causal",
         model_id="meta-llama/Meta-Llama-3-8B",
-        flash_attention_2=True,
+        flash_attention_2=False,
     ):
         model_config = RouterModelConfig(
             model_id=model_id,

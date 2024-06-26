@@ -22,7 +22,7 @@ class CausalLLMClassifier:
         additional_fields: List[str] = list(["label", "pidx"]),
         max_new_tokens: int = 6,
     ):
-        """TODO: complete here
+        """
         This model is trained to predict a score [1, 5] for a given user query.
         Higher score means higher chance the simple model will perform well (think score of it's response)
 
@@ -97,10 +97,6 @@ class CausalLLMClassifier:
         # see https://github.com/huggingface/transformers/blob/main/src/transformers/generation/utils.py#L101
         row["output_ids"] = output_new.sequences.squeeze()[input_ids.shape[1] :].cpu()
         assert len(row["output_ids"]) == len(row["output_ids"])
-
-        # for debugging
-        # self.tokenizer.convert_ids_to_tokens(input_ids.cpu().numpy().flatten())
-        # self.tokenizer.convert_ids_to_tokens(row["output_ids"].cpu().numpy().flatten())
 
         # find the first token within the special tokens range. This is our score prediction.
         label_token_idx = next(

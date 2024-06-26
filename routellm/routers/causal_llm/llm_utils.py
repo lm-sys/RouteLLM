@@ -2,11 +2,7 @@ import os
 
 import torch
 import yaml
-from transformers import (
-    AutoModelForCausalLM,
-    AutoModelForSequenceClassification,
-    AutoTokenizer,
-)
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from routellm.routers.causal_llm.configs import (
     PROMPT_FORMAT_CONFIGS,
@@ -40,16 +36,6 @@ def get_model(config: RouterModelConfig, model_ckpt: str, pad_token_id: int = 2)
             ),
             attention_dropout=config.attention_dropout,
             token=os.getenv("LLAMA2_HF_TOKEN"),
-        )
-    elif config.model_type == ModelTypeEnum.NEW_HEAD:
-        return AutoModelForSequenceClassification.from_pretrained(
-            model_ckpt,
-            trust_remote_code=True,
-            torch_dtype=torch.bfloat16,
-            use_cache=False,
-            use_flash_attention_2=config.flash_attention_2,
-            num_labels=config.num_outputs,
-            pad_token_id=pad_token_id,
         )
     else:
         raise NotImplementedError(
