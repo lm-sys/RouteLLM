@@ -11,7 +11,7 @@ causal_llm:
     checkpoint_path: routellm/causal_llm_gpt4_augmented
 bert:
     checkpoint_path: routellm/bert_gpt4_augmented
-matrix_factorization:
-    checkpoint_path: routellm/matrix_factorization_gpt4_augmented
+mf:
+    checkpoint_path: routellm/mf_gpt4_augmented
     strong_model: gpt-4-1106-preview
     weak_model: mixtral-8x7b-instruct-v0.1

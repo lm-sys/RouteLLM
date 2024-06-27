@@ -39,13 +39,13 @@ Our core setup is routing between a pair of LLMs - a stronger, more expensive mo
 RouteLLM offers a lightweight OpenAI-compatible server for routing requests between two LLMs based on different routing strategies. The server can be started with the following command:
 
 ```
-python -m routellm.openai_server --config config.example.yaml --routers matrix_factorization
+python -m routellm.openai_server --config config.example.yaml --routers mf
 ```
 
-- `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `matrix_factorization`. 
+- `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `mf`.
 - `--config` specifies the path to the configuration file, which contains the paths and settings required by each router.
 
-Users should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-matrix_factorization-0.5` specifies that the request should be routed using the matrix factorization router with a cost threshold of 0.5.
+Users should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-mf-0.5` specifies that the request should be routed using the matrix factorization router with a cost threshold of 0.5.
 
 ### Server Authentication
 
@@ -58,7 +58,7 @@ The range of meaningful thresholds can vary significantly depending on the route
 Out of the box, we support calibrating thresholds based on a publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 20% of calls are routed to the stronger model:
 
 ```
-python -m routellm.calibrate_threshold --task calibrate --routers matrix_factorization --strong-model-pct 0.2 --config config.example.toml
+python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.2 --config config.example.toml
 ```
 
 Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
@@ -84,13 +84,13 @@ The results for all our benchmarks are cached for speed. For MT Bench, we use th
 
 Out of the box, RouteLLM supports 4 routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair.
 
-For most use-cases, **we recommend the `matrix_factorization` router** as we have evaluated it to be very strong and lightweight.
+For most use-cases, **we recommend the `mf` router** as we have evaluated it to be very strong and lightweight.
 
 The full list of routers:
 1. `sw_ranking`: Uses a weighted Elo calculation for routing, where each vote is weighted according to how similar it is to the user's prompt.
 2. `bert`: Uses a BERT classifier trained on the preference data.
 3. `causal_llm`: Uses a LLM-based classifier tuned on the preference data.
-4. `matrix_factorization`: Uses a matrix factorization model trained on the preference data.
+4. `mf`: Uses a matrix factorization model trained on the preference data.
 5. `random`: Randomly routes to either model.
 
 While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well (see Section 4.4 of our paper).
@@ -117,8 +117,8 @@ causal_llm:
     classifier_message: routellm/routers/causal_llm/classifier_ft_v5.txt
 bert:
     checkpoint_path: routellm/bert_gpt4_augmented
-matrix_factorization:
-    checkpoint_path: routellm/matrix_factorization_gpt4_augmented
+mf:
+    checkpoint_path: routellm/mf_gpt4_augmented
     hidden_size: 128
     strong_model: gpt-4-1106-preview
     weak_model: mixtral-8x7b-instruct-v0.1

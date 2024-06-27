@@ -271,7 +271,7 @@ class RandomRouter(Router):
 
 ROUTER_CLS = {
     "random": RandomRouter,
-    "matrix_factorization": MatrixFactorizationRouter,
+    "mf": MatrixFactorizationRouter,
     "causal_llm": CausalLLMRouter,
     "bert": BERTRouter,
     "sw_ranking": SWRankingRouter,
