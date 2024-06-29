@@ -14,12 +14,19 @@ Our core features include:
 
 ## Installation
 
+**From PyPI**
+```
+# Modify extras depending on your use case.
+pip install "routellm[serve,eval]"
+```
+
+
 **From source:**
 
 ```
 git clone https://github.com/lm-sys/RouteLLM.git
 cd RouteLLM
-# Modify depending on your use case.
+# Modify extras depending on your use case.
 pip install -e .[serve,eval]
 ```
 
