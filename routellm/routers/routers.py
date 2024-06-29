@@ -5,6 +5,7 @@ import random
 import numpy as np
 import torch
 from datasets import concatenate_datasets, load_dataset
+from huggingface_hub import hf_hub_download
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from routellm.model_pair import ROUTED_PAIR
@@ -53,8 +54,6 @@ class CausalLLMRouter(Router):
     def __init__(
         self,
         checkpoint_path,
-        system_message="routellm/routers/causal_llm/system_ft_v5.txt",
-        classifier_message="routellm/routers/causal_llm/classifier_ft_v5.txt",
         score_threshold=4,
         special_tokens=["[[1]]", "[[2]]", "[[3]]", "[[4]]", "[[5]]"],
         num_outputs=5,
@@ -78,6 +77,12 @@ class CausalLLMRouter(Router):
             prompt_field="messages",
             additional_fields=[],
             use_last_turn=True,
+        )
+        system_message = hf_hub_download(
+            repo_id=checkpoint_path, filename="system_ft_v5.txt"
+        )
+        classifier_message = hf_hub_download(
+            repo_id=checkpoint_path, filename="classifier_ft_v5.txt"
         )
         with open(system_message, "r") as pr:
             system_message = pr.read()
