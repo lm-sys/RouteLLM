@@ -28,7 +28,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 ROUTERS_MAP = {}
 
 openai_client = AsyncOpenAI()
-count = defaultdict(int)
+count = defaultdict(dict)
 
 
 @asynccontextmanager
@@ -172,8 +172,8 @@ async def create_chat_completion(request: ChatCompletionRequest):
             prompt=prompt,
             threshold=threshold,
         )
-    count[routed_model] += 1
-    print(f"Count: {count}")
+    count[router][routed_model] += 1
+    print(f"Model Counts: {dict(count)}")
 
     return await create_completion(
         routed_model,
