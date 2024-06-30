@@ -1,6 +1,7 @@
 # RouteLLM
 
-RouteLLM is a framework for serving and evaluating large language model routers.
+RouteLLM is a framework for serving and evaluating large language model routers.  
+[ [Paper](https://arxiv.org/abs/2406.18665) ]
 
 <p align="center">
   <img src="assets/router.png" width="50%" />
@@ -120,8 +121,6 @@ sw_ranking:
     weak_model: mixtral-8x7b-instruct-v0.1
 causal_llm:
     checkpoint_path: routellm/causal_llm_gpt4_augmented
-    system_message: routellm/routers/causal_llm/system_ft_v5.txt
-    classifier_message: routellm/routers/causal_llm/classifier_ft_v5.txt
 bert:
     checkpoint_path: routellm/bert_gpt4_augmented
 mf:
@@ -144,3 +143,19 @@ There is only a single method to implement: `calculate_strong_win_rate`, which t
 ### Adding a new benchmark
 
 To add a new benchmark to RouteLLM, implement the abstract `Benchmark` class in `benchmarks.py` and update the `evaluate.py` module to properly initialize the new benchmark class. Ideally, the results for the benchmark should be precomputed to avoid having to regenerate the results for each evaluation run -- see the existing benchmarks for examples on how to do this.
+
+# Citation
+
+The code in this repository is based on the research from the [paper](https://arxiv.org/abs/2406.18665). Please cite if you find the repository helpful.
+
+```
+@misc{ong2024routellmlearningroutellms,
+      title={RouteLLM: Learning to Route LLMs with Preference Data},
+      author={Isaac Ong and Amjad Almahairi and Vincent Wu and Wei-Lin Chiang and Tianhao Wu and Joseph E. Gonzalez and M Waleed Kadous and Ion Stoica},
+      year={2024},
+      eprint={2406.18665},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2406.18665},
+}
+```
