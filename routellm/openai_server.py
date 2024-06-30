@@ -20,7 +20,6 @@ from fastapi.concurrency import asynccontextmanager
 from fastapi.responses import JSONResponse, StreamingResponse
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
-from regex import R
 
 from routellm.routers.routers import ROUTER_CLS
 
@@ -28,7 +27,11 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 ROUTERS_MAP = {}
 
 openai_client = AsyncOpenAI()
-count = defaultdict(dict)
+count = defaultdict(lambda: defaultdict(int))
+
+logging.basicConfig(
+    filename="routellm_server.log", encoding="utf-8", level=logging.DEBUG
+)
 
 
 @asynccontextmanager
