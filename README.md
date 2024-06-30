@@ -50,10 +50,12 @@ RouteLLM offers a lightweight OpenAI-compatible server for routing requests betw
 python -m routellm.openai_server --routers mf --config config.example.yaml 
 ```
 
-- `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `mf`.
+- `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `mf` (see below for the list of routers).
 - `--config` specifies the path to the configuration file, which contains the paths and settings required by each router.
 
-Users should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using model name of `router-mf-0.5` specifies that the request should be routed using the matrix factorization router with a cost threshold of 0.5.
+For most use-cases, **we recommend the `mf` router** as we have evaluated it to be very strong and lightweight.
+
+When making a request to the server, clients should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using a `model` of `router-mf-0.5` specifies that the request should be routed using the `mf` router with a cost threshold of 0.5.
 
 ### Server Authentication
 
@@ -66,10 +68,11 @@ The range of meaningful thresholds can vary significantly depending on the route
 Out of the box, we support calibrating thresholds based on a publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 20% of calls are routed to the stronger model:
 
 ```
-python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.2 --config config.example.yaml
+> python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.2 --config config.example.yaml
+> For 20.0% strong model calls, calibrated threshold for mf: 0.1881028115749359
 ```
 
-Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
+This means that the threshold should be set to 0.1881 for the `mf` router such that approximately 20% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1881`. Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
 
 ## Evaluation
 
@@ -91,8 +94,6 @@ The results for all our benchmarks are cached for speed. For MT Bench, we use th
 ## Routers
 
 Out of the box, RouteLLM supports 4 routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair.
-
-For most use-cases, **we recommend the `mf` router** as we have evaluated it to be very strong and lightweight.
 
 The full list of routers:
 1. `sw_ranking`: Uses a weighted Elo calculation for routing, where each vote is weighted according to how similar it is to the user's prompt.
