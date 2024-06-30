@@ -22,7 +22,7 @@ pip install "routellm[serve,eval]"
 ```
 
 
-**From source:**
+**From source**
 
 ```
 git clone https://github.com/lm-sys/RouteLLM.git
@@ -102,9 +102,7 @@ The full list of routers:
 4. `mf`: Uses a matrix factorization model trained on the preference data.
 5. `random`: Randomly routes to either model.
 
-While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well (see Section 4.4 of our paper).
-
-For the full details of how these routers were trained, please refer to our [paper](https://arxiv.org/abs/2406.18665).
+While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well. For the full details regarding these routers, please refer to our [paper](https://arxiv.org/abs/2406.18665).
 
 ## Configuration
 
