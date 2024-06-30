@@ -9,7 +9,7 @@ import logging
 import os
 import time
 from collections import defaultdict
-from typing import Dict, List, Literal, Optional, Union
+from typing import AsyncGenerator, Dict, List, Literal, Optional, Union
 
 import fastapi
 import shortuuid
@@ -17,7 +17,7 @@ import tqdm
 import uvicorn
 import yaml
 from fastapi.concurrency import asynccontextmanager
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 from regex import R
@@ -106,6 +106,7 @@ class ChatCompletionResponse(BaseModel):
 
 async def create_completion(model, prompt, **kwargs):
     temperature = kwargs["temperature"]
+    stream = kwargs.get("stream", False)
 
     if "gpt-4" in model or "gpt-3.5-turbo" in model:
         client = openai_client
@@ -115,13 +116,21 @@ async def create_completion(model, prompt, **kwargs):
     logging.info(
         f"Creating completion for model: {model}, temperature: {temperature}, prompt: {prompt[:50]}"
     )
-    res = await client.chat.completions.create(
+    response = await client.chat.completions.create(
         **kwargs,
         model=model,
     )
-    logging.info(f"Generated {res.choices[0]}")
 
-    return res
+    if stream:
+        return stream_response(response)
+    else:
+        return response
+
+
+async def stream_response(response) -> AsyncGenerator:
+    async for chunk in response:
+        yield f"data: {chunk.model_dump_json()}\n\n"
+    yield "data: [DONE]\n\n"
 
 
 @app.post("/v1/chat/completions")
@@ -173,13 +182,17 @@ async def create_chat_completion(request: ChatCompletionRequest):
             threshold=threshold,
         )
     count[router][routed_model] += 1
-    print(f"Model Counts: {dict(count)}")
+    logging.info(f"Model Counts: {dict(count)}")
 
-    return await create_completion(
+    generator = await create_completion(
         routed_model,
         prompt,
         **request.model_dump(exclude=["model"], exclude_none=True),
     )
+    if request.stream:
+        return StreamingResponse(content=generator, media_type="text/event-stream")
+    else:
+        return JSONResponse(content=generator.model_dump())
 
 
 parser = argparse.ArgumentParser(
