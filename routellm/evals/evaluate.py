@@ -17,10 +17,9 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 def generate_results(
-    result_list, benchmark, benchmark_name, output, plot_optimal=False
+    df_router_result, benchmark, benchmark_name, output, plot_optimal=False
 ):
     plt.figure(figsize=(6, 5))
-    df_router_result = pd.DataFrame(result_list)
     for method in df_router_result["method"].unique():
         df_per_method = df_router_result[
             df_router_result["method"] == method
@@ -126,6 +125,21 @@ def generate_results(
         print("Metrics:\n", metrics)
 
 
+def pretty_print_results(threshold, accuracy, model_counts, total):
+    header = (
+        "=" * 15
+        + f" {router} with threshold {threshold} on {args.benchmark} "
+        + "=" * 15
+    )
+    print("\n" + header)
+    print("Average accuracy: {:.3f}".format(accuracy))
+    print(f"Model counts: {', '.join([f'{k}: {v}' for k, v in model_counts.items()])}")
+    print(
+        f"Model %: {', '.join([f'{k}: {v / total * 100:.3f}%' for k, v in model_counts.items()])}"
+    )
+    print("=" * len(header) + "\n")
+
+
 if __name__ == "__main__":
     import argparse
 
@@ -168,6 +182,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--config", type=str)
     parser.add_argument("--num-results", type=int, default=10)
+    parser.add_argument("--random-iters", type=int, default=10)
 
     args = parser.parse_args()
     print(args)
@@ -189,38 +204,49 @@ if __name__ == "__main__":
 
     config = yaml.safe_load(open(args.config, "r"))
 
-    all_results = []
+    all_results = pd.DataFrame()
     for router in args.routers:
         # Ensure reproducibility on a per-router basis
         random.seed(0)
         router_config = config.get(router, {})
-        router_results = benchmark.evaluate(
-            ROUTER_CLS[router](**router_config), args.num_results
-        )
-        for threshold, score, model_counts, total in router_results:
-            print(f"Evaluating router: {router} with threshold {threshold}...")
-            # Pretty print stats
-            header = (
-                "=" * 15
-                + f" {router} with threshold {threshold} on {args.benchmark} "
-                + "=" * 15
+        # For non-deterministic routers like random, we average over multiple runs
+        if router in ["random"]:
+            router_results = []
+            for i in range(args.random_iters):
+                for threshold, accuracy, model_counts, total in benchmark.evaluate(
+                    ROUTER_CLS[router](**router_config), args.num_results, True
+                ):
+                    router_results.append(
+                        {
+                            "threshold": threshold,
+                            "strong_percentage": model_counts[ROUTED_PAIR.strong]
+                            / total
+                            * 100,
+                            "accuracy": accuracy,
+                        }
+                    )
+            router_results_df = (
+                pd.DataFrame(router_results)
+                .groupby(["strong_percentage"], as_index=False)
+                .mean()
             )
-            print("\n" + header)
-            print("Average accuracy: {:.3f}".format(score))
-            print(
-                f"Model counts: {', '.join([f'{k}: {v}' for k, v in model_counts.items()])}"
-            )
-            print(
-                f"Model %: {', '.join([f'{k}: {v / total * 100:.3f}%' for k, v in model_counts.items()])}"
-            )
-            print("=" * len(header) + "\n")
+            router_results_df["method"] = str(router)
+            all_results = pd.concat([all_results, router_results_df])
+        else:
+            router_results = []
+            for threshold, accuracy, model_counts, total in benchmark.evaluate(
+                ROUTER_CLS[router](**router_config), args.num_results, False
+            ):
+                print(f"Evaluating router: {router} with threshold {threshold}...")
+                pretty_print_results(threshold, accuracy, model_counts, total)
 
-            result = {
-                "method": str(router),
-                "threshold": threshold,
-                "strong_percentage": model_counts[ROUTED_PAIR.strong] / total * 100,
-                "accuracy": score,
-            }
-            all_results.append(result)
+                result = {
+                    "method": str(router),
+                    "threshold": threshold,
+                    "strong_percentage": model_counts[ROUTED_PAIR.strong] / total * 100,
+                    "accuracy": accuracy,
+                }
+                router_results.append(result)
+            all_results = pd.concat([all_results, pd.DataFrame(router_results)])
 
     generate_results(all_results, benchmark, args.benchmark, output=args.output)

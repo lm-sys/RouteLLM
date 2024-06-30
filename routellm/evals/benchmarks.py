@@ -7,6 +7,7 @@ import pandas as pd
 from tqdm import tqdm
 
 from routellm.model_pair import ROUTED_PAIR
+from routellm.routers.routers import Router
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -22,7 +23,9 @@ class Benchmark(abc.ABC):
     """
 
     @abc.abstractmethod
-    def evaluate(self, router, threshold: float) -> tuple[str, dict[str, int], str]:
+    def evaluate(
+        self, router: Router, threshold: float, overwrite_router_cache: bool
+    ) -> tuple[str, dict[str, int], str]:
         """Takes in a router and threshold and returns a tuple of weighted accuracy, model counts, and number of requests."""
         pass
 
@@ -67,10 +70,14 @@ class MMLU(Benchmark):
             f"Remaining {len(self.all_data)}/{original_length} prompts for MMLU after decontamination"
         )
 
-    def evaluate(self, router, num_results):
+    def evaluate(self, router, num_results, overwrite_router_cache):
         router_name = str(router)
 
-        if router_name not in self.cache or router_name in self.overwrite_cache:
+        if (
+            router_name not in self.cache
+            or router_name in self.overwrite_cache
+            or overwrite_router_cache
+        ):
             if router.NO_PARALLEL:
                 strong_win_rates = self.all_data["prompt"].progress_apply(
                     router.calculate_strong_win_rate
@@ -161,10 +168,14 @@ class MTBench(Benchmark):
             print("Error loading MT Bench cache, starting fresh.")
             self.cache = {}
 
-    def evaluate(self, router, num_results):
+    def evaluate(self, router, num_results, overwrite_router_cache):
         router_name = str(router)
 
-        if router_name not in self.cache or router_name in self.overwrite_cache:
+        if (
+            router_name not in self.cache
+            or router_name in self.overwrite_cache
+            or overwrite_router_cache
+        ):
             if router.NO_PARALLEL:
                 strong_win_rates = self.questions["turns"].progress_apply(
                     # Only use first turn for routing
@@ -304,10 +315,14 @@ class GSM8K(Benchmark):
             f"{len(self.all_data)}/{original_len} questions for GSM8K after decontamination."
         )
 
-    def evaluate(self, router, num_results):
+    def evaluate(self, router, num_results, overwrite_router_cache):
         router_name = str(router)
 
-        if router_name not in self.cache or router_name in self.overwrite_cache:
+        if (
+            router_name not in self.cache
+            or router_name in self.overwrite_cache
+            or overwrite_router_cache
+        ):
             if router.NO_PARALLEL:
                 strong_win_rates = self.all_data["prompt"].progress_apply(
                     router.calculate_strong_win_rate
