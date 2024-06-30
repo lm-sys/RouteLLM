@@ -47,7 +47,7 @@ Our core setup is routing between a pair of LLMs - a stronger, more expensive mo
 RouteLLM offers a lightweight OpenAI-compatible server for routing requests between two LLMs based on different routing strategies. The server can be started with the following command:
 
 ```
-python -m routellm.openai_server --config config.example.yaml --routers mf
+python -m routellm.openai_server --routers mf --config config.example.yaml 
 ```
 
 - `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `mf`.
@@ -66,7 +66,7 @@ The range of meaningful thresholds can vary significantly depending on the route
 Out of the box, we support calibrating thresholds based on a publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 20% of calls are routed to the stronger model:
 
 ```
-python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.2 --config config.example.toml
+python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.2 --config config.example.yaml
 ```
 
 Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
@@ -78,7 +78,7 @@ RouteLLM also includes a evaluation framework to measure the performance of diff
 To evaluate a router on a benchmark, you can use the following command:
 
 ```
-python -m routellm.evals.evaluate --config config.example.yaml --routers random sw_ranking bert --benchmark gsm8k
+python -m routellm.evals.evaluate --routers random sw_ranking bert --benchmark gsm8k --config config.example.yaml 
 ```
 
 - `--routers` specifies the list of routers to evaluate, for instance, `random` and `bert` in this case.
