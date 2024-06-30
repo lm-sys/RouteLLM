@@ -167,11 +167,9 @@ async def create_chat_completion(request: ChatCompletionRequest):
 
     threshold = float(threshold)
 
-    # Use user prompt for routing unless it's not present
-    if request.messages[0]["role"] == "system":
-        prompt = request.messages[1]["content"]
-    else:
-        prompt = request.messages[0]["content"]
+    # Look at the last turn for routing.
+    # Our current routers were only trained on first turn data, so more research is required here.
+    prompt = request.messages[-1]["content"]
 
     route_fn = ROUTERS_MAP[router].route
     if asyncio.iscoroutinefunction(route_fn):
