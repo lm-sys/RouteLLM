@@ -108,8 +108,7 @@ While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8
 
 To modify the model pair routed to for serving or evaluation, use the `--strong-model` and `--weak-model` flags e.g.
 ```
-python -m routellm.openai_server --routers mf  --weak-model meta-llama/Meta-Llama-3-8B-Instruct
-
+python -m routellm.openai_server --routers mf --weak-model meta-llama/Meta-Llama-3-8B-Instruct
 python -m routellm.evals.evaluate --routers bert --benchmark gsm8k --strong-model gpt-4o
 ```
 
