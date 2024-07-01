@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from openai import OpenAI
 
-from routellm.model_pair import ROUTED_PAIR
+from routellm.model_pair import ModelPair
 
 """
 The core code is based heavily on the original SGLang implementation.
@@ -17,6 +17,9 @@ https://github.com/sgl-project/sglang/blob/main/benchmark/gsm8k/bench_sglang.py
 """
 
 INVALID = -9999999
+ROUTED_PAIR = ModelPair(
+    strong="gpt-4-1106-preview", weak="mistralai/Mixtral-8x7B-Instruct-v0.1"
+)
 
 
 def select_sglang_backend(args):

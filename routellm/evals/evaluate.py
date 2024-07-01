@@ -10,14 +10,14 @@ from pandarallel import pandarallel
 
 from routellm.evals.benchmarks import GSM8K, MMLU, MTBench
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
-from routellm.model_pair import ROUTED_PAIR
+from routellm.model_pair import ModelPair
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 def generate_results(
-    df_router_result, benchmark, benchmark_name, output, plot_optimal=False
+    df_router_result, benchmark, benchmark_name, routed_pair, output, plot_optimal=False
 ):
     plt.figure(figsize=(6, 5))
     for method in df_router_result["method"].unique():
@@ -33,23 +33,23 @@ def generate_results(
             linestyle="-",
         )
 
-    weak_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.weak)
-    print(ROUTED_PAIR.weak, weak_accuracy)
+    weak_accuracy = benchmark.get_model_accuracy(routed_pair.weak)
+    print(f"{routed_pair.weak} score: {weak_accuracy}")
 
-    strong_accuracy = benchmark.get_model_accuracy(ROUTED_PAIR.strong)
-    print(ROUTED_PAIR.strong, strong_accuracy)
+    strong_accuracy = benchmark.get_model_accuracy(routed_pair.strong)
+    print(f"{routed_pair.strong} score: {strong_accuracy}")
 
     plt.axhline(
         y=weak_accuracy,
         color="grey",
         linestyle="--",
-        label=ROUTED_PAIR.weak,
+        label=routed_pair.weak,
     )
     plt.axhline(
         y=strong_accuracy,
         color="red",
         linestyle="--",
-        label=ROUTED_PAIR.strong,
+        label=routed_pair.strong,
     )
 
     if plot_optimal:
@@ -180,6 +180,10 @@ if __name__ == "__main__":
         default=psutil.cpu_count(logical=False),
         help="Number of cores to use, all by default.",
     )
+    parser.add_argument("--strong-model", type=str, default="gpt-4-1106-preview")
+    parser.add_argument(
+        "--weak-model", type=str, default="mistralai/Mixtral-8x7B-Instruct-v0.1"
+    )
     parser.add_argument("--config", type=str)
     parser.add_argument("--num-results", type=int, default=10)
     parser.add_argument("--random-iters", type=int, default=10)
@@ -188,17 +192,18 @@ if __name__ == "__main__":
     print(args)
 
     pandarallel.initialize(progress_bar=True, nb_workers=args.parallel)
+    routed_pair = ModelPair(strong=args.strong_model, weak=args.weak_model)
 
     if args.benchmark == "mmlu":
         print("Running eval for full MMLU.")
         mmlu_domains = ALL_MMLU_DOMAINS
-        benchmark = MMLU(mmlu_domains, args.overwrite_cache)
+        benchmark = MMLU(mmlu_domains, routed_pair, args.overwrite_cache)
     elif args.benchmark == "mt-bench":
         print("Running eval for MT Bench.")
-        benchmark = MTBench(args.overwrite_cache)
+        benchmark = MTBench(routed_pair, args.overwrite_cache)
     elif args.benchmark == "gsm8k":
         print("Running eval for GSM8k.")
-        benchmark = GSM8K(args.overwrite_cache)
+        benchmark = GSM8K(routed_pair, args.overwrite_cache)
     else:
         raise ValueError(f"Invalid benchmark {args.benchmark}")
 
@@ -219,7 +224,7 @@ if __name__ == "__main__":
                     router_results.append(
                         {
                             "threshold": threshold,
-                            "strong_percentage": model_counts[ROUTED_PAIR.strong]
+                            "strong_percentage": model_counts[routed_pair.strong]
                             / total
                             * 100,
                             "accuracy": accuracy,
@@ -243,10 +248,10 @@ if __name__ == "__main__":
                 result = {
                     "method": str(router),
                     "threshold": threshold,
-                    "strong_percentage": model_counts[ROUTED_PAIR.strong] / total * 100,
+                    "strong_percentage": model_counts[routed_pair.strong] / total * 100,
                     "accuracy": accuracy,
                 }
                 router_results.append(result)
             all_results = pd.concat([all_results, pd.DataFrame(router_results)])
 
-    generate_results(all_results, benchmark, args.benchmark, output=args.output)
+    generate_results(all_results, benchmark, args.benchmark, routed_pair, args.output)

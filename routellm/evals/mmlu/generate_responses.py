@@ -11,7 +11,11 @@ import tqdm
 from openai import OpenAI
 
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
-from routellm.model_pair import ROUTED_PAIR
+from routellm.model_pair import ModelPair
+
+ROUTED_PAIR = ModelPair(
+    strong="gpt-4-1106-preview", weak="mistralai/Mixtral-8x7B-Instruct-v0.1"
+)
 
 choices = ["A", "B", "C", "D"]
 tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo")

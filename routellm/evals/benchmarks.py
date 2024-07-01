@@ -6,7 +6,6 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from routellm.model_pair import ROUTED_PAIR
 from routellm.routers.routers import Router
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -41,7 +40,8 @@ class Benchmark(abc.ABC):
 
 
 class MMLU(Benchmark):
-    def __init__(self, domains, overwrite_cache):
+    def __init__(self, domains, routed_pair, overwrite_cache):
+        self.routed_pair = routed_pair
         self.overwrite_cache = overwrite_cache
         self.cache_path = f"{CURRENT_DIR}/mmlu/cache.npy"
 
@@ -103,13 +103,13 @@ class MMLU(Benchmark):
             )
             results = np.where(
                 selection,
-                self.all_data[ROUTED_PAIR.strong],
-                self.all_data[ROUTED_PAIR.weak],
+                self.all_data[self.routed_pair.strong],
+                self.all_data[self.routed_pair.weak],
             )
             models = np.where(
                 selection,
-                ROUTED_PAIR.strong,
-                ROUTED_PAIR.weak,
+                self.routed_pair.strong,
+                self.routed_pair.weak,
             )
             model_counts = Counter(models)
             yield threshold, sum(results) / len(results) * 100, model_counts, len(
@@ -121,10 +121,10 @@ class MMLU(Benchmark):
         total = len(df)
 
         strong_calls = total * strong_percent
-        weak_correct = len(df[df[ROUTED_PAIR.weak] == True])
+        weak_correct = len(df[df[self.routed_pair.weak] == True])
 
-        df_sub = df[df[ROUTED_PAIR.weak] == False]
-        df_sub = df_sub[df_sub[ROUTED_PAIR.strong] == True]
+        df_sub = df[df[self.routed_pair.weak] == False]
+        df_sub = df_sub[df_sub[self.routed_pair.strong] == True]
 
         strong_bonus = min(strong_calls, len(df_sub))
         opt_correct = weak_correct + strong_bonus
@@ -138,7 +138,9 @@ class MMLU(Benchmark):
 
 
 class MTBench(Benchmark):
-    def __init__(self, overwrite_cache):
+    def __init__(self, routed_pair, overwrite_cache):
+        self.routed_pair = routed_pair
+
         self.judgements = pd.read_json(
             f"{CURRENT_DIR}/mt_bench/judgements.jsonl", lines=True
         )
@@ -201,8 +203,8 @@ class MTBench(Benchmark):
                     if i != len(thresholds) - 1
                     else questions["strong_win_rates"] > threshold
                 ),
-                ROUTED_PAIR.strong,
-                ROUTED_PAIR.weak,
+                self.routed_pair.strong,
+                self.routed_pair.weak,
             )
 
             results = questions.merge(
@@ -215,10 +217,10 @@ class MTBench(Benchmark):
             score = results["score"].mean()
 
             model_counts = results["model"].value_counts().to_dict()
-            if ROUTED_PAIR.weak not in model_counts:
-                model_counts[ROUTED_PAIR.weak] = 0
-            if ROUTED_PAIR.strong not in model_counts:
-                model_counts[ROUTED_PAIR.strong] = 0
+            if self.routed_pair.weak not in model_counts:
+                model_counts[self.routed_pair.weak] = 0
+            if self.routed_pair.strong not in model_counts:
+                model_counts[self.routed_pair.strong] = 0
 
             total = len(results)
 
@@ -243,7 +245,7 @@ class MTBench(Benchmark):
         max_strong_calls = int(len(self.questions) * strong_percent)
 
         strong_judgements = (
-            self.judgements[self.judgements["model"] == ROUTED_PAIR.strong][
+            self.judgements[self.judgements["model"] == self.routed_pair.strong][
                 ["question_id", "model", "score"]
             ]
             .groupby(by=["model", "question_id"], as_index=False)
@@ -251,7 +253,7 @@ class MTBench(Benchmark):
         )
 
         weak_judgements = (
-            self.judgements[self.judgements["model"] == ROUTED_PAIR.weak][
+            self.judgements[self.judgements["model"] == self.routed_pair.weak][
                 [
                     "question_id",
                     "model",
@@ -295,7 +297,8 @@ class MTBench(Benchmark):
 
 
 class GSM8K(Benchmark):
-    def __init__(self, overwrite_cache):
+    def __init__(self, routed_pair, overwrite_cache):
+        self.routed_pair = routed_pair
         self.overwrite_cache = overwrite_cache
         self.cache_path = f"{CURRENT_DIR}/gsm8k/cache.npy"
 
@@ -348,10 +351,10 @@ class GSM8K(Benchmark):
             )
             results = np.where(
                 selection,
-                self.all_data[ROUTED_PAIR.strong],
-                self.all_data[ROUTED_PAIR.weak],
+                self.all_data[self.routed_pair.strong],
+                self.all_data[self.routed_pair.weak],
             )
-            models = np.where(selection, ROUTED_PAIR.strong, ROUTED_PAIR.weak)
+            models = np.where(selection, self.routed_pair.strong, self.routed_pair.weak)
             model_counts = Counter(models)
             yield threshold, sum(results) / len(results) * 100, model_counts, len(
                 results
@@ -366,10 +369,10 @@ class GSM8K(Benchmark):
         total = len(df)
 
         strong_calls = total * strong_percent
-        weak_correct = len(df[df[ROUTED_PAIR.weak] == True])
+        weak_correct = len(df[df[self.routed_pair.weak] == True])
 
-        df_sub = df[df[ROUTED_PAIR.weak] == False]
-        df_sub = df_sub[df_sub[ROUTED_PAIR.strong] == True]
+        df_sub = df[df[self.routed_pair.weak] == False]
+        df_sub = df_sub[df_sub[self.routed_pair.strong] == True]
 
         strong_bonus = min(strong_calls, len(df_sub))
         opt_correct = weak_correct + strong_bonus

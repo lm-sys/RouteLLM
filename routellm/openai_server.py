@@ -21,6 +21,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
+from routellm.model_pair import ModelPair
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -28,10 +29,6 @@ ROUTERS_MAP = {}
 
 openai_client = AsyncOpenAI()
 count = defaultdict(lambda: defaultdict(int))
-
-logging.basicConfig(
-    filename="routellm_server.log", encoding="utf-8", level=logging.DEBUG
-)
 
 
 @asynccontextmanager
@@ -173,15 +170,9 @@ async def create_chat_completion(request: ChatCompletionRequest):
 
     route_fn = ROUTERS_MAP[router].route
     if asyncio.iscoroutinefunction(route_fn):
-        routed_model = await route_fn(
-            prompt=prompt,
-            threshold=threshold,
-        )
+        routed_model = await route_fn(prompt, threshold, ROUTED_PAIR)
     else:
-        routed_model = route_fn(
-            prompt=prompt,
-            threshold=threshold,
-        )
+        routed_model = route_fn(prompt, threshold, ROUTED_PAIR)
     count[router][routed_model] += 1
     logging.info(f"Model Counts: {dict(count)}")
 
@@ -225,6 +216,10 @@ parser.add_argument(
     type=str,
     default=os.environ.get("ANYSCALE_API_KEY"),
 )
+parser.add_argument("--strong-model", type=str, default="gpt-4-1106-preview")
+parser.add_argument(
+    "--weak-model", type=str, default="mistralai/Mixtral-8x7B-Instruct-v0.1"
+)
 args = parser.parse_args()
 
 config = yaml.safe_load(open(args.config, "r"))
@@ -233,6 +228,8 @@ alt_client = AsyncOpenAI(
     base_url=args.alt_base_url,
     api_key=args.alt_api_key,
 )
+
+ROUTED_PAIR = ModelPair(strong=args.strong_model, weak=args.weak_model)
 
 if args.verbose:
     logging.basicConfig(level=logging.INFO)

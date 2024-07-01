@@ -8,7 +8,6 @@ from datasets import concatenate_datasets, load_dataset
 from huggingface_hub import hf_hub_download
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-from routellm.model_pair import ROUTED_PAIR
 from routellm.routers.causal_llm.configs import RouterModelConfig
 from routellm.routers.causal_llm.llm_utils import (
     load_prompt_format,
@@ -39,11 +38,11 @@ class Router(abc.ABC):
     def calculate_strong_win_rate(self, prompt):
         pass
 
-    def route(self, prompt, threshold):
+    def route(self, prompt, threshold, routed_pair):
         if self.calculate_strong_win_rate(prompt) >= threshold:
-            return ROUTED_PAIR.strong
+            return routed_pair.strong
         else:
-            return ROUTED_PAIR.weak
+            return routed_pair.weak
 
     def __str__(self):
         return NAME_TO_CLS[self.__class__]
