@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "routellm"
-version = "0.0.1"
+version = "0.1.0"
 description = "A framework for serving and evaluating large language model routers."
 readme = "README.md"
 classifiers = ["Programming Language :: Python :: 3"]
