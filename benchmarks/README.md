@@ -4,7 +4,7 @@
 
 In our [paper](https://arxiv.org/abs/2406.18665), we report MT Bench results comparing our routers to [Martian](https://withmartian.com) and [Unify AI](https://unify.ai), two commerical offerings for routing. We conduct these benchmarks using the [FastChat](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge) repository, replacing model calls to either Martian or Unify AI using an OpenAI-compatible server.
 
-For Unify AI, we pick the best-performing router on the user dashboard `router@q:1|c:1.71e-03|t:1.10e-05|i:1.09e-03` use it for benchmarking, allows calls between either GPT-4 Turbo and Mixtral 8x7B. Using this router, we obtain a MT Bench score of `8.757862` with 45.625% of calls routed to GPT-4.
+For Unify AI, we pick the best-performing router on the user dashboard `router@q:1|c:1.71e-03|t:1.10e-05|i:1.09e-03` use it for benchmarking, allows calls to either GPT-4 Turbo or Mixtral 8x7B. Using this router, we obtain a MT Bench score of `8.757862` with `45.625%` of calls routed to GPT-4.
 ```python
 client = openai.OpenAI(
 	base_url="https://api.unify.ai/v0/",
@@ -32,3 +32,5 @@ response = client.chat.completions.create(
 		...
     )
 ```
+
+The full MT Bench results and judgements are available in the `mt-bench/` directory.
