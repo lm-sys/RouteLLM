@@ -106,6 +106,13 @@ While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8
 
 ## Configuration
 
+To modify the model pair routed to for serving or evaluation, use the `--strong-model` and `--weak-model` flags e.g.
+```
+python -m routellm.openai_server --routers mf  --weak-model meta-llama/Meta-Llama-3-8B-Instruct
+
+python -m routellm.evals.evaluate --routers bert --benchmark gsm8k --strong-model gpt-4o
+```
+
 The configuration for all routers is contained in single YAML file, which is a top-level mapping from router name to the keyword arguments used for router initialization. An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge, as discussed in our paper. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
 
 ```yaml
