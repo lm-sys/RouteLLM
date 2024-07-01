@@ -33,9 +33,9 @@ pip install -e .[serve,eval]
 
 ## Motivation
 
-*Not all LLMs are created equal*. There exists wide variation in the costs and capabilities of different models, which leads to a dilemma when deploying LLMs in the real-world: routing all queries to the largest, most capable model leads to the highest-quality responses, but can be prohibitively expensive, whereas routing queries to smaller models can save costs significantly but may result in lower-quality responses. LLM routing is our solution to this problem.
+*Not all LLMs are created equal*. There is wide variation in the costs and capabilities of different models, which leads to a dilemma when deploying LLMs: routing all queries to the largest, most capable model leads to the highest-quality responses, but can be prohibitively expensive, whereas routing queries to smaller models can save costs significantly but may result in lower-quality responses. LLM routing is a solution to this.
 
-Our core setup is routing between a pair of LLMs - a stronger, more expensive model and a weak, cheaper model. Each router takes in **only** the user prompt, and decides which LLM to route that request to using any strategy. Each routing request is also associated with a _cost threshold_, which is a user-specified value between 0 and 1 that determines the cost-quality tradeoff of that request. A higher cost threshold translates to lower cost but may also lead to lower quality responses.
+Our setup is routing between two models: a more expensive stronger model and a cheaper but weaker model. Each router takes in a query, and decides which LLM to route it to. Each request is also associated with a _cost threshold_, which is a user-specified value between 0 and 1 that determines the cost-quality tradeoff of that request. A higher cost threshold translates to lower cost but may lead to lower-quality responses.
 
 <!-- <p float="left">
   <img src="assets/gsm8k.png" width="40%" />
