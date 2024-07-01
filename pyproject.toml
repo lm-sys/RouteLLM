@@ -36,7 +36,7 @@ dev = ["black", "isort", "pre-commit"]
 profile = "black"
 
 [tool.setuptools.packages.find]
-exclude = ["assets*"]
+exclude = ["assets*", "benchmarks*"]
 
 [tool.wheel]
-exclude = ["assets*"]
+exclude = ["assets*", "benchmarks*"]
