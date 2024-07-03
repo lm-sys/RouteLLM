@@ -83,6 +83,7 @@ Instructions for setting up an OpenAI compatible server for popular providers:
 - [Vertex AI Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/call-gemini-using-openai-library)
 - [Amazon Bedrock](https://github.com/aws-samples/bedrock-access-gateway)
 - [Ollama](https://github.com/ollama/ollama/blob/main/docs/openai.md)
+- [vLLM](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html)
 - [Together AI](https://docs.together.ai/docs/openai-api-compatibility)
 - [Anyscale Endpoints](https://docs.anyscale.com/endpoints/intro/)
 - [Fireworks AI](https://readme.fireworks.ai/docs/openai-compatibility)
