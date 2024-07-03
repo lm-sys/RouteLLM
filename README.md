@@ -57,10 +57,6 @@ For most use-cases, **we recommend the `mf` router** as we have evaluated it to 
 
 When making a request to the server, clients should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using a `model` of `router-mf-0.5` specifies that the request should be routed using the `mf` router with a cost threshold of 0.5.
 
-### Server Authentication
-
-For OpenAI models, the server will route requests to the official OpenAI client, so you will need to set the `OPENAI_API_KEY` environment variable before launching the server. For all other models, you nede to configure an alternative OpenAI-compatible server, which can be configured with the `--alt-base-url` and `alt-api-key` flags (we use Anyscale by default).
-
 ### Threshold Calibration
 
 The range of meaningful thresholds can vary significantly depending on the router used and the query distribution. Therefore, we recommend calibrating the thresholds based on a sample of your query distribution, as well as the percentage of queries you'd like to route to the stronger model or weaker model.
@@ -73,6 +69,23 @@ Out of the box, we support calibrating thresholds based on a publicly-available 
 ```
 
 This means that the threshold should be set to 0.1881 for the `mf` router such that approximately 20% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1881`. Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
+
+### Model Support
+
+By default, the server will route all OpenAI model to the official OpenAI client, so you will need to set the `OPENAI_API_KEY` environment variable for authentication before launching the server.
+
+For other models, RouteLLM supports any provider that has an OpenAI-compatible interface, which includes a wide-range of both closed and open-source models running locally or in the cloud. Once you have an OpenAI-compatible endpoint, set the `--alt-base-url` and `--alt-api-key` flags to point to your endpoint. e.g. For Anyscale Endpoints,
+```
+python -m routellm.openai_server --routers mf --config config.example.yaml --https://api.endpoints.anyscale.com/v1 --esecret_ANYSCALE_API_KEY
+```
+
+Instructions for setting up an OpenAI compatible server for popular providers:
+- [Vertex AI Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/call-gemini-using-openai-library)
+- [Amazon Bedrock](https://github.com/aws-samples/bedrock-access-gateway)
+- [Ollama](https://github.com/ollama/ollama/blob/main/docs/openai.md)
+- [Together AI](https://docs.together.ai/docs/openai-api-compatibility)
+- [Anyscale Endpoints](https://docs.anyscale.com/endpoints/intro/)
+- [Fireworks AI](https://readme.fireworks.ai/docs/openai-compatibility)
 
 ## Evaluation
 
