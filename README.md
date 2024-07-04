@@ -33,9 +33,9 @@ pip install -e .[serve,eval]
 
 ## Motivation
 
-*Not all LLMs are created equal*. There is wide variation in the costs and capabilities of different models, which leads to a dilemma when deploying LLMs: routing all queries to the largest, most capable model leads to the highest-quality responses, but can be prohibitively expensive, whereas routing queries to smaller models can save costs significantly but may result in lower-quality responses. LLM routing is a solution to this.
+Different LLMs vary widely their costs and capabilities, which leads to a dilemma when deploying them: routing all queries to the most capable model leads to the highest-quality responses but can be very expensive, while routing queries to smaller models can save costs but may result in lower-quality responses. 
 
-Our setup is routing between two models: a more expensive stronger model and a cheaper but weaker model. Each router takes in a query, and decides which LLM to route it to. Each request is also associated with a _cost threshold_, which is a user-specified value between 0 and 1 that determines the cost-quality tradeoff of that request. A higher cost threshold translates to lower cost but may lead to lower-quality responses.
+*LLM routing* offers a solution. We deploy a router that takes in each user's query and decides what LLM to route it to. We focus on routing between two models: a stronger, more expensive model and a cheaper but weaker model. Each request is also associated with a _cost threshold_ that determines the cost-quality tradeoff of that request - a higher cost threshold leads to lower cost but may also reduce the quality of responses.
 
 <!-- <p float="left">
   <img src="assets/gsm8k.png" width="40%" />
@@ -44,32 +44,30 @@ Our setup is routing between two models: a more expensive stronger model and a c
 
 ## Server
 
-RouteLLM offers a lightweight OpenAI-compatible server for routing requests between two LLMs based on different routing strategies. The server can be started with the following command:
+RouteLLM offers a lightweight OpenAI-compatible server for routing requests based on different routing strategies:
 
 ```
 python -m routellm.openai_server --routers mf --config config.example.yaml 
 ```
 
 - `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `mf` (see below for the list of routers).
-- `--config` specifies the path to the configuration file, which contains the paths and settings required by each router.
+- `--config` specifies the path to the configuration file for the routers (see Configuration section)
 
 For most use-cases, **we recommend the `mf` router** as we have evaluated it to be very strong and lightweight.
 
-When making a request to the server, clients should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using a `model` of `router-mf-0.5` specifies that the request should be routed using the `mf` router with a cost threshold of 0.5.
+When making a request to the server, clients specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using a `model` of `router-mf-0.5` specifies that the request should be routed using the `mf` router with a cost threshold of 0.5.
 
 See [here](docs/minimal_walkthrough.md) for a minimal walkthrough of using the RouteLLM server.
 
 ### Threshold Calibration
 
-The range of meaningful thresholds can vary significantly depending on the router used and the query distribution. Therefore, we recommend calibrating the thresholds based on a sample of your query distribution, as well as the percentage of queries you'd like to route to the stronger model or weaker model.
+The range of meaningful thresholds can vary depending on the type of router and the queries received. Therefore, we recommend calibrating thresholds using a sample of your query distribution, as well as the percentage of queries you'd like to route to the stronger model or weaker model.
 
-Out of the box, we support calibrating thresholds based on a publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 20% of calls are routed to the stronger model:
+Out of the box, we support calibrating thresholds based on the publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 50% of calls are routed to the stronger model:
 
 ```
-> python -m routellm.calibrate_threshold --task calibrate --routers mf causal_llm bert --strong-model-pct 0.5 --config config.example.yaml
+> python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.5 --config config.example.yaml
 For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
-For 50.0% strong model calls, calibrated threshold for causal_llm: 0.09619814157485962
-For 50.0% strong model calls, calibrated threshold for bert: 0.4066035747528076
 ```
 
 This means that the threshold should be set to 0.1881 for the `mf` router such that approximately 50% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1159`. Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
@@ -99,20 +97,19 @@ Instructions for setting up an OpenAI compatible server for popular providers:
 
 ## Evaluation
 
-RouteLLM also includes a evaluation framework to measure the performance of different routing strategies on specific benchmarks. We currently support the following benchmarks: [MMLU](https://arxiv.org/abs/2009.03300), [GSM8K](https://arxiv.org/abs/2110.14168), and [MT Bench](https://arxiv.org/abs/2306.05685).
+RouteLLM also includes a evaluation framework to measure the performance of different routing strategies on benchmarks.
 
 To evaluate a router on a benchmark, you can use the following command:
-
 ```
 python -m routellm.evals.evaluate --routers random sw_ranking bert --benchmark gsm8k --config config.example.yaml 
 ```
 
 - `--routers` specifies the list of routers to evaluate, for instance, `random` and `bert` in this case.
-- `--benchmark` specifies the specific benchmark to evaluate the routers on.
+- `--benchmark` specifies the specific benchmark to evaluate the routers on. We currently support: `mmlu`, `gsm8k`, and `mt-bench`.
 
-By default, the evaluation results will be printed to the console. A plot of router performance will also be generated in the current directory (override using `--output`). To avoid recomputing results, the results for a router on a given benchmark is cached by default. This behavior can be overridden by using the `--overwrite-cache` flag, which takes in a list of routers to overwrite the cache for.
+Evaluation results will be printed to the console. A plot of router performance will also be generated in the current directory (override the path using `--output`). To avoid recomputing results, the results for a router on a given benchmark is cached by default. This behavior can be overridden by using the `--overwrite-cache` flag, which takes in a list of routers to overwrite the cache for.
 
-The results for all our benchmarks are cached for speed. For MT Bench, we use the precomputed judgements for the desired model pair. For MMLU and GSM8K, we utilized [SGLang](https://github.com/sgl-project/sglang) to efficiently compute the results for the desired model pair and stored these results - the full code for this can be found in the respective benchmark directories.
+The results for all our benchmarks have been cached. For MT Bench, we use the precomputed judgements for the desired model pair. For MMLU and GSM8K, we utilized [SGLang](https://github.com/sgl-project/sglang) to compute the results for the desired model pair - the full code for this can be found in the benchmark directories if you would like to evaluate a different model pair.
 
 By default, GPT-4 and Mixtral are used as the model pair for evaluation. To modify the model pair used, use the `--strong-model` and `--weak-model` flags e.g.
 ```
@@ -124,17 +121,17 @@ python -m routellm.evals.evaluate --routers bert --benchmark gsm8k --strong-mode
 Out of the box, RouteLLM supports 4 routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair.
 
 The full list of routers:
-1. `sw_ranking`: Uses a weighted Elo calculation for routing, where each vote is weighted according to how similar it is to the user's prompt.
-2. `bert`: Uses a BERT classifier trained on the preference data.
-3. `causal_llm`: Uses a LLM-based classifier tuned on the preference data.
-4. `mf`: Uses a matrix factorization model trained on the preference data.
+1. `mf`: Uses a matrix factorization model trained on the preference data. (recommended)
+2. `sw_ranking`: Uses a weighted Elo calculation for routing, where each vote is weighted according to how similar it is to the user's prompt.
+3. `bert`: Uses a BERT classifier trained on the preference data.
+4. `causal_llm`: Uses a LLM-based classifier tuned on the preference data.
 5. `random`: Randomly routes to either model.
 
-While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well. For the full details regarding these routers, please refer to our [paper](https://arxiv.org/abs/2406.18665).
+While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well. For the full details, refer to our [paper](https://arxiv.org/abs/2406.18665).
 
 ## Configuration
 
-The configuration for all routers is contained in single YAML file, which is a top-level mapping from router name to the keyword arguments used for router initialization. An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge, as discussed in our paper. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
+The configuration for all routers is specified in single YAML file, which is a top-level mapping from router name to the keyword arguments used for router initialization. An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
 
 ```yaml
 sw_ranking:
