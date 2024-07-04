@@ -57,6 +57,8 @@ For most use-cases, **we recommend the `mf` router** as we have evaluated it to 
 
 When making a request to the server, clients should specify which router and what cost threshold to use for each request using the `model` field in the following format `router-[ROUTER NAME]-[THRESHOLD]`. For instance, using a `model` of `router-mf-0.5` specifies that the request should be routed using the `mf` router with a cost threshold of 0.5.
 
+See [here](docs/minimal_walkthrough.md) for a minimal walkthrough of using the RouteLLM server.
+
 ### Threshold Calibration
 
 The range of meaningful thresholds can vary significantly depending on the router used and the query distribution. Therefore, we recommend calibrating the thresholds based on a sample of your query distribution, as well as the percentage of queries you'd like to route to the stronger model or weaker model.
@@ -64,15 +66,22 @@ The range of meaningful thresholds can vary significantly depending on the route
 Out of the box, we support calibrating thresholds based on a publicly-available [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the matrix factorization router such that 20% of calls are routed to the stronger model:
 
 ```
-> python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.2 --config config.example.yaml
-> For 20.0% strong model calls, calibrated threshold for mf: 0.1881028115749359
+> python -m routellm.calibrate_threshold --task calibrate --routers mf causal_llm bert --strong-model-pct 0.5 --config config.example.yaml
+For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
+For 50.0% strong model calls, calibrated threshold for causal_llm: 0.09619814157485962
+For 50.0% strong model calls, calibrated threshold for bert: 0.4066035747528076
 ```
 
-This means that the threshold should be set to 0.1881 for the `mf` router such that approximately 20% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1881`. Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
+This means that the threshold should be set to 0.1881 for the `mf` router such that approximately 50% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1159`. Note that because we are calibrating the threshold based on an existing the dataset, the number of calls routed to the stronger or weaker model will differ in practice based on the actual queries received by the server.
 
 ### Model Support
 
-By default, the server will route all OpenAI model to the official OpenAI client, so you will need to set the `OPENAI_API_KEY` environment variable for authentication before launching the server.
+By default, GPT-4 and Mixtral are used as the model pair for serving. To modify the model pair used, use the `--strong-model` and `--weak-model` flags e.g.
+```
+python -m routellm.openai_server --routers mf --strong-model gpt-4o --weak-model meta-llama/Meta-Llama-3-8B-Instruct
+```
+
+The server will route all OpenAI model to the official OpenAI client, so you will need to set the `OPENAI_API_KEY` environment variable for authentication before launching the server if you're using an OpenAI model.
 
 For other models, RouteLLM supports any provider that has an OpenAI-compatible interface, which includes a wide-range of both closed and open-source models running locally or in the cloud. Once you have an OpenAI-compatible endpoint, set the `--alt-base-url` and `--alt-api-key` flags to point to your endpoint. e.g. For Anyscale Endpoints,
 ```
@@ -105,6 +114,11 @@ By default, the evaluation results will be printed to the console. A plot of rou
 
 The results for all our benchmarks are cached for speed. For MT Bench, we use the precomputed judgements for the desired model pair. For MMLU and GSM8K, we utilized [SGLang](https://github.com/sgl-project/sglang) to efficiently compute the results for the desired model pair and stored these results - the full code for this can be found in the respective benchmark directories.
 
+By default, GPT-4 and Mixtral are used as the model pair for evaluation. To modify the model pair used, use the `--strong-model` and `--weak-model` flags e.g.
+```
+python -m routellm.evals.evaluate --routers bert --benchmark gsm8k --strong-model gpt-4o --weak-model meta-llama/Meta-Llama-3-8B-Instruct
+```
+
 ## Routers
 
 Out of the box, RouteLLM supports 4 routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair.
@@ -119,11 +133,6 @@ The full list of routers:
 While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well. For the full details regarding these routers, please refer to our [paper](https://arxiv.org/abs/2406.18665).
 
 ## Configuration
-
-To modify the model pair routed to for serving or evaluation, use the `--strong-model` and `--weak-model` flags e.g.
-```
-python -m routellm.openai_server --routers mf --strong-model gpt-4o --weak-model meta-llama/Meta-Llama-3-8B-Instruct
-```
 
 The configuration for all routers is contained in single YAML file, which is a top-level mapping from router name to the keyword arguments used for router initialization. An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge, as discussed in our paper. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
 
