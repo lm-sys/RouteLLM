@@ -44,7 +44,7 @@ The server is now listening on `http://0.0.0.0:6060`. By default, the router wil
 
 You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](docs/routing_to_local_models.md) for details).
 
-2. The *cost threshold* controls the tradeoff between cost and quality for routing, and depends on both the router and dataset. Let's calibrate our threshold for 50% GPT-4 calls using the public Chatbot Arena [dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k):
+2. The *cost threshold* controls the tradeoff between cost and quality for routing, and depends on both the router and dataset. Let's calibrate our threshold for 50% GPT-4 calls using public Chatbot Arena data:
 ```
 > python -m routellm.calibrate_threshold --routers mf --strong-model-pct 0.5 --config config.example.yaml
 For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
@@ -98,7 +98,7 @@ When making a request to the server, clients specify which router and what cost 
 
 The threshold used for routing controls the cost-quality tradeoff. The range of meaningful thresholds varies depending on the type of router and the queries you receive. Therefore, we recommend calibrating thresholds using a sample of your incoming queries, as well as the % of queries you'd like to route to the stronger model.
 
-As an example, we support calibrating thresholds based on the public [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the `mf` router such that 50% of calls are routed to the stronger model:
+By default, we support calibrating thresholds based on the public [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the `mf` router such that 50% of calls are routed to the stronger model:
 
 ```
 > python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.5 --config config.example.yaml
