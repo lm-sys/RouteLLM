@@ -35,38 +35,40 @@ pip install -e .[serve,eval]
 
 Let's walkthrough setting up a RouteLLM server and pointing our existing OpenAI client to it.
 
-1. Launch the RouteLLM server with the `mf` router (recommended):
+1. First, launch the RouteLLM server with the `mf` router (recommended):
 ```
 > export OPENAI_API_KEY=sk-...
 > python -m routellm.openai_server --routers mf --alt-base-url https://api.endpoints.anyscale.com/v1 --alt-api-key ANYSCALE_API_KEY --config config.example.yaml
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
-The server is now listening on `http://0.0.0.0:6060`. By default, the router will route between GPT-4 and Mixtral 8x7B, so you'll need to configure your API keys for OpenAI and a model provider for Mixtral beforehand (we use Anyscale above). You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](docs/routing_to_local_models.md) for details).
+The server is now listening on `http://0.0.0.0:6060`. By default, the router will route between GPT-4 and Mixtral 8x7B, so you'll need to configure your API keys for OpenAI and a model provider for Mixtral beforehand (we use Anyscale above). 
+
+You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](docs/routing_to_local_models.md) for details).
 
 2. The cost threshold controls the tradeoff between cost and quality, and depends on both the router and dataset. Let's calibrate our threshold for 50% GPT-4 calls using the public Chatbot Arena [dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k):
 ```
 > python -m routellm.calibrate_threshold --routers mf --strong-model-pct 0.5 --config config.example.yaml
 For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
 ```
-This means that I'll want to use `0.116` as my threshold to get approximately 50% of queries routed to GPT-4 ([more details](#threshold-calibration)).
+This means that I'll want to use `0.116` as my threshold to get approximately 50% of queries routed to GPT-4 (see [Threshold Calibration](#threshold-calibration) for details).
 
-3. Point the existing OpenAI client to RouteLLM and set router:
+3. Now, let's point our existing OpenAI client to RouteLLM and specify the router:
 ```python
 import openai
 
 client = openai.OpenAI(
-	base_url="https://localhost:6060/v1",
+  base_url="https://localhost:6060/v1",
   # Required but ignored
-	api_key="no_api_key"
+  api_key="no_api_key"
 )
 ...
 response = client.chat.completions.create(
   # "Use the MF router with a threshold of 0.116"
-	model="router-mf-0.116",
-	messages=[
-    ...
-	]
+  model="router-mf-0.116",
+  messages=[
+    {"role": "user", "content": "Hello!"}
+  ]
 )
 ```
 That's it! Now, requests with be routed between the strong and weak model depending on what is required, saving costs while maximizing quality. Depending on your use case, you might want to consider hosting the server on the cloud, using a different model pair, and calibrating the thresholds based on the types of queries you will receive to improve performance.

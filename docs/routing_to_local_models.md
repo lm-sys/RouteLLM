@@ -24,17 +24,17 @@ The server is now listening on `http://0.0.0.0:6060`. We use the `--weak-model` 
 import openai
 
 client = openai.OpenAI(
-	base_url="https://localhost:6060/v1",
-	# Required but ignored
-	api_key="no_api_key"
+  base_url="https://localhost:6060/v1",
+  # Required but ignored
+  api_key="no_api_key"
 )
 ...
 response = client.chat.completions.create(
   # "Use the MF router with a threshold of 0.116"
-	model="router-mf-0.116",
-	messages=[
-    ...
-	]
+  model="router-mf-0.116",
+  messages=[
+    {"role": "user", "content": "Hello!"}
+  ]
 )
 ```
 In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.116` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here. And that's it - now, our requests will be routed between GPT-4 (for more difficult queries) and our local Llama-3 8B model, saving costs while maximizing quality!
