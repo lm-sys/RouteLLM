@@ -31,12 +31,6 @@ cd RouteLLM
 pip install -e .[serve,eval]
 ```
 
-## Motivation
-
-Different LLMs vary widely their costs and capabilities, which leads to a dilemma when deploying them: routing all queries to the most capable model leads to the highest-quality responses but can be very expensive, while routing queries to smaller models can save costs but may result in lower-quality responses. 
-
-*LLM routing* offers a solution. We deploy a router that takes in each user's query and decides what LLM to route it to. We focus on routing between two models: a stronger, more expensive model and a cheaper but weaker model. Each request is also associated with a _cost threshold_ that determines the cost-quality tradeoff of that request - a higher cost threshold leads to lower cost but may also reduce the quality of responses.
-
 ## Quickstart
 
 Let's walkthrough setting up a RouteLLM server and pointing our existing OpenAI client to it.
@@ -75,7 +69,13 @@ response = client.chat.completions.create(
 	]
 )
 ```
-That's it! Now, all requests with be routed between the strong and weak model based on the query. Depending on your use case, you might want to consider hosting the server on the cloud, using a different model pair, and calibrating the thresholds based on the types of queries you will receive to improve performance.
+That's it! Now, requests with be routed between the strong and weak model depending on what is required, saving costs while maximizing quality. Depending on your use case, you might want to consider hosting the server on the cloud, using a different model pair, and calibrating the thresholds based on the types of queries you will receive to improve performance.
+
+## Motivation
+
+Different LLMs vary widely their costs and capabilities, which leads to a dilemma when deploying them: routing all queries to the most capable model leads to the highest-quality responses but can be very expensive, while routing queries to smaller models can save costs but may result in lower-quality responses. 
+
+*LLM routing* offers a solution. We deploy a router that takes in each user's query and decides what LLM to route it to. We focus on routing between two models: a stronger, more expensive model and a cheaper but weaker model. Each request is also associated with a _cost threshold_ that determines the cost-quality tradeoff of that request - a higher cost threshold leads to lower cost but may also reduce the quality of responses.
 
 ## Server
 
