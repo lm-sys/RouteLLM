@@ -13,11 +13,11 @@ Now, the Ollama server will be running at `http://localhost:11434/v1`.
 2. Launch RouteLLM server with the `mf` router (recommended):
 ```
 > export OPENAI_API_KEY=sk-...
-> python -m routellm.openai_server --routers mf --alt-base-url http://localhost:11434/v1 --config config.example.yaml --weak-model llama3
+> python -m routellm.openai_server --routers mf --weak-model ollama/llama3 --config.example.yaml
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
-The server is now listening on `http://0.0.0.0:6060`. We use the `--weak-model` flag to use Llama 3 as our weak model and the `--alt-base-url` flag to point to our local Ollama server.
+The server is now listening on `http://0.0.0.0:6060`. We use the `--weak-model` flag to use point to the Llama 3 instance that is running locally on our machine.
 
 3. Point your OpenAI client to the RouteLLM server:
 ```python
@@ -37,4 +37,6 @@ response = client.chat.completions.create(
   ]
 )
 ```
-In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.116` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here. And that's it - now, our requests will be routed between GPT-4 for more difficult queries and our local Llama-3 8B model for simpler queries.
+In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.116` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
+
+And that's it! Now, our requests will be routed between GPT-4 for more difficult queries and our local Llama-3 8B model for simpler queries.
