@@ -42,7 +42,7 @@ INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
 The server is now listening on `http://0.0.0.0:6060`. By default, the router will route between GPT-4 and Mixtral 8x7B, so you'll need to configure your API keys for OpenAI and a model provider for Mixtral 8x7B beforehand (we use Anyscale above).
 
-You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](docs/routing_to_local_models.md) for details).
+You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](examples/routing_to_local_models.md) for details).
 
 2. The *cost threshold* controls the tradeoff between cost and quality for routing, and depends on both the router and dataset. Let's calibrate our threshold for 50% GPT-4 calls using public Chatbot Arena data:
 ```
@@ -72,6 +72,34 @@ response = client.chat.completions.create(
 That's it! Now, requests with be routed between the strong and weak model depending on what is required, **saving costs while maximizing quality**.
 
 Depending on your use case, you might want to consider hosting the server on the cloud, using a different model pair, and calibrating the thresholds based on the types of queries you will receive to improve performance.
+
+### Demo
+
+Once the server is launched, you can also launch a local chat interface to experiment with the router to see how different requests are routed.
+```
+python -m examples.router_chat --router mf --threshold 0.116
+```
+
+<p align="center">
+  <img src="assets/chat-interface.png" width="50%" />
+</p>
+
+### Model Support
+
+By default, GPT-4 and Mixtral are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags.
+
+Regardless of the model pair used, the server requires an `OPENAI_API_KEY` to be set for generating embeddings.
+
+The server will route all OpenAI model to the official OpenAI client. For other models, RouteLLM supports any provider that has an OpenAI-compatible interface, which includes a wide-range of both closed and open-source models running locally or in the cloud. Once you have an OpenAI-compatible endpoint, set the `--alt-base-url` and `--alt-api-key` flags to point to your endpoint.
+
+Instructions for setting up an OpenAI compatible server for popular providers:
+- [Vertex AI Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/call-gemini-using-openai-library)
+- [Amazon Bedrock](https://github.com/aws-samples/bedrock-access-gateway)
+- [Ollama](https://github.com/ollama/ollama/blob/main/docs/openai.md)
+- [vLLM](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html)
+- [Together AI](https://docs.together.ai/docs/openai-api-compatibility)
+- [Anyscale Endpoints](https://docs.anyscale.com/endpoints/intro/)
+- [Fireworks AI](https://readme.fireworks.ai/docs/openai-compatibility)
 
 ## Motivation
 
@@ -108,26 +136,6 @@ For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
 This means that the threshold should be set to 0.1881 for the `mf` router so that approximately 50% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1159`.
 
 However, note that because we calibrate the thresholds based on an existing dataset, the % of calls routed to each model will differ based on the actual queries received. Therefore, we recommend calibrating on a dataset that closely resembles the types of queries you receive.
-
-### Model Support
-
-By default, GPT-4 and Mixtral are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags.
-
-The server will route all OpenAI model to the official OpenAI client, so you will need to set the `OPENAI_API_KEY` environment variable for authentication before launching the server if you're using an OpenAI model.
-
-For other models, RouteLLM supports any provider that has an OpenAI-compatible interface, which includes a wide-range of both closed and open-source models running locally or in the cloud. Once you have an OpenAI-compatible endpoint, set the `--alt-base-url` and `--alt-api-key` flags to point to your endpoint. e.g. For Anyscale Endpoints,
-```
-python -m routellm.openai_server --routers mf --config config.example.yaml --https://api.endpoints.anyscale.com/v1 --esecret_ANYSCALE_API_KEY
-```
-
-Instructions for setting up an OpenAI compatible server for popular providers:
-- [Vertex AI Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/call-gemini-using-openai-library)
-- [Amazon Bedrock](https://github.com/aws-samples/bedrock-access-gateway)
-- [Ollama](https://github.com/ollama/ollama/blob/main/docs/openai.md)
-- [vLLM](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html)
-- [Together AI](https://docs.together.ai/docs/openai-api-compatibility)
-- [Anyscale Endpoints](https://docs.anyscale.com/endpoints/intro/)
-- [Fireworks AI](https://readme.fireworks.ai/docs/openai-compatibility)
 
 ## Evaluation
 
