@@ -89,15 +89,14 @@ python -m examples.router_chat --router mf --threshold 0.116
 
 By default, GPT-4 and Mixtral 8x7B are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags. However, regardless of the model pair, an `OPENAI_API_KEY` is required for generating embeddings.
 
-We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name using the `--strong-model` or `--weak-model` flag.
+We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name using the `--strong-model` or `--weak-model` flag. Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
 
-Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
+See [Routing to Local Models](examples/routing_to_local_models.md) for a walkthrough of routing to local models using Ollama.
 
-Instructions for for popular providers:
+Instructions for other popular providers:
 - [Anthropic](https://litellm.vercel.app/docs/providers/anthropic#api-keys)
 - [Gemini - Google AI Studio](https://litellm.vercel.app/docs/providers/gemini#sample-usage)
 - [Amazon Bedrock](https://litellm.vercel.app/docs/providers/bedrock#required-environment-variables)
-- [Ollama](https://litellm.vercel.app/docs/providers/togetherai#api-keys)
 - [Together AI](https://litellm.vercel.app/docs/providers/togetherai#api-keys)
 - [Anyscale Endpoints](https://litellm.vercel.app/docs/providers/anyscale#api-key)
 
