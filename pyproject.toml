@@ -19,13 +19,13 @@ dependencies = [
 	'tqdm',
 	'openai',
 	'transformers',
-	'tiktoken',
-	'datasets'
+	'datasets',
+	'litellm'
 ]
 
 [project.optional-dependencies]
 serve = ["fastapi", "shortuuid", "uvicorn"]
-eval = ["matplotlib", "pandarallel", "sglang"]
+eval = ["matplotlib", "pandarallel", "sglang", 'tiktoken']
 dev = ["black", "isort", "pre-commit"]
 
 [project.urls]

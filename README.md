@@ -36,11 +36,12 @@ Let's walkthrough setting up a RouteLLM server and pointing our existing OpenAI 
 1. First, launch the RouteLLM server with the `mf` router:
 ```
 > export OPENAI_API_KEY=sk-XXXXXX
-> python -m routellm.openai_server --routers mf --alt-base-url https://api.endpoints.anyscale.com/v1 --alt-api-key ANYSCALE_API_KEY --config config.example.yaml
+> export ANYSCALE_API_KEY=esecret_XXXXXX
+> python -m routellm.openai_server --routers mf --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1 ---config config.example.yaml
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
-The server is now listening on `http://0.0.0.0:6060`. By default, the router will route between GPT-4 and Mixtral 8x7B, so you'll need to configure your API keys for OpenAI and a model provider for Mixtral 8x7B beforehand (we use Anyscale above).
+The server is now listening on `http://0.0.0.0:6060`. By default, the router will route between GPT-4 and Mixtral 8x7B, so you'll need to configure your API keys for OpenAI and a model provider for Mixtral 8x7B beforehand (we use Anyscale by setting the API key and pointing our weak model to it above).
 
 You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](examples/routing_to_local_models.md)).
 
@@ -86,18 +87,21 @@ python -m examples.router_chat --router mf --threshold 0.116
 
 ### Model Support
 
-By default, GPT-4 and Mixtral are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags. However, regardless of the model pair, an `OPENAI_API_KEY` is required for generating embeddings.
+By default, GPT-4 and Mixtral 8x7B are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags. However, regardless of the model pair, an `OPENAI_API_KEY` is required for generating embeddings.
 
-The server will route all OpenAI model to the OpenAI server. For other models, RouteLLM supports any provider that has an OpenAI-compatible interface, which includes a range of open-source and closed models running locally or in the cloud. To configure this, set the `--alt-base-url` and `--alt-api-key` flags to point to your endpoint.
+We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name using the `--strong-model` or `--weak-model` flag.
 
-Instructions for setting up an OpenAI-compatible server for popular providers:
-- [Vertex AI Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/call-gemini-using-openai-library)
-- [Amazon Bedrock](https://github.com/aws-samples/bedrock-access-gateway)
-- [Ollama](https://github.com/ollama/ollama/blob/main/docs/openai.md)
-- [vLLM](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html)
-- [Together AI](https://docs.together.ai/docs/openai-api-compatibility)
-- [Anyscale Endpoints](https://docs.anyscale.com/endpoints/intro/)
-- [Fireworks AI](https://readme.fireworks.ai/docs/openai-compatibility)
+Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
+
+Instructions for for popular providers:
+- [Anthropic](https://litellm.vercel.app/docs/providers/anthropic#api-keys)
+- [Gemini - Google AI Studio](https://litellm.vercel.app/docs/providers/gemini#sample-usage)
+- [Amazon Bedrock](https://litellm.vercel.app/docs/providers/bedrock#required-environment-variables)
+- [Ollama](https://litellm.vercel.app/docs/providers/togetherai#api-keys)
+- [Together AI](https://litellm.vercel.app/docs/providers/togetherai#api-keys)
+- [Anyscale Endpoints](https://litellm.vercel.app/docs/providers/anyscale#api-key)
+
+For other model providers, view the instructions [here](https://litellm.vercel.app/docs/providers). 
 
 ## Motivation
 

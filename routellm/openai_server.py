@@ -18,6 +18,7 @@ import uvicorn
 import yaml
 from fastapi.concurrency import asynccontextmanager
 from fastapi.responses import JSONResponse, StreamingResponse
+from litellm import acompletion
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
@@ -104,29 +105,6 @@ class ChatCompletionResponse(BaseModel):
     usage: UsageInfo
 
 
-async def create_completion(model, prompt, **kwargs):
-    temperature = kwargs["temperature"]
-    stream = kwargs.get("stream", False)
-
-    if "gpt-4" in model or "gpt-3.5-turbo" in model:
-        client = openai_client
-    else:
-        client = alt_client
-
-    logging.info(
-        f"Creating completion for model: {model}, temperature: {temperature}, prompt: {prompt[:50]}"
-    )
-    response = await client.chat.completions.create(
-        **kwargs,
-        model=model,
-    )
-
-    if stream:
-        return stream_response(response)
-    else:
-        return response
-
-
 async def stream_response(response) -> AsyncGenerator:
     async for chunk in response:
         yield f"data: {chunk.model_dump_json()}\n\n"
@@ -176,13 +154,17 @@ async def create_chat_completion(request: ChatCompletionRequest):
     count[router][routed_model] += 1
     logging.info(f"Model Counts: {dict(count)}")
 
-    generator = await create_completion(
-        routed_model,
-        prompt,
+    generator = await acompletion(
+        model=routed_model,
+        api_base=API_BASE,
+        api_key=API_KEY,
         **request.model_dump(exclude=["model"], exclude_none=True),
     )
+
     if request.stream:
-        return StreamingResponse(content=generator, media_type="text/event-stream")
+        return StreamingResponse(
+            content=stream_response(generator), media_type="text/event-stream"
+        )
     else:
         return JSONResponse(content=generator.model_dump())
 
@@ -208,17 +190,17 @@ parser.add_argument(
     "--alt-base-url",
     help="The OpenAI-compatible base URL for non-OpenAI API requests",
     type=str,
-    default="https://api.endpoints.anyscale.com/v1",
+    default=None,
 )
 parser.add_argument(
     "--alt-api-key",
     help="The API key for non-OpenAI API requests",
     type=str,
-    default=os.environ.get("ANYSCALE_API_KEY"),
+    default=None,
 )
 parser.add_argument("--strong-model", type=str, default="gpt-4-1106-preview")
 parser.add_argument(
-    "--weak-model", type=str, default="mistralai/Mixtral-8x7B-Instruct-v0.1"
+    "--weak-model", type=str, default="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1"
 )
 args = parser.parse_args()
 
@@ -230,6 +212,8 @@ alt_client = AsyncOpenAI(
 )
 
 ROUTED_PAIR = ModelPair(strong=args.strong_model, weak=args.weak_model)
+API_BASE = args.alt_base_url
+API_KEY = args.alt_api_key
 
 if args.verbose:
     logging.basicConfig(level=logging.INFO)

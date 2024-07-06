@@ -182,7 +182,9 @@ if __name__ == "__main__":
     )
     parser.add_argument("--strong-model", type=str, default="gpt-4-1106-preview")
     parser.add_argument(
-        "--weak-model", type=str, default="mistralai/Mixtral-8x7B-Instruct-v0.1"
+        "--weak-model",
+        type=str,
+        default="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
     )
     parser.add_argument("--config", type=str)
     parser.add_argument("--num-results", type=int, default=10)
