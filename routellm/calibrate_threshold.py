@@ -9,7 +9,6 @@ from tqdm import tqdm
 from routellm.routers.routers import ROUTER_CLS
 
 tqdm.pandas()
-pandarallel.initialize(progress_bar=True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -33,6 +32,7 @@ if __name__ == "__main__":
     config = yaml.safe_load(open(args.config, "r"))
 
     if args.task == "generate":
+        pandarallel.initialize(progress_bar=True)
         battles_df = load_dataset(args.battles_dataset, split="train").to_pandas()
         for router in args.routers:
             router = ROUTER_CLS[router](**config.get(router, {}))
@@ -54,5 +54,5 @@ if __name__ == "__main__":
         for router in args.routers:
             threshold = thresholds_df[router].quantile(q=1 - args.strong_model_pct)
             print(
-                f"For {args.strong_model_pct * 100}% strong model calls, calibrated threshold for {router}: {threshold}"
+                f'{args.strong_model_pct * 100}% strong model calls for {router}: model="router-{router}-{threshold}"'
             )
