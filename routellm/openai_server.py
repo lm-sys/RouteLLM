@@ -170,7 +170,7 @@ async def create_chat_completion(request: ChatCompletionRequest):
 
 
 parser = argparse.ArgumentParser(
-    description="OpenAI compatible API server for LLM routing."
+    description="An OpenAI-compatible API server for LLM routing."
 )
 parser.add_argument(
     "--verbose",
@@ -188,13 +188,13 @@ parser.add_argument(
 )
 parser.add_argument(
     "--alt-base-url",
-    help="The OpenAI-compatible base URL for non-OpenAI API requests",
+    help="The base URL used for LLM requests",
     type=str,
     default=None,
 )
 parser.add_argument(
     "--alt-api-key",
-    help="The API key for non-OpenAI API requests",
+    help="The API key used for LLM requests",
     type=str,
     default=None,
 )
