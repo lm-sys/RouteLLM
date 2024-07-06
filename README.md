@@ -86,13 +86,11 @@ python -m examples.router_chat --router mf --threshold 0.116
 
 ### Model Support
 
-By default, GPT-4 and Mixtral are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags.
+By default, GPT-4 and Mixtral are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags. However, regardless of the model pair, an `OPENAI_API_KEY` is required for generating embeddings.
 
-Regardless of the model pair used, the server requires an `OPENAI_API_KEY` to be set for generating embeddings.
+The server will route all OpenAI model to the OpenAI server. For other models, RouteLLM supports any provider that has an OpenAI-compatible interface, which includes a range of open-source and closed models running locally or in the cloud. To configure this, set the `--alt-base-url` and `--alt-api-key` flags to point to your endpoint.
 
-The server will route all OpenAI model to the official OpenAI client. For other models, RouteLLM supports any provider that has an OpenAI-compatible interface, which includes a wide-range of both closed and open-source models running locally or in the cloud. Once you have an OpenAI-compatible endpoint, set the `--alt-base-url` and `--alt-api-key` flags to point to your endpoint.
-
-Instructions for setting up an OpenAI compatible server for popular providers:
+Instructions for setting up an OpenAI-compatible server for popular providers:
 - [Vertex AI Gemini](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/call-gemini-using-openai-library)
 - [Amazon Bedrock](https://github.com/aws-samples/bedrock-access-gateway)
 - [Ollama](https://github.com/ollama/ollama/blob/main/docs/openai.md)
@@ -103,9 +101,9 @@ Instructions for setting up an OpenAI compatible server for popular providers:
 
 ## Motivation
 
-Different LLMs vary widely their costs and capabilities, which leads to a dilemma when deploying them: routing all queries to the most capable model leads to the highest-quality responses but can be very expensive, while routing queries to smaller models can save costs but may result in lower-quality responses. 
+Different LLMs vary widely in their costs and capabilities, which leads to a dilemma when deploying them: routing all queries to the most capable model leads to the highest-quality responses but can be very expensive, while routing queries to smaller models can save costs but may result in lower-quality responses. 
 
-*LLM routing* offers a solution. We deploy a router that takes in each user's query and decides what LLM to route it to. We focus on routing between two models: a stronger, more expensive model and a cheaper but weaker model. Each request is also associated with a _cost threshold_ that determines the cost-quality tradeoff of that request - a higher cost threshold leads to lower cost but may also reduce the quality of responses.
+*LLM routing* offers a solution to this. We introduce a router that looks at queries and routes simpler queries to smaller, cheaper models, saving costs while maintaining quality. We focus on routing between 2 models: a stronger, more expensive model and a cheaper but weaker model. Each request is also associated with a _cost threshold_ that determines the cost-quality tradeoff of that request - a higher cost threshold leads to lower cost but may lead to lower-quality responses.
 
 ## Server
 
