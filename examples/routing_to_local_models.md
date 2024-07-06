@@ -1,6 +1,6 @@
 # Routing to Local Models with RouteLLM and Ollama
 
-A common use-case is routing between GPT-4 as the strong model and a local model as the weak model. This allows you to only use GPT-4 for queries that require it, saving costs while maximizing quality.
+A common use-case is routing between GPT-4 as the strong model and a local model as the weak model. This allows you to only use GPT-4 for queries that require it, saving costs while maintaining response quality.
 
 Let's route between GPT-4 and a local Llama 3 8B as an example. Make sure Ollama is [installed](https://github.com/ollama/ollama?tab=readme-ov-file#ollama) beforehand.
 
@@ -37,4 +37,4 @@ response = client.chat.completions.create(
   ]
 )
 ```
-In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.116` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here. And that's it - now, our requests will be routed between GPT-4 (for more difficult queries) and our local Llama-3 8B model, saving costs while maximizing quality!
+In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.116` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here. And that's it - now, our requests will be routed between GPT-4 for more difficult queries and our local Llama-3 8B model for simpler queries.

@@ -42,14 +42,14 @@ INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
 The server is now listening on `http://0.0.0.0:6060`. By default, the router will route between GPT-4 and Mixtral 8x7B, so you'll need to configure your API keys for OpenAI and a model provider for Mixtral 8x7B beforehand (we use Anyscale above).
 
-You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](examples/routing_to_local_models.md) for details).
+You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](examples/routing_to_local_models.md)).
 
 2. The *cost threshold* controls the tradeoff between cost and quality for routing, and depends on both the router and dataset. Let's calibrate our threshold for 50% GPT-4 calls using public Chatbot Arena data:
 ```
 > python -m routellm.calibrate_threshold --routers mf --strong-model-pct 0.5 --config config.example.yaml
 For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
 ```
-This means that I'll want to use `0.116` as my cost threshold to get approximately 50% of queries routed to GPT-4 (see [Threshold Calibration](#threshold-calibration) for details).
+This means that I'll want to use `0.116` as my cost threshold to get approximately 50% of queries routed to GPT-4 (see [Threshold Calibration](#threshold-calibration)).
 
 3. Now, let's point our existing OpenAI client to RouteLLM and specify the router:
 ```python
@@ -69,7 +69,7 @@ response = client.chat.completions.create(
   ]
 )
 ```
-That's it! Now, requests with be routed between the strong and weak model depending on what is required, **saving costs while maximizing quality**.
+That's it! Now, requests with be routed between the strong and weak model depending on what is required, **saving costs while maintaining a high quality of responses**.
 
 Depending on your use case, you might want to consider hosting the server on the cloud, using a different model pair, and calibrating the thresholds based on the types of queries you will receive to improve performance.
 
