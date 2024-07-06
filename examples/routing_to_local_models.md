@@ -13,7 +13,7 @@ Now, the Ollama server will be running at `http://localhost:11434/v1`.
 2. Launch RouteLLM server with the `mf` router (recommended):
 ```
 > export OPENAI_API_KEY=sk-...
-> python -m routellm.openai_server --routers mf --weak-model ollama/llama3 --config.example.yaml
+> python -m routellm.openai_server --routers mf --weak-model ollama_chat/llama3 --config.example.yaml
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
