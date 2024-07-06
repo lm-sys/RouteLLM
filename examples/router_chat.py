@@ -80,7 +80,7 @@ def predict(message, history, threshold, router, temperature):
     for i, chunk in enumerate(stream):
         print(chunk)
         if i == 0:
-            model_prefix = f"[{chunk.model}]"
+            model_prefix = f"[{chunk.model}]\n"
             yield model_prefix
             partial_message += model_prefix
         partial_message += chunk.choices[0].delta.content or ""
