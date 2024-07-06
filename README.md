@@ -100,7 +100,7 @@ Instructions for other popular providers:
 - [Together AI](https://litellm.vercel.app/docs/providers/togetherai#api-keys)
 - [Anyscale Endpoints](https://litellm.vercel.app/docs/providers/anyscale#api-key)
 
-For other model providers, view the instructions [here](https://litellm.vercel.app/docs/providers). 
+For other model providers, find the instructions [here](https://litellm.vercel.app/docs/providers). 
 
 ## Motivation
 
