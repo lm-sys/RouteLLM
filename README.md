@@ -99,7 +99,7 @@ python -m examples.router_chat --router mf --threshold 0.11593
 
 In the above examples, GPT-4 and Mixtral 8x7B are used as the model pair, but you can modify this using the `strong-model` and `weak-model` arguments.
 
-We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name. Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
+We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name. Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` and setting the `--base-url` and `--api-key` flags.
 
 Note that regardless of the model pair used, an `OPENAI_API_KEY` will be required to generate embeddings for both the `mf` and `sw_ranking` routers.
 
