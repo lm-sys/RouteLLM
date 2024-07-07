@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
+from routellm.controller import Controller
 from routellm.routers.routers import Router
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -23,7 +24,11 @@ class Benchmark(abc.ABC):
 
     @abc.abstractmethod
     def evaluate(
-        self, router: Router, threshold: float, overwrite_router_cache: bool
+        self,
+        controller: Controller,
+        router: str,
+        num_results: int,
+        overwrite_router_cache: bool,
     ) -> tuple[str, dict[str, int], str]:
         """Takes in a router and threshold and returns a tuple of weighted accuracy, model counts, and number of requests."""
         pass
@@ -70,26 +75,19 @@ class MMLU(Benchmark):
             f"Remaining {len(self.all_data)}/{original_length} prompts for MMLU after decontamination"
         )
 
-    def evaluate(self, router, num_results, overwrite_router_cache):
-        router_name = str(router)
-
+    def evaluate(self, controller, router, num_results, overwrite_router_cache):
         if (
-            router_name not in self.cache
-            or router_name in self.overwrite_cache
+            router not in self.cache
+            or router in self.overwrite_cache
             or overwrite_router_cache
         ):
-            if router.NO_PARALLEL:
-                strong_win_rates = self.all_data["prompt"].progress_apply(
-                    router.calculate_strong_win_rate
-                )
-            else:
-                strong_win_rates = self.all_data["prompt"].parallel_map(
-                    router.calculate_strong_win_rate
-                )
-            self.cache[router_name] = strong_win_rates
+            strong_win_rates = controller.batch_calculate_win_rate(
+                prompts=self.all_data["prompt"], router=router
+            )
+            self.cache[router] = strong_win_rates
             np.save(self.cache_path, self.cache)
         else:
-            strong_win_rates = self.cache[router_name]
+            strong_win_rates = self.cache[router]
 
         # Choose thresholds split into 10 equally sized bins (including duplicates)
         _, thresholds = pd.qcut(strong_win_rates, num_results, retbins=True)
@@ -170,27 +168,21 @@ class MTBench(Benchmark):
             print("Error loading MT Bench cache, starting fresh.")
             self.cache = {}
 
-    def evaluate(self, router, num_results, overwrite_router_cache):
-        router_name = str(router)
-
+    def evaluate(self, controller, router, num_results, overwrite_router_cache):
         if (
-            router_name not in self.cache
-            or router_name in self.overwrite_cache
+            router not in self.cache
+            or router in self.overwrite_cache
             or overwrite_router_cache
         ):
-            if router.NO_PARALLEL:
-                strong_win_rates = self.questions["turns"].progress_apply(
-                    # Only use first turn for routing
-                    lambda turn: router.calculate_strong_win_rate(turn[0])
-                )
-            else:
-                strong_win_rates = self.questions["turns"].parallel_apply(
-                    lambda turn: router.calculate_strong_win_rate(turn[0])
-                )
-            self.cache[router_name] = strong_win_rates
+            strong_win_rates = controller.batch_calculate_win_rate(
+                # Only use first turn for routing
+                prompts=self.questions["turns"].apply(lambda x: x[0]),
+                router=router,
+            )
+            self.cache[router] = strong_win_rates
             np.save(self.cache_path, self.cache)
         else:
-            strong_win_rates = self.cache[router_name]
+            strong_win_rates = self.cache[router]
 
         _, thresholds = pd.qcut(strong_win_rates, num_results, retbins=True)
         questions = self.questions[["question_id", "turns"]]
@@ -318,26 +310,19 @@ class GSM8K(Benchmark):
             f"{len(self.all_data)}/{original_len} questions for GSM8K after decontamination."
         )
 
-    def evaluate(self, router, num_results, overwrite_router_cache):
-        router_name = str(router)
-
+    def evaluate(self, controller, router, num_results, overwrite_router_cache):
         if (
-            router_name not in self.cache
-            or router_name in self.overwrite_cache
+            router not in self.cache
+            or router in self.overwrite_cache
             or overwrite_router_cache
         ):
-            if router.NO_PARALLEL:
-                strong_win_rates = self.all_data["prompt"].progress_apply(
-                    router.calculate_strong_win_rate
-                )
-            else:
-                strong_win_rates = self.all_data["prompt"].parallel_map(
-                    router.calculate_strong_win_rate
-                )
-            self.cache[router_name] = strong_win_rates
+            strong_win_rates = controller.batch_calculate_win_rate(
+                prompts=self.all_data["prompt"], router=router
+            )
+            self.cache[router] = strong_win_rates
             np.save(self.cache_path, self.cache)
         else:
-            strong_win_rates = self.cache[router_name]
+            strong_win_rates = self.cache[router]
 
         # Choose thresholds split into 10 equally sized bins (including duplicates)
         _, thresholds = pd.qcut(strong_win_rates, num_results, retbins=True)

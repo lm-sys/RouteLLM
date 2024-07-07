@@ -225,7 +225,7 @@ if __name__ == "__main__":
             router_results = []
             for i in range(args.random_iters):
                 for threshold, accuracy, model_counts, total in benchmark.evaluate(
-                    controller.routers[router], args.num_results, True
+                    controller, router, args.num_results, True
                 ):
                     router_results.append(
                         {
@@ -246,7 +246,7 @@ if __name__ == "__main__":
         else:
             router_results = []
             for threshold, accuracy, model_counts, total in benchmark.evaluate(
-                controller.routers[router], args.num_results, False
+                controller, router, args.num_results, False
             ):
                 print(f"Evaluating router: {router} with threshold {threshold}...")
                 pretty_print_results(threshold, accuracy, model_counts, total)
