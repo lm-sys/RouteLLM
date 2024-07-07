@@ -40,6 +40,8 @@ os.environ["OPENAI_API_KEY"] = "sk-XXXXXX"
 # Replace with your model provider.
 os.environ["ANYSCALE_API_KEY"] = "esecret_XXXXXX"
 
+# No longer needed
+# client = OpenAI()
 client = Controller(
   routers=["mf"],
   routed_pair=ModelPair(
