@@ -187,7 +187,7 @@ if __name__ == "__main__":
         type=str,
         default="mistralai/Mixtral-8x7B-Instruct-v0.1",
     )
-    parser.add_argument("--config", type=str)
+    parser.add_argument("--config", type=str, default=None)
     parser.add_argument("--num-results", type=int, default=10)
     parser.add_argument("--random-iters", type=int, default=10)
 
@@ -197,9 +197,9 @@ if __name__ == "__main__":
     pandarallel.initialize(progress_bar=True, nb_workers=args.parallel)
     routed_pair = ModelPair(strong=args.strong_model, weak=args.weak_model)
     controller = Controller(
-        args.routers,
-        yaml.safe_load(open(args.config, "r")),
-        routed_pair,
+        routers=args.routers,
+        config=yaml.safe_load(open(args.config, "r")) if args.config else None,
+        routed_pair=routed_pair,
         progress_bar=True,
     )
 
