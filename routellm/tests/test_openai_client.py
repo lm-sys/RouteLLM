@@ -31,12 +31,7 @@ if __name__ == "__main__":
     print(args)
 
     client = Controller(
-        routers=["mf"],
-        config={
-            "mf": {
-                "checkpoint_path": "routellm/mf_gpt4_augmented",
-            }
-        },
+        routers=[args.router],
         routed_pair=ModelPair(
             strong="gpt-4-1106-preview",
             weak="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
