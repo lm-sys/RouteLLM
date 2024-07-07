@@ -10,8 +10,8 @@ import tiktoken
 import tqdm
 from openai import OpenAI
 
+from routellm.controller import ModelPair
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
-from routellm.model_pair import ModelPair
 
 ROUTED_PAIR = ModelPair(
     strong="gpt-4-1106-preview", weak="mistralai/Mixtral-8x7B-Instruct-v0.1"

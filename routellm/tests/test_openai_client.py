@@ -1,7 +1,6 @@
 import argparse
 
 from routellm.controller import Controller
-from routellm.model_pair import ModelPair
 from routellm.routers.routers import ROUTER_CLS
 
 system_content = (
@@ -32,10 +31,8 @@ if __name__ == "__main__":
 
     client = Controller(
         routers=[args.router],
-        routed_pair=ModelPair(
-            strong="gpt-4-1106-preview",
-            weak="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
-        ),
+        strong_model="gpt-4-1106-preview",
+        weak_model="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
     )
 
     chat_completion = client.chat.completions.create(

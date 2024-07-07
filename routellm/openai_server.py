@@ -20,7 +20,6 @@ from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
 from routellm.controller import Controller, RoutingError
-from routellm.model_pair import ModelPair
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -34,11 +33,11 @@ count = defaultdict(lambda: defaultdict(int))
 async def lifespan(app):
     global CONTROLLER
 
-    routed_pair = ModelPair(strong=args.strong_model, weak=args.weak_model)
     CONTROLLER = Controller(
         routers=args.routers,
         config=yaml.safe_load(open(args.config, "r")) if args.config else None,
-        routed_pair=routed_pair,
+        strong_model=args.strong_model,
+        weak_model=args.weak_model,
         api_base=args.base_url,
         api_key=args.api_key,
         progress_bar=True,
