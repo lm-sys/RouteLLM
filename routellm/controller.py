@@ -1,6 +1,6 @@
 from collections import defaultdict
 from types import SimpleNamespace
-from typing import Any
+from typing import Any, Optional
 
 import tqdm
 from litellm import acompletion, completion
@@ -43,21 +43,21 @@ class Controller:
             )
         )
 
-    def _validate(self, router: str, threshold: float):
+    def _validate_router_threshold(
+        self, router: Optional[str], threshold: Optional[float]
+    ):
+        if router is None or threshold is None:
+            raise RoutingError("Router or threshold unspecified.")
         if router not in self.routers:
             raise RoutingError(
                 f"Invalid router {router}. Available routers are {list(self.routers.keys())}."
             )
-        elif not isinstance(threshold, float) or not 0 <= threshold <= 1:
+        if not 0 <= threshold <= 1:
             raise RoutingError(
                 f"Invalid threshold {threshold}. Threshold must be a float between 0.0 and 1.0."
             )
 
-    def _get_routed_model_for_completion(self, kwargs: dict[str, Any]):
-        if "messages" not in kwargs or not kwargs["messages"]:
-            raise ValueError("messages must be a non-empty list")
-
-        model = kwargs["model"]
+    def _parse_model_name(self, model: str):
         _, router, threshold = model.split("-", 2)
         try:
             threshold = float(threshold)
@@ -67,11 +67,14 @@ class Controller:
             raise RoutingError(
                 f"Invalid model {model}. Model name must be of the format 'router-[router name]-[threshold]."
             )
-        self._validate(router, float(threshold))
+        return router, threshold
 
+    def _get_routed_model_for_completion(
+        self, messages: list, router: str, threshold: float
+    ):
         # Look at the last turn for routing.
         # Our current routers were only trained on first turn data, so more research is required here.
-        prompt = kwargs["messages"][-1]["content"]
+        prompt = messages[-1]["content"]
         routed_model = self.routers[router].route(prompt, threshold, self.routed_pair)
 
         self.model_counts[router][routed_model] += 1
@@ -79,18 +82,41 @@ class Controller:
         return routed_model
 
     def route(self, prompt: str, router: str, threshold: float):
-        self._validate(router, threshold)
+        self._validate_router_threshold(router, threshold)
 
         return self.routers[router].route(prompt, threshold, self.routed_pair)
 
-    # Matches OpenAI's Chat Completions interface
-    def completion(self, **kwargs):
-        routed_model = self._get_routed_model_for_completion(kwargs)
-        kwargs["model"] = routed_model
+    # Matches OpenAI's Chat Completions interface, but also supports optional router and threshold args
+    # If model name is present, attempt to parse router and threshold using it, otherwise, use the router and threshold args
+    def completion(
+        self,
+        *,
+        router: Optional[str] = None,
+        threshold: Optional[float] = None,
+        **kwargs,
+    ):
+        if "model" in kwargs:
+            router, threshold = self._parse_model_name(kwargs["model"])
+
+        self._validate_router_threshold(router, threshold)
+        kwargs["model"] = self._get_routed_model_for_completion(
+            kwargs["messages"], router, threshold
+        )
         return completion(api_base=self.api_base, api_key=self.api_key, **kwargs)
 
-    # Matches OpenAI's Async Chat Completions interface
-    async def acompletion(self, **kwargs):
-        routed_model = self._get_routed_model_for_completion(kwargs)
-        kwargs["model"] = routed_model
+    # Matches OpenAI's Async Chat Completions interface, but also supports optional router and threshold args
+    async def acompletion(
+        self,
+        *,
+        router: Optional[str] = None,
+        threshold: Optional[float] = None,
+        **kwargs,
+    ):
+        if "model" in kwargs:
+            router, threshold = self._parse_model_name(kwargs["model"])
+
+        self._validate_router_threshold(router, threshold)
+        kwargs["model"] = self._get_routed_model_for_completion(
+            kwargs["messages"], router, threshold
+        )
         return await acompletion(api_base=self.api_base, api_key=self.api_key, **kwargs)
