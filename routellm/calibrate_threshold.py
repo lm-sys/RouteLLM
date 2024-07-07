@@ -9,8 +9,6 @@ from tqdm import tqdm
 from routellm.controller import Controller
 from routellm.routers.routers import ROUTER_CLS
 
-tqdm.pandas()
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(

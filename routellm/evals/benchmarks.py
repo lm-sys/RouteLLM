@@ -12,7 +12,6 @@ from routellm.routers.routers import Router
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 pd.options.mode.copy_on_write = True
-tqdm.pandas()
 
 
 class Benchmark(abc.ABC):
