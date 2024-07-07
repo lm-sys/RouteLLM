@@ -9,9 +9,9 @@ RouteLLM is a framework for serving and evaluating LLM routers.
 
 Our core features include:
 
-- Launch an OpenAI-compatible API that takes in user requests and routes them to the best model for that specific request using a single command.
+- Drop-in replacement for OpenAI client (or launch an OpenAI-compatible server) to route simpler queries to cheaper models.
 - Trained routers are provided out of the box, which we have shown to **reduce costs by up to 85%** on widely-used benchmarks such as MT Bench while maintaining **95% GPT-4 performance**.
-- Easily extend the framework to include new routers and benchmarks, and compare the performance of all routers with a single command.
+- Easily extend the framework to include new routers and compare the performance of routers across multiple benchmarks.
 
 ## Installation
 
@@ -19,7 +19,6 @@ Our core features include:
 ```
 pip install "routellm[serve,eval]"
 ```
-
 
 **From source**
 
@@ -31,40 +30,41 @@ pip install -e .[serve,eval]
 
 ## Quickstart
 
-Let's walkthrough setting up a RouteLLM server and pointing our existing OpenAI client to it.
+Let's walkthrough updating our existing OpenAI client to route queries between LLMs instead of only using one model.
 
-1. First, launch the RouteLLM server with the `mf` router:
+1. First, initialize the RouteLLM controller with the `mf` router:
+```python
+from routellm.controller import Controller
+
+os.environ["OPENAI_API_KEY"] = "sk-XXXXXX"
+# Replace with your model provider.
+os.environ["ANYSCALE_API_KEY"] = "esecret_XXXXXX"
+
+client = Controller(
+  routers=["mf"],
+  routed_pair=ModelPair(
+      strong="gpt-4-1106-preview",
+      # Mixtral 8x7B model provided by Anyscale
+      weak="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
+  ),
+)
 ```
-> export OPENAI_API_KEY=sk-XXXXXX
-> export ANYSCALE_API_KEY=esecret_XXXXXX
-> python -m routellm.openai_server --routers mf --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1 --config config.example.yaml
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
-```
-The server is now listening on `http://0.0.0.0:6060`. By default, the router will route between GPT-4 and Mixtral 8x7B, so you'll need to configure your API keys for OpenAI and a model provider for Mixtral 8x7B beforehand (we use Anyscale by setting the API key and pointing our weak model to it above).
+Above, we pick `gpt-4-1106-preview` as the strong model and `anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1` as the weak model, setting the API keys accordingly. You can route between different model pairs or providers by updating the model names as described in [Model Support](#model-support).
 
-You can also route between a different model pair by specifying the `--strong-model` and `--weak-model` flags (see [Model Support](#model-support) and [Routing to Local Models](examples/routing_to_local_models.md)).
+Want to route to local models? Check out [Routing to Local Models](examples/routing_to_local_models.md).
 
-2. The *cost threshold* controls the tradeoff between cost and quality for routing, and depends on both the router and dataset. Let's calibrate our threshold for 50% GPT-4 calls using public Chatbot Arena data:
+2. Each routing request contains a *cost threshold* that controls the tradeoff between cost and quality, and it depends on both the router and dataset. Let's calibrate our threshold for 50% GPT-4 calls using public Chatbot Arena data:
 ```
 > python -m routellm.calibrate_threshold --routers mf --strong-model-pct 0.5 --config config.example.yaml
-For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
+For 50.0% strong model calls for mf, threshold = 0.11593
 ```
-This means that I'll want to use `0.116` as my cost threshold to get approximately 50% of queries routed to GPT-4 (see [Threshold Calibration](#threshold-calibration)).
+This means that we want to use `0.11593` as the cost threshold to get approximately 50% of queries routed to GPT-4 (see [Threshold Calibration](#threshold-calibration)).
 
-3. Now, let's point our existing OpenAI client to RouteLLM and specify the router:
+3. Now, let's update the `model` field in our OpenAI client, specifying the router and cost threshold to use:
 ```python
-import openai
-
-client = openai.OpenAI(
-  base_url="http://localhost:6060/v1",
-  # Required but ignored
-  api_key="no_api_key"
-)
-...
 response = client.chat.completions.create(
-  # "Use the MF router with a threshold of 0.116"
-  model="router-mf-0.116",
+  # Use the MF router with a cost threshold of 0.11593
+  model="router-mf-0.11593",
   messages=[
     {"role": "user", "content": "Hello!"}
   ]
@@ -72,13 +72,22 @@ response = client.chat.completions.create(
 ```
 That's it! Now, requests with be routed between the strong and weak model depending on what is required, **saving costs while maintaining a high quality of responses**.
 
-Depending on your use case, you might want to consider hosting the server on the cloud, using a different model pair, and calibrating the thresholds based on the types of queries you will receive to improve performance.
+Depending on your use case, you might want to consider using a different model pair, modifying the configuration, or calibrating the thresholds based on your expected queries to improve performance.
 
-### Demo
+### Server & Demo
 
-Once the server is launched, you can also launch a local chat interface to experiment with the router to see how different requests are routed.
+Instead of using the Python SDK, you can also launch an OpenAI-compatible server that will work with any existing OpenAI client, using similar steps:
 ```
-python -m examples.router_chat --router mf --threshold 0.116
+> export OPENAI_API_KEY=sk-XXXXXX
+> export ANYSCALE_API_KEY=esecret_XXXXXX
+> python -m routellm.openai_server --routers mf --strong-model gpt-4-1106-preview --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
+```
+
+Once the server is launched, you can also launch a local router chatbot to experiment with how different messages are routed.
+```
+python -m examples.router_chat --router mf --threshold 0.11593
 ```
 
 <p align="center">
@@ -87,13 +96,13 @@ python -m examples.router_chat --router mf --threshold 0.116
 
 ### Model Support
 
-By default, GPT-4 and Mixtral 8x7B are used as the model pair for serving. To modify the model pair used, set them using the `--strong-model` and `--weak-model` flags. However, regardless of the model pair, an `OPENAI_API_KEY` is required for generating embeddings.
+By default, GPT-4 and Mixtral 8x7B are used as the model pair for serving. To modify the model pair used, set them using the `strong-model` and `weak-model` arguments or flags. However, regardless of the model pair, an `OPENAI_API_KEY` is required for generating embeddings.
 
-We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name using the `--strong-model` or `--weak-model` flag. Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
+We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name. Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
 
 See [Routing to Local Models](examples/routing_to_local_models.md) for a walkthrough of routing to local models using Ollama.
 
-Instructions for other popular providers:
+Instructions for setting up your API keys for popular providers:
 - [Anthropic](https://litellm.vercel.app/docs/providers/anthropic#api-keys)
 - [Gemini - Google AI Studio](https://litellm.vercel.app/docs/providers/gemini#sample-usage)
 - [Amazon Bedrock](https://litellm.vercel.app/docs/providers/bedrock#required-environment-variables)
@@ -113,11 +122,11 @@ Different LLMs vary widely in their costs and capabilities, which leads to a dil
 RouteLLM offers a lightweight OpenAI-compatible server for routing requests based on different routing strategies:
 
 ```
-python -m routellm.openai_server --routers mf --config config.example.yaml 
+python -m routellm.openai_server --routers mf --config config.example.yaml
 ```
 
 - `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `mf` (see below for the list of routers).
-- `--config` specifies the path to the configuration file for the routers (see Configuration section)
+- `--config` specifies the path to the configuration file for the routers. If unspecified, the server will default to using our best-performing configuration (see [Configuration](#configuration) section)
 
 For most use-cases, **we recommend the `mf` router** as we have evaluated it to be very strong and lightweight.
 
@@ -131,7 +140,7 @@ By default, we support calibrating thresholds based on the public [Chatbot Arena
 
 ```
 > python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.5 --config config.example.yaml
-For 50.0% strong model calls, calibrated threshold for mf: 0.11592505872249603
+For 50.0% strong model calls for mf, threshold = 0.11593
 ```
 
 This means that the threshold should be set to 0.1881 for the `mf` router so that approximately 50% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1159`.
@@ -173,7 +182,7 @@ While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8
 
 ## Configuration
 
-The configuration for all routers is specified in single YAML file, which is a top-level mapping from router name to the keyword arguments used for router initialization.
+The configuration for routers is specified in either the `config` argument for `Controller` or by passing in  the path for YAML file using `--config`. It is a top-level mapping from router name to the keyword arguments used for router initialization.
 
 An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
 
