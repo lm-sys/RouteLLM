@@ -11,7 +11,6 @@ from pandarallel import pandarallel
 from routellm.controller import Controller
 from routellm.evals.benchmarks import GSM8K, MMLU, MTBench
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
-from routellm.model_pair import ModelPair
 from routellm.routers.routers import ROUTER_CLS
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -195,24 +194,24 @@ if __name__ == "__main__":
     print(args)
 
     pandarallel.initialize(progress_bar=True, nb_workers=args.parallel)
-    routed_pair = ModelPair(strong=args.strong_model, weak=args.weak_model)
     controller = Controller(
         routers=args.routers,
         config=yaml.safe_load(open(args.config, "r")) if args.config else None,
-        routed_pair=routed_pair,
+        strong_model=args.strong_model,
+        weak_model=args.weak_model,
         progress_bar=True,
     )
 
     if args.benchmark == "mmlu":
         print("Running eval for full MMLU.")
         mmlu_domains = ALL_MMLU_DOMAINS
-        benchmark = MMLU(mmlu_domains, routed_pair, args.overwrite_cache)
+        benchmark = MMLU(mmlu_domains, controller.model_pair, args.overwrite_cache)
     elif args.benchmark == "mt-bench":
         print("Running eval for MT Bench.")
-        benchmark = MTBench(routed_pair, args.overwrite_cache)
+        benchmark = MTBench(controller.model_pair, args.overwrite_cache)
     elif args.benchmark == "gsm8k":
         print("Running eval for GSM8k.")
-        benchmark = GSM8K(routed_pair, args.overwrite_cache)
+        benchmark = GSM8K(controller.model_pair, args.overwrite_cache)
     else:
         raise ValueError(f"Invalid benchmark {args.benchmark}")
 
@@ -230,7 +229,9 @@ if __name__ == "__main__":
                     router_results.append(
                         {
                             "threshold": threshold,
-                            "strong_percentage": model_counts[routed_pair.strong]
+                            "strong_percentage": model_counts[
+                                controller.model_pair.strong
+                            ]
                             / total
                             * 100,
                             "accuracy": accuracy,
@@ -254,10 +255,18 @@ if __name__ == "__main__":
                 result = {
                     "method": str(router),
                     "threshold": threshold,
-                    "strong_percentage": model_counts[routed_pair.strong] / total * 100,
+                    "strong_percentage": model_counts[controller.model_pair.strong]
+                    / total
+                    * 100,
                     "accuracy": accuracy,
                 }
                 router_results.append(result)
             all_results = pd.concat([all_results, pd.DataFrame(router_results)])
 
-    generate_results(all_results, benchmark, args.benchmark, routed_pair, args.output)
+    generate_results(
+        all_results,
+        benchmark,
+        args.benchmark,
+        controller.model_pair.strong,
+        args.output,
+    )

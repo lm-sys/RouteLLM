@@ -43,11 +43,9 @@ os.environ["ANYSCALE_API_KEY"] = "esecret_XXXXXX"
 # client = OpenAI()
 client = Controller(
   routers=["mf"],
-  routed_pair=ModelPair(
-      strong="gpt-4-1106-preview",
-      # Mixtral 8x7B model provided by Anyscale
-      weak="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
-  ),
+  strong_model="gpt-4-1106-preview",
+  # Mixtral 8x7B model provided by Anyscale
+  weak_model="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
 )
 ```
 Above, we pick `gpt-4-1106-preview` as the strong model and `anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1` as the weak model, setting the API keys accordingly. You can route between different model pairs or providers by updating the model names as described in [Model Support](#model-support).

@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from openai import OpenAI
 
-from routellm.model_pair import ModelPair
+from routellm.controller import ModelPair
 
 """
 The core code is based heavily on the original SGLang implementation.

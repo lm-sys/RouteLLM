@@ -1,4 +1,5 @@
 from collections import defaultdict
+from dataclasses import dataclass
 from types import SimpleNamespace
 from typing import Any, Optional
 
@@ -6,7 +7,6 @@ import pandas as pd
 import tqdm
 from litellm import acompletion, completion
 
-from routellm.model_pair import ModelPair
 from routellm.routers.routers import ROUTER_CLS
 
 # Default config for routers augmented using golden label data from GPT-4.
@@ -32,17 +32,24 @@ class RoutingError(Exception):
     pass
 
 
+@dataclass
+class ModelPair:
+    strong: str
+    weak: str
+
+
 class Controller:
     def __init__(
         self,
         routers: list[str],
-        routed_pair: ModelPair,
-        progress_bar: bool = False,
+        strong_model: str,
+        weak_model: str,
         config: Optional[dict[str, dict[str, Any]]] = None,
         api_base: Optional[str] = None,
         api_key: Optional[str] = None,
+        progress_bar: bool = False,
     ):
-        self.routed_pair = routed_pair
+        self.model_pair = ModelPair(strong=strong_model, weak=weak_model)
         self.routers = {}
         self.api_base = api_base
         self.api_key = api_key
@@ -95,7 +102,7 @@ class Controller:
         # Look at the last turn for routing.
         # Our current routers were only trained on first turn data, so more research is required here.
         prompt = messages[-1]["content"]
-        routed_model = self.routers[router].route(prompt, threshold, self.routed_pair)
+        routed_model = self.routers[router].route(prompt, threshold, self.model_pair)
 
         self.model_counts[router][routed_model] += 1
 
@@ -117,7 +124,7 @@ class Controller:
     def route(self, prompt: str, router: str, threshold: float):
         self._validate_router_threshold(router, threshold)
 
-        return self.routers[router].route(prompt, threshold, self.routed_pair)
+        return self.routers[router].route(prompt, threshold, self.model_pair)
 
     # Matches OpenAI's Chat Completions interface, but also supports optional router and threshold args
     # If model name is present, attempt to parse router and threshold using it, otherwise, use the router and threshold args

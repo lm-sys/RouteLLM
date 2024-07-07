@@ -20,10 +20,8 @@ os.environ["OPENAI_API_KEY"] = "sk-XXXXXX"
 
 client = Controller(
   routers=["mf"],
-  routed_pair=ModelPair(
-      strong="gpt-4-1106-preview",
-      weak="ollama_chat/llama3",
-  ),
+  strong_model="gpt-4-1106-preview",
+  weak_model="ollama_chat/llama3",
 )
 ```
 
