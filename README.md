@@ -86,7 +86,7 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
 
-Once the server is launched, you can also launch a local router chatbot to experiment with how different messages are routed.
+Once the server is launched, you can host a local router chatbot to see how different messages are routed.
 ```
 python -m examples.router_chat --router mf --threshold 0.11593
 ```
@@ -97,11 +97,11 @@ python -m examples.router_chat --router mf --threshold 0.11593
 
 ### Model Support
 
-In the above examples, GPT-4 and Mixtral 8x7B are used as the model pair for routing. To modify the model pair used, set them using the `strong-model` and `weak-model` arguments.
+In the above examples, GPT-4 and Mixtral 8x7B are used as the model pair, but you can modify this using the `strong-model` and `weak-model` arguments.
 
 We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name. Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
 
-Note that regardless of the model pair used, an `OPENAI_API_KEY` will be required for generating embeddings for the `mf` and `sw_ranking` routers currently.
+Note that regardless of the model pair used, an `OPENAI_API_KEY` will be required to generate embeddings for both the `mf` and `sw_ranking` routers.
 
 Instructions for setting up your API keys for popular providers:
 - Local model with Ollama: see [this guide](examples/routing_to_local_models.md)
