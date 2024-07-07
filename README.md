@@ -34,6 +34,7 @@ Let's walkthrough replacing an existing OpenAI client to route queries between L
 
 1. First, initialize the RouteLLM controller with the `mf` router. By default, RouteLLM will use the best-performing config:
 ```python
+import os
 from routellm.controller import Controller
 
 os.environ["OPENAI_API_KEY"] = "sk-XXXXXX"
