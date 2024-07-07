@@ -56,5 +56,5 @@ if __name__ == "__main__":
         for router in args.routers:
             threshold = thresholds_df[router].quantile(q=1 - args.strong_model_pct)
             print(
-                f"For {args.strong_model_pct * 100}% strong model calls for {router}: threshold = {round(threshold, 5)}"
+                f"For {args.strong_model_pct * 100}% strong model calls for {router}, threshold = {round(threshold, 5)}"
             )
