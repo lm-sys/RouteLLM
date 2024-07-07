@@ -37,7 +37,7 @@ Let's walkthrough setting up a RouteLLM server and pointing our existing OpenAI 
 ```
 > export OPENAI_API_KEY=sk-XXXXXX
 > export ANYSCALE_API_KEY=esecret_XXXXXX
-> python -m routellm.openai_server --routers mf --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1 ---config config.example.yaml
+> python -m routellm.openai_server --routers mf --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1 --config config.example.yaml
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
