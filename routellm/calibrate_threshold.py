@@ -6,6 +6,7 @@ from datasets import Dataset, load_dataset
 from pandarallel import pandarallel
 from tqdm import tqdm
 
+from routellm.controller import Controller
 from routellm.routers.routers import ROUTER_CLS
 
 tqdm.pandas()
@@ -15,7 +16,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--battles_dataset", type=str, default="lmsys/lmsys-arena-human-preference-55k"
     )
-    parser.add_argument("--config", type=str, default="config.example.yaml")
+    parser.add_argument("--config", type=str, default=None)
     parser.add_argument(
         "--routers",
         nargs="+",
@@ -29,21 +30,22 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    config = yaml.safe_load(open(args.config, "r"))
-
     if args.task == "generate":
         pandarallel.initialize(progress_bar=True)
         battles_df = load_dataset(args.battles_dataset, split="train").to_pandas()
+        controller = Controller(
+            routers=args.routers,
+            config=yaml.safe_load(open(args.config, "r")) if args.config else None,
+            # This is not needed since we only calculate the win rate
+            routed_pair=None,
+            progress_bar=True,
+        )
+
         for router in args.routers:
-            router = ROUTER_CLS[router](**config.get(router, {}))
-            if router.NO_PARALLEL:
-                battles_df[str(router)] = battles_df["prompt"].progress_apply(
-                    lambda x: router.calculate_strong_win_rate(json.loads(x)[0])
-                )
-            else:
-                battles_df[str(router)] = battles_df["prompt"].parallel_apply(
-                    lambda x: router.calculate_strong_win_rate(json.loads(x)[0])
-                )
+            win_rates = controller.batch_calculate_win_rate(
+                battles_df["prompt"].apply(lambda x: json.loads(x)[0]), router
+            )
+            battles_df[str(router)] = win_rates
             Dataset.from_pandas(battles_df).push_to_hub(
                 "routellm/lmsys-arena-human-preference-55k-thresholds"
             )
@@ -54,5 +56,5 @@ if __name__ == "__main__":
         for router in args.routers:
             threshold = thresholds_df[router].quantile(q=1 - args.strong_model_pct)
             print(
-                f'{args.strong_model_pct * 100}% strong model calls for {router}: model="router-{router}-{threshold}"'
+                f"For {args.strong_model_pct * 100}% strong model calls for {router}: threshold = {round(threshold, 5)}"
             )
