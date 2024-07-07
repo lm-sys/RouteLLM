@@ -57,7 +57,7 @@ This means that I'll want to use `0.116` as my cost threshold to get approximate
 import openai
 
 client = openai.OpenAI(
-  base_url="https://localhost:6060/v1",
+  base_url="http://localhost:6060/v1",
   # Required but ignored
   api_key="no_api_key"
 )
