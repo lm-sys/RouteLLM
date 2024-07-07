@@ -8,6 +8,7 @@ import psutil
 import yaml
 from pandarallel import pandarallel
 
+from routellm.controller import Controller
 from routellm.evals.benchmarks import GSM8K, MMLU, MTBench
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
 from routellm.model_pair import ModelPair
@@ -195,6 +196,12 @@ if __name__ == "__main__":
 
     pandarallel.initialize(progress_bar=True, nb_workers=args.parallel)
     routed_pair = ModelPair(strong=args.strong_model, weak=args.weak_model)
+    controller = Controller(
+        args.routers,
+        yaml.safe_load(open(args.config, "r")),
+        routed_pair,
+        progress_bar=True,
+    )
 
     if args.benchmark == "mmlu":
         print("Running eval for full MMLU.")
@@ -209,19 +216,16 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Invalid benchmark {args.benchmark}")
 
-    config = yaml.safe_load(open(args.config, "r"))
-
     all_results = pd.DataFrame()
-    for router in args.routers:
+    for router in controller.routers:
         # Ensure reproducibility on a per-router basis
         random.seed(0)
-        router_config = config.get(router, {})
         # For non-deterministic routers like random, we average over multiple runs
         if router in ["random"]:
             router_results = []
             for i in range(args.random_iters):
                 for threshold, accuracy, model_counts, total in benchmark.evaluate(
-                    ROUTER_CLS[router](**router_config), args.num_results, True
+                    controller.routers[router], args.num_results, True
                 ):
                     router_results.append(
                         {
@@ -242,7 +246,7 @@ if __name__ == "__main__":
         else:
             router_results = []
             for threshold, accuracy, model_counts, total in benchmark.evaluate(
-                ROUTER_CLS[router](**router_config), args.num_results, False
+                controller.routers[router], args.num_results, False
             ):
                 print(f"Evaluating router: {router} with threshold {threshold}...")
                 pretty_print_results(threshold, accuracy, model_counts, total)
