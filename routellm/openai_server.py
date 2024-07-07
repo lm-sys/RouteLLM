@@ -36,11 +36,11 @@ async def lifespan(app):
 
     routed_pair = ModelPair(strong=args.strong_model, weak=args.weak_model)
     CONTROLLER = Controller(
-        args.routers,
-        yaml.safe_load(open(args.config, "r")),
-        routed_pair,
-        args.alt_base_url,
-        args.alt_api_key,
+        routers=args.routers,
+        config=yaml.safe_load(open(args.config, "r")) if args.config else None,
+        routed_pair=routed_pair,
+        alt_base_url=args.alt_base_url,
+        alt_api_key=args.alt_api_key,
         progress_bar=True,
     )
     yield
@@ -149,7 +149,7 @@ parser.add_argument(
     action="store_true",
 )
 parser.add_argument("--workers", type=int, default=0)
-parser.add_argument("--config", type=str)
+parser.add_argument("--config", type=str, default=None)
 parser.add_argument("--port", type=int, default=6060)
 parser.add_argument(
     "--routers",
