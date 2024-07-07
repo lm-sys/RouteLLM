@@ -32,7 +32,7 @@ pip install -e .[serve,eval]
 
 Let's walkthrough updating our existing OpenAI client to route queries between LLMs instead of only using one model.
 
-1. First, let's initialize the RouteLLM controller with the `mf` router. By default, RouteLLM will use the best-performing configuration:
+1. First, let's initialize the RouteLLM controller with the `mf` router. By default, RouteLLM will use the best-performing config:
 ```python
 from routellm.controller import Controller
 
@@ -64,7 +64,7 @@ This means that we want to use `0.11593` as the cost threshold to get approximat
 3. Now, let's update the `model` field in our OpenAI client, specifying the router and cost threshold to use:
 ```python
 response = client.chat.completions.create(
-  # Use the MF router with a cost threshold of 0.11593
+  # This tells RouteLLM to use the MF router with a cost threshold of 0.11593
   model="router-mf-0.11593",
   messages=[
     {"role": "user", "content": "Hello!"}
