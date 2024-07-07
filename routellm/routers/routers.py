@@ -135,8 +135,10 @@ class SWRankingRouter(Router):
         self,
         arena_battle_datasets,
         arena_embedding_datasets,
-        strong_model,
-        weak_model,
+        # This is the model pair for Elo calculations at inference time,
+        # and can be different from the model pair used for routing.
+        strong_model="gpt-4-1106-preview",
+        weak_model="mixtral-8x7b-instruct-v0.1",
         num_tiers=10,
     ):
         self.strong_model = strong_model
@@ -209,8 +211,10 @@ class MatrixFactorizationRouter(Router):
     def __init__(
         self,
         checkpoint_path,
-        strong_model,
-        weak_model,
+        # This is the model pair for scoring at inference time,
+        # and can be different from the model pair used for routing.
+        strong_model="gpt-4-1106-preview",
+        weak_model="mixtral-8x7b-instruct-v0.1",
         hidden_size=128,
         num_models=64,
         text_dim=1536,
