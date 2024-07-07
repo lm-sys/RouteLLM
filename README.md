@@ -32,7 +32,7 @@ pip install -e .[serve,eval]
 
 Let's walkthrough updating our existing OpenAI client to route queries between LLMs instead of only using one model.
 
-1. First, initialize the RouteLLM controller with the `mf` router:
+1. First, let's initialize the RouteLLM controller with the `mf` router. By default, RouteLLM will use the best-performing configuration:
 ```python
 from routellm.controller import Controller
 
@@ -96,13 +96,14 @@ python -m examples.router_chat --router mf --threshold 0.11593
 
 ### Model Support
 
-By default, GPT-4 and Mixtral 8x7B are used as the model pair for serving. To modify the model pair used, set them using the `strong-model` and `weak-model` arguments or flags. However, regardless of the model pair, an `OPENAI_API_KEY` is required for generating embeddings.
+In the above examples, GPT-4 and Mixtral 8x7B are used as the model pair for routing. To modify the model pair used, set them using the `strong-model` and `weak-model` arguments.
 
 We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat completions from a wide-range of open-source and closed models. In general, you need a setup an API key and point to the provider with the appropriate model name. Alternatively, you can also use **any OpenAI-compatible endpoint** by prefixing the model name with `openai/` using the `--alt-base-url` and `--alt-api-key` flags to point to the server.
 
-See [Routing to Local Models](examples/routing_to_local_models.md) for a walkthrough of routing to local models using Ollama.
+Note that regardless of the model pair used, an `OPENAI_API_KEY` will be required for generating embeddings for the `mf` and `sw_ranking` routers currently.
 
 Instructions for setting up your API keys for popular providers:
+- Local model with Ollama: see [this guide](examples/routing_to_local_models.md)
 - [Anthropic](https://litellm.vercel.app/docs/providers/anthropic#api-keys)
 - [Gemini - Google AI Studio](https://litellm.vercel.app/docs/providers/gemini#sample-usage)
 - [Amazon Bedrock](https://litellm.vercel.app/docs/providers/bedrock#required-environment-variables)
@@ -182,7 +183,7 @@ While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8
 
 ## Configuration
 
-The configuration for routers is specified in either the `config` argument for `Controller` or by passing in  the path for YAML file using `--config`. It is a top-level mapping from router name to the keyword arguments used for router initialization.
+The configuration for routers is specified in either the `config` argument for `Controller` or by passing in the path to a YAML file using the `--config` flag. It is a top-level mapping from router name to the keyword arguments used for router initialization.
 
 An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
 
