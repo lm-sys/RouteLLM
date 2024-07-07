@@ -10,7 +10,40 @@ ollama run llama3
 ```
 Now, the Ollama server will be running at `http://localhost:11434/v1`.
 
-2. Launch RouteLLM server with the `mf` router (recommended):
+Next, you have 2 options depending on your use case: either replacing an existing OpenAI client in your Python code, or launching an OpenAI-compatible server.
+
+## Option A: Replace existing OpenAI client
+
+2. Create a RouteLLM controller with the `mf` router, specifying the local Llama 3 8B model as the weak model:
+```python
+os.environ["OPENAI_API_KEY"] = "sk-XXXXXX"
+
+client = Controller(
+  routers=["mf"],
+  routed_pair=ModelPair(
+      strong="gpt-4-1106-preview",
+      weak="ollama_chat/llama3",
+  ),
+)
+```
+
+3. Update the `model` field in your existing OpenAI client code:
+```python
+response = client.chat.completions.create(
+  # Use the MF router with a threshold of 0.116
+  model="router-mf-0.11593",
+  messages=[
+    {"role": "user", "content": "Hello!"}
+  ]
+)
+```
+In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.11593` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
+
+And that's it! Now, our requests will be routed between GPT-4 for more difficult queries and our local Llama-3 8B model for simpler queries.
+
+## Option B: Launch an OpenAI-compatible Server
+
+2. Launch an OpenAI-compatible with the `mf` router:
 ```
 > export OPENAI_API_KEY=sk-...
 > python -m routellm.openai_server --routers mf --weak-model ollama_chat/llama3 --config.example.yaml
@@ -25,18 +58,17 @@ import openai
 
 client = openai.OpenAI(
   base_url="https://localhost:6060/v1",
-  # Required but ignored
   api_key="no_api_key"
 )
 ...
 response = client.chat.completions.create(
-  # "Use the MF router with a threshold of 0.116"
-  model="router-mf-0.116",
+  # Use the MF router with a threshold of 0.11593
+  model="router-mf-0.11593",
   messages=[
     {"role": "user", "content": "Hello!"}
   ]
 )
 ```
-In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.116` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
+In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.11593` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
 
 And that's it! Now, our requests will be routed between GPT-4 for more difficult queries and our local Llama-3 8B model for simpler queries.
