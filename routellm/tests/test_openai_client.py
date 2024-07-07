@@ -1,7 +1,10 @@
 import argparse
+import os
 
 from routellm.controller import Controller
 from routellm.routers.routers import ROUTER_CLS
+
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 system_content = (
     "You are a helpful assistant. Respond to the questions as best as you can."
