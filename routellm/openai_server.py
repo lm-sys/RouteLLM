@@ -39,8 +39,8 @@ async def lifespan(app):
         routers=args.routers,
         config=yaml.safe_load(open(args.config, "r")) if args.config else None,
         routed_pair=routed_pair,
-        alt_base_url=args.alt_base_url,
-        alt_api_key=args.alt_api_key,
+        api_base=args.base_url,
+        api_key=args.api_key,
         progress_bar=True,
     )
     yield
@@ -159,14 +159,14 @@ parser.add_argument(
     choices=list(ROUTER_CLS.keys()),
 )
 parser.add_argument(
-    "--alt-base-url",
-    help="The base URL used for LLM requests",
+    "--base-url",
+    help="The base URL used for all LLM requests",
     type=str,
     default=None,
 )
 parser.add_argument(
-    "--alt-api-key",
-    help="The API key used for LLM requests",
+    "--api-key",
+    help="The API key used for all LLM requests",
     type=str,
     default=None,
 )
