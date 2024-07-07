@@ -2,6 +2,7 @@ from collections import defaultdict
 from types import SimpleNamespace
 from typing import Any, Optional
 
+import pandas as pd
 import tqdm
 from litellm import acompletion, completion
 
@@ -80,6 +81,19 @@ class Controller:
         self.model_counts[router][routed_model] += 1
 
         return routed_model
+
+    # Mainly used for evaluations
+    def batch_calculate_win_rate(
+        self,
+        prompts: pd.Series,
+        router: str,
+    ):
+        self._validate_router_threshold(router, 0)
+        router_instance = self.routers[router]
+        if router_instance.NO_PARALLEL:
+            return prompts.progress_apply(router_instance.calculate_strong_win_rate)
+        else:
+            return prompts.parallel_apply(router_instance.calculate_strong_win_rate)
 
     def route(self, prompt: str, router: str, threshold: float):
         self._validate_router_threshold(router, threshold)
