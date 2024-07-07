@@ -10,11 +10,11 @@ ollama run llama3
 ```
 Now, the Ollama server will be running at `http://localhost:11434/v1`.
 
-Next, you have 2 options depending on your use case: either replacing an existing OpenAI client in your Python code, or launching an OpenAI-compatible server.
+Next, you have 2 options depending on your use case: either replace the OpenAI client in your Python code, or launch an OpenAI-compatible server.
 
 ## Option A: Replace existing OpenAI client
 
-2. Create a RouteLLM controller with the `mf` router, specifying the local Llama 3 8B model as the weak model:
+2. Create a RouteLLM controller with the `mf` router, specifying the local Llama 3 8B as the weak model:
 ```python
 os.environ["OPENAI_API_KEY"] = "sk-XXXXXX"
 
@@ -27,10 +27,9 @@ client = Controller(
 )
 ```
 
-3. Update the `model` field in your existing OpenAI client code:
+3. Update the `model` field in when generating completions:
 ```python
 response = client.chat.completions.create(
-  # Use the MF router with a threshold of 0.116
   model="router-mf-0.11593",
   messages=[
     {"role": "user", "content": "Hello!"}
@@ -43,14 +42,14 @@ And that's it! Now, our requests will be routed between GPT-4 for more difficult
 
 ## Option B: Launch an OpenAI-compatible Server
 
-2. Launch an OpenAI-compatible with the `mf` router:
+2. Launch a server with the `mf` router:
 ```
 > export OPENAI_API_KEY=sk-...
 > python -m routellm.openai_server --routers mf --weak-model ollama_chat/llama3 --config.example.yaml
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
-The server is now listening on `http://0.0.0.0:6060`. We use the `--weak-model` flag to use point to the Llama 3 instance that is running locally on our machine.
+The server is now listening on `http://0.0.0.0:6060`. We use the `--weak-model` flag to use point to the Llama 3 model that is running locally on our machine.
 
 3. Point your OpenAI client to the RouteLLM server:
 ```python
@@ -62,7 +61,6 @@ client = openai.OpenAI(
 )
 ...
 response = client.chat.completions.create(
-  # Use the MF router with a threshold of 0.11593
   model="router-mf-0.11593",
   messages=[
     {"role": "user", "content": "Hello!"}
