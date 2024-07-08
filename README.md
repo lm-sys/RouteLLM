@@ -32,20 +32,18 @@ pip install -e .[serve,eval]
 
 Let's walkthrough replacing an existing OpenAI client to route queries between LLMs instead of using only a single model.
 
-1. First, initialize the RouteLLM controller with the `mf` router. By default, RouteLLM will use the best-performing config:
+1. First, let's replace our OpenAI client by initializing the RouteLLM controller with the `mf` router. By default, RouteLLM will use the best-performing config:
 ```python
 import os
 from routellm.controller import Controller
 
 os.environ["OPENAI_API_KEY"] = "sk-XXXXXX"
-# Replace with your model provider.
+# Replace with your model provider, we use Anyscale's Mixtral here.
 os.environ["ANYSCALE_API_KEY"] = "esecret_XXXXXX"
 
-# client = OpenAI()
 client = Controller(
   routers=["mf"],
   strong_model="gpt-4-1106-preview",
-  # Mixtral 8x7B model provided by Anyscale
   weak_model="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
 )
 ```
@@ -103,14 +101,14 @@ We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat comple
 Note that regardless of the model pair used, an `OPENAI_API_KEY` will currently still be required to generate embeddings for the `mf` and `sw_ranking` routers.
 
 Instructions for setting up your API keys for popular providers:
-- [Local model with Ollama]: see [this guide](examples/routing_to_local_models.md)
+- Local models with Ollama: see [this guide](examples/routing_to_local_models.md)
 - [Anthropic](https://litellm.vercel.app/docs/providers/anthropic#api-keys)
 - [Gemini - Google AI Studio](https://litellm.vercel.app/docs/providers/gemini#sample-usage)
 - [Amazon Bedrock](https://litellm.vercel.app/docs/providers/bedrock#required-environment-variables)
 - [Together AI](https://litellm.vercel.app/docs/providers/togetherai#api-keys)
 - [Anyscale Endpoints](https://litellm.vercel.app/docs/providers/anyscale#api-key)
 
-For other model providers, find instructions [here](https://litellm.vercel.app/docs/providers). 
+For other model providers, find instructions [here](https://litellm.vercel.app/docs/providers) or raise an issue.
 
 ## Motivation
 
@@ -171,7 +169,7 @@ By default, GPT-4 and Mixtral are used as the model pair for evaluation. To modi
 Out of the box, RouteLLM supports 4 routers trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair.
 
 The full list of routers:
-1. `mf`: Uses a matrix factorization model trained on the preference data. (recommended)
+1. `mf`: Uses a matrix factorization model trained on the preference data (recommended).
 2. `sw_ranking`: Uses a weighted Elo calculation for routing, where each vote is weighted according to how similar it is to the user's prompt.
 3. `bert`: Uses a BERT classifier trained on the preference data.
 4. `causal_llm`: Uses a LLM-based classifier tuned on the preference data.
