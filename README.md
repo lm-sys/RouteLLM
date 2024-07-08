@@ -51,12 +51,12 @@ Above, we pick `gpt-4-1106-preview` as the strong model and `anyscale/mistralai/
 
 Want to route to local models? Check out [Routing to Local Models](examples/routing_to_local_models.md).
 
-2. Each routing request contains a *cost threshold* that controls the tradeoff between cost and quality, and this depends on both the router used and the queries received. Let's calibrate our threshold for 50% GPT-4 calls using public Chatbot Arena data:
+2. Each routing request has a *cost threshold* that controls the tradeoff between cost and quality. We should calibrate this based on the types of queries we receive to maximize routing performance. As an example, let's calibrate our threshold for 50% GPT-4 calls using data from Chatbot Arena.
 ```
 > python -m routellm.calibrate_threshold --routers mf --strong-model-pct 0.5 --config config.example.yaml
 For 50.0% strong model calls for mf, threshold = 0.11593
 ```
-This means that we want to use `0.11593` as the cost threshold to get approximately 50% of queries routed to GPT-4 (see [Threshold Calibration](#threshold-calibration) for details).
+This means that we want to use `0.11593` as our threshold so that approximately 50% of all queries (those that require GPT-4 the most) will be routed to it (see [Threshold Calibration](#threshold-calibration) for details).
 
 3. Now, let's update the `model` field when we generate completions to specify the router and threshold to use:
 ```python
