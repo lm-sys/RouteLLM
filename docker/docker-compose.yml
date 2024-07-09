@@ -1,0 +1,60 @@
+services:
+  routllm:
+    restart: unless-stopped
+    # edit below to run on a container runtime other than nvidia-container-runtime.
+    # not yet tested with rocm/AMD GPUs
+    # Comment out the "deploy" section to run on CPU only
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu, utility, compute]
+              count: 1 # Currently routllm can only handle one gpu device!!!
+    # Uncomment the image line to pull the image from the container registry.
+    # Also, comment out the build section.
+    #image: ghcr.io/lm-sys/routllm:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "6060:6060"
+    volumes:
+      - ./hf:/root/.cache/huggingface
+    environment:
+      #- OPENAI_API_KEY_FILE=/run/secrets/openai_api_key
+      #- OPENAI_API_KEY=sk-...
+      #- ANYSCALE_API_KEY_FILE=/run/secrets/anyscale_api_key
+      #- ANYSCALE_API_KEY=esecret_XXXXXX
+      #- ANTHROPIC_API_KEY_FILE=/run/secrets/anthropic_api_key
+      #- ANTHROPIC_API_KEY=api-key
+      #- GEMINI_API_KEY_FILE=/run/secrets/gemini_api_key
+      #- GEMINI_API_KEY=api-key
+      #- TOGETHERAI_API_KEY_FILE=/run/secrets/togetherai_api_key
+      #- TOGETHERAI_API_KEY=api-key
+
+      # bedrock (_FILE is supported)
+      #- AWS_ACCESS_KEY_ID=...
+      #- AWS_SECRET_ACCESS_KEY=...
+      #- AWS_REGION_NAME=...
+      - SERVER_ARGS=--routers mf --strong-model gpt-4o --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1
+
+    # Only required if you are using a secret file
+    #secrets:
+    #  - openai_api_key
+    #  - anyscale_api_key
+    #  - anthropic_api_key
+    #  - gemini_api_key
+    #  - togetherai_api_key
+# Only required if you are using a secret file
+#secrets:
+#openai_api_key:
+#  file: <path to your openai api key file>
+#anyscale_api_key:
+#  file: <path to your anyscale api key file>
+#anthropic_api_key:
+#  file: <path to your anthropic api key file>
+#gemini_api_key:
+#  file: <path to your gemini api key file>
+#togetherai_api_key:
+#  file: <path to your togetherai api key file>
