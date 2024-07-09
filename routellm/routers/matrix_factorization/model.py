@@ -79,10 +79,11 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
         text_dim,
         num_classes,
         use_proj,
+        collapse_linear=False,
     ):
         super().__init__()
-        self._name = "TextMF"
         self.use_proj = use_proj
+        self.collapse_linear = collapse_linear  # collapse the linear transformations into a single linear layer
         self.P = torch.nn.Embedding(num_models, dim)
 
         self.embedding_model = "text-embedding-3-small"
@@ -104,19 +105,20 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
         return self.P.weight.device
 
     def forward(self, model_id, prompt):
-        model_id = torch.tensor(model_id, dtype=torch.long).to(self.get_device())
-
-        model_embed = self.P(model_id)
-        model_embed = torch.nn.functional.normalize(model_embed, p=2, dim=1)
-
         prompt_embed = (
             OPENAI_CLIENT.embeddings.create(input=[prompt], model=self.embedding_model)
             .data[0]
             .embedding
         )
         prompt_embed = torch.tensor(prompt_embed, device=self.get_device())
-        prompt_embed = self.text_proj(prompt_embed)
+        model_id = torch.tensor(model_id, dtype=torch.long).to(self.get_device())
 
+        if self.collapse_linear:
+            upscaled_model_embed = self.precompute_upscaled_embedding(model_id)
+            return upscaled_model_embed @ prompt_embed.squeeze(-1)
+
+        model_embed = self.P(model_id)
+        prompt_embed = self.text_proj(prompt_embed)
         return self.classifier(model_embed * prompt_embed).squeeze()
 
     @torch.no_grad()
@@ -127,3 +129,22 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
 
     def load(self, path):
         self.load_state_dict(torch.load(path))
+
+    def post_process_weight(self):
+        # since the current model consist of only linear transformations
+        # we can collapse the linear transformations into a single linear layer
+        # https://github.com/lm-sys/RouteLLM/issues/9
+        num_models = self.P.weight.shape[0]
+        text_dim = self.text_proj[0].weight.shape[1]
+
+        self.P.weight.data = torch.nn.functional.normalize(
+            self.P.weight.data, p=2, dim=1
+        )
+
+        if self.collapse_linear:
+            self.precompute_upscaled_embedding = torch.nn.Embedding(
+                num_models, text_dim
+            )
+            self.precompute_upscaled_embedding.weight.data = (
+                self.P.weight * self.classifier[0].weight.data
+            ) @ self.text_proj[0].weight.data

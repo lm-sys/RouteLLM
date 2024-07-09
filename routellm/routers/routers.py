@@ -231,6 +231,7 @@ class MatrixFactorizationRouter(Router):
             num_classes=num_classes,
             use_proj=use_proj,
         )
+        self.model.post_process_weight()
         self.model = self.model.eval().to(device)
         self.strong_model_id = MODEL_IDS[strong_model]
         self.weak_model_id = MODEL_IDS[weak_model]
