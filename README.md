@@ -1,6 +1,6 @@
 # RouteLLM
 
-RouteLLM is a framework for serving and evaluating LLM routers.  
+RouteLLM is a framework for serving and evaluating LLM routers, developed through a collaboration between LMSys and Anyscale.
 [ [LMSys Blog](http://lmsys.org/blog/2024-07-01-routellm/) ] [[Anyscale Blog](https://www.anyscale.com/blog/building-an-llm-router-for-high-quality-and-cost-effective-responses) ] [ [Paper](https://arxiv.org/abs/2406.18665) ]
 
 <p align="center">
@@ -177,7 +177,9 @@ The full list of routers:
 
 While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well. Therefore, you can replace the model pair used for routing without having to retrain these models!
 
- For the full details, refer to our [paper](https://arxiv.org/abs/2406.18665).
+We provide detailed instructions on how to train the LLM-based classifier in the following [notebook](https://github.com/anyscale/llm-router/blob/main/README.ipynb).
+
+For the full details, refer to our [paper](https://arxiv.org/abs/2406.18665).
 
 ## Configuration
 
