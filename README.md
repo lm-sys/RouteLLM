@@ -1,7 +1,7 @@
 # RouteLLM
 
 RouteLLM is a framework for serving and evaluating LLM routers.  
-[ [Blog](http://lmsys.org/blog/2024-07-01-routellm/) ] [ [Paper](https://arxiv.org/abs/2406.18665) ]
+[ [LMSys Blog](http://lmsys.org/blog/2024-07-01-routellm/) ] [[Anyscale Blog](https://www.anyscale.com/blog/building-an-llm-router-for-high-quality-and-cost-effective-responses) ] [ [Paper](https://arxiv.org/abs/2406.18665) ]
 
 <p align="center">
   <img src="assets/router.png" width="50%" />
