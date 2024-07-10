@@ -1,6 +1,6 @@
 # RouteLLM
 
-RouteLLM is a framework for serving and evaluating LLM routers, developed through a collaboration between LMSys and Anyscale.
+RouteLLM is a framework for serving and evaluating LLM routers, developed through a collaboration between [LMSys](https://lmsys.org/) and [Anyscale](https://www.anyscale.com/).
 [ [LMSys Blog](http://lmsys.org/blog/2024-07-01-routellm/) ] [[Anyscale Blog](https://www.anyscale.com/blog/building-an-llm-router-for-high-quality-and-cost-effective-responses) ] [ [Paper](https://arxiv.org/abs/2406.18665) ]
 
 <p align="center">
