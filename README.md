@@ -1,8 +1,8 @@
 # RouteLLM
 
-RouteLLM is a framework for serving and evaluating LLM routers, developed through a collaboration between [LMSys](https://lmsys.org/) and [Anyscale](https://www.anyscale.com/).
+RouteLLM is a framework for serving and evaluating LLM routers.
 
-[ [LMSys Blog](http://lmsys.org/blog/2024-07-01-routellm/) ] [[Anyscale Blog](https://www.anyscale.com/blog/building-an-llm-router-for-high-quality-and-cost-effective-responses) ] [ [Paper](https://arxiv.org/abs/2406.18665) ]
+[ [Blog](http://lmsys.org/blog/2024-07-01-routellm/) ] [ [Paper](https://arxiv.org/abs/2406.18665) ]
 
 <p align="center">
   <img src="assets/router.png" width="50%" />
@@ -117,6 +117,8 @@ Different LLMs vary widely in their costs and capabilities, which leads to a dil
 
 *LLM routing* offers a solution to this. We introduce a router that looks at queries and routes simpler queries to smaller, cheaper models, saving costs while maintaining quality. We focus on routing between 2 models: a stronger, more expensive model and a cheaper but weaker model. Each request is also associated with a _cost threshold_ that determines the cost-quality tradeoff of that request - a higher cost threshold leads to lower cost but may lead to lower-quality responses.
 
+The research in this repository was conducted in [collaboration with Anyscale](https://www.anyscale.com/blog/building-an-llm-router-for-high-quality-and-cost-effective-responses), and we are grateful for their help and support.
+
 ## Server
 
 RouteLLM offers a lightweight OpenAI-compatible server for routing requests based on different routing strategies:
@@ -178,7 +180,7 @@ The full list of routers:
 
 While these routers have been trained on the `gpt-4-1106-preview` and `mixtral-8x7b-instruct-v0.1` model pair, we have found that these routers generalize well to other strong and weak model pairs as well. Therefore, you can replace the model pair used for routing without having to retrain these models!
 
-We provide detailed instructions on how to train the LLM-based classifier in the following [notebook](https://github.com/anyscale/llm-router/blob/main/README.ipynb).
+We also provide detailed instructions on how to train the LLM-based classifier in the following [notebook](https://github.com/anyscale/llm-router/blob/main/README.ipynb).
 
 For the full details, refer to our [paper](https://arxiv.org/abs/2406.18665).
 
