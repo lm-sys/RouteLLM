@@ -11,7 +11,8 @@ RouteLLM is a framework for serving and evaluating LLM routers.
 Our core features include:
 
 - Drop-in replacement for OpenAI's client (or launch an OpenAI-compatible server) to route simpler queries to cheaper models.
-- Trained routers are provided out of the box, which we have shown to **reduce costs by up to 85%** while maintaining **95% GPT-4 performance** on widely-used benchmarks like MT Bench. Benchmarks also demonstrate that they achieve the same performance as commercial offerings while being >40% cheaper. 
+- Trained routers are provided out of the box, which we have shown to **reduce costs by up to 85%** while maintaining **95% GPT-4 performance** on widely-used benchmarks like MT Bench.
+- Benchmarks also demonstrate that these routers achieve the same performance as commercial offerings while being **>40% cheaper**. 
 - Easily extend the framework to include new routers and compare the performance of routers across multiple benchmarks.
 
 ## Installation
