@@ -152,7 +152,7 @@ However, note that because we calibrate the thresholds based on an existing data
 
 ## Evaluation
 
-RouteLLM also includes a evaluation framework to measure the performance of different routing strategies on benchmarks.
+RouteLLM also includes an evaluation framework to measure the performance of different routing strategies on benchmarks.
 
 To evaluate a router on a benchmark, you can use the following command:
 ```
