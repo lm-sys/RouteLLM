@@ -217,9 +217,10 @@ class MatrixFactorizationRouter(Router):
         weak_model="mixtral-8x7b-instruct-v0.1",
         hidden_size=128,
         num_models=64,
-        text_dim=1536,
+        text_dim=768,
         num_classes=1,
         use_proj=True,
+        embedding_model="all-mpnet-base-v2",
     ):
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -230,7 +231,9 @@ class MatrixFactorizationRouter(Router):
             text_dim=text_dim,
             num_classes=num_classes,
             use_proj=use_proj,
+            embedding_model=embedding_model,
         )
+
         self.model.post_process_weight()
         self.model = self.model.eval().to(device)
         self.strong_model_id = MODEL_IDS[strong_model]
