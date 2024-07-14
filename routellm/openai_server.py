@@ -5,8 +5,10 @@ It current only supports Chat Completions: https://platform.openai.com/docs/api-
 
 import argparse
 import asyncio
+import json
 import logging
 import os
+import re
 import time
 from collections import defaultdict
 from typing import AsyncGenerator, Dict, List, Literal, Optional, Union
@@ -16,10 +18,13 @@ import shortuuid
 import tqdm
 import uvicorn
 import yaml
+from fastapi import Response
 from fastapi.concurrency import asynccontextmanager
 from fastapi.responses import JSONResponse, StreamingResponse
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
+from regex import R
+from starlette.background import BackgroundTask
 
 from routellm.routers.routers import ROUTER_CLS
 
@@ -46,6 +51,31 @@ async def lifespan(app):
 
 
 app = fastapi.FastAPI(lifespan=lifespan)
+logging.basicConfig(filename="info.log", level=logging.DEBUG)
+
+
+def log_info(req_body, res_body):
+    logging.info(req_body)
+    logging.info(res_body)
+
+
+@app.middleware("http")
+async def some_middleware(request, call_next):
+    req_body = await request.body()
+    response = await call_next(request)
+
+    res_body = b""
+    async for chunk in response.body_iterator:
+        res_body += chunk
+
+    task = BackgroundTask(log_info, req_body, res_body)
+    return Response(
+        content=res_body,
+        status_code=response.status_code,
+        headers=dict(response.headers),
+        media_type=response.media_type,
+        background=task,
+    )
 
 
 class ErrorResponse(BaseModel):
@@ -107,7 +137,11 @@ class ChatCompletionResponse(BaseModel):
     usage: UsageInfo
 
 
-async def create_completion(model, prompt, **kwargs):
+def remove_model_name(content: str) -> str:
+    """Remove the model name from the start of the content."""
+    return re.sub(r'^\s*\[.*?\]\s*', '', content)
+
+async def create_completion(model, prompt, messages, **kwargs):
     temperature = kwargs["temperature"]
     stream = kwargs.get("stream", False)
 
@@ -116,25 +150,43 @@ async def create_completion(model, prompt, **kwargs):
     else:
         client = alt_client
 
+    # Remove model names from previous messages
+    cleaned_messages = [
+        {**msg, "content": remove_model_name(msg["content"])}
+        for msg in messages
+    ]
+
     logging.info(
         f"Creating completion for model: {model}, temperature: {temperature}, prompt: {prompt[:50]}"
     )
     response = await client.chat.completions.create(
+        messages=cleaned_messages,
         **kwargs,
         model=model,
     )
 
     if stream:
-        return stream_response(response)
+        return stream_response(response, model)
     else:
-        return response
+        return prepend_model_name(response, model)
 
-
-async def stream_response(response) -> AsyncGenerator:
+async def stream_response(response, model_name) -> AsyncGenerator:
+    full_content = f"[{model_name}] "
+    first_chunk = True
     async for chunk in response:
-        yield f"data: {chunk.model_dump_json()}\n\n"
+        if chunk.choices[0].delta.content is not None:
+            if first_chunk:
+                chunk.choices[0].delta.content = full_content + chunk.choices[0].delta.content
+                first_chunk = False
+            full_content += chunk.choices[0].delta.content
+            yield f"data: {json.dumps(chunk.model_dump())}\n\n"
+    
     yield "data: [DONE]\n\n"
 
+def prepend_model_name(response, model_name):
+    for choice in response.choices:
+        choice.message.content = f"[{model_name}] {choice.message.content}"
+    return response
 
 @app.post("/v1/chat/completions")
 async def create_chat_completion(request: ChatCompletionRequest):
@@ -184,6 +236,7 @@ async def create_chat_completion(request: ChatCompletionRequest):
         )
     count[router][routed_model] += 1
     logging.info(f"Model Counts: {dict(count)}")
+    print(f"Model Counts: {dict(count)}")
 
     generator = await create_completion(
         routed_model,
