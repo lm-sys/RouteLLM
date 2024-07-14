@@ -92,6 +92,7 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
                 Dimension of the text embeddings
                 1536 for OpenAI's text-embedding-3-small
                 768 for all-mpnet-base-v2
+                1024 for infgrad/stella_en_400M_v5
             num_classes:
                 Number of classes, default to 1, output a scalar
             use_proj:
@@ -141,6 +142,15 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
             )
         elif self.embedding_model == "all-mpnet-base-v2":
             prompt_embed = self._embedding_model.encode([prompt])
+        elif self.embedding_model == "infgrad/stella_en_400M_v5":
+            prompt_embed = self._embedding_model.encode(
+                [prompt], prompt_name="s2s_query"
+            )
+        else:
+            raise ValueError(
+                f"Unsupported embedding model {self.embedding_model}, "
+                "should be one of text-embedding-3-small, all-mpnet-base-v2, infgrad/stella_en_400M_v5"
+            )
 
         prompt_embed = torch.tensor(prompt_embed, device=self.get_device())
         model_id = torch.tensor(model_id, dtype=torch.long).to(self.get_device())
@@ -173,10 +183,15 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
             self.P.weight.data, p=2, dim=1
         )
 
-        if self.embedding_model == "all-mpnet-base-v2":
+        if (
+            self.embedding_model == "all-mpnet-base-v2"
+            or self.embedding_model == "infgrad/stella_en_400M_v5"
+        ):
             from sentence_transformers import SentenceTransformer
 
-            self._embedding_model = SentenceTransformer(self.embedding_model)
+            self._embedding_model = SentenceTransformer(
+                self.embedding_model, trust_remote_code=True
+            ).to("cuda")
 
         if self.collapse_linear:
             self.precompute_upscaled_embedding = torch.nn.Embedding(
