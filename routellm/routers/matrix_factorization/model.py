@@ -74,18 +74,46 @@ MODEL_IDS = {
 class MFModel(torch.nn.Module, PyTorchModelHubMixin):
     def __init__(
         self,
-        dim,
-        num_models,
-        text_dim,
-        num_classes,
-        use_proj,
+        dim=128,
+        num_models=64,
+        text_dim=768,
+        num_classes=1,
+        use_proj=True,
+        collapse_linear=False,
+        embedding_model="all-mpnet-base-v2",
     ):
+        """
+        Args:
+            dim:
+                Dimension of the model embeddings, default to 128
+            num_models:
+                Number of models, default to 64
+            text_dim:
+                Dimension of the text embeddings
+                1536 for OpenAI's text-embedding-3-small
+                768 for all-mpnet-base-v2
+                1024 for infgrad/stella_en_400M_v5
+            num_classes:
+                Number of classes, default to 1, output a scalar
+            use_proj:
+                Whether to use projection for the text embeddings
+                This is set to be True in our pretrained models for better performance
+            collapse_linear:
+                Whether to collapse the linear transformations into a single linear layer
+                Since the current pretrained models only consist of Linear layers,
+                we can collapse them into a single layer for faster inference
+                See https://github.com/lm-sys/RouteLLM/issues/9
+            embedding_model:
+                Text embedding model for the prompt, should be the same as the one used in training
+                Use all-mpnet-base-v2 to avoid OpenAI's key, however, slightly worse performance
+                Use OpenAI's text-embedding-3-small for better performance
+        """
         super().__init__()
-        self._name = "TextMF"
         self.use_proj = use_proj
+        self.collapse_linear = collapse_linear  # collapse the linear transformations into a single linear layer
         self.P = torch.nn.Embedding(num_models, dim)
 
-        self.embedding_model = "text-embedding-3-small"
+        self.embedding_model = embedding_model
 
         if self.use_proj:
             self.text_proj = torch.nn.Sequential(
@@ -104,19 +132,35 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
         return self.P.weight.device
 
     def forward(self, model_id, prompt):
+        if self.embedding_model == "text-embedding-3-small":
+            prompt_embed = (
+                OPENAI_CLIENT.embeddings.create(
+                    input=[prompt], model=self.embedding_model
+                )
+                .data[0]
+                .embedding
+            )
+        elif self.embedding_model == "all-mpnet-base-v2":
+            prompt_embed = self._embedding_model.encode([prompt])
+        elif self.embedding_model == "infgrad/stella_en_400M_v5":
+            prompt_embed = self._embedding_model.encode(
+                [prompt], prompt_name="s2s_query"
+            )
+        else:
+            raise ValueError(
+                f"Unsupported embedding model {self.embedding_model}, "
+                "should be one of text-embedding-3-small, all-mpnet-base-v2, infgrad/stella_en_400M_v5"
+            )
+
+        prompt_embed = torch.tensor(prompt_embed, device=self.get_device())
         model_id = torch.tensor(model_id, dtype=torch.long).to(self.get_device())
 
+        if self.collapse_linear:
+            upscaled_model_embed = self.precompute_upscaled_embedding(model_id)
+            return upscaled_model_embed @ prompt_embed.squeeze(-1)
+
         model_embed = self.P(model_id)
-        model_embed = torch.nn.functional.normalize(model_embed, p=2, dim=1)
-
-        prompt_embed = (
-            OPENAI_CLIENT.embeddings.create(input=[prompt], model=self.embedding_model)
-            .data[0]
-            .embedding
-        )
-        prompt_embed = torch.tensor(prompt_embed, device=self.get_device())
         prompt_embed = self.text_proj(prompt_embed)
-
         return self.classifier(model_embed * prompt_embed).squeeze()
 
     @torch.no_grad()
@@ -127,3 +171,32 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
 
     def load(self, path):
         self.load_state_dict(torch.load(path))
+
+    def post_process_weight(self):
+        # since the current model consist of only linear transformations
+        # we can collapse the linear transformations into a single linear layer
+        # https://github.com/lm-sys/RouteLLM/issues/9
+        num_models = self.P.weight.shape[0]
+        text_dim = self.text_proj[0].weight.shape[1]
+
+        self.P.weight.data = torch.nn.functional.normalize(
+            self.P.weight.data, p=2, dim=1
+        )
+
+        if (
+            self.embedding_model == "all-mpnet-base-v2"
+            or self.embedding_model == "infgrad/stella_en_400M_v5"
+        ):
+            from sentence_transformers import SentenceTransformer
+
+            self._embedding_model = SentenceTransformer(
+                self.embedding_model, trust_remote_code=True
+            ).to("cuda")
+
+        if self.collapse_linear:
+            self.precompute_upscaled_embedding = torch.nn.Embedding(
+                num_models, text_dim
+            )
+            self.precompute_upscaled_embedding.weight.data = (
+                self.P.weight * self.classifier[0].weight.data
+            ) @ self.text_proj[0].weight.data
