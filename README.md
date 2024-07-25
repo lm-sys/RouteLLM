@@ -30,6 +30,25 @@ cd RouteLLM
 pip install -e .[serve,eval]
 ```
 
+## Docker
+To run Route-LLM inside Docker:
+```
+git clone https://github.com/lm-sys/RouteLLM.git
+cd RouteLLM
+ ```
+ Add your keys and models in the **environment** section of docker-compose.yml: 
+```
+  environment:
+      - OPENAI_API_KEY=your_strong_model_key
+      - ANYSCALE_MODEL_KEY=your_weak_model_key
+  command: python -m routellm.openai_server --routers mf --strong-model openai/gpt4o --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1
+
+```
+Now simply use the docker-compose command.
+``` 
+docker-compose up
+```
+
 ## Quickstart
 
 Let's walkthrough replacing an existing OpenAI client to route queries between LLMs instead of using only a single model.

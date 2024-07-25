@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  routellm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 6060:6060
+    volumes:
+      - ./config.example.yaml:/app/config.example.yaml # Mount the config file
+    environment:
+      - OPENAI_API_KEY=your_openai_api_key  # Replace with your actual OpenAI API key
+      - GROQ_API_KEY=your_groq_api_key  # Replace with your actual GR0Q_API_KEY, ANYSCALE_API_KEY ETC.
+    command: python -m routellm.openai_server --routers mf --strong-model openai/gpt4o --weak-model groq/llama3-8b-8192
