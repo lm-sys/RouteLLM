@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,24 +9,42 @@ description = "A framework for serving and evaluating large language model route
 readme = "README.md"
 classifiers = ["Programming Language :: Python :: 3"]
 dependencies = [
-	'importlib-metadata; python_version<"3.10"',
-	'pyyaml',
-	'pydantic',
-	'numpy',
-	'pandas',
-	'torch',
-	'scikit-learn',
-	'tqdm',
-	'openai',
-	'transformers',
-	'datasets',
-	'litellm'
+    'importlib-metadata; python_version<"3.10"',
+    'pyyaml',
+    'pydantic',
+    "numpy",
+    'pandas',
+    'torch',
+    'scikit-learn',
+    'tqdm',
+    'openai',
+    'transformers',
+    'datasets',
+    'litellm',
 ]
+authors = [
+    {name = "iojw", email = "isaacong.jw@gmail.com"},
+]
+requires-python = ">=3.10"
+license = {text = "Apache 2.0"}
 
 [project.optional-dependencies]
-serve = ["fastapi", "shortuuid", "uvicorn"]
-eval = ["matplotlib", "pandarallel", "sglang", 'tiktoken']
-dev = ["black", "isort", "pre-commit"]
+serve = [
+    "fastapi",
+    "shortuuid",
+    "uvicorn"
+]
+eval = [
+    "matplotlib",
+    "pandarallel>=1.6.5",
+    "sglang",
+    'tiktoken'
+]
+dev = [
+    "black",
+    "isort",
+    "pre-commit"
+]
 
 [project.urls]
 "Homepage" = "https://github.com/lm-sys/RouteLLM"
@@ -40,3 +58,6 @@ exclude = ["assets*", "benchmarks*"]
 
 [tool.wheel]
 exclude = ["assets*", "benchmarks*"]
+
+[tool.pdm]
+distribution = true
