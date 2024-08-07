@@ -191,6 +191,13 @@ The configuration for routers is specified in either the `config` argument for `
 
 An example configuration is provided in the `config.example.yaml` file - it provides the configurations for routers that have trained on Arena data augmented using GPT-4 as a judge. The models and datasets used are all hosted on Hugging Face under the [RouteLLM](https://huggingface.co/routellm) and [LMSYS](https://huggingface.co/lmsys) organizations.
 
+The default model paths in the **config.example.yaml** may lead you to issue something like the following:
+
+```bash
+git lfs install
+git clone https://huggingface.co/routellm/mf_gpt4_augmented ./routellm-models/mf_gpt4_augmented
+```
+
 ## Contribution
 
 We welcome contributions! Please feel free to open an issue or a pull request if you have any suggestions or improvements.
