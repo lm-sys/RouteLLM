@@ -26,6 +26,12 @@ Our core features include:
 pip install "routellm[serve,eval]"
 ```
 
+or via [pdm](https://pdm-project.org/):
+
+```bash
+pdm add "routellm[serve,eval]"
+```
+
 **From source**
 
 ```bash
@@ -34,18 +40,9 @@ cd RouteLLM
 pip install -e .[serve,eval]
 ```
 
-### pdm
-
-*An amazing standards-compliant (unlike poetry) Python package manager you can get [here](https://pdm-project.org/)*
-
-**From PyPi**
-```bash
-pdm add "routellm[serve,eval]"
-```
+or using pdm (after cloning with git & cwd):
 
 ```bash
-git clone https://github.com/lm-sys/RouteLLM.git
-cd RouteLLM
 pdm install -d
 ```
 
