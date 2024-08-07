@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "routellm"
-version = "0.2.0"
+dynamic = ["version"]
 description = "A framework for serving and evaluating large language model routers."
 readme = "README.md"
 classifiers = ["Programming Language :: Python :: 3"]
@@ -63,6 +63,8 @@ exclude = ["assets*", "benchmarks*"]
 
 [tool.pdm]
 distribution = true
+build = {includes = ["src"]}
+version = { source = "file", path = "src/__version__.py" }
 
 [project.scripts]
 routellm-serve = "routellm:openai_server.serve"
