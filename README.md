@@ -54,6 +54,8 @@ The `routellm-calibrate` & `routellm-eval` commands come bundled and can be used
 
 These CLI commands are automatically installed in your shell environment.  See their `--help` flags and the Quickstart below.
 
+*If you're using **pdm**, issuing `pdm run` commands like `pdm run routellm-serve` will automatically load your `.env` file if you have one.*
+
 ## Quickstart
 
 Let's walkthrough replacing an existing OpenAI client to route queries between LLMs instead of using only a single model.
