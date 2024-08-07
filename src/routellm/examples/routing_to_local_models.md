@@ -34,7 +34,7 @@ response = client.chat.completions.create(
   ]
 )
 ```
-In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.11593` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
+In the [Quickstart](../../../README.md#quickstart) section, we calibrated the threshold to be `0.11593` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
 
 And that's it! Now, our requests will be routed between GPT-4 for more difficult queries and our local Llama-3 8B model for simpler queries.
 
@@ -65,6 +65,6 @@ response = client.chat.completions.create(
   ]
 )
 ```
-In the [Quickstart](../README.md#quickstart) section, we calibrated the threshold to be `0.11593` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
+In the [Quickstart](../../../README.md#quickstart) section, we calibrated the threshold to be `0.11593` for `mf` so that we get approximately 50% of queries routed to GPT-4, which we set in the `model` field here.
 
 And that's it! Now, our requests will be routed between GPT-4 for more difficult queries and our local Llama-3 8B model for simpler queries.
