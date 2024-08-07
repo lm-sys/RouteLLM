@@ -69,8 +69,8 @@ version = { source = "file", path = "src/__version__.py" }
 [project.scripts]
 routellm-serve = "routellm:openai_server.serve"
 routellm-calibrate = "routellm:calibrate_threshold.calibrate"
-routellm-eval = "routellm:evals:evaluate.run_eval"
-routellm-chat = "routellm:examples:router_chat"
+routellm-eval = "routellm:evals.evaluate.run_eval"
+routellm-chat = "routellm:examples.router_chat"
 
 [tool.pdm.scripts]
 serve = { call = "routellm:openai_server", env_file.override = ".env" }
