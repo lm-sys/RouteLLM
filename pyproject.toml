@@ -40,6 +40,8 @@ eval = [
     "sglang",
     'tiktoken'
 ]
+
+[tool.pdm.dev-dependencies]
 dev = [
     "black",
     "isort",
@@ -53,11 +55,19 @@ dev = [
 [tool.isort]
 profile = "black"
 
-[tool.setuptools.packages.find]
-exclude = ["assets*", "benchmarks*"]
+#[tool.setuptools.packages.find]
+#exclude = ["assets*", "benchmarks*"]
 
 [tool.wheel]
 exclude = ["assets*", "benchmarks*"]
 
 [tool.pdm]
 distribution = true
+
+[project.scripts]
+routellm-serve = "routellm:openai_server.serve"
+routellm-calibrate = "routellm:calibrate_threshold.calibrate"
+
+[tool.pdm.scripts]
+serve = { call = "routellm:openai_server", env_file.override = ".env" }
+calibrate = { call = "routellm:calibrate", env_file.override = ".env" }
