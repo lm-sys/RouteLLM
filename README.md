@@ -2,6 +2,8 @@
 
 RouteLLM is a framework for serving and evaluating LLM routers.
 
+**Version: 0.2.0**
+
 [ [Blog](http://lmsys.org/blog/2024-07-01-routellm/) ] [ [Paper](https://arxiv.org/abs/2406.18665) ]
 
 <p align="center">
@@ -17,24 +19,49 @@ Our core features include:
 
 ## Installation
 
+### pip
+
 **From PyPI**
-```
+```bash
 pip install "routellm[serve,eval]"
+```
+
+or via [pdm](https://pdm-project.org/):
+
+```bash
+pdm add "routellm[serve,eval]"
 ```
 
 **From source**
 
-```
+```bash
 git clone https://github.com/lm-sys/RouteLLM.git
 cd RouteLLM
 pip install -e .[serve,eval]
 ```
+
+or using pdm (after cloning with git & cwd):
+
+```bash
+pdm install -d
+```
+
+## CLI
+
+The `routellm-serve` & `routellm-chat` commands come bundled and can be used after installing `routellm[serve]`
+
+The `routellm-calibrate` & `routellm-eval` commands come bundled and can be used after installing `routellm[eval]`
+
+These CLI commands are automatically installed in your shell environment.  See their `--help` flags and the Quickstart below.
+
+*If you're using **pdm**, issuing `pdm run` commands like `pdm run routellm-serve` will automatically load your `.env` file if you have one.*
 
 ## Quickstart
 
 Let's walkthrough replacing an existing OpenAI client to route queries between LLMs instead of using only a single model.
 
 1. First, let's replace our OpenAI client by initializing the RouteLLM controller with the `mf` router. By default, RouteLLM will use the best-performing config:
+
 ```python
 import os
 from routellm.controller import Controller
@@ -49,18 +76,22 @@ client = Controller(
   weak_model="anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
 )
 ```
+
 Above, we pick `gpt-4-1106-preview` as the strong model and `anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1` as the weak model, setting the API keys accordingly. You can route between different model pairs or providers by updating the model names as described in [Model Support](#model-support).
 
-Want to route to local models? Check out [Routing to Local Models](examples/routing_to_local_models.md).
+Want to route to local models? Check out [Routing to Local Models](src/routellm/examples/routing_to_local_models.md).
 
 2. Each routing request has a *cost threshold* that controls the tradeoff between cost and quality. We should calibrate this based on the types of queries we receive to maximize routing performance. As an example, let's calibrate our threshold for 50% GPT-4 calls using data from Chatbot Arena.
+
 ```
-> python -m routellm.calibrate_threshold --routers mf --strong-model-pct 0.5 --config config.example.yaml
+> routellm-calibrate --routers mf --strong-model-pct 0.5 --config config.example.yaml
 For 50.0% strong model calls for mf, threshold = 0.11593
 ```
+
 This means that we want to use `0.11593` as our threshold so that approximately 50% of all queries (those that require GPT-4 the most) will be routed to it (see [Threshold Calibration](#threshold-calibration) for details).
 
 3. Now, let's update the `model` field when we generate completions to specify the router and threshold to use:
+
 ```python
 response = client.chat.completions.create(
   # This tells RouteLLM to use the MF router with a cost threshold of 0.11593
@@ -70,6 +101,7 @@ response = client.chat.completions.create(
   ]
 )
 ```
+
 That's it! Now, requests with be routed between the strong and weak model depending on what is required, **saving costs while maintaining a high quality of responses**.
 
 Depending on your use case, you might want to consider using a different model pair, modifying the configuration, or calibrating the thresholds based on the types of queries you receive to improve performance.
@@ -77,17 +109,19 @@ Depending on your use case, you might want to consider using a different model p
 ### Server & Demo
 
 Instead of using the Python SDK, you can also launch an OpenAI-compatible server that will work with any existing OpenAI client, using similar steps:
-```
+
+```bash
 > export OPENAI_API_KEY=sk-XXXXXX
 > export ANYSCALE_API_KEY=esecret_XXXXXX
-> python -m routellm.openai_server --routers mf --strong-model gpt-4-1106-preview --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1
+> routellm-serve --routers mf --strong-model gpt-4-1106-preview --weak-model anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
 
 Once the server is launched, you can start a local router chatbot to see how different messages are routed.
-```
-python -m examples.router_chat --router mf --threshold 0.11593
+
+```bash
+routellm-chat --router mf --threshold 0.11593
 ```
 
 <p align="center">
@@ -103,7 +137,7 @@ We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat comple
 Note that regardless of the model pair used, an `OPENAI_API_KEY` will currently still be required to generate embeddings for the `mf` and `sw_ranking` routers.
 
 Instructions for setting up your API keys for popular providers:
-- Local models with Ollama: see [this guide](examples/routing_to_local_models.md)
+- Local models with Ollama: see [this guide](src/routellm/examples/routing_to_local_models.md)
 - [Anthropic](https://litellm.vercel.app/docs/providers/anthropic#api-keys)
 - [Gemini - Google AI Studio](https://litellm.vercel.app/docs/providers/gemini#sample-usage)
 - [Amazon Bedrock](https://litellm.vercel.app/docs/providers/bedrock#required-environment-variables)
@@ -124,8 +158,8 @@ The research in this repository was conducted in [collaboration with Anyscale](h
 
 RouteLLM offers a lightweight OpenAI-compatible server for routing requests based on different routing strategies:
 
-```
-python -m routellm.openai_server --routers mf --config config.example.yaml
+```bash
+routellm-serve --routers mf --config config.example.yaml
 ```
 
 - `--routers` specifies the list of routers available to the server. For instance, here, the server is started with one available router: `mf` (see below for the list of routers).
@@ -141,8 +175,8 @@ The threshold used for routing controls the cost-quality tradeoff. The range of 
 
 By default, we support calibrating thresholds based on the public [Chatbot Arena dataset](https://huggingface.co/datasets/lmsys/lmsys-arena-human-preference-55k). For example, to calibrate the threshold for the `mf` router such that 50% of calls are routed to the stronger model:
 
-```
-> python -m routellm.calibrate_threshold --task calibrate --routers mf --strong-model-pct 0.5 --config config.example.yaml
+```bash
+> routellm-calibrate --task calibrate --routers mf --strong-model-pct 0.5 --config config.example.yaml
 For 50.0% strong model calls for mf, threshold = 0.11593
 ```
 
@@ -155,8 +189,9 @@ However, note that because we calibrate the thresholds based on an existing data
 RouteLLM also includes an evaluation framework to measure the performance of different routing strategies on benchmarks.
 
 To evaluate a router on a benchmark, you can use the following command:
-```
-python -m routellm.evals.evaluate --routers random sw_ranking bert --benchmark gsm8k --config config.example.yaml 
+
+```bash
+routellm-eval --routers random sw_ranking bert --benchmark gsm8k --config config.example.yaml 
 ```
 
 - `--routers` specifies the list of routers to evaluate, for instance, `random` and `bert` in this case.

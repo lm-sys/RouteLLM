@@ -9,7 +9,8 @@ from tqdm import tqdm
 from routellm.controller import Controller
 from routellm.routers.routers import ROUTER_CLS
 
-if __name__ == "__main__":
+
+def calibrate():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--battles_dataset", type=str, default="lmsys/lmsys-arena-human-preference-55k"
@@ -56,3 +57,7 @@ if __name__ == "__main__":
             print(
                 f"For {args.strong_model_pct * 100}% strong model calls for {router}, threshold = {round(threshold, 5)}"
             )
+
+
+if __name__ == "__main__":
+    calibrate()

@@ -1,32 +1,52 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "routellm"
-version = "0.2.0"
+dynamic = ["version"]
 description = "A framework for serving and evaluating large language model routers."
 readme = "README.md"
 classifiers = ["Programming Language :: Python :: 3"]
 dependencies = [
-	'importlib-metadata; python_version<"3.10"',
-	'pyyaml',
-	'pydantic',
-	'numpy',
-	'pandas',
-	'torch',
-	'scikit-learn',
-	'tqdm',
-	'openai',
-	'transformers',
-	'datasets',
-	'litellm'
+    'importlib-metadata; python_version<"3.10"',
+    'pyyaml',
+    'pydantic',
+    "numpy",
+    'pandas',
+    'torch',
+    'scikit-learn',
+    'tqdm',
+    'openai',
+    'transformers',
+    'datasets',
+    'litellm',
 ]
+authors = [
+    {name = "iojw", email = "isaacong.jw@gmail.com"},
+]
+requires-python = ">=3.10"
+license = {text = "Apache 2.0"}
 
 [project.optional-dependencies]
-serve = ["fastapi", "shortuuid", "uvicorn"]
-eval = ["matplotlib", "pandarallel", "sglang", 'tiktoken']
-dev = ["black", "isort", "pre-commit"]
+serve = [
+    "fastapi",
+    "shortuuid",
+    "uvicorn"
+]
+eval = [
+    "matplotlib",
+    "pandarallel>=1.6.5",
+    "sglang",
+    'tiktoken'
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pre-commit"
+]
 
 [project.urls]
 "Homepage" = "https://github.com/lm-sys/RouteLLM"
@@ -35,8 +55,25 @@ dev = ["black", "isort", "pre-commit"]
 [tool.isort]
 profile = "black"
 
-[tool.setuptools.packages.find]
-exclude = ["assets*", "benchmarks*"]
+#[tool.setuptools.packages.find]
+#exclude = ["assets*", "benchmarks*"]
 
 [tool.wheel]
 exclude = ["assets*", "benchmarks*"]
+
+[tool.pdm]
+distribution = true
+build = {includes = ["src"]}
+version = { source = "file", path = "src/__version__.py" }
+
+[project.scripts]
+routellm-serve = "routellm:openai_server.serve"
+routellm-calibrate = "routellm:calibrate_threshold.calibrate"
+routellm-eval = "routellm:evals.evaluate.run_eval"
+routellm-chat = "routellm:examples.router_chat"
+
+[tool.pdm.scripts]
+serve = { call = "routellm:openai_server", env_file.override = ".env" }
+calibrate = { call = "routellm:calibrate", env_file.override = ".env" }
+eval = { call = "routellm:evals:evaluate.run_eval", env_file.override = ".env" }
+chat = { call = "routellm:examples:router_chat", env_file.override = ".env" }

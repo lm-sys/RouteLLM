@@ -140,7 +140,7 @@ def pretty_print_results(threshold, accuracy, model_counts, total):
     print("=" * len(header) + "\n")
 
 
-if __name__ == "__main__":
+def run_eval():
     import argparse
 
     parser = argparse.ArgumentParser(
@@ -224,16 +224,16 @@ if __name__ == "__main__":
             router_results = []
             for i in range(args.random_iters):
                 for threshold, accuracy, model_counts, total in benchmark.evaluate(
-                    controller, router, args.num_results, True
+                        controller, router, args.num_results, True
                 ):
                     router_results.append(
                         {
                             "threshold": threshold,
                             "strong_percentage": model_counts[
-                                controller.model_pair.strong
-                            ]
-                            / total
-                            * 100,
+                                                     controller.model_pair.strong
+                                                 ]
+                                                 / total
+                                                 * 100,
                             "accuracy": accuracy,
                         }
                     )
@@ -247,7 +247,7 @@ if __name__ == "__main__":
         else:
             router_results = []
             for threshold, accuracy, model_counts, total in benchmark.evaluate(
-                controller, router, args.num_results, False
+                    controller, router, args.num_results, False
             ):
                 print(f"Evaluating router: {router} with threshold {threshold}...")
                 pretty_print_results(threshold, accuracy, model_counts, total)
@@ -256,8 +256,8 @@ if __name__ == "__main__":
                     "method": str(router),
                     "threshold": threshold,
                     "strong_percentage": model_counts[controller.model_pair.strong]
-                    / total
-                    * 100,
+                                         / total
+                                         * 100,
                     "accuracy": accuracy,
                 }
                 router_results.append(result)
@@ -270,3 +270,7 @@ if __name__ == "__main__":
         controller.model_pair.strong,
         args.output,
     )
+
+
+if __name__ == "__main__":
+    run_eval()
