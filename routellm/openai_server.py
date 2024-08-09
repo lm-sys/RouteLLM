@@ -140,6 +140,12 @@ async def create_chat_completion(request: ChatCompletionRequest):
         return JSONResponse(content=res.model_dump())
 
 
+@app.get("/health")
+async def health_check():
+    """Health check endpoint."""
+    return JSONResponse(content={"status": "online"})
+
+
 parser = argparse.ArgumentParser(
     description="An OpenAI-compatible API server for LLM routing."
 )
