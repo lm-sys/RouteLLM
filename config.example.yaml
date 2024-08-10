@@ -6,8 +6,8 @@ sw_ranking:
       - routellm/arena_battles_embeddings
       - routellm/gpt4_judge_battles_embeddings
 causal_llm:
-    checkpoint_path: routellm/causal_llm_gpt4_augmented
+    checkpoint_path: routellm-models/causal_llm_gpt4_augmented
 bert:
-    checkpoint_path: routellm/bert_gpt4_augmented
+    checkpoint_path: routellm-models/bert_gpt4_augmented
 mf:
-    checkpoint_path: routellm/mf_gpt4_augmented
+    checkpoint_path: routellm-models/mf_gpt4_augmented
