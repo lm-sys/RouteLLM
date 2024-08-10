@@ -3,6 +3,11 @@ from dataclasses import dataclass
 from types import SimpleNamespace
 from typing import Any, Optional
 
+#LiteLLM maps all supported openai params by provider + model (e.g. function calling is supported by OpenAI but not Groq).
+#If a provider/model doesn't support a particular param, we can drop it.
+import litellm
+litellm.drop_params = True
+
 import pandas as pd
 from litellm import acompletion, completion
 from tqdm import tqdm
