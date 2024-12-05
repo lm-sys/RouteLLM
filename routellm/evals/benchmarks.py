@@ -363,3 +363,75 @@ class GSM8K(Benchmark):
         opt_accuracy = opt_correct / total * 100
 
         return opt_accuracy
+
+class CustomDataset(Benchmark):
+    def __init__(self, routed_pair, overwrite_cache):
+        self.routed_pair = routed_pair
+        self.overwrite_cache = overwrite_cache
+        self.cache_path = f"{CURRENT_DIR}/custom_dataset/cache.npy"
+
+        try:
+            self.cache = np.load(self.cache_path, allow_pickle=True).item()
+        except:
+            self.cache = {}
+        self.all_data = pd.read_csv(f"{CURRENT_DIR}/custom_dataset/custom_dataset_routeLLM.csv")
+        original_len = len(self.all_data)
+
+        print(
+            f"{len(self.all_data)}/{original_len} questions for CustomDataset after decontamination."
+        )
+
+    def evaluate(self, controller, router, num_results, overwrite_router_cache):
+        if (
+            router not in self.cache
+            or router in self.overwrite_cache
+            or overwrite_router_cache
+        ):
+            strong_win_rates = controller.batch_calculate_win_rate(
+                prompts=self.all_data["prompt"], router=router
+            )
+            self.cache[router] = strong_win_rates
+            np.save(self.cache_path, self.cache)
+        else:
+            strong_win_rates = self.cache[router]
+
+        # Choose thresholds split into 10 equally sized bins (including duplicates)
+        _, thresholds = pd.qcut(strong_win_rates, num_results, retbins=True)
+        self.all_data["strong_win_rates"] = strong_win_rates
+
+        for i, threshold in enumerate(thresholds):
+            selection = (
+                self.all_data["strong_win_rates"] >= threshold
+                if i != len(thresholds) - 1
+                else self.all_data["strong_win_rates"] > threshold
+            )
+            results = np.where(
+                selection,
+                self.all_data[self.routed_pair.strong],
+                self.all_data[self.routed_pair.weak],
+            )
+            models = np.where(selection, self.routed_pair.strong, self.routed_pair.weak)
+            model_counts = Counter(models)
+            yield threshold, sum(results) / len(results) * 100, model_counts, len(
+                results
+            )
+
+    def get_model_accuracy(self, model):
+        df = self.all_data
+        return len(df[df[model] == True]) / len(df) * 100
+
+    def get_optimal_accuracy(self, strong_percent):
+        df = self.all_data
+        total = len(df)
+
+        strong_calls = total * strong_percent
+        weak_correct = len(df[df[self.routed_pair.weak] == True])
+
+        df_sub = df[df[self.routed_pair.weak] == False]
+        df_sub = df_sub[df_sub[self.routed_pair.strong] == True]
+
+        strong_bonus = min(strong_calls, len(df_sub))
+        opt_correct = weak_correct + strong_bonus
+        opt_accuracy = opt_correct / total * 100
+
+        return opt_accuracy

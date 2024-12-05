@@ -204,6 +204,40 @@ There is only a single method to implement: `calculate_strong_win_rate`, which t
 ### Adding a new benchmark
 
 To add a new benchmark to RouteLLM, implement the abstract `Benchmark` class in `benchmarks.py` and update the `evaluate.py` module to properly initialize the new benchmark class. Ideally, the results for the benchmark should be precomputed to avoid having to regenerate the results for each evaluation run -- see the existing benchmarks for examples on how to do this.
+#### RouteLLM Evaluation with custom dataset Guide
+
+This document provides instructions for setting up and running evaluation with RouteLLM using a custom dataset and specific configurations.
+
+---
+
+##### 1. Preparing the Custom Dataset
+
+To use a custom dataset, you need to provide a file formatted as follows:
+
+###### **Format:**
+
+The custom dataset must be a text file with comma-separated values (CSV) containing the following columns:
+
+- **`prompt`**: The input text or query for evaluation.
+- **`gpt-4o`**: The output of the first model (strong model).
+- **`gpt-4o-mini`**: The output of the second model (weak model).
+
+###### **Example File (`custom_dataset.csv`) in routellm/evals/custom_dataset:**
+```csv
+prompt,gpt-4o,gpt-4o-mini
+"What is the capital of France?","The capital of France is Paris.","Paris is the capital of France."
+"Define machine learning.","Machine learning is the study of algorithms that improve automatically through experience.","Machine learning involves algorithms that learn from data."
+```
+To execute the evaluation, use the following command:
+
+```bash
+python -m routellm.evals.evaluate --routers random mf \
+    --benchmark custom_dataset \
+    --config config.example.yaml \
+    --strong-model gpt-4o \
+    --weak-model gpt-4o-mini
+```
+With strong-model and weak-model in dataset
 
 # Citation
 
