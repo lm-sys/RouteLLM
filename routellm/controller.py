@@ -24,7 +24,7 @@ GPT_4_AUGMENTED_CONFIG = {
     },
     "causal_llm": {"checkpoint_path": "routellm/causal_llm_gpt4_augmented"},
     "bert": {"checkpoint_path": "routellm/bert_gpt4_augmented"},
-    "mf": {"checkpoint_path": "routellm/mf_gpt4_augmented"},
+    "mf": {"checkpoint_path": "madison-evans/routellm_all-MiniLM-L6-v2"},
 }
 
 
@@ -48,7 +48,9 @@ class Controller:
         api_base: Optional[str] = None,
         api_key: Optional[str] = None,
         progress_bar: bool = False,
+        hf_token: Optional[str] = None,  # Add hf_token as a parameter
     ):
+        self.hf_token = hf_token  # Store the hf_token
         self.model_pair = ModelPair(strong=strong_model, weak=weak_model)
         self.routers = {}
         self.api_base = api_base
@@ -67,7 +69,8 @@ class Controller:
         for router in routers:
             if router_pbar is not None:
                 router_pbar.set_description(f"Loading {router}")
-            self.routers[router] = ROUTER_CLS[router](**config.get(router, {}))
+            self.routers[router] = ROUTER_CLS[router](hf_token=self.hf_token, **config.get(router, {}))
+
 
         # Some Python magic to match the OpenAI Python SDK
         self.chat = SimpleNamespace(
@@ -101,6 +104,14 @@ class Controller:
                 f"Invalid model {model}. Model name must be of the format 'router-[router name]-[threshold]."
             )
         return router, threshold
+    
+    def get_routed_model(self, messages: list, router: str, threshold: float) -> str:
+        """
+        Get the routed model for a given message using the specified router and threshold.
+        """
+        self._validate_router_threshold(router, threshold)
+        routed_model = self._get_routed_model_for_completion(messages, router, threshold)
+        return routed_model
 
     def _get_routed_model_for_completion(
         self, messages: list, router: str, threshold: float
