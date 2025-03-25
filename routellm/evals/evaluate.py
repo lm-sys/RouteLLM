@@ -267,6 +267,6 @@ if __name__ == "__main__":
         all_results,
         benchmark,
         args.benchmark,
-        controller.model_pair.strong,
+        controller.model_pair,
         args.output,
     )
