@@ -168,3 +168,27 @@ class Controller:
             kwargs["messages"], router, threshold
         )
         return await acompletion(api_base=self.api_base, api_key=self.api_key, **kwargs)
+        # --- NEW: lightweight helper -------------------------------------------
+    def invoke(
+        self,
+        prompt: str,
+        *,
+        router: str = "mf",
+        threshold: float = 0.5,
+        return_score: bool = False,
+    ):
+        """
+        Fast path that runs the router **only** and returns the routed model
+        name.  Set `return_score=True` to also get the strong-model win-rate.
+
+        Example
+        -------
+        >>> ctrl = Controller(routers=["mf"], strong_model="gpt-4o", weak_model="llama3-8b")
+        >>> model = ctrl.invoke("Write a haiku about routing.")
+        'llama3-8b-8192'
+        """
+        self._validate_router_threshold(router, threshold)
+        router_inst = self.routers[router]
+        win_rate = router_inst.calculate_strong_win_rate(prompt)
+        chosen = self.model_pair.strong if win_rate >= threshold else self.model_pair.weak
+        return (chosen, win_rate) if return_score else chosen

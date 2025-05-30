@@ -8,7 +8,7 @@ from openai import OpenAI
 from sklearn.linear_model import LogisticRegression
 
 choices = ["A", "B", "C", "D"]
-OPENAI_CLIENT = OpenAI()
+OPENAI_CLIENT = OpenAI(api_key="tpsg-WuXePnCvR4CG6y8wB3MXbAkqHi4yCaf" , base_url="https://api.tapsage.com/openai/v1")
 
 
 def compute_tiers(model_ratings, num_tiers):

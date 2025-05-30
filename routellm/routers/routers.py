@@ -140,6 +140,7 @@ class SWRankingRouter(Router):
         strong_model="gpt-4-1106-preview",
         weak_model="mixtral-8x7b-instruct-v0.1",
         num_tiers=10,
+        embedding_model: str = "text-embedding-3-small"
     ):
         self.strong_model = strong_model
         self.weak_model = weak_model
@@ -154,7 +155,7 @@ class SWRankingRouter(Router):
             for dataset in arena_embedding_datasets
         ]
         self.arena_conv_embedding = np.concatenate(embeddings)
-        self.embedding_model = "text-embedding-3-small"
+        self.embedding_model = embedding_model
 
         assert len(self.arena_df) == len(
             self.arena_conv_embedding
@@ -181,7 +182,7 @@ class SWRankingRouter(Router):
         prompt_emb = (
             (
                 OPENAI_CLIENT.embeddings.create(
-                    input=[prompt], model=self.embedding_model
+                    input=[prompt], model=self.embedding_model , encoding_format="float"
                 )
             )
             .data[0]
