@@ -4,7 +4,10 @@ from types import SimpleNamespace
 from typing import Any, Optional
 
 import pandas as pd
+import litellm
 from litellm import acompletion, completion
+
+litellm.drop_params = True
 from tqdm import tqdm
 
 from routellm.routers.routers import ROUTER_CLS
