@@ -18,7 +18,8 @@ def get_embeddings(battles_df):
     )
 
     client = openai.OpenAI(
-        api_key=os.environ["OPENAI_API_KEY"], base_url="https://api.openai.com/v1"
+        api_key=os.environ["OPENAI_API_KEY"], base_url="https://api.openai.com/v1",
+        timeout=60.0, max_retries=3,
     )
 
     batch_size = 2000
