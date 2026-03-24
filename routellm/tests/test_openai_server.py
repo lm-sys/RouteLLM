@@ -43,6 +43,8 @@ if __name__ == "__main__":
     client = openai.OpenAI(
         base_url=args.base_url,
         api_key=args.api_key,
+        timeout=60.0,
+        max_retries=3,
     )
 
     chat_completion = client.chat.completions.create(

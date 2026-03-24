@@ -10,7 +10,7 @@ from openai import OpenAI
 from routellm.evals.mmlu.domains import ALL_MMLU_DOMAINS
 
 THRESHOLD = 0.95
-client = OpenAI()
+client = OpenAI(timeout=60.0, max_retries=3)
 
 
 def check_data_contamination_similarity(train_embeddings, eval_prompts):

@@ -25,7 +25,7 @@ from routellm.routers.routers import ROUTER_CLS
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 CONTROLLER = None
 
-openai_client = AsyncOpenAI()
+openai_client = AsyncOpenAI(timeout=60.0, max_retries=3)
 count = defaultdict(lambda: defaultdict(int))
 
 
