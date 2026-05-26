@@ -1,0 +1,17 @@
+__pycache__
+*.py[cod]
+*.so
+.git
+.gitignore
+.github
+.eggs
+*.egg-info
+build/
+dist/
+*.npy
+assets/
+benchmarks/
+*.md
+!README.md
+.pre-commit-config.yaml
+docker/

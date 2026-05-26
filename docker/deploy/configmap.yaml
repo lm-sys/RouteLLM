@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: routellm-config
+data:
+  config.yaml: |
+    sw_ranking:
+      arena_battle_datasets:
+        - lmsys/lmsys-arena-human-preference-55k
+        - routellm/gpt4_judge_battles
+      arena_embedding_datasets:
+        - routellm/arena_battles_embeddings
+        - routellm/gpt4_judge_battles_embeddings
+    causal_llm:
+      checkpoint_path: routellm/causal_llm_gpt4_augmented

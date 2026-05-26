@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: routellm
+  labels:
+    app: routellm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: routellm
+  template:
+    metadata:
+      labels:
+        app: routellm
+    spec:
+      containers:
+        - name: routellm
+          image: ghcr.io/lm-sys/routellm:latest
+          ports:
+            - containerPort: 6060
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: routellm-secrets
+                  key: openai-api-key
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: routellm-secrets
+                  key: hf-token
+            - name: BASE_URL
+              value: ""
+            - name: ROUTERS
+              value: "sw_ranking causal_llm"
+            - name: STRONG_MODEL
+              value: "gpt-4-1106-preview"
+            - name: WEAK_MODEL
+              value: "anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1"
+          volumeMounts:
+            - name: config
+              mountPath: /app/config.yaml
+              subPath: config.yaml
+          resources:
+            requests:
+              memory: "8Gi"
+              cpu: "2"
+            limits:
+              memory: "16Gi"
+              cpu: "4"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 6060
+            initialDelaySeconds: 120
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 6060
+            initialDelaySeconds: 30
+            periodSeconds: 10
+      volumes:
+        - name: config
+          configMap:
+            name: routellm-config
+            optional: true
