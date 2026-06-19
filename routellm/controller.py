@@ -1,3 +1,4 @@
+import os
 from collections import defaultdict
 from dataclasses import dataclass
 from types import SimpleNamespace
@@ -30,6 +31,10 @@ GPT_4_AUGMENTED_CONFIG = {
 
 class RoutingError(Exception):
     pass
+
+
+BAI_API_BASE = "https://api.b.ai/v1"
+BAI_MODEL_PREFIX = "bai/"
 
 
 @dataclass
@@ -114,6 +119,25 @@ class Controller:
 
         return routed_model
 
+    def _completion_kwargs_for_model(self, model: str):
+        completion_kwargs = {
+            "api_base": self.api_base,
+            "api_key": self.api_key,
+            "model": model,
+        }
+
+        if model.startswith(BAI_MODEL_PREFIX):
+            completion_kwargs.update(
+                {
+                    "api_base": self.api_base
+                    or os.environ.get("BAI_API_BASE", BAI_API_BASE),
+                    "api_key": self.api_key or os.environ.get("BAI_API_KEY"),
+                    "model": f"openai/{model.removeprefix(BAI_MODEL_PREFIX)}",
+                }
+            )
+
+        return completion_kwargs
+
     # Mainly used for evaluations
     def batch_calculate_win_rate(
         self,
@@ -147,10 +171,11 @@ class Controller:
             router, threshold = self._parse_model_name(kwargs["model"])
 
         self._validate_router_threshold(router, threshold)
-        kwargs["model"] = self._get_routed_model_for_completion(
+        routed_model = self._get_routed_model_for_completion(
             kwargs["messages"], router, threshold
         )
-        return completion(api_base=self.api_base, api_key=self.api_key, **kwargs)
+        kwargs.update(self._completion_kwargs_for_model(routed_model))
+        return completion(**kwargs)
 
     # Matches OpenAI's Async Chat Completions interface, but also supports optional router and threshold args
     async def acompletion(
@@ -164,7 +189,8 @@ class Controller:
             router, threshold = self._parse_model_name(kwargs["model"])
 
         self._validate_router_threshold(router, threshold)
-        kwargs["model"] = self._get_routed_model_for_completion(
+        routed_model = self._get_routed_model_for_completion(
             kwargs["messages"], router, threshold
         )
-        return await acompletion(api_base=self.api_base, api_key=self.api_key, **kwargs)
+        kwargs.update(self._completion_kwargs_for_model(routed_model))
+        return await acompletion(**kwargs)
