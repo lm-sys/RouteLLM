@@ -102,6 +102,16 @@ We leverage [LiteLLM](https://github.com/BerriAI/litellm) to support chat comple
 
 Note that regardless of the model pair used, an `OPENAI_API_KEY` will currently still be required to generate embeddings for the `mf` and `sw_ranking` routers.
 
+B.AI's LLM service is supported through its OpenAI-compatible API. Set `BAI_API_KEY`, optionally set `BAI_API_BASE` if you need a custom endpoint, and prefix B.AI model names with `bai/`:
+
+```
+export BAI_API_KEY=sk-XXXXXX
+python -m routellm.openai_server \
+  --routers mf \
+  --strong-model bai/gpt-5.2 \
+  --weak-model bai/claude-sonnet-4-6
+```
+
 Instructions for setting up your API keys for popular providers:
 - Local models with Ollama: see [this guide](examples/routing_to_local_models.md)
 - [Anthropic](https://litellm.vercel.app/docs/providers/anthropic#api-keys)
