@@ -1,7 +1,7 @@
 import torch
 from huggingface_hub import PyTorchModelHubMixin
 
-from routellm.routers.similarity_weighted.utils import OPENAI_CLIENT
+from routellm.routers.similarity_weighted.utils import get_openai_client
 
 MODEL_IDS = {
     "RWKV-4-Raven-14B": 0,
@@ -110,7 +110,8 @@ class MFModel(torch.nn.Module, PyTorchModelHubMixin):
         model_embed = torch.nn.functional.normalize(model_embed, p=2, dim=1)
 
         prompt_embed = (
-            OPENAI_CLIENT.embeddings.create(input=[prompt], model=self.embedding_model)
+            get_openai_client()
+            .embeddings.create(input=[prompt], model=self.embedding_model)
             .data[0]
             .embedding
         )
