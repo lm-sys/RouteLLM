@@ -1,3 +1,4 @@
+import functools
 import json
 import math
 import os
@@ -8,7 +9,18 @@ from openai import OpenAI
 from sklearn.linear_model import LogisticRegression
 
 choices = ["A", "B", "C", "D"]
-OPENAI_CLIENT = OpenAI()
+
+
+@functools.lru_cache(maxsize=1)
+def get_openai_client():
+    """Lazily instantiate (and cache) the OpenAI client.
+
+    Constructing ``OpenAI()`` requires ``OPENAI_API_KEY`` to be set. Creating it
+    at import time would force every router to need an API key, even local ones
+    (e.g. ``bert``, ``causal_llm``) that never call OpenAI. Deferring creation to
+    first use keeps those routers importable without any credentials.
+    """
+    return OpenAI()
 
 
 def compute_tiers(model_ratings, num_tiers):
