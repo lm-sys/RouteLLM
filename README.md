@@ -146,7 +146,7 @@ By default, we support calibrating thresholds based on the public [Chatbot Arena
 For 50.0% strong model calls for mf, threshold = 0.11593
 ```
 
-This means that the threshold should be set to 0.1881 for the `mf` router so that approximately 50% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.1159`.
+This means that the threshold should be set to 0.11593 for the `mf` router so that approximately 50% of calls are routed to the strong model i.e. using a `model` field of `router-mf-0.11593`.
 
 However, note that because we calibrate the thresholds based on an existing dataset, the % of calls routed to each model will differ based on the actual queries received. Therefore, we recommend calibrating on a dataset that closely resembles the types of queries you receive.
 
