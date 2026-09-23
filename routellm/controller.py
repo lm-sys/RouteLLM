@@ -91,15 +91,17 @@ class Controller:
             )
 
     def _parse_model_name(self, model: str):
-        _, router, threshold = model.split("-", 2)
+        parts = model.split("-", 2)
+        if len(parts) != 3 or parts[0] != "router" or not parts[1]:
+            raise RoutingError(
+                f"Invalid model {model}. Model name must be of the format 'router-[router name]-[threshold]."
+            )
+
+        _, router, threshold = parts
         try:
             threshold = float(threshold)
         except ValueError as e:
             raise RoutingError(f"Threshold {threshold} must be a float.") from e
-        if not model.startswith("router"):
-            raise RoutingError(
-                f"Invalid model {model}. Model name must be of the format 'router-[router name]-[threshold]."
-            )
         return router, threshold
 
     def _get_routed_model_for_completion(
