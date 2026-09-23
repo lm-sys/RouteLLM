@@ -43,7 +43,7 @@ And that's it! Now, our requests will be routed between GPT-4 for more difficult
 2. Launch a server with the `mf` router:
 ```
 > export OPENAI_API_KEY=sk-...
-> python -m routellm.openai_server --routers mf --weak-model ollama_chat/llama3 --config.example.yaml
+> python -m routellm.openai_server --routers mf --weak-model ollama_chat/llama3 --config config.example.yaml
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:6060 (Press CTRL+C to quit)
 ```
@@ -54,7 +54,7 @@ The server is now listening on `http://0.0.0.0:6060`. We use the `--weak-model` 
 import openai
 
 client = openai.OpenAI(
-  base_url="https://localhost:6060/v1",
+  base_url="http://localhost:6060/v1",
   api_key="no_api_key"
 )
 ...
