@@ -253,7 +253,10 @@ class RandomRouter(Router):
         return random.uniform(0, 1)
 
 
+from routellm.routers.v1m_router import V1MRouter
+
 ROUTER_CLS = {
+    "v1m": V1MRouter,
     "random": RandomRouter,
     "mf": MatrixFactorizationRouter,
     "causal_llm": CausalLLMRouter,
