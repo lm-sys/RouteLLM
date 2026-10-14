@@ -253,7 +253,10 @@ class RandomRouter(Router):
         return random.uniform(0, 1)
 
 
+from routellm.routers.subq_router import SubQRouter
+
 ROUTER_CLS = {
+    "subq": SubQRouter,
     "random": RandomRouter,
     "mf": MatrixFactorizationRouter,
     "causal_llm": CausalLLMRouter,
